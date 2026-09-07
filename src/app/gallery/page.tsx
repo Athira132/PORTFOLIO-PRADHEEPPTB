@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Maximize2, Tag, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Lightbox from "@/components/ui/Lightbox";
 import {
@@ -35,7 +35,7 @@ export default function GalleryPage() {
             </span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-forest-950 font-normal tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl text-forest-950 font-bold tracking-tight">
             Moments of Insight & Transformation
           </h1>
 
@@ -55,7 +55,7 @@ export default function GalleryPage() {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
                     isSelected
-                      ? "bg-forest-900 text-[#FAF7F2] shadow-sm"
+                      ? "bg-forest-900 text-[#FAF7F2] shadow-sm font-semibold"
                       : "bg-white text-muted-text hover:text-forest-900 border border-[#EAE2D3] hover:bg-[#F3EDE2]"
                   }`}
                 >
@@ -68,42 +68,25 @@ export default function GalleryPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. GALLERY GRID — REFINED, SMALLER PHOTOS, NO CAPTION OVERLAYS */}
+      {/* 2. GALLERY GRID — PURE PHOTOS, OBJECT-CONTAIN, NO TEXT OR CAPTIONS */}
       {/* ========================================================================= */}
       <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {filteredItems.map((item) => (
               <div
                 key={item.id}
                 onClick={() => setActiveItem(item)}
-                className="group relative rounded-2xl overflow-hidden bg-white border border-[#EAE2D3] shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col justify-between"
+                className="group relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-[#FAF7F2] border border-[#EAE2D3] shadow-xs hover:border-forest-900/40 hover:shadow-md transition-all duration-300 cursor-pointer flex items-center justify-center p-3"
               >
-                {/* Image Container: smaller and well-proportioned */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#EAE2D3]">
+                <div className="relative w-full h-full">
                   <Image
                     src={item.imageSrc}
-                    alt={item.title}
+                    alt="Pradheep Pattambi gallery photo"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-forest-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="px-4 py-1.5 rounded-full bg-white/95 text-forest-950 text-xs font-medium tracking-wide flex items-center gap-1.5 shadow-sm">
-                      <Maximize2 className="w-3.5 h-3.5" />
-                      <span>View</span>
-                    </span>
-                  </div>
-                </div>
-
-                {/* Clean Title & Category only (no long description/captions) */}
-                <div className="p-5">
-                  <span className="text-[10px] uppercase tracking-wider font-semibold text-olive-700 block mb-1">
-                    {item.category}
-                  </span>
-                  <h3 className="font-serif text-lg font-medium text-forest-950 group-hover:text-forest-800 transition-colors line-clamp-1">
-                    {item.title}
-                  </h3>
                 </div>
               </div>
             ))}
@@ -129,7 +112,7 @@ export default function GalleryPage() {
       {/* ========================================================================= */}
       <section className="py-16 sm:py-20 bg-[#F4EFE6] border-t border-[#EAE2D3]/60">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
-          <h2 className="font-serif text-3xl sm:text-4xl text-forest-950 font-normal">
+          <h2 className="text-3xl sm:text-4xl text-forest-950 font-bold tracking-tight">
             Invite Pradheep N.V. to your next event or workshop
           </h2>
           <p className="text-muted-text text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">

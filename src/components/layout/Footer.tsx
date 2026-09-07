@@ -22,7 +22,7 @@ export default function Footer() {
               <span className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-semibold">
                 Begin Your Journey Today
               </span>
-              <h3 className="font-serif text-3xl sm:text-4xl text-[#FAF7F2] mt-2 font-normal">
+              <h3 className="text-3xl sm:text-4xl text-[#FAF7F2] mt-2 font-bold tracking-tight">
                 Ready to rediscover your inner calm and clarity?
               </h3>
               <p className="text-[#B5C2B9] text-base mt-3 leading-relaxed">
@@ -58,7 +58,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-block">
-              <span className="font-serif text-3xl font-normal tracking-tight text-[#FAF7F2]">
+              <span className="text-2xl sm:text-3xl font-bold tracking-tight text-[#FAF7F2]">
                 Pradheep Pattambi
               </span>
               <span className="block text-xs uppercase tracking-[0.2em] text-[#C5A880] mt-1 font-medium">

@@ -40,11 +40,11 @@ export default function AboutPage() {
               </span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-forest-950 font-normal tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl text-forest-950 font-bold tracking-tight">
               About Me
             </h1>
 
-            <p className="text-lg sm:text-2xl font-serif text-forest-800 italic max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-2xl text-forest-800 font-medium max-w-3xl mx-auto leading-relaxed">
               &ldquo;I’m Pradheep N.V., a psychologist in Palakkad, helping individuals explore
               their inner strength and overcome life’s challenges through mindful guidance and support.&rdquo;
             </p>
@@ -82,7 +82,7 @@ export default function AboutPage() {
                 </span>
               </div>
 
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-normal leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-bold leading-tight tracking-tight">
                 Pradheep Pattambi
               </h2>
 
@@ -152,7 +152,7 @@ export default function AboutPage() {
               <div className="w-14 h-14 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center mb-6">
                 <HeartHandshake className="w-7 h-7" />
               </div>
-              <h3 className="font-serif text-2xl text-forest-950 font-medium mb-3">
+              <h3 className="text-2xl text-forest-950 font-bold mb-3">
                 Psychological Counselor
               </h3>
               <p className="text-muted-text text-sm sm:text-base leading-relaxed mb-6">
@@ -180,7 +180,7 @@ export default function AboutPage() {
               <div className="w-14 h-14 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center mb-6">
                 <Mic className="w-7 h-7" />
               </div>
-              <h3 className="font-serif text-2xl text-forest-950 font-medium mb-3">
+              <h3 className="text-2xl text-forest-950 font-bold mb-3">
                 Motivational Speaker
               </h3>
               <p className="text-muted-text text-sm sm:text-base leading-relaxed mb-6">
@@ -208,7 +208,7 @@ export default function AboutPage() {
               <div className="w-14 h-14 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center mb-6">
                 <Sparkles className="w-7 h-7" />
               </div>
-              <h3 className="font-serif text-2xl text-forest-950 font-medium mb-3">
+              <h3 className="text-2xl text-forest-950 font-bold mb-3">
                 Life Skill Coach
               </h3>
               <p className="text-muted-text text-sm sm:text-base leading-relaxed mb-6">
@@ -245,7 +245,7 @@ export default function AboutPage() {
             </span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-tight text-forest-950">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-forest-950">
             Delving into the uncharted realms of your consciousness to light the way toward personal evolution
           </h2>
 

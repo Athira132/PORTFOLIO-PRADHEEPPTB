@@ -47,7 +47,7 @@ export default function ServiceCard({
         </div>
 
         {/* Title */}
-        <h3 className="font-serif text-2xl sm:text-3xl font-medium text-forest-950 mb-4 group-hover:text-forest-800 transition-colors">
+        <h3 className="text-2xl sm:text-3xl font-bold text-forest-950 mb-4 group-hover:text-forest-800 transition-colors">
           {service.title}
         </h3>
 

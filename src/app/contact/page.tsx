@@ -33,7 +33,7 @@ export default function ContactPage() {
             </span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-forest-950 font-normal tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl text-forest-950 font-bold tracking-tight">
             Let’s connect.
           </h1>
 
@@ -55,7 +55,7 @@ export default function ContactPage() {
                 <span className="text-xs uppercase tracking-[0.2em] text-olive-700 font-semibold block mb-2">
                   DIRECT CONSULTATION
                 </span>
-                <h2 className="font-serif text-3xl font-medium text-forest-950">
+                <h2 className="text-3xl font-bold tracking-tight text-forest-950">
                   Reach out personally
                 </h2>
                 <p className="mt-3 text-muted-text text-sm sm:text-base leading-relaxed">
@@ -77,7 +77,7 @@ export default function ContactPage() {
                     </span>
                     <a
                       href="tel:+919567654880"
-                      className="font-serif text-xl font-medium text-forest-950 hover:text-forest-800 transition-colors block mt-0.5"
+                      className="text-xl font-bold text-forest-950 hover:text-forest-800 transition-colors block mt-0.5"
                     >
                       +91 9567-654-880
                     </a>
@@ -100,7 +100,7 @@ export default function ContactPage() {
                       href="https://api.whatsapp.com/send?phone=919567654880"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-serif text-xl font-medium text-forest-950 hover:text-forest-800 transition-colors block mt-0.5"
+                      className="text-xl font-bold text-forest-950 hover:text-forest-800 transition-colors block mt-0.5"
                     >
                       +91 9567-654-880
                     </a>
@@ -121,7 +121,7 @@ export default function ContactPage() {
                     </span>
                     <a
                       href="mailto:info@pradheeppattambi.com"
-                      className="font-serif text-lg sm:text-xl font-medium text-forest-950 hover:text-forest-800 transition-colors block mt-0.5"
+                      className="text-lg sm:text-xl font-bold text-forest-950 hover:text-forest-800 transition-colors block mt-0.5"
                     >
                       info@pradheeppattambi.com
                     </a>
@@ -140,7 +140,7 @@ export default function ContactPage() {
                     <span className="text-xs uppercase tracking-wider text-olive-700 font-semibold block">
                       Office / Clinic Address
                     </span>
-                    <p className="font-serif text-lg font-medium text-forest-950 mt-0.5">
+                    <p className="text-lg font-bold text-forest-950 mt-0.5">
                       Sree Nilayam, Umikkunnu Pattambi
                     </p>
                     <p className="text-xs text-muted-text mt-1">
@@ -193,7 +193,7 @@ export default function ContactPage() {
                 <span className="text-xs uppercase tracking-[0.2em] text-olive-700 font-semibold block mb-1">
                   APPOINTMENT INQUIRY
                 </span>
-                <h3 className="font-serif text-3xl font-medium text-forest-950">
+                <h3 className="text-3xl font-bold tracking-tight text-forest-950">
                   Send a Confidential Message
                 </h3>
                 <p className="text-xs sm:text-sm text-muted-text mt-2">

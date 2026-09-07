@@ -38,7 +38,7 @@ export default function FAQAccordion({
               className="w-full text-left px-6 sm:px-8 py-5 sm:py-6 flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-900"
               aria-expanded={isOpen}
             >
-              <span className="font-serif text-lg sm:text-xl font-medium text-forest-950 pr-4">
+              <span className="text-lg sm:text-xl font-bold text-forest-950 pr-4">
                 {item.question}
               </span>
               <div

@@ -37,7 +37,7 @@ export default function ContactForm() {
           <div className="w-16 h-16 rounded-full bg-[#EBF1EA] text-forest-900 mx-auto flex items-center justify-center">
             <CheckCircle2 className="w-10 h-10 text-olive-600" />
           </div>
-          <h3 className="font-serif text-2xl sm:text-3xl font-medium text-forest-950">
+          <h3 className="text-2xl sm:text-3xl font-bold text-forest-950">
             Thank you, {formData.name || "friend"}!
           </h3>
           <p className="text-muted-text text-sm sm:text-base max-w-md mx-auto leading-relaxed">

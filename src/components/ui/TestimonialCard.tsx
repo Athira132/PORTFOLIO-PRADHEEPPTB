@@ -21,14 +21,14 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
         </div>
 
         {/* Quote Content */}
-        <p className="font-serif text-lg sm:text-xl text-forest-950 leading-relaxed italic mb-8">
+        <p className="text-lg sm:text-xl text-forest-950 leading-relaxed font-medium mb-8">
           &ldquo;{testimonial.quote}&rdquo;
         </p>
       </div>
 
       {/* Author Info */}
       <div className="flex items-center gap-4 pt-6 border-t border-[#F0EAE0]">
-        <div className="w-12 h-12 rounded-full bg-[#EBF1EA] text-forest-900 border border-[#D8CCA8] flex items-center justify-center font-serif text-base font-semibold">
+        <div className="w-12 h-12 rounded-full bg-[#EBF1EA] text-forest-900 border border-[#D8CCA8] flex items-center justify-center text-base font-bold">
           {testimonial.initials}
         </div>
         <div>

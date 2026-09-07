@@ -54,7 +54,7 @@ export default function CounsellingPage() {
               </span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-forest-950 font-normal tracking-tight leading-[1.12]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl text-forest-950 font-bold tracking-tight leading-[1.12]">
               Empowering minds, transforming lives — expert counselling in Palakkad
             </h1>
 
@@ -111,7 +111,7 @@ export default function CounsellingPage() {
                 </span>
               </div>
 
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-normal leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-bold leading-tight tracking-tight">
                 Psychologist In Palakkad
               </h2>
 
@@ -199,7 +199,7 @@ export default function CounsellingPage() {
                   <div className="w-12 h-12 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center mb-6">
                     <IconComponent className="w-6 h-6 text-olive-700" />
                   </div>
-                  <h3 className="font-serif text-2xl font-normal text-forest-950 mb-3">
+                  <h3 className="text-2xl font-bold text-forest-950 mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-muted-text text-sm leading-relaxed">

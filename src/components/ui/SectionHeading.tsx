@@ -51,7 +51,7 @@ export default function SectionHeading({
       )}
 
       <h2
-        className={`font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight leading-[1.18] ${
+        className={`text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.18] ${
           light ? "text-[#FAF7F2]" : "text-forest-950"
         }`}
       >

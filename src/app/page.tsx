@@ -53,9 +53,8 @@ export default function HomePage() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.6rem] font-normal text-forest-950 tracking-tight leading-[1.08]">
-              Pradheep <br />
-              <span className="italic font-normal text-forest-800">Pattambi</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.6rem] font-bold text-forest-950 tracking-tight leading-[1.08] uppercase">
+              PRADHEEP PATTAMBI
             </h1>
 
             {/* Description */}
@@ -86,7 +85,7 @@ export default function HomePage() {
             {/* Quick Trust Highlights */}
             <div className="pt-4 border-t border-[#D8CCA8]/70 grid grid-cols-3 gap-4 max-w-md">
               <div>
-                <span className="block font-serif text-2xl sm:text-3xl text-forest-950 font-medium leading-none mb-1">
+                <span className="block text-2xl sm:text-3xl text-forest-950 font-bold leading-none mb-1">
                   20+
                 </span>
                 <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider">
@@ -94,7 +93,7 @@ export default function HomePage() {
                 </span>
               </div>
               <div>
-                <span className="block font-serif text-2xl sm:text-3xl text-forest-950 font-medium leading-none mb-1">
+                <span className="block text-2xl sm:text-3xl text-forest-950 font-bold leading-none mb-1">
                   1000s
                 </span>
                 <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider">
@@ -102,7 +101,7 @@ export default function HomePage() {
                 </span>
               </div>
               <div>
-                <span className="block font-serif text-2xl sm:text-3xl text-forest-950 font-medium leading-none mb-1">
+                <span className="block text-2xl sm:text-3xl text-forest-950 font-bold leading-none mb-1">
                   100%
                 </span>
                 <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider">
@@ -143,12 +142,12 @@ export default function HomePage() {
                 </span>
               </div>
 
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-normal leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-bold leading-tight tracking-tight">
                 A little about Pradheep
               </h2>
 
               <div className="space-y-4">
-                <p className="font-serif text-xl sm:text-2xl text-forest-800 italic leading-snug">
+                <p className="text-xl sm:text-2xl text-forest-800 font-semibold leading-snug">
                   &ldquo;Elevating Lives Through Counseling and Inspiring Transformation.&rdquo;
                 </p>
                 <p className="text-olive-700 font-medium text-base sm:text-lg">
@@ -216,7 +215,7 @@ export default function HomePage() {
                   MOMENTS OF IMPACT
                 </span>
               </div>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-normal leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-bold leading-tight tracking-tight">
                 A window into the transformative journeys I’ve guided
               </h2>
               <p className="mt-4 text-muted-text text-base sm:text-lg leading-relaxed">
@@ -235,30 +234,22 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Gallery Preview Grid */}
+          {/* Gallery Preview Grid — Pure photos, object-contain, no captions or labels */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {previewGallery.map((item) => (
               <Link
                 key={item.id}
                 href="/gallery"
-                className="group relative rounded-2xl overflow-hidden shadow-sm bg-white border border-[#EAE2D3] flex flex-col justify-between hover:shadow-md transition-shadow"
+                className="group relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-[#FAF7F2] border border-[#EAE2D3] shadow-xs hover:border-forest-900/40 hover:shadow-md transition-all duration-300 flex items-center justify-center p-3"
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#EAE2D3]">
+                <div className="relative w-full h-full">
                   <Image
                     src={item.imageSrc}
-                    alt={item.title}
+                    alt="Pradheep Pattambi gallery photo"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
-                </div>
-                <div className="p-4 bg-white">
-                  <span className="text-[10px] uppercase tracking-wider text-olive-700 font-semibold block mb-1">
-                    {item.category}
-                  </span>
-                  <h3 className="font-serif text-base font-medium text-forest-950 group-hover:text-forest-800 transition-colors line-clamp-1">
-                    {item.title}
-                  </h3>
                 </div>
               </Link>
             ))}
@@ -295,7 +286,7 @@ export default function HomePage() {
             YOUR TRANSFORMATION AWAITS
           </span>
 
-          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal leading-tight text-forest-950">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight text-forest-950 tracking-tight">
             Let’s take the next step together.
           </h2>
 

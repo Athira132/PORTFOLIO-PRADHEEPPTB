@@ -84,7 +84,7 @@ export default function CareerPage() {
               </span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-forest-950 font-normal tracking-tight leading-[1.12]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl text-forest-950 font-bold tracking-tight leading-[1.12]">
               Confused About Your Career Path?
             </h1>
 
@@ -142,7 +142,7 @@ export default function CareerPage() {
                 </span>
               </div>
 
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-normal leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-bold leading-tight tracking-tight">
                 Find the Right Career with the Right Guidance
               </h2>
 
@@ -199,7 +199,7 @@ export default function CareerPage() {
               <div className="w-12 h-12 rounded-2xl bg-[#FEE2E2] text-red-700 flex items-center justify-center">
                 <AlertCircle className="w-6 h-6" />
               </div>
-              <h3 className="font-serif text-2xl text-forest-950 font-medium">
+              <h3 className="text-2xl text-forest-950 font-bold mb-2">
                 Family & Social Pressure
               </h3>
               <p className="text-muted-text text-sm sm:text-base leading-relaxed">
@@ -213,7 +213,7 @@ export default function CareerPage() {
               <div className="w-12 h-12 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center">
                 <HelpCircle className="w-6 h-6 text-olive-700" />
               </div>
-              <h3 className="font-serif text-2xl text-forest-950 font-medium">
+              <h3 className="text-2xl text-forest-950 font-bold mb-2">
                 Peer Influence & Herd Mentality
               </h3>
               <p className="text-muted-text text-sm sm:text-base leading-relaxed">
@@ -227,7 +227,7 @@ export default function CareerPage() {
               <div className="w-12 h-12 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center">
                 <Lightbulb className="w-6 h-6 text-olive-700" />
               </div>
-              <h3 className="font-serif text-2xl text-forest-950 font-medium">
+              <h3 className="text-2xl text-forest-950 font-bold mb-2">
                 Lack of Career Awareness
               </h3>
               <p className="text-muted-text text-sm sm:text-base leading-relaxed">
@@ -265,7 +265,7 @@ export default function CareerPage() {
                       <IconComp className="w-7 h-7 text-olive-700" />
                     </div>
                     <div>
-                      <h3 className="font-serif text-2xl sm:text-3xl font-medium text-forest-950">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-forest-950">
                         {group.title}
                       </h3>
                       <span className="text-xs uppercase tracking-wider text-olive-700 font-semibold">
@@ -310,10 +310,10 @@ export default function CareerPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
             <div className="p-8 rounded-3xl bg-white border border-[#EAE2D3] shadow-sm">
-              <span className="font-serif text-3xl text-olive-700 font-bold block mb-3">
+              <span className="text-3xl text-olive-700 font-bold block mb-3">
                 01.
               </span>
-              <h4 className="font-serif text-xl font-medium text-forest-950 mb-2">
+              <h4 className="text-xl font-bold text-forest-950 mb-2">
                 Understanding Interests & Temperament
               </h4>
               <p className="text-xs sm:text-sm text-muted-text leading-relaxed">
@@ -322,10 +322,10 @@ export default function CareerPage() {
             </div>
 
             <div className="p-8 rounded-3xl bg-[#F8F5EE] border border-[#EAE2D3] shadow-sm">
-              <span className="font-serif text-3xl text-forest-900 font-bold block mb-3">
+              <span className="text-3xl text-forest-900 font-bold block mb-3">
                 02.
               </span>
-              <h4 className="font-serif text-xl font-medium text-forest-950 mb-2">
+              <h4 className="text-xl font-bold text-forest-950 mb-2">
                 Mapping Inherent Strengths
               </h4>
               <p className="text-xs sm:text-sm text-muted-text leading-relaxed">
@@ -334,10 +334,10 @@ export default function CareerPage() {
             </div>
 
             <div className="p-8 rounded-3xl bg-white border border-[#EAE2D3] shadow-sm">
-              <span className="font-serif text-3xl text-olive-700 font-bold block mb-3">
+              <span className="text-3xl text-olive-700 font-bold block mb-3">
                 03.
               </span>
-              <h4 className="font-serif text-xl font-medium text-forest-950 mb-2">
+              <h4 className="text-xl font-bold text-forest-950 mb-2">
                 Step-by-Step Action Roadmap
               </h4>
               <p className="text-xs sm:text-sm text-muted-text leading-relaxed">

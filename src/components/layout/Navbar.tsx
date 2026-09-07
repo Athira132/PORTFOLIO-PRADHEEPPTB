@@ -115,7 +115,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`flex items-center justify-between px-4 py-3 rounded-xl text-lg font-serif transition-colors ${
+                  className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium transition-colors ${
                     isActive
                       ? "bg-forest-900 text-[#FAF7F2] font-semibold"
                       : "text-forest-950 hover:bg-[#F3EDE2]"
