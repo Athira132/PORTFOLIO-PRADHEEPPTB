@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Phone,
   Mail,
@@ -22,24 +23,65 @@ export default function ContactPage() {
   return (
     <div className="overflow-x-hidden bg-[#FAF7F2]">
       {/* ========================================================================= */}
-      {/* 1. CONTACT HERO — FULL-WIDTH BRIGHT & WELCOMING BANNER */}
+      {/* 1. CONTACT HERO — CIRCULAR PHOTO ON LEFT, REACH INFO ON RIGHT */}
       {/* ========================================================================= */}
-      <section className="pt-16 sm:pt-24 pb-16 sm:pb-20 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50 mb-4">
-            <span className="w-2 h-2 rounded-full bg-olive-600" />
-            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
-              SAFE & CONFIDENTIAL REACH
-            </span>
+      <section className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {/* Left: Circular Photo Frame */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-start">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-white border border-[#EAE2D3] shadow-sm flex items-center justify-center p-3 sm:p-4 shrink-0">
+                <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center">
+                  <Image
+                    src="/images/pradheep-about.webp"
+                    alt="Pradheep N.V. - Contact & Appointments"
+                    fill
+                    priority
+                    className="object-contain"
+                    sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 390px"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Editorial Typography & Actions */}
+            <div className="lg:col-span-7 space-y-5 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50 w-fit">
+                <span className="w-2 h-2 rounded-full bg-olive-600" />
+                <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
+                  SAFE & CONFIDENTIAL REACH
+                </span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl md:text-6xl text-forest-950 font-bold tracking-tight leading-[1.1]">
+                Let’s connect.
+              </h1>
+
+              <p className="text-muted-text text-base sm:text-lg max-w-2xl leading-relaxed">
+                &ldquo;Take the first step towards clarity, growth, and a more fulfilling life.
+                Reach out directly for appointments, confidential consultations, or speaking inquiries.&rdquo;
+              </p>
+
+              <div className="flex flex-wrap items-center gap-3.5 pt-2">
+                <a
+                  href="tel:+919567654880"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm font-medium tracking-wide shadow-sm"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Call +91 9567-654-880</span>
+                </a>
+                <a
+                  href="https://api.whatsapp.com/send?phone=919567654880"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-[#25D366] text-forest-950 bg-[#E8F8EE] hover:bg-[#D3F3DC] transition-colors text-sm font-medium tracking-wide"
+                >
+                  <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
+            </div>
           </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl text-forest-950 font-bold tracking-tight">
-            Let’s connect.
-          </h1>
-
-          <p className="mt-4 text-muted-text text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
-            &ldquo;Take the first step towards clarity, growth, and a more fulfilling life.&rdquo;
-          </p>
         </div>
       </section>
 

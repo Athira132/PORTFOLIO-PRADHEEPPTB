@@ -158,6 +158,14 @@ export default function Footer() {
                   Contact & Location
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/faq"
+                  className="text-[#B5C2B9] hover:text-[#FAF7F2] transition-colors"
+                >
+                  FAQ & Guidance
+                </Link>
+              </li>
             </ul>
           </div>
 

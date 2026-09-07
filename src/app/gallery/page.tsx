@@ -24,45 +24,66 @@ export default function GalleryPage() {
   return (
     <div className="overflow-x-hidden bg-[#FAF8F5]">
       {/* ========================================================================= */}
-      {/* 1. GALLERY HERO — FULL-WIDTH BRIGHT BANNER */}
+      {/* 1. GALLERY HERO — CIRCULAR PHOTO ON LEFT, ARCHIVE HEADINGS ON RIGHT */}
       {/* ========================================================================= */}
-      <section className="pt-16 sm:pt-24 pb-12 sm:pb-16 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50 mb-4">
-            <span className="w-2 h-2 rounded-full bg-olive-600" />
-            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
-              VISUAL ARCHIVE
-            </span>
-          </div>
+      <section className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {/* Left: Circular Photo Frame */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-start">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-white border border-[#EAE2D3] shadow-sm flex items-center justify-center p-3 sm:p-4 shrink-0">
+                <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center">
+                  <Image
+                    src="/images/pradheep-speaking-1.webp"
+                    alt="Pradheep Pattambi Keynote Seminars and Workshops"
+                    fill
+                    priority
+                    className="object-contain"
+                    sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 390px"
+                  />
+                </div>
+              </div>
+            </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl text-forest-950 font-bold tracking-tight">
-            Moments of Insight & Transformation
-          </h1>
+            {/* Right: Editorial Typography & Filter Pills */}
+            <div className="lg:col-span-7 space-y-5 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50 w-fit">
+                <span className="w-2 h-2 rounded-full bg-olive-600" />
+                <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
+                  VISUAL ARCHIVE
+                </span>
+              </div>
 
-          <p className="mt-4 text-muted-text text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            A window into the transformative journeys, keynote seminars, life skill
-            workshops, and community wellness programs led by Pradheep N.V.
-          </p>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl text-forest-950 font-bold tracking-tight leading-[1.1]">
+                Moments of Insight & Transformation
+              </h1>
 
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-10">
-            {galleryCategories.map((cat) => {
-              const isSelected = selectedCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  type="button"
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
-                    isSelected
-                      ? "bg-forest-900 text-[#FAF7F2] shadow-sm font-semibold"
-                      : "bg-white text-muted-text hover:text-forest-900 border border-[#EAE2D3] hover:bg-[#F3EDE2]"
-                  }`}
-                >
-                  {cat}
-                </button>
-              );
-            })}
+              <p className="text-muted-text text-base sm:text-lg max-w-2xl leading-relaxed">
+                A window into the transformative journeys, keynote seminars, life skill
+                workshops, and community wellness programs led by Pradheep N.V.
+              </p>
+
+              {/* Category Filter Pills */}
+              <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 pt-2">
+                {galleryCategories.map((cat) => {
+                  const isSelected = selectedCategory === cat;
+                  return (
+                    <button
+                      key={cat}
+                      type="button"
+                      onClick={() => setSelectedCategory(cat)}
+                      className={`px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
+                        isSelected
+                          ? "bg-forest-900 text-[#FAF7F2] shadow-sm font-semibold"
+                          : "bg-white text-muted-text hover:text-forest-900 border border-[#EAE2D3] hover:bg-[#F3EDE2]"
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </section>
