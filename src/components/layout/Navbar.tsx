@@ -31,9 +31,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-[#FAF7F2] border-b border-[#EAE2D3] shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 md:h-20 w-full">
-          {/* Left-Aligned Desktop Navigation Menu */}
-          <nav className="hidden lg:flex items-center space-x-2 xl:space-x-4 -ml-2">
+        <div className="relative flex items-center justify-between h-18 md:h-20 w-full">
+          {/* Left: Empty spacer to preserve visual balance */}
+          <div className="hidden lg:block w-28 xl:w-36" />
+
+          {/* Center: Visually Centered Desktop Navigation Menu */}
+          <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center space-x-2 xl:space-x-4">
             {navLinks.map((item) => {
               const isActive =
                 item.href === "/"
@@ -59,8 +62,8 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right-Aligned Get in Touch Button — Desktop */}
-          <div className="hidden lg:flex items-center">
+          {/* Right: Far-Right Aligned Get in Touch Button — Desktop */}
+          <div className="hidden lg:flex items-center justify-end">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-1.5 px-6 py-2.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm hover:shadow text-sm font-medium tracking-wide group"
