@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
+@theme {
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-cream-50: #FAF7F2;
+  --color-cream-100: #F4EFE6;
+  --color-cream-200: #EAE2D3;
+  --color-cream-300: #D8CCA8;
+
+  --color-forest-950: #0E2016;
+  --color-forest-900: #143022;
+  --color-forest-850: #183A2A;
+  --color-forest-800: #1E4633;
+  --color-forest-700: #2B5D45;
+  --color-forest-600: #3B7C5D;
+
+  --color-olive-800: #3B4836;
+  --color-olive-700: #4B5C45;
+  --color-olive-600: #5E7356;
+  --color-olive-500: #748D6C;
+  --color-olive-100: #EBF1EA;
+  --color-olive-50: #F5F8F4;
+
+  --color-sand-50: #FAF8F5;
+  --color-sand-100: #F2ECE4;
+  --color-sand-200: #E5DDD0;
+
+  --color-charcoal: #1C2621;
+  --color-muted-text: #4A564F;
+  --color-gold-accent: #C5A880;
+  --color-gold-light: #EFE6D6;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream-50);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #143022;
+  color: #FAF7F2;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8D1C7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5E7356;
 }
