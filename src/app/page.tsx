@@ -36,7 +36,7 @@ export default function HomePage() {
             fill
             priority
             quality={100}
-            className="object-cover object-[right_top] md:object-[82%_top]"
+            className="object-cover object-[80%_15%] md:object-[82%_15%]"
             sizes="100vw"
           />
         </div>
