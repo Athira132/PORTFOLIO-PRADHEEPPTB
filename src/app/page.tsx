@@ -25,27 +25,27 @@ export default function HomePage() {
   return (
     <div className="overflow-x-hidden">
       {/* ========================================================================= */}
-      {/* 1. HERO SECTION — FULL-WIDTH BACKGROUND IMAGE BANNER (NO OVERLAYS / GRADIENTS) */}
+      {/* 1. HERO SECTION — FULL-WIDTH BACKGROUND (NO TOP CROP, NO GRADIENTS/OVERLAYS) */}
       {/* ========================================================================= */}
-      <section className="relative h-[calc(100svh-4.5rem)] md:h-[calc(100vh-5rem)] min-h-[560px] max-h-[820px] flex items-center bg-[#FAF7F2] overflow-hidden border-b border-[#EAE2D3]/60">
-        {/* Full-width background image with natural colors and zero overlays */}
+      <section className="relative w-full min-h-[620px] md:min-h-[680px] lg:h-[100vh] max-h-[860px] flex items-center bg-[#FAF7F2] overflow-hidden border-b border-[#EAE2D3]/60">
+        {/* Full-width original photo, anchored to the top so the top is never cropped */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/pradheep-hero.png"
             alt="Pradheep Pattambi - Psychologist and Life Skill Coach"
             fill
             priority
-            quality={95}
-            className="object-cover object-[80%_bottom] md:object-[82%_bottom]"
+            quality={100}
+            className="object-cover object-[right_top] md:object-[82%_top]"
             sizes="100vw"
           />
         </div>
 
-        {/* Hero Content on the left */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 w-full flex flex-col justify-center">
-          <div className="max-w-xl lg:max-w-2xl space-y-5 sm:space-y-6">
+        {/* Hero Content on the left (with padding to clear the transparent navbar) */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-12 w-full flex flex-col justify-center">
+          <div className="max-w-xl lg:max-w-2xl space-y-4 sm:space-y-5">
             {/* Small Label */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/60 w-fit">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/60 w-fit">
               <span className="w-2 h-2 rounded-full bg-olive-600" />
               <span className="text-[11px] sm:text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
                 PSYCHOLOGIST
@@ -53,7 +53,7 @@ export default function HomePage() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.8rem] font-normal text-forest-950 tracking-tight leading-[1.08]">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.6rem] font-normal text-forest-950 tracking-tight leading-[1.08]">
               Pradheep <br />
               <span className="italic font-normal text-forest-800">Pattambi</span>
             </h1>
@@ -84,7 +84,7 @@ export default function HomePage() {
             </div>
 
             {/* Quick Trust Highlights */}
-            <div className="pt-5 border-t border-[#D8CCA8]/70 grid grid-cols-3 gap-4 max-w-md">
+            <div className="pt-4 border-t border-[#D8CCA8]/70 grid grid-cols-3 gap-4 max-w-md">
               <div>
                 <span className="block font-serif text-2xl sm:text-3xl text-forest-950 font-medium leading-none mb-1">
                   20+

@@ -22,15 +22,6 @@ const navLinks: NavItem[] = [
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -38,31 +29,11 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-[#FAF7F2]/90 backdrop-blur-md shadow-sm border-b border-[#EAE2D3]"
-          : "bg-[#FAF7F2]/70 backdrop-blur-sm border-b border-transparent"
-      }`}
-    >
+    <header className="absolute top-0 inset-x-0 z-50 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 md:h-20">
-          {/* Logo & Identity */}
-          <Link
-            href="/"
-            className="group flex flex-col focus:outline-none"
-            aria-label="Pradheep Pattambi Homepage"
-          >
-            <span className="font-serif text-xl sm:text-2xl font-medium tracking-tight text-forest-950 group-hover:text-forest-800 transition-colors">
-              Pradheep Pattambi
-            </span>
-            <span className="text-[9px] sm:text-[10px] font-sans tracking-[0.22em] uppercase text-olive-700 font-normal mt-0.5">
-              PSYCHOLOGIST &bull; COACH &bull; SPEAKER
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+        <div className="flex items-center justify-between h-20 md:h-24">
+          {/* Desktop Navigation Links — Left/Center (No brand name) */}
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-3">
             {navLinks.map((item) => {
               const isActive =
                 item.href === "/"
@@ -73,10 +44,10 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`relative px-4 py-2 text-sm font-medium transition-colors font-sans rounded-full ${
+                  className={`relative px-4 py-2 text-sm xl:text-base font-medium transition-colors font-sans rounded-full ${
                     isActive
-                      ? "text-forest-950 font-semibold"
-                      : "text-muted-text hover:text-forest-900 hover:bg-[#F3EDE2]"
+                      ? "text-forest-950 font-bold"
+                      : "text-forest-950/80 hover:text-forest-950 hover:bg-forest-950/5"
                   }`}
                 >
                   {item.name}
@@ -88,38 +59,32 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right CTA - Desktop */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Right CTA — Desktop */}
+          <div className="hidden lg:flex items-center gap-5">
             <a
               href="https://api.whatsapp.com/send?phone=919567654880"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-forest-900 hover:text-forest-700 font-medium px-2 py-1"
+              className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-forest-950/80 hover:text-forest-950 font-medium px-2 py-1"
             >
               <Phone className="w-3.5 h-3.5" />
               <span>+91 9567-654-880</span>
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-1.5 px-6 py-2.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm hover:shadow text-sm font-medium tracking-wide group"
+              className="inline-flex items-center justify-center gap-1.5 px-7 py-3 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm hover:shadow text-sm font-medium tracking-wide group"
             >
               <span>Get in Touch</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
 
-          {/* Mobile Hamburger Button */}
-          <div className="flex lg:hidden items-center gap-3">
-            <Link
-              href="/contact"
-              className="sm:inline-flex hidden items-center justify-center px-4 py-2 rounded-full bg-forest-900 text-[#FAF7F2] text-xs font-medium"
-            >
-              Get in Touch
-            </Link>
+          {/* Mobile Top Bar */}
+          <div className="flex lg:hidden items-center justify-between w-full">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-xl text-forest-950 hover:bg-[#F3EDE2] transition-colors focus:outline-none"
+              className="p-2.5 rounded-xl text-forest-950 hover:bg-forest-950/10 transition-colors focus:outline-none"
               aria-label={mobileMenuOpen ? "Close navigation" : "Open navigation"}
             >
               {mobileMenuOpen ? (
@@ -128,6 +93,13 @@ export default function Navbar() {
                 <Menu className="w-6 h-6" />
               )}
             </button>
+
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-forest-900 text-[#FAF7F2] text-xs font-medium shadow-sm"
+            >
+              Get in Touch
+            </Link>
           </div>
         </div>
       </div>

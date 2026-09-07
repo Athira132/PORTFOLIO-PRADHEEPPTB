@@ -74,7 +74,7 @@ export default function CareerPage() {
       {/* ========================================================================= */}
       {/* 1. CAREER HERO — FULL-WIDTH BRIGHT LIGHT WARM BEIGE / IVORY BANNER */}
       {/* ========================================================================= */}
-      <section className="pt-16 sm:pt-24 pb-16 sm:pb-20 bg-[#F5EFEB] border-b border-[#D8CCA8]/60">
+      <section className="pt-28 sm:pt-36 pb-16 sm:pb-20 bg-[#F5EFEB] border-b border-[#D8CCA8]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-5">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[#D8CCA8]/60">
