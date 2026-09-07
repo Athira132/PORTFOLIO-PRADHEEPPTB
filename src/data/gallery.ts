@@ -20,7 +20,7 @@ export const galleryData: GalleryItem[] = [
     id: "gal-1",
     title: "Keynote Address on Mindset Transformation",
     category: "Workshops & Speaking",
-    imageSrc: "/images/pradheep-speaking-1.webp",
+    imageSrc: "/images/photo-2.png",
     description: "Pradheep N.V. engaging a vibrant audience on resilience, emotional intelligence, and purpose.",
     featured: true
   },
@@ -28,7 +28,7 @@ export const galleryData: GalleryItem[] = [
     id: "gal-2",
     title: "Empowerment & Life Skills Seminar",
     category: "Workshops & Speaking",
-    imageSrc: "/images/pradheep-speaking-2.webp",
+    imageSrc: "/images/photo-3.png",
     description: "Interactive session fostering communication, confidence, and leadership among youth and educators.",
     featured: true
   },
@@ -36,7 +36,7 @@ export const galleryData: GalleryItem[] = [
     id: "gal-3",
     title: "Quiet Reflection & Mindful Guidance",
     category: "Counseling & Guidance",
-    imageSrc: "/images/pradheep-counselling.webp",
+    imageSrc: "/images/photo-1.jpg",
     description: "Creating a calm sanctuary for deep self-reflection, understanding, and transformative healing.",
     featured: true
   },
@@ -44,7 +44,7 @@ export const galleryData: GalleryItem[] = [
     id: "gal-4",
     title: "Author & Thought Leader Portrait",
     category: "Personal Growth",
-    imageSrc: "/images/pradheep-about.webp",
+    imageSrc: "/images/photo-4.png",
     description: "Over 20 years of humanitarian dedication, Malayalam literature, and mindful psychology.",
     featured: true
   },
@@ -52,7 +52,7 @@ export const galleryData: GalleryItem[] = [
     id: "gal-5",
     title: "Career Mentorship & Future Roadmaps",
     category: "Counseling & Guidance",
-    imageSrc: "/images/pradheep-career.webp",
+    imageSrc: "/images/photo-2.png",
     description: "Guiding students and job seekers across Pattambi to uncover their innate strengths and career pathways.",
     featured: false
   },
@@ -60,7 +60,7 @@ export const galleryData: GalleryItem[] = [
     id: "gal-6",
     title: "In Service of Human Wellness",
     category: "Moments & Memories",
-    imageSrc: "/images/pradheep-portrait.webp",
+    imageSrc: "/images/photo-1.jpg",
     description: "Reflections from community outreach programs and mindful wellness seminars in Kerala.",
     featured: false
   }

@@ -33,7 +33,7 @@ export default function ContactPage() {
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-white border border-[#EAE2D3] shadow-sm flex items-center justify-center p-3 sm:p-4 shrink-0">
                 <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center">
                   <Image
-                    src="/images/pradheep-about.webp"
+                    src="/images/photo-1.jpg"
                     alt="Pradheep N.V. - Contact & Appointments"
                     fill
                     priority

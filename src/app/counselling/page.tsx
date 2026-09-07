@@ -52,7 +52,7 @@ export default function CounsellingPage() {
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-white border border-[#EAE2D3] shadow-sm flex items-center justify-center p-3 sm:p-4 shrink-0">
                 <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center">
                   <Image
-                    src="/images/pradheep-counselling.webp"
+                    src="/images/photo-1.jpg"
                     alt="Supportive Psychological Counselling Session with Pradheep N.V."
                     fill
                     priority
@@ -109,16 +109,18 @@ export default function CounsellingPage() {
       <section className="py-20 sm:py-28 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Image Col: smaller and well-balanced */}
+            {/* Image Col: 100% visible, object-contain */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-sm sm:max-w-md rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white aspect-[16/11]">
-                <Image
-                  src="/images/pradheep-counselling.webp"
-                  alt="Counseling in Palakkad by Pradheep N.V."
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 35vw"
-                />
+              <div className="relative w-full max-w-sm sm:max-w-md rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white aspect-[4/5] p-3 flex items-center justify-center">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/images/photo-4.png"
+                    alt="Counseling in Palakkad by Pradheep N.V."
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 1024px) 100vw, 35vw"
+                  />
+                </div>
               </div>
             </div>
 

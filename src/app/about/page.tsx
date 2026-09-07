@@ -38,7 +38,7 @@ export default function AboutPage() {
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-white border border-[#EAE2D3] shadow-sm flex items-center justify-center p-3 sm:p-4 shrink-0">
                 <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center">
                   <Image
-                    src="/images/pradheep-portrait.webp"
+                    src="/images/photo-4.png"
                     alt="Pradheep N.V. - Psychologist in Kerala"
                     fill
                     priority
@@ -95,18 +95,19 @@ export default function AboutPage() {
       <section className="py-20 sm:py-28 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Portrait Column: smaller and well-balanced */}
+            {/* Portrait Column: 100% visible, object-contain */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-xs sm:max-w-sm rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white">
-                <Image
-                  src="/images/pradheep-about.webp"
-                  alt="Pradheep N.V. (Pradheep Pattambi)"
-                  width={576}
-                  height={1024}
-                  className="w-full h-auto object-cover max-h-[480px]"
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 30vw"
-                />
+              <div className="relative w-full max-w-xs sm:max-w-sm rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white aspect-[4/5] p-3 flex items-center justify-center">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/images/photo-1.jpg"
+                    alt="Pradheep N.V. (Pradheep Pattambi)"
+                    fill
+                    className="object-contain"
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 30vw"
+                  />
+                </div>
               </div>
             </div>
 

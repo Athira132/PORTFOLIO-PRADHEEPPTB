@@ -25,50 +25,140 @@ export default function HomePage() {
   return (
     <div className="overflow-x-hidden">
       {/* ========================================================================= */}
-      {/* 1. HERO SECTION — FULL-WIDTH BACKGROUND (NO TOP CROP, NO GRADIENTS/OVERLAYS) */}
+      {/* 1. HERO SECTION */}
+      {/* Desktop (md: & up): Full-width background banner with left text */}
+      {/* Mobile (< md): Vertically stacked — Image cleanly on top, text below */}
       {/* ========================================================================= */}
-      <section className="relative w-full min-h-[580px] md:min-h-[640px] lg:h-[calc(100vh-5rem)] max-h-[820px] flex items-center bg-[#FAF7F2] overflow-hidden border-b border-[#EAE2D3]/60">
-        {/* Full-width original photo, anchored to the top so the top is never cropped */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/pradheep-hero.png"
-            alt="Pradheep Pattambi - Psychologist and Life Skill Coach"
-            fill
-            priority
-            quality={100}
-            className="object-cover object-[80%_15%] md:object-[82%_15%]"
-            sizes="100vw"
-          />
+      <section className="relative w-full bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
+        {/* DESKTOP LAYOUT (md and above): Full-width background banner */}
+        <div className="hidden md:flex relative w-full min-h-[580px] lg:h-[calc(100vh-5rem)] max-h-[820px] items-center overflow-hidden">
+          {/* Full-width original photo */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/pradheep-hero.png"
+              alt="Pradheep Pattambi - Psychologist and Life Skill Coach"
+              fill
+              priority
+              quality={100}
+              className="object-cover object-[80%_15%] lg:object-[82%_15%]"
+              sizes="100vw"
+            />
+          </div>
+
+          {/* Hero Content on the left */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-12 md:py-16 w-full flex flex-col justify-center">
+            <div className="max-w-xl lg:max-w-2xl space-y-5">
+              {/* Small Label */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/60 w-fit">
+                <span className="w-2 h-2 rounded-full bg-olive-600" />
+                <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
+                  PSYCHOLOGIST
+                </span>
+              </div>
+
+              {/* Main Heading */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.6rem] font-bold text-forest-950 tracking-tight leading-[1.08] uppercase">
+                PRADHEEP PATTAMBI
+              </h1>
+
+              {/* Description */}
+              <p className="text-forest-950/85 text-base sm:text-lg leading-relaxed font-sans max-w-lg">
+                Are you feeling overwhelmed by life&rsquo;s challenges? Struggling with
+                anxiety, depression, or relationship issues? Seeking a safe space to
+                explore your thoughts and emotions? You&rsquo;ve come to the right place.
+              </p>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center gap-3.5 pt-1">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm hover:shadow-md text-sm sm:text-base font-medium tracking-wide group"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-forest-900/40 text-forest-950 bg-white/70 hover:bg-white transition-colors text-sm sm:text-base font-medium tracking-wide shadow-xs"
+                >
+                  <span>Get in Touch</span>
+                </Link>
+              </div>
+
+              {/* Quick Trust Highlights */}
+              <div className="pt-4 border-t border-[#D8CCA8]/70 grid grid-cols-3 gap-4 max-w-md">
+                <div>
+                  <span className="block text-2xl sm:text-3xl text-forest-950 font-bold leading-none mb-1">
+                    20+
+                  </span>
+                  <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider font-semibold">
+                    Years Service
+                  </span>
+                </div>
+                <div>
+                  <span className="block text-2xl sm:text-3xl text-forest-950 font-bold leading-none mb-1">
+                    1000s
+                  </span>
+                  <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider font-semibold">
+                    Lives Guided
+                  </span>
+                </div>
+                <div>
+                  <span className="block text-2xl sm:text-3xl text-forest-950 font-bold leading-none mb-1">
+                    100%
+                  </span>
+                  <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider font-semibold">
+                    Confidential
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Hero Content on the left */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 w-full flex flex-col justify-center">
-          <div className="max-w-xl lg:max-w-2xl space-y-4 sm:space-y-5">
+        {/* MOBILE LAYOUT (under md): Vertically stacked, text NEVER overlaps photo */}
+        <div className="md:hidden flex flex-col w-full">
+          {/* Top: Fully visible original hero image in its own frame */}
+          <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] bg-[#FAF7F2] overflow-hidden">
+            <Image
+              src="/images/pradheep-hero.png"
+              alt="Pradheep Pattambi - Psychologist and Life Skill Coach"
+              fill
+              priority
+              quality={100}
+              className="object-cover object-[78%_12%]"
+              sizes="100vw"
+            />
+          </div>
+
+          {/* Bottom: Clean content area below image — 0% overlap with person */}
+          <div className="px-5 py-8 sm:px-8 sm:py-10 space-y-5 bg-[#FAF7F2]">
             {/* Small Label */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/60 w-fit">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/60 w-fit">
               <span className="w-2 h-2 rounded-full bg-olive-600" />
-              <span className="text-[11px] sm:text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
+              <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
                 PSYCHOLOGIST
               </span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.6rem] font-bold text-forest-950 tracking-tight leading-[1.08] uppercase">
+            <h1 className="text-3xl sm:text-4xl font-bold text-forest-950 tracking-tight leading-[1.1] uppercase">
               PRADHEEP PATTAMBI
             </h1>
 
             {/* Description */}
-            <p className="text-forest-950/85 text-base sm:text-lg leading-relaxed font-sans max-w-lg">
+            <p className="text-forest-950/85 text-base leading-relaxed font-sans">
               Are you feeling overwhelmed by life&rsquo;s challenges? Struggling with
               anxiety, depression, or relationship issues? Seeking a safe space to
               explore your thoughts and emotions? You&rsquo;ve come to the right place.
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-1">
+            <div className="flex flex-col sm:flex-row gap-3 pt-1">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm hover:shadow-md text-sm sm:text-base font-medium tracking-wide group"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm text-sm font-medium tracking-wide group"
               >
                 <span>Learn More</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -76,35 +166,35 @@ export default function HomePage() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-forest-900/40 text-forest-950 bg-white/70 hover:bg-white transition-colors text-sm sm:text-base font-medium tracking-wide shadow-xs"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-forest-900/40 text-forest-950 bg-white hover:bg-[#F3EDE2] transition-colors text-sm font-medium tracking-wide shadow-xs"
               >
                 <span>Get in Touch</span>
               </Link>
             </div>
 
             {/* Quick Trust Highlights */}
-            <div className="pt-4 border-t border-[#D8CCA8]/70 grid grid-cols-3 gap-4 max-w-md">
+            <div className="pt-4 border-t border-[#D8CCA8]/70 grid grid-cols-3 gap-3">
               <div>
-                <span className="block text-2xl sm:text-3xl text-forest-950 font-bold leading-none mb-1">
+                <span className="block text-2xl text-forest-950 font-bold leading-none mb-1">
                   20+
                 </span>
-                <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider">
+                <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider font-semibold">
                   Years Service
                 </span>
               </div>
               <div>
-                <span className="block text-2xl sm:text-3xl text-forest-950 font-bold leading-none mb-1">
+                <span className="block text-2xl text-forest-950 font-bold leading-none mb-1">
                   1000s
                 </span>
-                <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider">
+                <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider font-semibold">
                   Lives Guided
                 </span>
               </div>
               <div>
-                <span className="block text-2xl sm:text-3xl text-forest-950 font-bold leading-none mb-1">
+                <span className="block text-2xl text-forest-950 font-bold leading-none mb-1">
                   100%
                 </span>
-                <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider">
+                <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider font-semibold">
                   Confidential
                 </span>
               </div>
@@ -119,17 +209,18 @@ export default function HomePage() {
       <section className="py-20 sm:py-28 lg:py-32 bg-[#F8F5EE] border-b border-[#EAE2D3]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Left: Distinct photo (smaller & balanced) */}
+            {/* Left: Distinct photo (100% fully visible, object-contain) */}
             <div className="lg:col-span-5 flex justify-center order-2 lg:order-1">
-              <div className="relative w-full max-w-sm sm:max-w-md rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white">
-                <Image
-                  src="/images/pradheep-portrait.webp"
-                  alt="Pradheep N.V. Portrait"
-                  width={598}
-                  height={1024}
-                  className="w-full h-auto object-cover max-h-[460px]"
-                  sizes="(max-width: 1024px) 100vw, 35vw"
-                />
+              <div className="relative w-full max-w-sm sm:max-w-md rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white aspect-[4/5] p-3 flex items-center justify-center">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/images/photo-4.png"
+                    alt="Pradheep N.V. Portrait - Psychologist in Kerala"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 1024px) 100vw, 35vw"
+                  />
+                </div>
               </div>
             </div>
 
