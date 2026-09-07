@@ -25,10 +25,10 @@ export default function HomePage() {
   return (
     <div className="overflow-x-hidden">
       {/* ========================================================================= */}
-      {/* 1. HERO SECTION — FULL-WIDTH BACKGROUND IMAGE BANNER */}
+      {/* 1. HERO SECTION — FULL-WIDTH BACKGROUND IMAGE BANNER (NO OVERLAYS / GRADIENTS) */}
       {/* ========================================================================= */}
-      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center bg-[#FAF7F2] overflow-hidden border-b border-[#EAE2D3]/60">
-        {/* Full-width background image */}
+      <section className="relative h-[calc(100svh-4.5rem)] md:h-[calc(100vh-5rem)] min-h-[560px] max-h-[820px] flex items-center bg-[#FAF7F2] overflow-hidden border-b border-[#EAE2D3]/60">
+        {/* Full-width background image with natural colors and zero overlays */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/pradheep-hero.png"
@@ -36,43 +36,40 @@ export default function HomePage() {
             fill
             priority
             quality={95}
-            className="object-cover object-right md:object-[82%_center]"
+            className="object-cover object-[80%_bottom] md:object-[82%_bottom]"
             sizes="100vw"
           />
-          {/* Subtle gradient overlay to keep text ultra-readable while keeping Pradheep natural on the right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2] via-[#FAF7F2]/90 md:via-[#FAF7F2]/75 to-transparent/10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2] via-transparent to-transparent md:hidden" />
         </div>
 
         {/* Hero Content on the left */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 w-full">
-          <div className="max-w-xl lg:max-w-2xl space-y-6 sm:space-y-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 w-full flex flex-col justify-center">
+          <div className="max-w-xl lg:max-w-2xl space-y-5 sm:space-y-6">
             {/* Small Label */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA]/90 backdrop-blur-sm border border-[#D8CCA8]/60">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/60 w-fit">
               <span className="w-2 h-2 rounded-full bg-olive-600" />
-              <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
+              <span className="text-[11px] sm:text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
                 PSYCHOLOGIST
               </span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.4rem] font-normal text-forest-950 tracking-tight leading-[1.05]">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.8rem] font-normal text-forest-950 tracking-tight leading-[1.08]">
               Pradheep <br />
               <span className="italic font-normal text-forest-800">Pattambi</span>
             </h1>
 
             {/* Description */}
-            <p className="text-muted-text text-lg sm:text-xl leading-relaxed font-sans">
+            <p className="text-forest-950/85 text-base sm:text-lg leading-relaxed font-sans max-w-lg">
               Are you feeling overwhelmed by life&rsquo;s challenges? Struggling with
               anxiety, depression, or relationship issues? Seeking a safe space to
               explore your thoughts and emotions? You&rsquo;ve come to the right place.
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-3.5 pt-1">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm hover:shadow-md text-sm sm:text-base font-medium tracking-wide group"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm hover:shadow-md text-sm sm:text-base font-medium tracking-wide group"
               >
                 <span>Learn More</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -80,35 +77,35 @@ export default function HomePage() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-forest-900/40 text-forest-950 bg-[#FAF7F2]/80 backdrop-blur-sm hover:bg-[#F3EDE2] transition-colors text-sm sm:text-base font-medium tracking-wide"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-forest-900/40 text-forest-950 bg-white/70 hover:bg-white transition-colors text-sm sm:text-base font-medium tracking-wide shadow-xs"
               >
                 <span>Get in Touch</span>
               </Link>
             </div>
 
             {/* Quick Trust Highlights */}
-            <div className="pt-6 sm:pt-8 border-t border-[#D8CCA8]/70 grid grid-cols-3 gap-4 sm:gap-6">
+            <div className="pt-5 border-t border-[#D8CCA8]/70 grid grid-cols-3 gap-4 max-w-md">
               <div>
-                <span className="block font-serif text-2xl sm:text-3xl text-forest-950 font-medium">
+                <span className="block font-serif text-2xl sm:text-3xl text-forest-950 font-medium leading-none mb-1">
                   20+
                 </span>
-                <span className="text-[11px] sm:text-xs text-muted-text font-sans uppercase tracking-wider">
+                <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider">
                   Years Service
                 </span>
               </div>
               <div>
-                <span className="block font-serif text-2xl sm:text-3xl text-forest-950 font-medium">
+                <span className="block font-serif text-2xl sm:text-3xl text-forest-950 font-medium leading-none mb-1">
                   1000s
                 </span>
-                <span className="text-[11px] sm:text-xs text-muted-text font-sans uppercase tracking-wider">
+                <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider">
                   Lives Guided
                 </span>
               </div>
               <div>
-                <span className="block font-serif text-2xl sm:text-3xl text-forest-950 font-medium">
+                <span className="block font-serif text-2xl sm:text-3xl text-forest-950 font-medium leading-none mb-1">
                   100%
                 </span>
-                <span className="text-[11px] sm:text-xs text-muted-text font-sans uppercase tracking-wider">
+                <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider">
                   Confidential
                 </span>
               </div>
@@ -238,7 +235,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Gallery Preview Grid: smaller and cleaner without captions */}
+          {/* Gallery Preview Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {previewGallery.map((item) => (
               <Link
