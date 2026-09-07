@@ -46,18 +46,18 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between h-18 md:h-20">
           {/* Logo & Identity */}
           <Link
             href="/"
             className="group flex flex-col focus:outline-none"
             aria-label="Pradheep Pattambi Homepage"
           >
-            <span className="font-serif text-2xl sm:text-3xl font-semibold tracking-tight text-forest-950 group-hover:text-forest-800 transition-colors">
+            <span className="font-serif text-xl sm:text-2xl font-medium tracking-tight text-forest-950 group-hover:text-forest-800 transition-colors">
               Pradheep Pattambi
             </span>
-            <span className="text-[11px] sm:text-xs font-sans tracking-[0.18em] uppercase text-olive-700 font-medium -mt-0.5">
-              Psychologist &bull; Coach &bull; Speaker
+            <span className="text-[9px] sm:text-[10px] font-sans tracking-[0.22em] uppercase text-olive-700 font-normal mt-0.5">
+              PSYCHOLOGIST &bull; COACH &bull; SPEAKER
             </span>
           </Link>
 

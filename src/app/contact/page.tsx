@@ -20,11 +20,11 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-[#FAF7F2]">
       {/* ========================================================================= */}
-      {/* 1. CONTACT HERO */}
+      {/* 1. CONTACT HERO — FULL-WIDTH BRIGHT & WELCOMING BANNER */}
       {/* ========================================================================= */}
-      <section className="pt-12 sm:pt-20 pb-12 sm:pb-16 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
+      <section className="pt-16 sm:pt-24 pb-16 sm:pb-20 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50 mb-4">
             <span className="w-2 h-2 rounded-full bg-olive-600" />
@@ -44,9 +44,9 @@ export default function ContactPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. CONTACT DETAILS & FORM SECTION */}
+      {/* 2. CONTACT DETAILS & FORM SECTION — BRIGHT SOFT CREAM */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-24 bg-[#F4EFE6]/50">
+      <section className="py-16 sm:py-24 bg-[#F8F5EE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Left Col: Contact Information Cards & Social */}

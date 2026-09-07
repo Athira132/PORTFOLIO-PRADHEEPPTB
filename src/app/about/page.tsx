@@ -28,12 +28,12 @@ export default function AboutPage() {
   return (
     <div className="overflow-x-hidden">
       {/* ========================================================================= */}
-      {/* 1. ABOUT HERO */}
+      {/* 1. ABOUT HERO — FULL-WIDTH BRIGHT EDITORIAL BANNER */}
       {/* ========================================================================= */}
-      <section className="pt-12 sm:pt-20 pb-16 sm:pb-24 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
+      <section className="pt-16 sm:pt-24 pb-16 sm:pb-20 bg-[#EDF2EB] border-b border-[#D8CCA8]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50">
+          <div className="max-w-4xl mx-auto text-center space-y-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[#D8CCA8]/60">
               <span className="w-2 h-2 rounded-full bg-olive-600" />
               <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
                 MEET YOUR GUIDE
@@ -53,33 +53,23 @@ export default function AboutPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. BIOGRAPHY CONTENT */}
+      {/* 2. BIOGRAPHY CONTENT — BALANCED WITH COMPACT ELEGANT PHOTO */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#F4EFE6]/50">
+      <section className="py-20 sm:py-28 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Portrait Column */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-[2rem] overflow-hidden shadow-xl border border-[#EAE2D3] bg-white">
+            {/* Portrait Column: smaller and well-balanced */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-xs sm:max-w-sm rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white">
                 <Image
-                  src="/images/pradheep-portrait.webp"
+                  src="/images/pradheep-about.webp"
                   alt="Pradheep N.V. (Pradheep Pattambi)"
-                  width={598}
+                  width={576}
                   height={1024}
-                  className="w-full h-auto object-cover max-h-[620px]"
+                  className="w-full h-auto object-cover max-h-[480px]"
                   priority
-                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  sizes="(max-width: 1024px) 100vw, 30vw"
                 />
-              </div>
-
-              {/* Accolade badge */}
-              <div className="mt-6 p-5 rounded-2xl bg-white border border-[#EAE2D3] shadow-sm space-y-2">
-                <span className="text-xs uppercase tracking-widest text-olive-700 font-bold">
-                  Rooted in Kerala
-                </span>
-                <p className="text-xs text-forest-900 leading-relaxed">
-                  Born in Pattambi &bull; 20+ Years in Kerala Government Service &bull; Author of 3 Malayalam Poetry Books
-                </p>
               </div>
             </div>
 
@@ -126,7 +116,7 @@ export default function AboutPage() {
                   href="https://wa.link/jc9lgn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-md group"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-sm group"
                 >
                   <span>Let’s talk with me</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -145,9 +135,9 @@ export default function AboutPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. THREE CORE PILLARS OF EXPERTISE */}
+      {/* 3. THREE CORE PILLARS OF EXPERTISE — BRIGHT SOFT CREAM */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#FAF7F2]">
+      <section className="py-20 sm:py-28 bg-[#F8F5EE] border-t border-b border-[#EAE2D3]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="AREAS OF MASTERY"
@@ -186,8 +176,8 @@ export default function AboutPage() {
             </div>
 
             {/* Card 2 */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-[#F4EFE6] border border-[#EAE2D3] shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-2xl bg-forest-900 text-[#FAF7F2] flex items-center justify-center mb-6">
+            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#EAE2D3] shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center mb-6">
                 <Mic className="w-7 h-7" />
               </div>
               <h3 className="font-serif text-2xl text-forest-950 font-medium mb-3">
@@ -245,21 +235,21 @@ export default function AboutPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 4. PHILOSOPHY SECTION */}
+      {/* 4. PHILOSOPHY SECTION — BRIGHT PALE SAGE BACKGROUND */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-36 bg-[#143022] text-[#FAF7F2] relative">
+      <section className="py-20 sm:py-28 bg-[#EDF2EB] text-forest-950 border-b border-[#D8CCA8]/60">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-semibold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-[#D8CCA8]/60 shadow-sm">
+            <span className="text-xs uppercase tracking-[0.2em] text-olive-800 font-semibold">
               MY PHILOSOPHY
             </span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-tight text-[#FAF7F2]">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-tight text-forest-950">
             Delving into the uncharted realms of your consciousness to light the way toward personal evolution
           </h2>
 
-          <div className="space-y-6 text-[#E6E0D4] text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+          <div className="space-y-5 text-muted-text text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
             <p>
               &ldquo;Are you feeling overwhelmed by life’s challenges? Struggling with anxiety,
               depression, or relationship issues? Searching for a safe, non-judgmental space to
@@ -277,7 +267,7 @@ export default function AboutPage() {
               href="https://wa.link/jc9lgn"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#FAF7F2] text-forest-950 hover:bg-[#F3EDE2] transition-colors text-sm sm:text-base font-medium shadow-md group"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium shadow-sm group"
             >
               <span>Connect on WhatsApp</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -287,9 +277,9 @@ export default function AboutPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 5. FULL-WIDTH TESTIMONIALS */}
+      {/* 5. FULL-WIDTH TESTIMONIALS — BRIGHT IVORY */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-36 bg-[#FAF7F2]">
+      <section className="py-20 sm:py-28 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="CLIENT EXPERIENCES"
@@ -307,9 +297,9 @@ export default function AboutPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 6. FAQ SECTION */}
+      {/* 6. FAQ SECTION — BRIGHT SOFT CREAM */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-36 bg-[#F4EFE6]/50 border-t border-[#EAE2D3]/60">
+      <section className="py-20 sm:py-28 bg-[#F8F5EE] border-t border-[#EAE2D3]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="FAQ"

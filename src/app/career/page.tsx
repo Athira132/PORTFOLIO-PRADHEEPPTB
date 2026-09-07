@@ -72,12 +72,12 @@ export default function CareerPage() {
   return (
     <div className="overflow-x-hidden">
       {/* ========================================================================= */}
-      {/* 1. CAREER HERO */}
+      {/* 1. CAREER HERO — FULL-WIDTH BRIGHT LIGHT WARM BEIGE / IVORY BANNER */}
       {/* ========================================================================= */}
-      <section className="pt-12 sm:pt-20 pb-16 sm:pb-24 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
+      <section className="pt-16 sm:pt-24 pb-16 sm:pb-20 bg-[#F5EFEB] border-b border-[#D8CCA8]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50">
+          <div className="max-w-4xl mx-auto text-center space-y-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[#D8CCA8]/60">
               <span className="w-2 h-2 rounded-full bg-olive-600" />
               <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
                 PATTAMBI CAREER GUIDANCE
@@ -93,10 +93,10 @@ export default function CareerPage() {
               strengths, choose the right path, and build a confident future.&rdquo;
             </p>
 
-            <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+            <div className="pt-3 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-md group"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-sm group"
               >
                 <span>Book Your Career Counselling Session Today</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -105,7 +105,7 @@ export default function CareerPage() {
                 href="https://api.whatsapp.com/send?phone=919567654880"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-forest-900/30 text-forest-950 hover:bg-[#F3EDE2] transition-colors text-sm sm:text-base font-medium tracking-wide"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-forest-900/30 text-forest-950 bg-white hover:bg-[#F3EDE2] transition-colors text-sm sm:text-base font-medium tracking-wide"
               >
                 <span>Chat with Pradheep Sir</span>
               </a>
@@ -115,30 +115,21 @@ export default function CareerPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. CAREER OVERVIEW CONTENT */}
+      {/* 2. CAREER OVERVIEW CONTENT — REFINED SMALLER PHOTO */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#F4EFE6]/50 border-b border-[#EAE2D3]/60">
+      <section className="py-20 sm:py-28 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Image Col */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#EAE2D3] bg-white">
+            {/* Image Col: smaller and well-balanced */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-sm sm:max-w-md rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white aspect-[16/11]">
                 <Image
                   src="/images/pradheep-career.webp"
                   alt="Career Guidance in Pattambi"
-                  width={768}
-                  height={432}
-                  className="w-full h-auto object-cover"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 35vw"
                 />
-              </div>
-              <div className="mt-6 p-6 rounded-2xl bg-white border border-[#EAE2D3] space-y-2">
-                <p className="text-xs uppercase tracking-wider text-olive-700 font-semibold">
-                  Personalized Roadmap
-                </p>
-                <p className="text-xs text-muted-text leading-relaxed">
-                  Tailored psychological assessments that reveal cognitive patterns, natural motivations, and real-world avenues.
-                </p>
               </div>
             </div>
 
@@ -179,7 +170,7 @@ export default function CareerPage() {
               <div className="pt-2">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-md group"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-sm group"
                 >
                   <span>Book a Session</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -191,9 +182,9 @@ export default function CareerPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. WHY GUIDANCE MATTERS */}
+      {/* 3. WHY GUIDANCE MATTERS — BRIGHT SOFT CREAM */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#FAF7F2]">
+      <section className="py-20 sm:py-28 bg-[#F8F5EE] border-t border-b border-[#EAE2D3]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="THE HIDDEN RISKS"
@@ -218,9 +209,9 @@ export default function CareerPage() {
             </div>
 
             {/* Box 2 */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-[#F4EFE6] border border-[#EAE2D3] shadow-sm space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-forest-900 text-[#FAF7F2] flex items-center justify-center">
-                <HelpCircle className="w-6 h-6" />
+            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#EAE2D3] shadow-sm space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center">
+                <HelpCircle className="w-6 h-6 text-olive-700" />
               </div>
               <h3 className="font-serif text-2xl text-forest-950 font-medium">
                 Peer Influence & Herd Mentality
@@ -234,7 +225,7 @@ export default function CareerPage() {
             {/* Box 3 */}
             <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#EAE2D3] shadow-sm space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center">
-                <Lightbulb className="w-6 h-6 text-olive-600" />
+                <Lightbulb className="w-6 h-6 text-olive-700" />
               </div>
               <h3 className="font-serif text-2xl text-forest-950 font-medium">
                 Lack of Career Awareness
@@ -249,16 +240,16 @@ export default function CareerPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 4. WHO SHOULD CONSIDER CAREER COUNSELLING? */}
+      {/* 4. WHO SHOULD CONSIDER CAREER COUNSELLING? — BRIGHT LIGHT BEIGE / IVORY */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#143022] text-[#FAF7F2]">
+      <section className="py-20 sm:py-28 bg-[#F5EFEB] text-forest-950 border-b border-[#D8CCA8]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="TARGETED GUIDANCE"
             title="Who Should Consider Career Counselling?"
             description="Whether at the onset of higher education or re-evaluating decades in the workplace, tailored clarity is available."
             align="center"
-            light={true}
+            light={false}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -267,33 +258,33 @@ export default function CareerPage() {
               return (
                 <div
                   key={group.title}
-                  className="p-8 sm:p-10 rounded-3xl bg-[#1B3E2D] border border-[#2B5D45] space-y-6"
+                  className="p-8 sm:p-10 rounded-3xl bg-white border border-[#EAE2D3] shadow-sm space-y-6"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-[#28573E] text-[#C5A880] flex items-center justify-center shrink-0">
-                      <IconComp className="w-7 h-7" />
+                    <div className="w-14 h-14 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center shrink-0">
+                      <IconComp className="w-7 h-7 text-olive-700" />
                     </div>
                     <div>
-                      <h3 className="font-serif text-2xl sm:text-3xl font-medium text-[#FAF7F2]">
+                      <h3 className="font-serif text-2xl sm:text-3xl font-medium text-forest-950">
                         {group.title}
                       </h3>
-                      <span className="text-xs uppercase tracking-wider text-[#C5A880] font-semibold">
+                      <span className="text-xs uppercase tracking-wider text-olive-700 font-semibold">
                         Pattambi & Palakkad Mentorship
                       </span>
                     </div>
                   </div>
 
-                  <p className="text-[#C8D4CC] text-sm sm:text-base leading-relaxed">
+                  <p className="text-muted-text text-sm sm:text-base leading-relaxed">
                     {group.description}
                   </p>
 
-                  <ul className="space-y-2.5 pt-2 border-t border-[#2B5D45]">
+                  <ul className="space-y-2.5 pt-2 border-t border-[#F0EAE0]">
                     {group.points.map((pt, idx) => (
                       <li
                         key={idx}
-                        className="flex items-center gap-2.5 text-xs sm:text-sm text-[#FAF7F2]/90"
+                        className="flex items-center gap-2.5 text-xs sm:text-sm text-forest-950"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-olive-600 shrink-0" />
                         <span>{pt}</span>
                       </li>
                     ))}
@@ -306,9 +297,9 @@ export default function CareerPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 5. MY APPROACH TO CAREER COUNSELLING */}
+      {/* 5. MY APPROACH TO CAREER COUNSELLING — BRIGHT WARM CREAM */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#FAF7F2]">
+      <section className="py-20 sm:py-28 bg-[#FAF7F2]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
           <SectionHeading
             label="THE METHODOLOGY"
@@ -318,7 +309,7 @@ export default function CareerPage() {
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
-            <div className="p-8 rounded-3xl bg-white border border-[#EAE2D3]">
+            <div className="p-8 rounded-3xl bg-white border border-[#EAE2D3] shadow-sm">
               <span className="font-serif text-3xl text-olive-700 font-bold block mb-3">
                 01.
               </span>
@@ -330,7 +321,7 @@ export default function CareerPage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-[#F4EFE6] border border-[#EAE2D3]">
+            <div className="p-8 rounded-3xl bg-[#F8F5EE] border border-[#EAE2D3] shadow-sm">
               <span className="font-serif text-3xl text-forest-900 font-bold block mb-3">
                 02.
               </span>
@@ -342,7 +333,7 @@ export default function CareerPage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-white border border-[#EAE2D3]">
+            <div className="p-8 rounded-3xl bg-white border border-[#EAE2D3] shadow-sm">
               <span className="font-serif text-3xl text-olive-700 font-bold block mb-3">
                 03.
               </span>
@@ -360,7 +351,7 @@ export default function CareerPage() {
               href="https://api.whatsapp.com/send?phone=919567654880"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-9 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-base font-medium shadow-md group"
+              className="inline-flex items-center gap-2 px-9 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-base font-medium shadow-sm group"
             >
               <span>Let’s Talk</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

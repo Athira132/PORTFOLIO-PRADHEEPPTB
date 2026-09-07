@@ -63,13 +63,5 @@ export const galleryData: GalleryItem[] = [
     imageSrc: "/images/pradheep-portrait.webp",
     description: "Reflections from community outreach programs and mindful wellness seminars in Kerala.",
     featured: false
-  },
-  {
-    id: "gal-7",
-    title: "Sanctuary for the Mind",
-    category: "Personal Growth",
-    imageSrc: "/images/pradheep-hero.png",
-    description: "A serene space dedicated to uncovering resilience, clarity, and personal evolution.",
-    featured: true
   }
 ];

@@ -42,12 +42,12 @@ export default function CounsellingPage() {
   return (
     <div className="overflow-x-hidden">
       {/* ========================================================================= */}
-      {/* 1. COUNSELLING HERO */}
+      {/* 1. COUNSELLING HERO — FULL-WIDTH BRIGHT PALE GREEN / CREAM BANNER */}
       {/* ========================================================================= */}
-      <section className="pt-12 sm:pt-20 pb-16 sm:pb-24 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
+      <section className="pt-16 sm:pt-24 pb-16 sm:pb-20 bg-[#EBF1EA] border-b border-[#D8CCA8]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50">
+          <div className="max-w-4xl mx-auto text-center space-y-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-[#D8CCA8]/60">
               <span className="w-2 h-2 rounded-full bg-olive-600" />
               <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
                 CLINICAL & PERSONAL COUNSELLING
@@ -62,10 +62,10 @@ export default function CounsellingPage() {
               Safe, confidential psychological support to help you overcome anxiety, heal emotional wounds, and rediscover inner calm.
             </p>
 
-            <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+            <div className="pt-3 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-md group"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-sm group"
               >
                 <span>Fix an Appointment</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -74,7 +74,7 @@ export default function CounsellingPage() {
                 href="https://wa.link/n8jdj7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-forest-900/30 text-forest-950 hover:bg-[#F3EDE2] transition-colors text-sm sm:text-base font-medium tracking-wide"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-forest-900/30 text-forest-950 bg-white hover:bg-[#F3EDE2] transition-colors text-sm sm:text-base font-medium tracking-wide"
               >
                 <span>WhatsApp Appointment</span>
               </a>
@@ -84,31 +84,21 @@ export default function CounsellingPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. MAIN COUNSELLING CONTENT: PSYCHOLOGIST IN PALAKKAD */}
+      {/* 2. MAIN COUNSELLING CONTENT: PSYCHOLOGIST IN PALAKKAD — REFINED IMAGE */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#F4EFE6]/50 border-b border-[#EAE2D3]/60">
+      <section className="py-20 sm:py-28 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Image Col */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#EAE2D3] bg-white">
+            {/* Image Col: smaller and well-balanced */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-sm sm:max-w-md rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white aspect-[16/11]">
                 <Image
                   src="/images/pradheep-counselling.webp"
                   alt="Counseling in Palakkad by Pradheep N.V."
-                  width={768}
-                  height={432}
-                  className="w-full h-auto object-cover"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 35vw"
                 />
-              </div>
-              <div className="mt-6 p-6 rounded-2xl bg-white border border-[#EAE2D3] space-y-2">
-                <div className="flex items-center gap-2 text-olive-700 font-semibold text-xs uppercase tracking-wider">
-                  <ShieldCheck className="w-4 h-4" />
-                  <span>Confidential Haven</span>
-                </div>
-                <p className="text-xs text-muted-text leading-relaxed">
-                  Every counseling interaction in Palakkad is held under strict ethical privacy and unconditional empathetic regard.
-                </p>
               </div>
             </div>
 
@@ -154,7 +144,7 @@ export default function CounsellingPage() {
                   href="https://wa.link/n8jdj7"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-md group"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-sm group"
                 >
                   <span>Get in Touch</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -168,7 +158,7 @@ export default function CounsellingPage() {
       {/* ========================================================================= */}
       {/* 3. THREE COUNSELLING SERVICE CARDS */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#FAF7F2]">
+      <section className="py-20 sm:py-28 bg-[#F8F5EE] border-t border-b border-[#EAE2D3]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="THERAPEUTIC OFFERINGS"
@@ -186,33 +176,33 @@ export default function CounsellingPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 4. TRUST SECTION: 6-ITEM GRID */}
+      {/* 4. TRUST SECTION: 6-ITEM GRID — BRIGHT & FRESH PALE SAGE */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#143022] text-[#FAF7F2]">
+      <section className="py-20 sm:py-28 bg-[#EDF2EB] text-forest-950 border-b border-[#D8CCA8]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="WHY CHOOSE PRADHEEP N.V."
             title="A Foundation Built on Trust & Compassion"
             description="Our therapeutic relationships are grounded in professional ethics, privacy, and dedicated guidance."
             align="center"
-            light={true}
+            light={false}
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {trustFeaturesData.map((feature) => {
               const IconComponent = trustIconMap[feature.iconName] || ShieldCheck;
               return (
                 <div
                   key={feature.id}
-                  className="p-8 rounded-3xl bg-[#1B3E2D] border border-[#2B5D45] hover:border-[#C5A880] transition-colors"
+                  className="p-8 rounded-3xl bg-white border border-[#EAE2D3] shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-[#28573E] text-[#C5A880] flex items-center justify-center mb-6">
-                    <IconComponent className="w-6 h-6" />
+                  <div className="w-12 h-12 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center mb-6">
+                    <IconComponent className="w-6 h-6 text-olive-700" />
                   </div>
-                  <h3 className="font-serif text-2xl font-normal text-[#FAF7F2] mb-3">
+                  <h3 className="font-serif text-2xl font-normal text-forest-950 mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-[#C8D4CC] text-sm leading-relaxed">
+                  <p className="text-muted-text text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -223,9 +213,9 @@ export default function CounsellingPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 5. TESTIMONIALS */}
+      {/* 5. TESTIMONIALS — BRIGHT WARM CREAM */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#FAF7F2]">
+      <section className="py-20 sm:py-28 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="CLIENT FEEDBACK"
@@ -243,9 +233,9 @@ export default function CounsellingPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 6. FAQ SECTION */}
+      {/* 6. FAQ SECTION — BRIGHT SOFT CREAM */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#F4EFE6]/50 border-t border-[#EAE2D3]/60">
+      <section className="py-20 sm:py-28 bg-[#F8F5EE] border-t border-[#EAE2D3]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="COUNSELLING FAQ"

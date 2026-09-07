@@ -22,16 +22,16 @@ export default function GalleryPage() {
       : galleryData.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-[#FAF8F5]">
       {/* ========================================================================= */}
-      {/* 1. GALLERY HERO */}
+      {/* 1. GALLERY HERO — FULL-WIDTH BRIGHT BANNER */}
       {/* ========================================================================= */}
-      <section className="pt-12 sm:pt-20 pb-12 sm:pb-16 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
+      <section className="pt-16 sm:pt-24 pb-12 sm:pb-16 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50 mb-4">
             <span className="w-2 h-2 rounded-full bg-olive-600" />
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
-              VISUAL CHRONICLES
+              VISUAL ARCHIVE
             </span>
           </div>
 
@@ -68,19 +68,19 @@ export default function GalleryPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. GALLERY GRID */}
+      {/* 2. GALLERY GRID — REFINED, SMALLER PHOTOS, NO CAPTION OVERLAYS */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-24 bg-[#FAF7F2]">
+      <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map((item) => (
               <div
                 key={item.id}
                 onClick={() => setActiveItem(item)}
-                className="group relative rounded-3xl overflow-hidden bg-white border border-[#EAE2D3] shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between"
+                className="group relative rounded-2xl overflow-hidden bg-white border border-[#EAE2D3] shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col justify-between"
               >
-                {/* Image Container */}
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#EAE2D3]">
+                {/* Image Container: smaller and well-proportioned */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#EAE2D3]">
                   <Image
                     src={item.imageSrc}
                     alt={item.title}
@@ -88,31 +88,22 @@ export default function GalleryPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  {/* Subtle Hover Action Pill */}
                   <div className="absolute inset-0 bg-forest-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="px-4 py-2 rounded-full bg-white/90 text-forest-950 text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5 shadow-md">
+                    <span className="px-4 py-1.5 rounded-full bg-white/95 text-forest-950 text-xs font-medium tracking-wide flex items-center gap-1.5 shadow-sm">
                       <Maximize2 className="w-3.5 h-3.5" />
-                      <span>Enlarge Photo</span>
+                      <span>View</span>
                     </span>
                   </div>
                 </div>
 
-                {/* Info Box */}
-                <div className="p-6">
-                  <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-wider font-semibold text-olive-700">
-                      <Tag className="w-3 h-3" />
-                      <span>{item.category}</span>
-                    </span>
-                  </div>
-
-                  <h3 className="font-serif text-xl font-medium text-forest-950 group-hover:text-forest-800 transition-colors line-clamp-1">
+                {/* Clean Title & Category only (no long description/captions) */}
+                <div className="p-5">
+                  <span className="text-[10px] uppercase tracking-wider font-semibold text-olive-700 block mb-1">
+                    {item.category}
+                  </span>
+                  <h3 className="font-serif text-lg font-medium text-forest-950 group-hover:text-forest-800 transition-colors line-clamp-1">
                     {item.title}
                   </h3>
-
-                  <p className="mt-2 text-xs sm:text-sm text-muted-text leading-relaxed line-clamp-2">
-                    {item.description}
-                  </p>
                 </div>
               </div>
             ))}
@@ -134,9 +125,9 @@ export default function GalleryPage() {
       <Lightbox item={activeItem} onClose={() => setActiveItem(null)} />
 
       {/* ========================================================================= */}
-      {/* 4. BOTTOM BANNER */}
+      {/* 4. BOTTOM BANNER — BRIGHT WARM CREAM */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-20 bg-[#F4EFE6]/70 border-t border-[#EAE2D3]/60">
+      <section className="py-16 sm:py-20 bg-[#F4EFE6] border-t border-[#EAE2D3]/60">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
           <h2 className="font-serif text-3xl sm:text-4xl text-forest-950 font-normal">
             Invite Pradheep N.V. to your next event or workshop
