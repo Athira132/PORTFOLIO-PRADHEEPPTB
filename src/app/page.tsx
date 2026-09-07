@@ -27,7 +27,7 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* 1. HERO SECTION — FULL-WIDTH BACKGROUND (NO TOP CROP, NO GRADIENTS/OVERLAYS) */}
       {/* ========================================================================= */}
-      <section className="relative w-full min-h-[620px] md:min-h-[680px] lg:h-[100vh] max-h-[860px] flex items-center bg-[#FAF7F2] overflow-hidden border-b border-[#EAE2D3]/60">
+      <section className="relative w-full min-h-[580px] md:min-h-[640px] lg:h-[calc(100vh-5rem)] max-h-[820px] flex items-center bg-[#FAF7F2] overflow-hidden border-b border-[#EAE2D3]/60">
         {/* Full-width original photo, anchored to the top so the top is never cropped */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -41,8 +41,8 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Hero Content on the left (with padding to clear the transparent navbar) */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-12 w-full flex flex-col justify-center">
+        {/* Hero Content on the left */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 w-full flex flex-col justify-center">
           <div className="max-w-xl lg:max-w-2xl space-y-4 sm:space-y-5">
             {/* Small Label */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/60 w-fit">

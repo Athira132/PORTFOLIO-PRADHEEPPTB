@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowUpRight, Phone } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 
 interface NavItem {
   name: string;
@@ -29,11 +29,11 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <header className="absolute top-0 inset-x-0 z-50 bg-transparent">
+    <header className="sticky top-0 z-50 bg-[#FAF7F2] border-b border-[#EAE2D3] shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-24">
-          {/* Desktop Navigation Links — Left/Center (No brand name) */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-3">
+        <div className="flex items-center justify-between h-18 md:h-20 w-full">
+          {/* Left-Aligned Desktop Navigation Menu */}
+          <nav className="hidden lg:flex items-center space-x-2 xl:space-x-4 -ml-2">
             {navLinks.map((item) => {
               const isActive =
                 item.href === "/"
@@ -47,7 +47,7 @@ export default function Navbar() {
                   className={`relative px-4 py-2 text-sm xl:text-base font-medium transition-colors font-sans rounded-full ${
                     isActive
                       ? "text-forest-950 font-bold"
-                      : "text-forest-950/80 hover:text-forest-950 hover:bg-forest-950/5"
+                      : "text-forest-900/80 hover:text-forest-950 hover:bg-[#F3EDE2]"
                   }`}
                 >
                   {item.name}
@@ -59,32 +59,23 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right CTA — Desktop */}
-          <div className="hidden lg:flex items-center gap-5">
-            <a
-              href="https://api.whatsapp.com/send?phone=919567654880"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-forest-950/80 hover:text-forest-950 font-medium px-2 py-1"
-            >
-              <Phone className="w-3.5 h-3.5" />
-              <span>+91 9567-654-880</span>
-            </a>
+          {/* Right-Aligned Get in Touch Button — Desktop */}
+          <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-1.5 px-7 py-3 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm hover:shadow text-sm font-medium tracking-wide group"
+              className="inline-flex items-center justify-center gap-1.5 px-6 py-2.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm hover:shadow text-sm font-medium tracking-wide group"
             >
               <span>Get in Touch</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
 
-          {/* Mobile Top Bar */}
+          {/* Mobile Navigation Header */}
           <div className="flex lg:hidden items-center justify-between w-full">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-xl text-forest-950 hover:bg-forest-950/10 transition-colors focus:outline-none"
+              className="p-2.5 rounded-xl text-forest-950 hover:bg-[#F3EDE2] transition-colors focus:outline-none"
               aria-label={mobileMenuOpen ? "Close navigation" : "Open navigation"}
             >
               {mobileMenuOpen ? (
@@ -106,7 +97,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 z-40 bg-[#FAF7F2] border-t border-[#EAE2D3] px-6 py-8 flex flex-col justify-between overflow-y-auto animate-in slide-in-from-top duration-200">
+        <div className="lg:hidden fixed inset-x-0 top-18 bottom-0 z-40 bg-[#FAF7F2] border-t border-[#EAE2D3] px-6 py-8 flex flex-col justify-between overflow-y-auto animate-in slide-in-from-top duration-200">
           <div className="space-y-2">
             <p className="text-xs uppercase tracking-widest text-olive-600 font-semibold mb-3 px-3">
               Navigation
