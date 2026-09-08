@@ -89,7 +89,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* MOBILE LAYOUT (under md): Direct typography overlay on the RIGHT SIDE inside hero banner — NO BOX / NO CARD */}
+        {/* MOBILE LAYOUT (under md): Direct typography overlay on the LEFT SIDE inside hero banner — NO BOX / NO CARD */}
         <div className="md:hidden relative w-full h-[400px] sm:h-[460px] bg-[#FAF7F2] overflow-hidden">
           {/* Full hero photo — 100% natural, NO overlays, shades, or gradients */}
           <div className="absolute inset-0 z-0">
@@ -99,33 +99,48 @@ export default function HomePage() {
               fill
               priority
               quality={100}
-              className="object-cover object-right sm:object-[95%_center]"
+              className="object-cover object-[70%_15%] sm:object-[75%_15%]"
               sizes="100vw"
             />
           </div>
 
-          {/* Typography Direct Overlay on the RIGHT SIDE — Started Higher, Inside Hero, No Box, No Card */}
-          <div className="relative z-10 h-full w-full flex justify-end items-start pt-6 sm:pt-8 pr-4 sm:pr-6 pointer-events-none">
-            <div className="max-w-[48%] sm:max-w-[44%] flex flex-col items-end text-right space-y-1.5 pointer-events-auto">
+          {/* Typography Direct Overlay on the LEFT SIDE — Started Higher, Inside Hero, No Box, No Card */}
+          <div className="relative z-10 h-full w-full flex justify-start items-start pt-7 sm:pt-9 px-5 sm:px-8 pointer-events-none">
+            <div className="max-w-[240px] sm:max-w-[280px] flex flex-col items-start text-left space-y-2 pointer-events-auto">
               {/* Accent Tag */}
-              <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-bold text-olive-900">
-                NLP Master Trainer
-              </span>
+              <div className="inline-flex items-center gap-1.5">
+                <span className="w-5 h-[1.5px] bg-olive-700" />
+                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-olive-900">
+                  NLP Master Trainer
+                </span>
+              </div>
 
-              {/* Main Heading — Noticeably larger, strong font weight, right-aligned, does not cross center */}
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-forest-950 tracking-tight leading-[1.08]">
-                <span>Pradheep</span>
-                <br />
-                <span>Pattambi</span>
+              {/* Main Heading — Large, attention-grabbing, left-aligned, inside hero */}
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-forest-950 tracking-tight leading-[1.1]">
+                Pradheep Pattambi
               </h1>
 
-              {/* Divider Line matching diagram */}
-              <span className="w-8 sm:w-10 h-[2px] bg-olive-700/60 rounded-full my-0.5" />
-
               {/* Subheading */}
-              <p className="text-[11px] sm:text-xs text-forest-900 font-semibold leading-tight tracking-tight">
-                Psychologist &bull; Life Skill Coach &bull; Speaker
+              <p className="text-xs sm:text-sm text-forest-900 font-semibold leading-snug">
+                Psychologist &bull; Life Skill Coach
               </p>
+
+              {/* Compact CTA sitting directly on the image */}
+              <div className="pt-1 flex items-center gap-2">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-xs font-medium tracking-wide shadow-sm"
+                >
+                  <span>Get in Touch</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-1 px-3.5 py-2 rounded-full border border-forest-900/40 text-forest-950 hover:bg-forest-900 hover:text-[#FAF7F2] text-xs font-medium tracking-wide transition-colors"
+                >
+                  <span>About</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
