@@ -9,7 +9,8 @@ import {
   Clock,
   ShieldCheck,
   Calendar,
-  ExternalLink
+  ExternalLink,
+  Navigation
 } from "lucide-react";
 import ContactForm from "@/components/forms/ContactForm";
 
@@ -174,27 +175,33 @@ export default function ContactPage() {
                 </div>
 
                 {/* Address */}
-                <a
-                  href="https://maps.app.goo.gl/PcEBdo9ftxN1VcRs9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-6 rounded-2xl bg-white border border-[#EAE2D3] shadow-sm flex items-start gap-4 hover:border-forest-900/40 hover:shadow-md transition-all group"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center shrink-0 group-hover:bg-forest-900 group-hover:text-[#FAF7F2] transition-colors">
-                    <MapPin className="w-5 h-5 text-olive-600 group-hover:text-[#FAF7F2]" />
+                <div className="p-6 rounded-2xl bg-white border border-[#EAE2D3] shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center shrink-0">
+                      <MapPin className="w-5 h-5 text-olive-600" />
+                    </div>
+                    <div>
+                      <span className="text-xs uppercase tracking-wider text-olive-700 font-semibold block">
+                        Office / Clinic Address
+                      </span>
+                      <p className="text-lg font-bold text-forest-950 mt-0.5">
+                        Sree Nilayam, Umikkunnu Pattambi
+                      </p>
+                      <p className="text-xs text-muted-text mt-1">
+                        Palakkad District, Kerala, India
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <span className="text-xs uppercase tracking-wider text-olive-700 font-semibold block">
-                      Office / Clinic Address
-                    </span>
-                    <p className="text-lg font-bold text-forest-950 mt-0.5 group-hover:text-forest-900 transition-colors">
-                      Sree Nilayam, Umikkunnu Pattambi
-                    </p>
-                    <p className="text-xs text-muted-text mt-1">
-                      Palakkad District, Kerala, India &bull; View on Google Maps &rarr;
-                    </p>
-                  </div>
-                </a>
+                  <a
+                    href="https://maps.app.goo.gl/PcEBdo9ftxN1VcRs9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF7F2] border border-[#EAE2D3] text-forest-950 hover:bg-forest-900 hover:text-[#FAF7F2] transition-colors text-xs font-semibold uppercase tracking-wider self-start sm:self-center shadow-xs"
+                  >
+                    <span>Get Directions</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
 
               {/* Social Channels */}
@@ -249,6 +256,61 @@ export default function ContactPage() {
               </div>
 
               <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3. CLINIC LOCATION & INTERACTIVE GOOGLE MAP */}
+      {/* ========================================================================= */}
+      <section className="py-16 sm:py-24 bg-[#FAF7F2] border-t border-[#EAE2D3]/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-6">
+            {/* Header with Title and Get Directions Button */}
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50 w-fit mb-3">
+                  <MapPin className="w-3.5 h-3.5 text-olive-700" />
+                  <span className="text-xs uppercase tracking-[0.2em] font-semibold text-olive-800">
+                    LOCATION & DIRECTIONS
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-forest-950">
+                  Find Our Clinic in Pattambi
+                </h2>
+                <p className="text-sm text-muted-text mt-1.5 max-w-xl">
+                  Easily locate Pradheep Pattambi&rsquo;s consultation office at Sree Nilayam, Umikkunnu Pattambi, Palakkad.
+                </p>
+              </div>
+
+              <div>
+                <a
+                  href="https://maps.app.goo.gl/PcEBdo9ftxN1VcRs9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-colors text-sm font-medium tracking-wide shadow-sm"
+                >
+                  <Navigation className="w-4 h-4" />
+                  <span>Get Directions</span>
+                  <ExternalLink className="w-4 h-4 ml-0.5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Embedded Visual Google Map */}
+            <div className="relative w-full h-80 sm:h-[420px] lg:h-[480px] rounded-3xl overflow-hidden border border-[#EAE2D3] shadow-md bg-white">
+              <iframe
+                title="Pradheep Pattambi Psychologist Location Map"
+                src="https://maps.google.com/maps?q=10.8011142,76.1899377+(Pradheep+Pattambi+Psychologist)&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              />
             </div>
           </div>
         </div>

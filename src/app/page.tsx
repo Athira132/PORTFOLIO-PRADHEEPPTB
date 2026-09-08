@@ -253,13 +253,13 @@ export default function HomePage() {
       <section className="py-20 sm:py-28 lg:py-32 bg-[#F8F5EE] border-b border-[#EAE2D3]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Left: Distinct photo (slightly cropped from right side only, face/body intact, no top crop) */}
+            {/* Left: Distinct photo (consultation desk, 100% visible, no top crop) */}
             <div className="lg:col-span-5 flex justify-center order-2 lg:order-1">
               <div className="relative w-full max-w-sm sm:max-w-md rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white aspect-[4/5] p-3 flex items-center justify-center">
                 <div className="relative w-full h-full">
                   <Image
-                    src="/images/photo-4-rightcrop.png"
-                    alt="Pradheep N.V. Portrait - Psychologist in Kerala"
+                    src="/images/gallery/gallery-05.jpg"
+                    alt="Pradheep N.V. at consultation desk"
                     fill
                     className="object-contain"
                     sizes="(max-width: 1024px) 100vw, 35vw"

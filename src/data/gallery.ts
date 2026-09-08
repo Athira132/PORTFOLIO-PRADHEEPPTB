@@ -167,5 +167,14 @@ export const galleryData: GalleryItem[] = [
     imageSrc: "/images/gallery/gallery-19.jpg",
     description: "Celebrating milestones and enduring positive impact across Kerala.",
     featured: false
+  },
+  {
+    id: "gal-20",
+    title: "Youth Empowerment & Motivational Coaching",
+    category: "Workshops & Speaking",
+    imageSrc: "/images/gallery/gallery-20.jpg",
+    description: "Inspiring audiences with actionable psychological guidance and life skills.",
+    featured: false
   }
 ];
+

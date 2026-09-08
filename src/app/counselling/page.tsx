@@ -52,11 +52,11 @@ export default function CounsellingPage() {
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-white border border-[#EAE2D3] shadow-sm flex items-center justify-center overflow-hidden shrink-0">
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
-                    src="/images/photo-1.jpg"
+                    src="/images/gallery/gallery-04.jpg"
                     alt="Supportive Psychological Counselling Session with Pradheep N.V."
                     fill
                     priority
-                    className="object-cover object-center scale-105"
+                    className="object-cover object-[center_50%]"
                     sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 390px"
                   />
                 </div>

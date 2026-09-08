@@ -97,11 +97,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Portrait Column: 100% visible, object-contain */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-xs sm:max-w-sm rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white aspect-[4/5] p-3 flex items-center justify-center">
+              <div className="relative w-full max-w-xs sm:max-w-sm rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white aspect-[3/4] p-3 flex items-center justify-center">
                 <div className="relative w-full h-full">
                   <Image
-                    src="/images/photo-1.jpg"
-                    alt="Pradheep N.V. (Pradheep Pattambi)"
+                    src="/images/gallery/gallery-03.jpg"
+                    alt="Pradheep N.V. at KVVES Pattambi"
                     fill
                     className="object-contain"
                     priority
