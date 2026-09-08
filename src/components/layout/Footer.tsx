@@ -226,7 +226,14 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-[#B5C2B9]">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
-                <span>Sree Nilayam, Umikkunnu Pattambi, Palakkad, Kerala</span>
+                <a
+                  href="https://maps.app.goo.gl/PcEBdo9ftxN1VcRs9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#FAF7F2] transition-colors"
+                >
+                  Sree Nilayam, Umikkunnu Pattambi, Palakkad, Kerala
+                </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#C5A880] shrink-0" />

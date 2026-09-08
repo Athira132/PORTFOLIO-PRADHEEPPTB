@@ -30,14 +30,14 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             {/* Left: Circular Photo Frame */}
             <div className="lg:col-span-5 flex justify-center lg:justify-start">
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-white border border-[#EAE2D3] shadow-sm flex items-center justify-center p-3 sm:p-4 shrink-0">
-                <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-white border border-[#EAE2D3] shadow-sm flex items-center justify-center overflow-hidden shrink-0">
+                <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
-                    src="/images/photo-1.jpg"
+                    src="/images/about-hero.jpg"
                     alt="Pradheep N.V. - Contact & Appointments"
                     fill
                     priority
-                    className="object-contain"
+                    className="object-cover object-center scale-105"
                     sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 390px"
                   />
                 </div>
@@ -174,22 +174,27 @@ export default function ContactPage() {
                 </div>
 
                 {/* Address */}
-                <div className="p-6 rounded-2xl bg-white border border-[#EAE2D3] shadow-sm flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5 text-olive-600" />
+                <a
+                  href="https://maps.app.goo.gl/PcEBdo9ftxN1VcRs9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-6 rounded-2xl bg-white border border-[#EAE2D3] shadow-sm flex items-start gap-4 hover:border-forest-900/40 hover:shadow-md transition-all group"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center shrink-0 group-hover:bg-forest-900 group-hover:text-[#FAF7F2] transition-colors">
+                    <MapPin className="w-5 h-5 text-olive-600 group-hover:text-[#FAF7F2]" />
                   </div>
                   <div>
                     <span className="text-xs uppercase tracking-wider text-olive-700 font-semibold block">
                       Office / Clinic Address
                     </span>
-                    <p className="text-lg font-bold text-forest-950 mt-0.5">
+                    <p className="text-lg font-bold text-forest-950 mt-0.5 group-hover:text-forest-900 transition-colors">
                       Sree Nilayam, Umikkunnu Pattambi
                     </p>
                     <p className="text-xs text-muted-text mt-1">
-                      Palakkad District, Kerala, India
+                      Palakkad District, Kerala, India &bull; View on Google Maps &rarr;
                     </p>
                   </div>
-                </div>
+                </a>
               </div>
 
               {/* Social Channels */}

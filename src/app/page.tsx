@@ -47,29 +47,61 @@ export default function HomePage() {
 
           {/* Hero Content on the left */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-12 md:py-16 w-full flex flex-col justify-center">
-            <div className="max-w-xl lg:max-w-2xl space-y-5">
-              {/* Small Label */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/60 w-fit">
-                <span className="w-2 h-2 rounded-full bg-olive-600" />
-                <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
-                  PSYCHOLOGIST
-                </span>
-              </div>
-
+            <div className="max-w-xl lg:max-w-2xl space-y-4">
               {/* Main Heading */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.6rem] font-bold text-forest-950 tracking-tight leading-[1.08] uppercase">
-                PRADHEEP PATTAMBI
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.8rem] xl:text-[4.2rem] font-bold text-forest-950 tracking-tight leading-[1.08]">
+                Pradheep Pattambi
               </h1>
 
-              {/* Description */}
-              <p className="text-forest-950/85 text-base sm:text-lg leading-relaxed font-sans max-w-lg">
-                Are you feeling overwhelmed by life&rsquo;s challenges? Struggling with
-                anxiety, depression, or relationship issues? Seeking a safe space to
-                explore your thoughts and emotions? You&rsquo;ve come to the right place.
+              {/* Secondary Heading */}
+              <h2 className="text-2xl sm:text-3xl font-bold text-forest-850 tracking-tight">
+                NLP Master Trainer
+              </h2>
+
+              {/* Supporting Text */}
+              <p className="text-forest-950/90 text-sm sm:text-base leading-relaxed font-sans max-w-xl">
+                Undertakes training for students, Teachers, clubs individuals and corporates
               </p>
 
+              {/* Structured Subjects Section */}
+              <div className="pt-2">
+                <span className="text-xs uppercase tracking-[0.2em] font-bold text-forest-950 block mb-2">
+                  Subjects
+                </span>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs sm:text-sm text-forest-900 font-medium">
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 border border-[#D8CCA8]/60 shadow-2xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-olive-600 shrink-0" />
+                    <span>NLP</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 border border-[#D8CCA8]/60 shadow-2xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-olive-600 shrink-0" />
+                    <span>Enniagram</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 border border-[#D8CCA8]/60 shadow-2xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-olive-600 shrink-0" />
+                    <span>TA</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 border border-[#D8CCA8]/60 shadow-2xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-olive-600 shrink-0" />
+                    <span>Therapees</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 border border-[#D8CCA8]/60 shadow-2xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-olive-600 shrink-0" />
+                    <span>Stress Mannagement</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 border border-[#D8CCA8]/60 shadow-2xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-olive-600 shrink-0" />
+                    <span>De Addiction</span>
+                  </div>
+                  <div className="col-span-2 sm:col-span-3 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 border border-[#D8CCA8]/60 shadow-2xs w-fit">
+                    <span className="w-1.5 h-1.5 rounded-full bg-olive-600 shrink-0" />
+                    <span>Relationship Issues etc</span>
+                  </div>
+                </div>
+              </div>
+
               {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-3.5 pt-1">
+              <div className="flex flex-wrap items-center gap-3.5 pt-2">
                 <Link
                   href="/about"
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm hover:shadow-md text-sm sm:text-base font-medium tracking-wide group"
@@ -80,7 +112,7 @@ export default function HomePage() {
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-forest-900/40 text-forest-950 bg-white/70 hover:bg-white transition-colors text-sm sm:text-base font-medium tracking-wide shadow-xs"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-forest-900/40 text-forest-950 bg-white/80 hover:bg-white transition-colors text-sm sm:text-base font-medium tracking-wide shadow-xs"
                 >
                   <span>Get in Touch</span>
                 </Link>
@@ -117,10 +149,10 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* MOBILE LAYOUT (under md): Vertically stacked, text NEVER overlaps photo */}
-        <div className="md:hidden flex flex-col w-full">
-          {/* Top: Fully visible original hero image in its own frame */}
-          <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] bg-[#FAF7F2] overflow-hidden">
+        {/* MOBILE LAYOUT (under md): Complete hero visible immediately on load, text positioned towards the RIGHT SIDE */}
+        <div className="md:hidden flex flex-col w-full bg-[#FAF7F2]">
+          {/* Top: Compact hero photo */}
+          <div className="relative w-full h-[200px] sm:h-[240px] bg-[#FAF7F2] overflow-hidden border-b border-[#EAE2D3]/50">
             <Image
               src="/images/pradheep-hero.png"
               alt="Pradheep Pattambi - Psychologist and Life Skill Coach"
@@ -132,71 +164,83 @@ export default function HomePage() {
             />
           </div>
 
-          {/* Bottom: Clean content area below image — 0% overlap with person */}
-          <div className="px-5 py-8 sm:px-8 sm:py-10 space-y-5 bg-[#FAF7F2]">
-            {/* Small Label */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/60 w-fit">
-              <span className="w-2 h-2 rounded-full bg-olive-600" />
-              <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
-                PSYCHOLOGIST
-              </span>
-            </div>
+          {/* Bottom: Complete hero text block positioned toward the RIGHT SIDE */}
+          <div className="w-full px-5 py-6 sm:px-8 sm:py-8 flex flex-col items-end text-right bg-[#FAF7F2]">
+            <div className="max-w-md w-full flex flex-col items-end text-right space-y-3">
+              {/* Name - clearly visible immediately */}
+              <h1 className="text-2xl sm:text-3xl font-bold text-forest-950 tracking-tight leading-[1.15]">
+                Pradheep Pattambi
+              </h1>
 
-            {/* Main Heading */}
-            <h1 className="text-3xl sm:text-4xl font-bold text-forest-950 tracking-tight leading-[1.1] uppercase">
-              PRADHEEP PATTAMBI
-            </h1>
+              {/* Secondary Heading - clearly visible immediately */}
+              <h2 className="text-base sm:text-lg font-bold text-forest-850 tracking-tight">
+                NLP Master Trainer
+              </h2>
 
-            {/* Description */}
-            <p className="text-forest-950/85 text-base leading-relaxed font-sans">
-              Are you feeling overwhelmed by life&rsquo;s challenges? Struggling with
-              anxiety, depression, or relationship issues? Seeking a safe space to
-              explore your thoughts and emotions? You&rsquo;ve come to the right place.
-            </p>
+              {/* Training Description */}
+              <p className="text-forest-900/90 text-xs sm:text-sm leading-relaxed font-sans max-w-xs">
+                Undertakes training for students, Teachers, clubs individuals and corporates
+              </p>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 pt-1">
-              <Link
-                href="/about"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm text-sm font-medium tracking-wide group"
-              >
-                <span>Learn More</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-forest-900/40 text-forest-950 bg-white hover:bg-[#F3EDE2] transition-colors text-sm font-medium tracking-wide shadow-xs"
-              >
-                <span>Get in Touch</span>
-              </Link>
-            </div>
-
-            {/* Quick Trust Highlights */}
-            <div className="pt-4 border-t border-[#D8CCA8]/70 grid grid-cols-3 gap-3">
-              <div>
-                <span className="block text-2xl text-forest-950 font-bold leading-none mb-1">
-                  20+
+              {/* Subjects */}
+              <div className="pt-1.5 w-full flex flex-col items-end text-right">
+                <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-forest-950 mb-1.5 block">
+                  Subjects
                 </span>
-                <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider font-semibold">
-                  Years Service
-                </span>
+                <div className="flex flex-wrap justify-end gap-1.5 text-xs text-forest-900 font-medium max-w-sm">
+                  <span className="px-2.5 py-1 rounded-md bg-white border border-[#D8CCA8]/70 shadow-2xs">NLP</span>
+                  <span className="px-2.5 py-1 rounded-md bg-white border border-[#D8CCA8]/70 shadow-2xs">Enniagram</span>
+                  <span className="px-2.5 py-1 rounded-md bg-white border border-[#D8CCA8]/70 shadow-2xs">TA</span>
+                  <span className="px-2.5 py-1 rounded-md bg-white border border-[#D8CCA8]/70 shadow-2xs">Therapees</span>
+                  <span className="px-2.5 py-1 rounded-md bg-white border border-[#D8CCA8]/70 shadow-2xs">Stress Mannagement</span>
+                  <span className="px-2.5 py-1 rounded-md bg-white border border-[#D8CCA8]/70 shadow-2xs">De Addiction</span>
+                  <span className="px-2.5 py-1 rounded-md bg-white border border-[#D8CCA8]/70 shadow-2xs">Relationship Issues etc</span>
+                </div>
               </div>
-              <div>
-                <span className="block text-2xl text-forest-950 font-bold leading-none mb-1">
-                  1000s
-                </span>
-                <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider font-semibold">
-                  Lives Guided
-                </span>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap justify-end gap-2.5 pt-2">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-forest-900 text-[#FAF7F2] text-xs font-medium tracking-wide shadow-sm hover:bg-forest-800 transition-colors"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-forest-900/40 text-forest-950 bg-white text-xs font-medium tracking-wide shadow-xs hover:bg-[#F3EDE2] transition-colors"
+                >
+                  <span>Get in Touch</span>
+                </Link>
               </div>
-              <div>
-                <span className="block text-2xl text-forest-950 font-bold leading-none mb-1">
-                  100%
-                </span>
-                <span className="text-[11px] text-forest-900/80 font-sans uppercase tracking-wider font-semibold">
-                  Confidential
-                </span>
+
+              {/* Quick Trust Highlights */}
+              <div className="pt-3 border-t border-[#D8CCA8]/60 w-full grid grid-cols-3 gap-2 text-center">
+                <div>
+                  <span className="block text-xl text-forest-950 font-bold leading-none mb-1">
+                    20+
+                  </span>
+                  <span className="text-[10px] text-forest-900/80 font-sans uppercase tracking-wider font-semibold">
+                    Years Service
+                  </span>
+                </div>
+                <div>
+                  <span className="block text-xl text-forest-950 font-bold leading-none mb-1">
+                    1000s
+                  </span>
+                  <span className="text-[10px] text-forest-900/80 font-sans uppercase tracking-wider font-semibold">
+                    Lives Guided
+                  </span>
+                </div>
+                <div>
+                  <span className="block text-xl text-forest-950 font-bold leading-none mb-1">
+                    100%
+                  </span>
+                  <span className="text-[10px] text-forest-900/80 font-sans uppercase tracking-wider font-semibold">
+                    Confidential
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -209,12 +253,12 @@ export default function HomePage() {
       <section className="py-20 sm:py-28 lg:py-32 bg-[#F8F5EE] border-b border-[#EAE2D3]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Left: Distinct photo (100% fully visible, object-contain) */}
+            {/* Left: Distinct photo (slightly cropped from right side only, face/body intact, no top crop) */}
             <div className="lg:col-span-5 flex justify-center order-2 lg:order-1">
               <div className="relative w-full max-w-sm sm:max-w-md rounded-3xl overflow-hidden shadow-md border border-[#EAE2D3] bg-white aspect-[4/5] p-3 flex items-center justify-center">
                 <div className="relative w-full h-full">
                   <Image
-                    src="/images/photo-4.png"
+                    src="/images/photo-4-rightcrop.png"
                     alt="Pradheep N.V. Portrait - Psychologist in Kerala"
                     fill
                     className="object-contain"
