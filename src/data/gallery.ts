@@ -175,6 +175,15 @@ export const galleryData: GalleryItem[] = [
     imageSrc: "/images/gallery/gallery-20.jpg",
     description: "Inspiring audiences with actionable psychological guidance and life skills.",
     featured: false
+  },
+  {
+    id: "gal-21",
+    title: "Mind Art Counseling Centre — Guidance Team",
+    category: "Counseling & Guidance",
+    imageSrc: "/images/gallery/gallery-21.jpg",
+    description: "Counselling and guidance team addressing career, family, premarital, teenage, and couple counselling.",
+    featured: false
   }
 ];
+
 

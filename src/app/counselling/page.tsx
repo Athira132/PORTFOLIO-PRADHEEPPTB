@@ -49,7 +49,7 @@ export default function CounsellingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             {/* Left: Circular Photo Frame */}
             <div className="lg:col-span-5 flex justify-center lg:justify-start">
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-white border border-[#EAE2D3] shadow-sm flex items-center justify-center overflow-hidden shrink-0">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-white border-2 border-[#C5B594] shadow-sm flex items-center justify-center overflow-hidden shrink-0">
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
                     src="/images/gallery/gallery-04.jpg"
