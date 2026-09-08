@@ -32,8 +32,15 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-[#FAF7F2] border-b border-[#EAE2D3] shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-18 md:h-20 w-full">
-          {/* Left: Empty spacer to preserve visual balance */}
-          <div className="hidden lg:block w-28 xl:w-36" />
+          {/* Left: Subtle Brand Name — Desktop */}
+          <div className="hidden lg:flex items-center">
+            <Link
+              href="/"
+              className="text-xs sm:text-sm font-semibold tracking-tight text-forest-950 hover:text-forest-800 transition-colors"
+            >
+              Pradeep Pattambi
+            </Link>
+          </div>
 
           {/* Center: Visually Centered Desktop Navigation Menu */}
           <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center space-x-2 xl:space-x-4">
@@ -78,7 +85,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-xl text-forest-950 hover:bg-[#F3EDE2] transition-colors focus:outline-none"
+              className="p-2 -ml-2 rounded-xl text-forest-950 hover:bg-[#F3EDE2] transition-colors focus:outline-none"
               aria-label={mobileMenuOpen ? "Close navigation" : "Open navigation"}
             >
               {mobileMenuOpen ? (
@@ -88,9 +95,17 @@ export default function Navbar() {
               )}
             </button>
 
+            {/* Subtle Brand Name — Mobile */}
+            <Link
+              href="/"
+              className="text-xs sm:text-sm font-semibold tracking-tight text-forest-950 hover:text-forest-800 transition-colors"
+            >
+              Pradeep Pattambi
+            </Link>
+
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-forest-900 text-[#FAF7F2] text-xs font-medium shadow-sm"
+              className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-forest-900 text-[#FAF7F2] text-xs font-medium shadow-sm hover:bg-forest-800 transition-colors"
             >
               Get in Touch
             </Link>
