@@ -28,7 +28,7 @@ export default function HomePage() {
       {/* 1. HERO SECTION — IMAGE-FIRST, MINIMAL EDITORIAL TEXT ON LEFT */}
       {/* ========================================================================= */}
       <section className="relative w-full bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
-        {/* DESKTOP LAYOUT (md and above): Full-width background banner with floating editorial card */}
+        {/* DESKTOP LAYOUT (md and above): Full-width background banner with direct typography overlay — NO BOX / NO CARD */}
         <div className="hidden md:flex relative w-full min-h-[580px] lg:h-[calc(100vh-5rem)] max-h-[820px] items-center overflow-hidden">
           {/* Full-width original photo */}
           <div className="absolute inset-0 z-0">
@@ -41,49 +41,59 @@ export default function HomePage() {
               className="object-cover object-[80%_15%] lg:object-[82%_15%]"
               sizes="100vw"
             />
+            {/* Subtle soft transparent gradient on image layer for natural text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2]/80 via-[#FAF7F2]/30 to-transparent pointer-events-none" />
           </div>
 
-          {/* Minimal Floating Editorial Card on the Left */}
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-12 md:py-16 w-full flex items-center">
-            <div className="backdrop-blur-md bg-[#FAF7F2]/85 border border-[#D8CCA8]/75 shadow-lg rounded-3xl p-6 sm:p-8 max-w-sm lg:max-w-md space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/10 border border-forest-900/15 w-fit">
-                <span className="w-1.5 h-1.5 rounded-full bg-olive-700" />
-                <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-forest-950">
+          {/* Typography Direct Overlay on the Left — No Card, No Box */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-12 md:py-16 w-full flex items-center">
+            <div className="max-w-xl lg:max-w-2xl space-y-5">
+              {/* Minimal Accent Label */}
+              <div className="inline-flex items-center gap-2">
+                <span className="w-8 h-[2px] bg-olive-700" />
+                <span className="text-xs sm:text-sm uppercase tracking-[0.25em] font-bold text-olive-900">
                   NLP Master Trainer
                 </span>
               </div>
 
-              <div className="space-y-1.5">
-                <h1 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold text-forest-950 tracking-tight leading-[1.1]">
-                  Pradheep Pattambi
-                </h1>
-                <p className="text-xs sm:text-sm text-forest-900/85 font-sans leading-relaxed">
-                  Psychologist &bull; Life Skill Coach &bull; Speaker
-                </p>
-              </div>
+              {/* Main Heading — Large, Strong, Editorial */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.5rem] font-bold text-forest-950 tracking-tight leading-[1.05]">
+                Pradheep Pattambi
+              </h1>
 
-              <div className="pt-1 flex items-center gap-3">
+              {/* Subheading */}
+              <p className="text-lg sm:text-xl lg:text-2xl text-forest-900 font-medium tracking-tight">
+                Psychologist &bull; Life Skill Coach &bull; Speaker
+              </p>
+
+              {/* Supporting Line */}
+              <p className="text-forest-950/80 text-sm sm:text-base leading-relaxed font-sans max-w-lg">
+                Undertakes specialized training for students, Teachers, clubs, individuals and corporates.
+              </p>
+
+              {/* Action Buttons — Sits directly over the image */}
+              <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-xs font-medium tracking-wide shadow-sm transition-colors"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-sm font-medium tracking-wide shadow-sm hover:shadow-md transition-all"
                 >
                   <span>Get in Touch</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-white/90 border border-[#D8CCA8] text-forest-950 hover:bg-[#F3EDE2] text-xs font-medium tracking-wide transition-colors shadow-2xs"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-forest-900/35 text-forest-950 bg-white/60 hover:bg-white text-sm font-medium tracking-wide transition-colors"
                 >
-                  <span>About</span>
+                  <span>About Pradheep</span>
                 </Link>
               </div>
             </div>
           </div>
         </div>
 
-        {/* MOBILE LAYOUT (under md): Text overlays hero photo on the LEFT SIDE, no text below image */}
-        <div className="md:hidden relative w-full h-[360px] sm:h-[420px] bg-[#FAF7F2] overflow-hidden">
-          {/* Hero photo covering the container */}
+        {/* MOBILE LAYOUT (under md): Direct typography overlay on the LEFT SIDE inside hero banner — NO BOX / NO CARD */}
+        <div className="md:hidden relative w-full h-[380px] sm:h-[440px] bg-[#FAF7F2] overflow-hidden">
+          {/* Full hero photo */}
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/pradheep-hero.png"
@@ -91,41 +101,46 @@ export default function HomePage() {
               fill
               priority
               quality={100}
-              className="object-cover object-[78%_15%]"
+              className="object-cover object-[80%_15%]"
               sizes="100vw"
             />
+            {/* Subtle soft transparent gradient on the left side of the image for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2]/90 via-[#FAF7F2]/50 to-transparent pointer-events-none" />
           </div>
 
-          {/* Compact Highlighted Text Overlaid on the LEFT SIDE */}
-          <div className="relative z-10 h-full flex items-center px-4 sm:px-6">
-            <div className="backdrop-blur-md bg-[#FAF7F2]/88 border border-[#D8CCA8]/80 shadow-md rounded-2xl p-4 max-w-[225px] sm:max-w-[250px] space-y-2">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-forest-900/10 border border-forest-900/15 w-fit">
-                <span className="w-1.5 h-1.5 rounded-full bg-olive-700" />
-                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-forest-950">
+          {/* Typography overlaid directly on the LEFT SIDE — No Box, No Card */}
+          <div className="relative z-10 h-full flex items-center px-5 sm:px-8">
+            <div className="max-w-[240px] sm:max-w-[280px] space-y-2.5">
+              {/* Accent Tag */}
+              <div className="inline-flex items-center gap-1.5">
+                <span className="w-5 h-[1.5px] bg-olive-700" />
+                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-olive-900">
                   NLP Master Trainer
                 </span>
               </div>
 
-              <div>
-                <h1 className="text-xl sm:text-2xl font-bold text-forest-950 tracking-tight leading-tight">
-                  Pradheep Pattambi
-                </h1>
-                <p className="text-[11px] text-forest-900/85 font-sans mt-0.5">
-                  Psychologist &bull; Coach
-                </p>
-              </div>
+              {/* Main Heading — Prominent and immediately attention-grabbing */}
+              <h1 className="text-2xl sm:text-3xl font-bold text-forest-950 tracking-tight leading-[1.12]">
+                Pradheep Pattambi
+              </h1>
 
-              <div className="pt-0.5 flex items-center gap-2">
+              {/* Subheading */}
+              <p className="text-xs sm:text-sm text-forest-900 font-semibold leading-snug">
+                Psychologist &bull; Life Skill Coach
+              </p>
+
+              {/* Compact CTA sitting directly on the image */}
+              <div className="pt-1.5 flex items-center gap-2">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-[11px] font-medium tracking-wide shadow-xs"
+                  className="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-xs font-medium tracking-wide shadow-sm"
                 >
-                  <span>Connect</span>
+                  <span>Get in Touch</span>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white border border-[#D8CCA8] text-forest-950 text-[11px] font-medium tracking-wide"
+                  className="inline-flex items-center gap-1 px-3.5 py-2 rounded-full border border-forest-900/30 text-forest-950 bg-white/50 text-xs font-medium tracking-wide"
                 >
                   <span>About</span>
                 </Link>
