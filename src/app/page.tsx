@@ -104,8 +104,8 @@ export default function HomePage() {
             />
           </div>
 
-          {/* Typography Direct Overlay on the LEFT SIDE — Started Higher, Inside Hero, No Box, No Card */}
-          <div className="relative z-10 h-full w-full flex justify-start items-start pt-7 sm:pt-9 px-5 sm:px-8 pointer-events-none">
+          {/* Typography Direct Overlay on the LEFT SIDE — Positioned Slightly Lower Inside Hero, No Box, No Card */}
+          <div className="relative z-10 h-full w-full flex justify-start items-start pt-12 sm:pt-14 px-5 sm:px-8 pointer-events-none">
             <div className="max-w-[240px] sm:max-w-[280px] flex flex-col items-start text-left space-y-2 pointer-events-auto">
               {/* Accent Tag */}
               <div className="inline-flex items-center gap-1.5">

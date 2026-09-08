@@ -38,7 +38,7 @@ export default function Navbar() {
               href="/"
               className="text-xs sm:text-sm font-semibold tracking-tight text-forest-950 hover:text-forest-800 transition-colors"
             >
-              Pradeep Pattambi
+              Pradheep Pattambi
             </Link>
           </div>
 
@@ -100,7 +100,7 @@ export default function Navbar() {
               href="/"
               className="text-xs sm:text-sm font-semibold tracking-tight text-forest-950 hover:text-forest-800 transition-colors"
             >
-              Pradeep Pattambi
+              Pradheep Pattambi
             </Link>
 
             <Link
