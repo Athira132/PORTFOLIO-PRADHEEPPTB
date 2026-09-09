@@ -89,7 +89,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* MOBILE LAYOUT (under md): Direct typography overlay on the LEFT SIDE, photo on the RIGHT SIDE — TWO-COLUMN COMPOSITION WITH DARK BACKGROUND */}
+        {/* MOBILE LAYOUT (under md): Direct typography overlay on the LEFT SIDE, photo on the RIGHT SIDE — TWO-COLUMN COMPOSITION WITH SOFTER DARK OVERLAY */}
         <div className="md:hidden relative w-full h-[580px] sm:h-[620px] bg-[#111814] overflow-hidden">
           {/* Hero photo framed with Pradheep visually dominant on the RIGHT */}
           <div className="absolute inset-0 z-0">
@@ -102,58 +102,58 @@ export default function HomePage() {
               className="object-cover object-[75%_top] sm:object-[78%_top]"
               sizes="100vw"
             />
-            {/* Seamless dark background behind text on the left, transitioning smoothly toward the photo on the right */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#111814] via-[#111814]/95 via-[50%] to-transparent pointer-events-none" />
+            {/* Lighter, softer dark overlay: original photograph is clearly visible while text maintains strong contrast */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#111814]/80 via-[#111814]/55 via-[48%] to-transparent pointer-events-none" />
           </div>
 
           {/* Typography Direct Overlay on the LEFT SIDE — Two-column composition, High Contrast, Noticeably Larger */}
           <div className="relative z-10 h-full w-full flex justify-start items-start pt-8 sm:pt-10 px-4 sm:px-6 pointer-events-none">
             <div className="max-w-[52%] sm:max-w-[48%] flex flex-col items-start text-left space-y-2 pointer-events-auto">
               {/* 1. Dominant Element: Pradheep Pattambi (Two lines, very large, bold, premium) */}
-              <h1 className="text-[2rem] sm:text-[2.25rem] font-extrabold text-[#FAF7F2] tracking-tight leading-[1.05]">
+              <h1 className="text-[2rem] sm:text-[2.25rem] font-extrabold text-[#FAF7F2] tracking-tight leading-[1.05] drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
                 <span>Pradheep</span>
                 <br />
                 <span>Pattambi</span>
               </h1>
 
               {/* 2. Second-largest text: NLP Master Trainer (Noticeably larger) */}
-              <h2 className="text-[14.5px] sm:text-[16px] font-bold text-[#C5A880] tracking-tight">
+              <h2 className="text-[14.5px] sm:text-[16px] font-bold text-[#C5A880] tracking-tight drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
                 NLP Master Trainer
               </h2>
 
               {/* Subtle accent divider */}
-              <div className="w-12 sm:w-14 h-[2px] bg-[#C5A880] rounded-full my-0.5" />
+              <div className="w-12 sm:w-14 h-[2px] bg-[#C5A880] rounded-full my-0.5 shadow-xs" />
 
               {/* 3. Supporting description (Noticeably larger and clear) */}
-              <p className="text-[11px] sm:text-[12.5px] text-[#E5DDD0] font-normal leading-[1.38] max-w-[195px]">
+              <p className="text-[11px] sm:text-[12.5px] text-[#FAF7F2] font-medium leading-[1.38] max-w-[195px] drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
                 Undertakes training for students, Teachers, clubs individuals and corporates
               </p>
 
               {/* 4. Subjects / Tags (Noticeably larger, readable) */}
               <div className="pt-1.5 flex flex-col items-start text-left w-full">
-                <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.15em] font-bold text-[#A3B899] mb-1.5">
+                <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.15em] font-bold text-[#A3B899] mb-1.5 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
                   Subjects
                 </span>
                 <div className="flex flex-wrap justify-start gap-1.5 text-[9.5px] sm:text-[10.5px] text-[#FAF7F2] font-semibold max-w-[195px]">
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621] border border-[#375240] shadow-2xs">
+                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     NLP
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621] border border-[#375240] shadow-2xs">
+                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     Enniagram
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621] border border-[#375240] shadow-2xs">
+                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     TA
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621] border border-[#375240] shadow-2xs">
+                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     Therapees
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621] border border-[#375240] shadow-2xs">
+                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     Stress Mannagement
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621] border border-[#375240] shadow-2xs">
+                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     De Addiction
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621] border border-[#375240] shadow-2xs">
+                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     Relationship Issues etc
                   </span>
                 </div>
@@ -163,7 +163,7 @@ export default function HomePage() {
               <div className="pt-2 flex items-center gap-2">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] text-xs font-bold tracking-wide shadow-sm transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] text-xs font-bold tracking-wide shadow-md transition-colors"
                 >
                   <span>Get in Touch</span>
                   <ArrowRight className="w-3 h-3" />
