@@ -31,43 +31,42 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-[#FAF7F2] border-b border-[#EAE2D3] shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between h-18 md:h-20 w-full">
-          {/* Left: Subtle Brand Name — Desktop */}
-          <div className="hidden lg:flex items-center">
+        <div className="flex items-center justify-between h-18 md:h-20 w-full">
+          {/* Desktop Navigation: Far-Left Brand Name, Menu Items Following It */}
+          <div className="hidden lg:flex items-center gap-8 xl:gap-12">
             <Link
               href="/"
-              className="text-xs sm:text-sm font-semibold tracking-tight text-forest-950 hover:text-forest-800 transition-colors"
+              className="text-base xl:text-lg font-bold tracking-tight text-forest-950 hover:text-forest-800 transition-colors shrink-0"
             >
               Pradheep Pattambi
             </Link>
+
+            <nav className="flex items-center space-x-1 xl:space-x-3">
+              {navLinks.map((item) => {
+                const isActive =
+                  item.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(item.href);
+
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`relative px-4 py-2 text-sm xl:text-base font-medium transition-colors font-sans rounded-full ${
+                      isActive
+                        ? "text-forest-950 font-bold"
+                        : "text-forest-900/80 hover:text-forest-950 hover:bg-[#F3EDE2]"
+                    }`}
+                  >
+                    {item.name}
+                    {isActive && (
+                      <span className="absolute bottom-1 left-4 right-4 h-[2px] bg-forest-900 rounded-full" />
+                    )}
+                  </Link>
+                );
+              })}
+            </nav>
           </div>
-
-          {/* Center: Visually Centered Desktop Navigation Menu */}
-          <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center space-x-2 xl:space-x-4">
-            {navLinks.map((item) => {
-              const isActive =
-                item.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(item.href);
-
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`relative px-4 py-2 text-sm xl:text-base font-medium transition-colors font-sans rounded-full ${
-                    isActive
-                      ? "text-forest-950 font-bold"
-                      : "text-forest-900/80 hover:text-forest-950 hover:bg-[#F3EDE2]"
-                  }`}
-                >
-                  {item.name}
-                  {isActive && (
-                    <span className="absolute bottom-1 left-4 right-4 h-[2px] bg-forest-900 rounded-full" />
-                  )}
-                </Link>
-              );
-            })}
-          </nav>
 
           {/* Right: Far-Right Aligned Get in Touch Button — Desktop */}
           <div className="hidden lg:flex items-center justify-end">
@@ -80,35 +79,38 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Navigation Header */}
+          {/* Mobile Navigation Header: Brand Name on the LEFT, Hamburger on the RIGHT */}
           <div className="flex lg:hidden items-center justify-between w-full">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 -ml-2 rounded-xl text-forest-950 hover:bg-[#F3EDE2] transition-colors focus:outline-none"
-              aria-label={mobileMenuOpen ? "Close navigation" : "Open navigation"}
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
-
-            {/* Subtle Brand Name — Mobile */}
+            {/* Far Left: Brand Name */}
             <Link
               href="/"
-              className="text-xs sm:text-sm font-semibold tracking-tight text-forest-950 hover:text-forest-800 transition-colors"
+              className="text-base sm:text-lg font-bold tracking-tight text-forest-950 hover:text-forest-800 transition-colors py-1 shrink-0"
             >
               Pradheep Pattambi
             </Link>
 
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-forest-900 text-[#FAF7F2] text-xs font-medium shadow-sm hover:bg-forest-800 transition-colors"
-            >
-              Get in Touch
-            </Link>
+            {/* Far Right: Compact CTA & Menu Button */}
+            <div className="flex items-center gap-2">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-forest-900 text-[#FAF7F2] text-xs font-medium shadow-sm hover:bg-forest-800 transition-colors shrink-0"
+              >
+                Get in Touch
+              </Link>
+
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 -mr-2 rounded-xl text-forest-950 hover:bg-[#F3EDE2] transition-colors focus:outline-none"
+                aria-label={mobileMenuOpen ? "Close navigation" : "Open navigation"}
+              >
+                {mobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </div>

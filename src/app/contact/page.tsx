@@ -26,19 +26,19 @@ export default function ContactPage() {
       {/* ========================================================================= */}
       {/* 1. CONTACT HERO — CIRCULAR PHOTO ON LEFT, REACH INFO ON RIGHT */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-24 bg-[#F4EFE6] border-b border-[#EAE2D3]">
+      <section className="py-16 sm:py-24 bg-[#111814] border-b border-[#233127]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             {/* Left: Circular Photo Frame */}
             <div className="lg:col-span-5 flex justify-center lg:justify-start">
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-white border-2 border-[#C5B594] shadow-sm flex items-center justify-center overflow-hidden shrink-0">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-[#1A241E] border-2 border-[#C5A880] shadow-xl flex items-center justify-center overflow-hidden shrink-0">
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
                     src="/images/gallery/gallery-03.jpg"
                     alt="Pradheep N.V. - Contact & Appointments"
                     fill
                     priority
-                    className="object-cover object-[center_top]"
+                    className="object-cover object-[center_top] scale-110"
                     sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 390px"
                   />
                 </div>
@@ -47,18 +47,18 @@ export default function ContactPage() {
 
             {/* Right: Editorial Typography & Actions */}
             <div className="lg:col-span-7 space-y-5 text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50 w-fit">
-                <span className="w-2 h-2 rounded-full bg-olive-600" />
-                <span className="text-xs uppercase tracking-[0.25em] font-semibold text-olive-800">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C2B22] border border-[#375240] w-fit">
+                <span className="w-2 h-2 rounded-full bg-[#C5A880]" />
+                <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#A3B899]">
                   SAFE & CONFIDENTIAL REACH
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl text-forest-950 font-bold tracking-tight leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#FAF7F2] font-bold tracking-tight leading-[1.1]">
                 Let’s connect.
               </h1>
 
-              <p className="text-muted-text text-base sm:text-lg max-w-2xl leading-relaxed">
+              <p className="text-[#D6CEBE] text-base sm:text-lg max-w-2xl leading-relaxed">
                 &ldquo;Take the first step towards clarity, growth, and a more fulfilling life.
                 Reach out directly for appointments, confidential consultations, or speaking inquiries.&rdquo;
               </p>
@@ -66,7 +66,7 @@ export default function ContactPage() {
               <div className="flex flex-wrap items-center gap-3.5 pt-2">
                 <a
                   href="tel:+919567654880"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm font-medium tracking-wide shadow-sm"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] transition-all text-sm font-bold tracking-wide shadow-sm"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Call +91 9567-654-880</span>
@@ -75,7 +75,7 @@ export default function ContactPage() {
                   href="https://api.whatsapp.com/send?phone=919567654880"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-[#25D366] text-forest-950 bg-[#E8F8EE] hover:bg-[#D3F3DC] transition-colors text-sm font-medium tracking-wide"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-[#D8CCA8]/50 text-[#FAF7F2] bg-white/5 hover:bg-white/10 transition-colors text-sm font-medium tracking-wide"
                 >
                   <MessageCircle className="w-4 h-4 text-[#25D366]" />
                   <span>Chat on WhatsApp</span>
