@@ -89,9 +89,9 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* MOBILE LAYOUT (under md): Direct typography overlay on the RIGHT SIDE inside hero banner — NO BOX / NO CARD */}
-        <div className="md:hidden relative w-full h-[520px] sm:h-[560px] bg-[#F4EFE6] overflow-hidden">
-          {/* Full hero photo — 100% natural, NO overlays, shades, or gradients */}
+        {/* MOBILE LAYOUT (under md): Direct typography overlay on the LEFT SIDE, photo on the RIGHT SIDE — TWO-COLUMN COMPOSITION */}
+        <div className="md:hidden relative w-full h-[540px] sm:h-[580px] bg-[#F4EFE6] overflow-hidden">
+          {/* Full hero photo — 100% natural, NO overlays or gradients, framed with Pradheep visually dominant on the RIGHT */}
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/pradheep-hero.png"
@@ -99,16 +99,16 @@ export default function HomePage() {
               fill
               priority
               quality={100}
-              className="object-cover object-right sm:object-[95%_15%]"
+              className="object-cover object-[72%_top] sm:object-[75%_top]"
               sizes="100vw"
             />
           </div>
 
-          {/* Typography Direct Overlay on the RIGHT SIDE — Inside Hero, No Box, No Card */}
-          <div className="relative z-10 h-full w-full flex justify-end items-start pt-7 sm:pt-9 pr-3.5 sm:pr-6 pointer-events-none">
-            <div className="max-w-[46%] sm:max-w-[44%] flex flex-col items-end text-right space-y-1.5 pointer-events-auto">
+          {/* Typography Direct Overlay on the LEFT SIDE — Two-column composition, No Box, No Card */}
+          <div className="relative z-10 h-full w-full flex justify-start items-start pt-7 sm:pt-9 px-4 sm:px-6 pointer-events-none">
+            <div className="max-w-[50%] sm:max-w-[48%] flex flex-col items-start text-left space-y-1.5 pointer-events-auto">
               {/* 1. Dominant Element: Pradheep Pattambi (Two lines, largest, bold, premium) */}
-              <h1 className="text-[1.85rem] sm:text-3xl font-extrabold text-forest-950 tracking-tight leading-[1.05]">
+              <h1 className="text-[1.75rem] sm:text-3xl font-extrabold text-forest-950 tracking-tight leading-[1.05]">
                 <span>Pradheep</span>
                 <br />
                 <span>Pattambi</span>
@@ -123,19 +123,16 @@ export default function HomePage() {
               <div className="w-10 sm:w-12 h-[1.5px] bg-olive-700/60 rounded-full my-0.5" />
 
               {/* 3. Supporting description */}
-              <p
-                className="text-[10px] sm:text-[11px] text-forest-950 font-semibold leading-[1.3] max-w-[170px]"
-                style={{ textShadow: "0 1px 3px rgba(250, 247, 242, 0.9), 0 0 6px rgba(250, 247, 242, 0.7)" }}
-              >
-                Undertakes training for students, Teachers, clubs, individuals and corporates
+              <p className="text-[10px] sm:text-[11px] text-forest-950 font-medium leading-[1.35] max-w-[190px]">
+                Undertakes training for students, Teachers, clubs individuals and corporates
               </p>
 
               {/* 4. Subjects / Tags */}
-              <div className="pt-1 flex flex-col items-end text-right w-full">
+              <div className="pt-1 flex flex-col items-start text-left w-full">
                 <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em] font-bold text-olive-900 mb-1">
                   Subjects
                 </span>
-                <div className="flex flex-wrap justify-end gap-1 text-[8.5px] sm:text-[9.5px] text-forest-950 font-bold max-w-[170px]">
+                <div className="flex flex-wrap justify-start gap-1 text-[8.5px] sm:text-[9.5px] text-forest-950 font-semibold max-w-[190px]">
                   <span className="px-2 py-0.5 rounded-full bg-[#FAF7F2] border border-[#D8CCA8] shadow-2xs">
                     NLP
                   </span>
