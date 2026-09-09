@@ -25,9 +25,9 @@ export default function HomePage() {
   return (
     <div className="overflow-x-hidden">
       {/* ========================================================================= */}
-      {/* 1. HERO SECTION — IMAGE-FIRST, MINIMAL EDITORIAL TEXT ON LEFT */}
+      {/* 1. HERO SECTION — IMAGE-FIRST, MINIMAL EDITORIAL TEXT */}
       {/* ========================================================================= */}
-      <section className="relative w-full bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
+      <section className="relative w-full bg-[#F4EFE6] border-b border-[#EAE2D3]">
         {/* DESKTOP LAYOUT (md and above): Full-width background banner with direct typography overlay — NO BOX / NO CARD */}
         <div className="hidden md:flex relative w-full min-h-[580px] lg:h-[calc(100vh-5rem)] max-h-[820px] items-center overflow-hidden">
           {/* Full-width original photo — 100% natural, NO overlays or shades */}
@@ -89,8 +89,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* MOBILE LAYOUT (under md): Direct typography overlay on the LEFT SIDE inside hero banner — NO BOX / NO CARD */}
-        <div className="md:hidden relative w-full h-[400px] sm:h-[460px] bg-[#FAF7F2] overflow-hidden">
+        {/* MOBILE LAYOUT (under md): Direct typography overlay on the RIGHT SIDE inside hero banner — NO BOX / NO CARD */}
+        <div className="md:hidden relative w-full h-[520px] sm:h-[560px] bg-[#F4EFE6] overflow-hidden">
           {/* Full hero photo — 100% natural, NO overlays, shades, or gradients */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -99,46 +99,75 @@ export default function HomePage() {
               fill
               priority
               quality={100}
-              className="object-cover object-[70%_15%] sm:object-[75%_15%]"
+              className="object-cover object-right sm:object-[95%_15%]"
               sizes="100vw"
             />
           </div>
 
-          {/* Typography Direct Overlay on the LEFT SIDE — Positioned Slightly Lower Inside Hero, No Box, No Card */}
-          <div className="relative z-10 h-full w-full flex justify-start items-start pt-12 sm:pt-14 px-5 sm:px-8 pointer-events-none">
-            <div className="max-w-[240px] sm:max-w-[280px] flex flex-col items-start text-left space-y-2 pointer-events-auto">
-              {/* Accent Tag */}
-              <div className="inline-flex items-center gap-1.5">
-                <span className="w-5 h-[1.5px] bg-olive-700" />
-                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-olive-900">
-                  NLP Master Trainer
-                </span>
-              </div>
-
-              {/* Main Heading — Large, attention-grabbing, left-aligned, inside hero */}
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-forest-950 tracking-tight leading-[1.1]">
-                Pradheep Pattambi
+          {/* Typography Direct Overlay on the RIGHT SIDE — Inside Hero, No Box, No Card */}
+          <div className="relative z-10 h-full w-full flex justify-end items-start pt-7 sm:pt-9 pr-3.5 sm:pr-6 pointer-events-none">
+            <div className="max-w-[46%] sm:max-w-[44%] flex flex-col items-end text-right space-y-1.5 pointer-events-auto">
+              {/* 1. Dominant Element: Pradheep Pattambi (Two lines, largest, bold, premium) */}
+              <h1 className="text-[1.85rem] sm:text-3xl font-extrabold text-forest-950 tracking-tight leading-[1.05]">
+                <span>Pradheep</span>
+                <br />
+                <span>Pattambi</span>
               </h1>
 
-              {/* Subheading */}
-              <p className="text-xs sm:text-sm text-forest-900 font-semibold leading-snug">
-                Psychologist &bull; Life Skill Coach
+              {/* 2. Second-largest text: NLP Master Trainer */}
+              <h2 className="text-[13px] sm:text-[15px] font-bold text-forest-900 tracking-tight">
+                NLP Master Trainer
+              </h2>
+
+              {/* Subtle accent divider */}
+              <div className="w-10 sm:w-12 h-[1.5px] bg-olive-700/60 rounded-full my-0.5" />
+
+              {/* 3. Supporting description */}
+              <p
+                className="text-[10px] sm:text-[11px] text-forest-950 font-semibold leading-[1.3] max-w-[170px]"
+                style={{ textShadow: "0 1px 3px rgba(250, 247, 242, 0.9), 0 0 6px rgba(250, 247, 242, 0.7)" }}
+              >
+                Undertakes training for students, Teachers, clubs, individuals and corporates
               </p>
 
+              {/* 4. Subjects / Tags */}
+              <div className="pt-1 flex flex-col items-end text-right w-full">
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em] font-bold text-olive-900 mb-1">
+                  Subjects
+                </span>
+                <div className="flex flex-wrap justify-end gap-1 text-[8.5px] sm:text-[9.5px] text-forest-950 font-bold max-w-[170px]">
+                  <span className="px-2 py-0.5 rounded-full bg-[#FAF7F2] border border-[#D8CCA8] shadow-2xs">
+                    NLP
+                  </span>
+                  <span className="px-2 py-0.5 rounded-full bg-[#FAF7F2] border border-[#D8CCA8] shadow-2xs">
+                    Enniagram
+                  </span>
+                  <span className="px-2 py-0.5 rounded-full bg-[#FAF7F2] border border-[#D8CCA8] shadow-2xs">
+                    TA
+                  </span>
+                  <span className="px-2 py-0.5 rounded-full bg-[#FAF7F2] border border-[#D8CCA8] shadow-2xs">
+                    Therapees
+                  </span>
+                  <span className="px-2 py-0.5 rounded-full bg-[#FAF7F2] border border-[#D8CCA8] shadow-2xs">
+                    Stress Mannagement
+                  </span>
+                  <span className="px-2 py-0.5 rounded-full bg-[#FAF7F2] border border-[#D8CCA8] shadow-2xs">
+                    De Addiction
+                  </span>
+                  <span className="px-2 py-0.5 rounded-full bg-[#FAF7F2] border border-[#D8CCA8] shadow-2xs">
+                    Relationship Issues etc
+                  </span>
+                </div>
+              </div>
+
               {/* Compact CTA sitting directly on the image */}
-              <div className="pt-1 flex items-center gap-2">
+              <div className="pt-1.5 flex items-center gap-1.5">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-xs font-medium tracking-wide shadow-sm"
+                  className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-[11px] font-medium tracking-wide shadow-sm"
                 >
                   <span>Get in Touch</span>
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-1 px-3.5 py-2 rounded-full border border-forest-900/40 text-forest-950 hover:bg-forest-900 hover:text-[#FAF7F2] text-xs font-medium tracking-wide transition-colors"
-                >
-                  <span>About</span>
+                  <ArrowRight className="w-2.5 h-2.5" />
                 </Link>
               </div>
             </div>

@@ -26,7 +26,7 @@ export default function GalleryPage() {
       {/* ========================================================================= */}
       {/* 1. GALLERY HERO — CIRCULAR PHOTO ON LEFT, ARCHIVE HEADINGS ON RIGHT */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
+      <section className="py-16 sm:py-24 bg-[#F4EFE6] border-b border-[#EAE2D3]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             {/* Left: Circular Photo Frame */}
