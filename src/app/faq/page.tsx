@@ -2,18 +2,88 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import type { Metadata } from "next";
+import JsonLd from "@/components/seo/JsonLd";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import { faqData } from "@/data/faq";
 
-export const metadata = {
-  title: "Frequently Asked Questions | Pradheep Pattambi (Psychologist)",
+export const metadata: Metadata = {
+  title: "Counselling FAQs | Pradheep Pattambi Psychologist Kerala",
   description:
-    "Find answers to common questions about psychological counseling, session formats, fees, and confidential therapy with Pradheep N.V. in Palakkad and Pattambi."
+    "Find answers to common questions on psychological counseling, therapy sessions, confidentiality, premarital guidance, and appointments in Palakkad & Kerala.",
+  alternates: {
+    canonical: "https://pradheeppattambi.com/faq/",
+  },
+  openGraph: {
+    title: "Counselling FAQs | Pradheep Pattambi Psychologist Kerala",
+    description:
+      "Find answers to common questions on psychological counseling, therapy sessions, confidentiality, premarital guidance, and appointments in Palakkad & Kerala.",
+    url: "https://pradheeppattambi.com/faq/",
+    siteName: "Pradheep Pattambi - Psychologist & NLP Master Trainer",
+    images: [
+      {
+        url: "https://pradheeppattambi.com/images/photo-3.png",
+        width: 1200,
+        height: 630,
+        alt: "Pradheep Pattambi - Counselling Questions and Answers Kerala",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Counselling FAQs | Pradheep Pattambi Psychologist Kerala",
+    description:
+      "Find answers to common questions on psychological counseling, therapy sessions, confidentiality, premarital guidance, and appointments in Palakkad & Kerala.",
+    images: ["https://pradheeppattambi.com/images/photo-3.png"],
+  },
+};
+
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://pradheeppattambi.com/faq/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://pradheeppattambi.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "FAQ",
+          item: "https://pradheeppattambi.com/faq/",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://pradheeppattambi.com/faq/#faqpage",
+      name: "Frequently Asked Questions About Counselling & Psychological Guidance",
+      url: "https://pradheeppattambi.com/faq/",
+      description:
+        "Frequently asked questions and answers about personal counselling, psychotherapy sessions, confidentiality, and booking with Pradheep N.V. in Palakkad, Kerala.",
+      mainEntity: faqData.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    },
+  ],
 };
 
 export default function FAQPage() {
   return (
     <div className="overflow-x-hidden bg-[#FAF7F2]">
+      <JsonLd data={faqStructuredData} />
       {/* ========================================================================= */}
       {/* 1. FAQ HERO — CIRCULAR PHOTO ON LEFT, Q&A HEADING ON RIGHT */}
       {/* ========================================================================= */}
@@ -26,7 +96,7 @@ export default function FAQPage() {
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
                     src="/images/photo-3.png"
-                    alt="Pradheep N.V. - Consultative Counselling Guidance"
+                    alt="Pradheep N.V. - Psychological Counseling and Guidance FAQs in Palakkad"
                     fill
                     priority
                     className="object-cover object-[center_top] scale-110"

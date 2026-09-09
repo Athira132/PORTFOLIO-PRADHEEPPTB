@@ -12,21 +12,82 @@ import {
   CheckCircle2,
   Quote
 } from "lucide-react";
+import type { Metadata } from "next";
 import SectionHeading from "@/components/ui/SectionHeading";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import FAQAccordion from "@/components/ui/FAQAccordion";
+import JsonLd from "@/components/seo/JsonLd";
 import { testimonialsData } from "@/data/testimonials";
 import { faqData } from "@/data/faq";
 
-export const metadata = {
-  title: "About Pradheep N.V. | Psychologist in Palakkad & Pattambi",
+export const metadata: Metadata = {
+  title: "About Pradheep N.V. | Psychologist in Palakkad, Kerala",
   description:
-    "Learn about Pradheep N.V. (Pradheep Pattambi), psychologist in Palakkad, published poet, martial arts enthusiast, and life skill mentor with 20+ years of Kerala Government service."
+    "Learn about Pradheep N.V. (Pradheep Pattambi), psychologist in Palakkad with 20+ years of Kerala service. Author, poet, NLP trainer & mental health guide.",
+  alternates: {
+    canonical: "https://pradheeppattambi.com/about/",
+  },
+  openGraph: {
+    title: "About Pradheep N.V. | Psychologist in Palakkad & Pattambi",
+    description:
+      "Meet Pradheep N.V., psychologist in Palakkad with 20+ years experience. Discover his compassionate philosophy, life coaching journey, and mindful counselling.",
+    url: "https://pradheeppattambi.com/about/",
+    siteName: "Pradheep Pattambi",
+    images: [
+      {
+        url: "/images/about-hero.jpg",
+        width: 800,
+        height: 800,
+        alt: "Pradheep N.V. - Clinical Psychologist and Life Skill Coach in Palakkad"
+      }
+    ],
+    locale: "en_US",
+    type: "profile"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Pradheep N.V. | Psychologist in Palakkad & Pattambi",
+    description:
+      "20+ years of dedicated service empowering lives through counselling, NLP, and mindful coaching in Kerala.",
+    images: ["/images/about-hero.jpg"]
+  }
+};
+
+const aboutStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pradheeppattambi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Pradheep",
+          "item": "https://pradheeppattambi.com/about/"
+        }
+      ]
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://pradheeppattambi.com/about/#webpage",
+      "url": "https://pradheeppattambi.com/about/",
+      "name": "About Pradheep N.V. | Psychologist in Palakkad & Pattambi",
+      "isPartOf": { "@id": "https://pradheeppattambi.com/#website" },
+      "mainEntity": { "@id": "https://pradheeppattambi.com/#person" }
+    }
+  ]
 };
 
 export default function AboutPage() {
   return (
     <div className="overflow-x-hidden">
+      <JsonLd data={aboutStructuredData} />
       {/* ========================================================================= */}
       {/* 1. ABOUT HERO — CIRCULAR PHOTO ON LEFT, EDITORIAL CONTENT ON RIGHT */}
       {/* ========================================================================= */}
@@ -39,7 +100,7 @@ export default function AboutPage() {
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
                     src="/images/about-hero.jpg"
-                    alt="Pradheep N.V. - Psychologist in Kerala"
+                    alt="Pradheep N.V. - Clinical Psychologist and Life Skill Coach in Palakkad, Kerala"
                     fill
                     priority
                     className="object-cover object-center scale-110"
@@ -101,7 +162,7 @@ export default function AboutPage() {
                 <div className="relative w-full h-full">
                   <Image
                     src="/images/gallery/gallery-03.jpg"
-                    alt="Pradheep N.V. at KVVES Pattambi"
+                    alt="Pradheep N.V. addressing a seminar at KVVES Pattambi, Palakkad"
                     fill
                     className="object-contain"
                     priority

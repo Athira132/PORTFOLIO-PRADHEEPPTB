@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -14,16 +15,64 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import FAQAccordion from "@/components/ui/FAQAccordion";
+import JsonLd from "@/components/seo/JsonLd";
 import { servicesData } from "@/data/services";
 import { testimonialsData } from "@/data/testimonials";
 import { faqData } from "@/data/faq";
 import { galleryData } from "@/data/gallery";
+
+export const metadata: Metadata = {
+  title: "Pradheep Pattambi | Psychologist in Palakkad & Life Coach",
+  description:
+    "Consult Pradheep N.V., expert psychologist in Palakkad & Pattambi. Confidential counselling, NLP training, stress management & life coaching across Kerala.",
+  alternates: {
+    canonical: "https://pradheeppattambi.com/"
+  },
+  openGraph: {
+    title: "Pradheep Pattambi | Psychologist in Palakkad & Life Coach",
+    description:
+      "Consult Pradheep N.V., expert psychologist in Palakkad & Pattambi. Confidential counselling, NLP training, stress management & life coaching across Kerala.",
+    url: "https://pradheeppattambi.com/",
+    siteName: "Pradheep Pattambi",
+    images: [
+      {
+        url: "/images/pradheep-hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Pradheep Pattambi - Psychologist and NLP Master Trainer in Palakkad, Kerala"
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pradheep Pattambi | Psychologist in Palakkad & Life Coach",
+    description:
+      "Empathetic psychological counselling, NLP master training, and life coaching in Pattambi, Palakkad, Kerala.",
+    images: ["/images/pradheep-hero.png"]
+  }
+};
+
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.slice(0, 4).map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer
+    }
+  }))
+};
 
 export default function HomePage() {
   const previewGallery = galleryData.slice(0, 4);
 
   return (
     <div className="overflow-x-hidden">
+      <JsonLd data={homeFaqSchema} />
       {/* ========================================================================= */}
       {/* 1. HERO SECTION — IMAGE-FIRST, PROPORTIONALLY INCREASED TYPOGRAPHY */}
       {/* ========================================================================= */}
@@ -34,7 +83,7 @@ export default function HomePage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/pradheep-hero.png"
-              alt="Pradheep Pattambi - Psychologist and Life Skill Coach"
+              alt="Pradheep Pattambi - Professional Psychologist and NLP Master Trainer in Palakkad, Kerala"
               fill
               priority
               quality={100}
@@ -95,7 +144,7 @@ export default function HomePage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/pradheep-hero.png"
-              alt="Pradheep Pattambi - Psychologist and Life Skill Coach"
+              alt="Pradheep Pattambi - Psychologist and Life Skill Coach in Pattambi, Kerala"
               fill
               priority
               quality={100}
@@ -110,16 +159,16 @@ export default function HomePage() {
           <div className="relative z-10 h-full w-full flex justify-start items-start pt-8 sm:pt-10 px-4 sm:px-6 pointer-events-none">
             <div className="max-w-[52%] sm:max-w-[48%] flex flex-col items-start text-left space-y-2 pointer-events-auto">
               {/* 1. Dominant Element: Pradheep Pattambi (Two lines, very large, bold, premium) */}
-              <h1 className="text-[2rem] sm:text-[2.25rem] font-extrabold text-[#FAF7F2] tracking-tight leading-[1.05] drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+              <p className="text-[2rem] sm:text-[2.25rem] font-extrabold text-[#FAF7F2] tracking-tight leading-[1.05] drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
                 <span>Pradheep</span>
                 <br />
                 <span>Pattambi</span>
-              </h1>
+              </p>
 
               {/* 2. Second-largest text: NLP Master Trainer (Noticeably larger) */}
-              <h2 className="text-[14.5px] sm:text-[16px] font-bold text-[#C5A880] tracking-tight drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
+              <p className="text-[14.5px] sm:text-[16px] font-bold text-[#C5A880] tracking-tight drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
                 NLP Master Trainer
-              </h2>
+              </p>
 
               {/* Subtle accent divider */}
               <div className="w-12 sm:w-14 h-[2px] bg-[#C5A880] rounded-full my-0.5 shadow-xs" />
@@ -267,7 +316,7 @@ export default function HomePage() {
                 <div className="relative w-full h-full">
                   <Image
                     src="/images/gallery/gallery-05.jpg"
-                    alt="Pradheep N.V. at consultation desk"
+                    alt="Pradheep N.V. consulting clients at his psychological guidance desk in Pattambi"
                     fill
                     className="object-contain"
                     sizes="(max-width: 1024px) 100vw, 35vw"
@@ -388,7 +437,7 @@ export default function HomePage() {
                 <div className="relative w-full h-full">
                   <Image
                     src={item.imageSrc}
-                    alt="Pradheep Pattambi gallery photo"
+                    alt={`${item.title} - Pradheep Pattambi Workshop in Kerala`}
                     fill
                     className="object-contain"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

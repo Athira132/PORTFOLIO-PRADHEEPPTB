@@ -14,19 +14,86 @@ import {
   CalendarCheck,
   LucideIcon
 } from "lucide-react";
+import type { Metadata } from "next";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import FAQAccordion from "@/components/ui/FAQAccordion";
+import JsonLd from "@/components/seo/JsonLd";
 import { servicesData } from "@/data/services";
 import { testimonialsData } from "@/data/testimonials";
 import { faqData } from "@/data/faq";
 import { trustFeaturesData } from "@/data/trustFeatures";
 
-export const metadata = {
-  title: "Counselling in Palakkad | Pradheep N.V. (Psychologist)",
+export const metadata: Metadata = {
+  title: "Psychological Counselling in Palakkad | Pradheep Pattambi",
   description:
-    "Expert, confidential psychological counselling in Palakkad & Pattambi by Pradheep N.V. Empowering minds, healing relationships, and building lasting resilience."
+    "Confidential psychological counselling in Palakkad & Pattambi by Pradheep N.V. Compassionate therapy for anxiety, depression, stress & relationship healing.",
+  alternates: {
+    canonical: "https://pradheeppattambi.com/counselling/"
+  },
+  openGraph: {
+    title: "Psychological Counselling in Palakkad | Pradheep Pattambi",
+    description:
+      "Expert, confidential psychological counselling in Palakkad & Pattambi by Pradheep N.V. Empowering minds, healing relationships, and building lasting resilience.",
+    url: "https://pradheeppattambi.com/counselling/",
+    siteName: "Pradheep Pattambi",
+    images: [
+      {
+        url: "/images/gallery/gallery-04.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Psychological Counselling Session with Pradheep Pattambi in Palakkad"
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Psychological Counselling in Palakkad | Pradheep Pattambi",
+    description:
+      "Confidential psychological counselling, anxiety therapy, and relationship guidance in Palakkad & Pattambi, Kerala.",
+    images: ["/images/gallery/gallery-04.jpg"]
+  }
+};
+
+const counsellingStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pradheeppattambi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Psychological Counselling",
+          "item": "https://pradheeppattambi.com/counselling/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://pradheeppattambi.com/counselling/#service",
+      "name": "Psychological Counselling & Psychotherapy",
+      "serviceType": "Mental Health Counseling",
+      "provider": { "@id": "https://pradheeppattambi.com/#person" },
+      "areaServed": [
+        { "@type": "City", "name": "Pattambi" },
+        { "@type": "AdministrativeArea", "name": "Palakkad" },
+        { "@type": "State", "name": "Kerala" }
+      ],
+      "description":
+        "Confidential psychological counselling for stress management, anxiety relief, emotional trauma healing, de-addiction guidance, and premarital relationship clarity.",
+      "url": "https://pradheeppattambi.com/counselling/"
+    }
+  ]
 };
 
 const trustIconMap: Record<string, LucideIcon> = {
@@ -41,6 +108,7 @@ const trustIconMap: Record<string, LucideIcon> = {
 export default function CounsellingPage() {
   return (
     <div className="overflow-x-hidden">
+      <JsonLd data={counsellingStructuredData} />
       {/* ========================================================================= */}
       {/* 1. COUNSELLING HERO — CIRCULAR PHOTO ON LEFT, CLINICAL INFO ON RIGHT */}
       {/* ========================================================================= */}
@@ -53,7 +121,7 @@ export default function CounsellingPage() {
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
                     src="/images/gallery/gallery-04.jpg"
-                    alt="Supportive Psychological Counselling Session with Pradheep N.V."
+                    alt="Pradheep N.V. - Confidential Psychological Counselling in Palakkad and Pattambi"
                     fill
                     priority
                     className="object-cover object-[center_50%] scale-110"
@@ -115,7 +183,7 @@ export default function CounsellingPage() {
                 <div className="relative w-full h-full">
                   <Image
                     src="/images/photo-4.png"
-                    alt="Counseling in Palakkad by Pradheep N.V."
+                    alt="Psychological counselling and psychotherapy session with Pradheep N.V. in Palakkad, Kerala"
                     fill
                     className="object-contain"
                     sizes="(max-width: 1024px) 100vw, 35vw"

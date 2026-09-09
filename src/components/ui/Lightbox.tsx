@@ -52,7 +52,7 @@ export default function Lightbox({ item, onClose }: LightboxProps) {
         <div className="relative w-full h-full">
           <Image
             src={item.imageSrc}
-            alt="Pradheep Pattambi gallery photograph"
+            alt={`${item.title} - Pradheep Pattambi Workshop Photograph`}
             fill
             className="object-contain"
             sizes="(max-width: 1024px) 100vw, 1200px"

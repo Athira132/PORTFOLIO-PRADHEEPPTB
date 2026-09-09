@@ -13,12 +13,79 @@ import {
   AlertCircle,
   Lightbulb
 } from "lucide-react";
+import type { Metadata } from "next";
 import SectionHeading from "@/components/ui/SectionHeading";
+import JsonLd from "@/components/seo/JsonLd";
 
-export const metadata = {
-  title: "Career Counselling in Pattambi | Pradheep N.V. (Psychologist)",
+export const metadata: Metadata = {
+  title: "Career Counselling in Pattambi & Palakkad | Pradheep N.V.",
   description:
-    "Expert, psychology-based career counselling in Pattambi for +2 students, college graduates, job seekers, and career changers. Discover your true strengths."
+    "Professional career counselling in Pattambi & Palakkad for +2 students, college graduates, and professionals. Scientific aptitude guidance & career path design.",
+  alternates: {
+    canonical: "https://pradheeppattambi.com/career/"
+  },
+  openGraph: {
+    title: "Career Counselling in Pattambi & Palakkad | Pradheep N.V.",
+    description:
+      "Expert, psychology-based career counselling in Pattambi for +2 students, college graduates, job seekers, and career changers. Discover your true strengths.",
+    url: "https://pradheeppattambi.com/career/",
+    siteName: "Pradheep Pattambi",
+    images: [
+      {
+        url: "/images/photo-4.png",
+        width: 1200,
+        height: 800,
+        alt: "Career Counselling and Guidance with Pradheep N.V. in Pattambi"
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Career Counselling in Pattambi & Palakkad | Pradheep N.V.",
+    description:
+      "Psychology-based career guidance in Pattambi for students and working professionals across Kerala.",
+    images: ["/images/photo-4.png"]
+  }
+};
+
+const careerStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pradheeppattambi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Career Counselling",
+          "item": "https://pradheeppattambi.com/career/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://pradheeppattambi.com/career/#service",
+      "name": "Career Counselling & Guidance",
+      "serviceType": "Educational & Career Counseling",
+      "provider": { "@id": "https://pradheeppattambi.com/#person" },
+      "areaServed": [
+        { "@type": "City", "name": "Pattambi" },
+        { "@type": "AdministrativeArea", "name": "Palakkad" },
+        { "@type": "State", "name": "Kerala" }
+      ],
+      "description":
+        "Scientific aptitude testing, course selection guidance for +2 students, college graduate direction, and mid-career transition coaching in Pattambi and Palakkad.",
+      "url": "https://pradheeppattambi.com/career/"
+    }
+  ]
 };
 
 const audienceGroups = [
@@ -71,6 +138,7 @@ const audienceGroups = [
 export default function CareerPage() {
   return (
     <div className="overflow-x-hidden">
+      <JsonLd data={careerStructuredData} />
       {/* ========================================================================= */}
       {/* 1. CAREER HERO — CIRCULAR PHOTO ON LEFT, GUIDANCE DETAILS ON RIGHT */}
       {/* ========================================================================= */}
@@ -83,7 +151,7 @@ export default function CareerPage() {
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
                     src="/images/photo-4.png"
-                    alt="Career Counselling and Student Mentorship with Pradheep N.V."
+                    alt="Pradheep N.V. - Career Counselling and Student Mentorship in Pattambi, Palakkad"
                     fill
                     priority
                     className="object-cover object-[center_top] scale-110"
@@ -145,7 +213,7 @@ export default function CareerPage() {
                 <div className="relative w-full h-full">
                   <Image
                     src="/images/photo-3.png"
-                    alt="Career Guidance in Pattambi"
+                    alt="Career Guidance and Aptitude Mapping with Pradheep N.V. in Pattambi, Kerala"
                     fill
                     className="object-contain"
                     sizes="(max-width: 1024px) 100vw, 35vw"

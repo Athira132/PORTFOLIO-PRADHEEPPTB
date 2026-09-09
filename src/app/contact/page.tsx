@@ -12,17 +12,79 @@ import {
   ExternalLink,
   Navigation
 } from "lucide-react";
+import type { Metadata } from "next";
 import ContactForm from "@/components/forms/ContactForm";
+import JsonLd from "@/components/seo/JsonLd";
 
-export const metadata = {
-  title: "Contact & Appointments | Pradheep Pattambi (Psychologist)",
+export const metadata: Metadata = {
+  title: "Contact & Appointments | Pradheep Pattambi Psychologist",
   description:
-    "Get in touch with Pradheep N.V. for confidential psychological counselling, career guidance in Pattambi, or motivational speaking across Kerala."
+    "Book a confidential counselling appointment with Pradheep N.V. in Pattambi, Palakkad. Call +91 9567-654-880 or chat on WhatsApp for consultation inquiries.",
+  alternates: {
+    canonical: "https://pradheeppattambi.com/contact/"
+  },
+  openGraph: {
+    title: "Contact & Appointments | Pradheep Pattambi Psychologist",
+    description:
+      "Get in touch with Pradheep N.V. for confidential psychological counselling, career guidance in Pattambi, or motivational speaking across Kerala.",
+    url: "https://pradheeppattambi.com/contact/",
+    siteName: "Pradheep Pattambi",
+    images: [
+      {
+        url: "/images/gallery/gallery-03.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Contact Pradheep Pattambi for Counselling Appointments in Palakkad"
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact & Appointments | Pradheep Pattambi Psychologist",
+    description:
+      "Reach out to Pradheep N.V. in Pattambi, Palakkad for appointments and guidance.",
+    images: ["/images/gallery/gallery-03.jpg"]
+  }
+};
+
+const contactStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pradheeppattambi.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact & Appointments",
+          "item": "https://pradheeppattambi.com/contact/"
+        }
+      ]
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://pradheeppattambi.com/contact/#webpage",
+      "url": "https://pradheeppattambi.com/contact/",
+      "name": "Contact & Appointments | Pradheep Pattambi Psychologist",
+      "description":
+        "Contact information and appointment booking for psychological counselling with Pradheep N.V. in Pattambi, Palakkad, Kerala.",
+      "mainEntity": { "@id": "https://pradheeppattambi.com/#business" }
+    }
+  ]
 };
 
 export default function ContactPage() {
   return (
     <div className="overflow-x-hidden bg-[#FAF7F2]">
+      <JsonLd data={contactStructuredData} />
       {/* ========================================================================= */}
       {/* 1. CONTACT HERO — CIRCULAR PHOTO ON LEFT, REACH INFO ON RIGHT */}
       {/* ========================================================================= */}
@@ -35,7 +97,7 @@ export default function ContactPage() {
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
                     src="/images/gallery/gallery-03.jpg"
-                    alt="Pradheep N.V. - Contact & Appointments"
+                    alt="Contact Pradheep N.V. - Psychologist in Pattambi, Palakkad"
                     fill
                     priority
                     className="object-cover object-[center_top] scale-110"
