@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import ContactForm from "@/components/forms/ContactForm";
+import WhatsAppBookingForm from "@/components/forms/WhatsAppBookingForm";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
@@ -303,21 +304,30 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right Col: Contact Form */}
-            <div className="lg:col-span-7">
-              <div className="mb-6">
-                <span className="text-xs uppercase tracking-[0.2em] text-olive-700 font-semibold block mb-1">
-                  APPOINTMENT INQUIRY
-                </span>
-                <h3 className="text-3xl font-bold tracking-tight text-forest-950">
-                  Send a Confidential Message
-                </h3>
-                <p className="text-xs sm:text-sm text-muted-text mt-2">
-                  Fill in the form below with your requirements and contact details. We will respond respectfully and promptly.
-                </p>
-              </div>
+            {/* Right Col: Booking & Contact Forms */}
+            <div className="lg:col-span-7 space-y-10">
+              {/* WhatsApp Quick Booking Form */}
+              <WhatsAppBookingForm
+                title="Book an Appointment on WhatsApp"
+                subtitle="Select your preferred date and time to confirm a direct consultation request on WhatsApp."
+              />
 
-              <ContactForm />
+              {/* General Message Form */}
+              <div className="pt-6 border-t border-[#EAE2D3]">
+                <div className="mb-6">
+                  <span className="text-xs uppercase tracking-[0.2em] text-olive-700 font-semibold block mb-1">
+                    DETAILED INQUIRY
+                  </span>
+                  <h3 className="text-2xl font-bold tracking-tight text-forest-950">
+                    Send a Confidential Note
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-text mt-1.5 leading-relaxed">
+                    Have an institutional inquiry, corporate seminar request, or detailed question? You can also send a message note below.
+                  </p>
+                </div>
+
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>

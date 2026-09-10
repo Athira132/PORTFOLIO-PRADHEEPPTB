@@ -16,6 +16,7 @@ import ServiceCard from "@/components/ui/ServiceCard";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import JsonLd from "@/components/seo/JsonLd";
+import WhatsAppBookingForm from "@/components/forms/WhatsAppBookingForm";
 import { servicesData } from "@/data/services";
 import { testimonialsData } from "@/data/testimonials";
 import { faqData } from "@/data/faq";
@@ -78,23 +79,23 @@ export default function HomePage() {
       {/* ========================================================================= */}
       <section className="relative w-full bg-[#FAF7F2] border-b border-[#EAE2D3]">
         {/* DESKTOP LAYOUT (md and above): Full-width background banner with increased typography overlay — NO BOX / NO CARD */}
-        <div className="hidden md:flex relative w-full min-h-[620px] lg:h-[calc(100vh-5rem)] max-h-[860px] items-center overflow-hidden">
-          {/* Full-width original photo — 100% natural, NO overlays or shades */}
+        <div className="hidden md:flex relative w-full min-h-[560px] lg:h-[calc(100vh-5rem)] max-h-[760px] items-center overflow-hidden">
+          {/* Full-width original photo — 100% natural, positioned to showcase Pradheep on right with clear left space */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/pradheep-hero.png"
+              src="/images/hero-new.webp"
               alt="Pradheep Pattambi - Professional Psychologist and NLP Master Trainer in Palakkad, Kerala"
               fill
               priority
               quality={100}
-              className="object-cover object-[80%_15%] lg:object-[82%_15%]"
+              className="object-cover object-[72%_center] lg:object-[75%_center]"
               sizes="100vw"
             />
           </div>
 
           {/* Typography Direct Overlay on the Left — Noticeably Larger, Editorial */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-12 md:py-16 w-full flex items-center">
-            <div className="max-w-xl lg:max-w-2xl space-y-6">
+            <div className="max-w-lg lg:max-w-xl space-y-6">
               {/* Minimal Accent Label */}
               <div className="inline-flex items-center gap-2.5">
                 <span className="w-10 h-[2.5px] bg-olive-700" />
@@ -114,7 +115,7 @@ export default function HomePage() {
               </p>
 
               {/* Supporting Line — Increased font size */}
-              <p className="text-forest-950/90 text-base sm:text-lg lg:text-xl leading-relaxed font-sans max-w-xl">
+              <p className="text-forest-950/90 text-base sm:text-lg lg:text-xl leading-relaxed font-sans max-w-lg">
                 Undertakes specialized training for students, Teachers, clubs, individuals and corporates.
               </p>
 
@@ -143,16 +144,16 @@ export default function HomePage() {
           {/* Hero photo framed with Pradheep visually dominant on the RIGHT */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/pradheep-hero.png"
+              src="/images/hero-new.webp"
               alt="Pradheep Pattambi - Psychologist and Life Skill Coach in Pattambi, Kerala"
               fill
               priority
               quality={100}
-              className="object-cover object-[75%_top] sm:object-[78%_top]"
+              className="object-cover object-[68%_top] sm:object-[70%_top]"
               sizes="100vw"
             />
             {/* Lighter, softer dark overlay: original photograph is clearly visible while text maintains strong contrast */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#111814]/80 via-[#111814]/55 via-[48%] to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#111814]/85 via-[#111814]/60 via-[50%] to-transparent pointer-events-none" />
           </div>
 
           {/* Typography Direct Overlay on the LEFT SIDE — Two-column composition, High Contrast, Noticeably Larger */}
@@ -486,6 +487,14 @@ export default function HomePage() {
             &ldquo;Whether you’re looking for personal guidance, career clarity, or support
             through life’s challenges, I’m here to help.&rdquo;
           </p>
+
+          {/* Quick WhatsApp Booking Form */}
+          <div className="max-w-xl mx-auto text-left pt-2">
+            <WhatsAppBookingForm
+              title="Request an Appointment"
+              subtitle="Select your preferred date and time to initiate a confidential booking directly on WhatsApp."
+            />
+          </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Link
