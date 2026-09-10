@@ -15,7 +15,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import JsonLd from "@/components/seo/JsonLd";
-import WhatsAppBookingForm from "@/components/forms/WhatsAppBookingForm";
+import BookAppointmentButton from "@/components/ui/BookAppointmentButton";
 import MainServicesSection from "@/components/services/MainServicesSection";
 import { testimonialsData } from "@/data/testimonials";
 import { faqData } from "@/data/faq";
@@ -567,12 +567,27 @@ export default function HomePage() {
             through life’s challenges, I’m here to help.&rdquo;
           </p>
 
-          {/* Quick WhatsApp Booking Form */}
-          <div className="max-w-xl mx-auto text-left pt-2">
-            <WhatsAppBookingForm
-              title="Request an Appointment"
-              subtitle="Select your preferred date and time to initiate a confidential booking directly on WhatsApp."
-            />
+          {/* Appointment CTA Card (Opens Modal Popup) */}
+          <div className="max-w-xl mx-auto bg-white rounded-3xl p-7 sm:p-9 border border-[#D8CCA8] shadow-sm text-center space-y-4">
+            <div className="w-12 h-12 rounded-2xl bg-[#EBF1EA] text-olive-800 flex items-center justify-center mx-auto">
+              <CalendarCheck className="w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="text-xl sm:text-2xl font-bold text-forest-950 tracking-tight">
+                Request a Confidential Session
+              </h3>
+              <p className="text-xs sm:text-sm text-muted-text mt-1 max-w-md mx-auto leading-relaxed">
+                Connect directly for individual, family, or career counselling in Pattambi. Instant appointment requests via WhatsApp.
+              </p>
+            </div>
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-3.5">
+              <BookAppointmentButton variant="primary">
+                Book an Appointment
+              </BookAppointmentButton>
+              <BookAppointmentButton variant="outline">
+                Make an Enquiry
+              </BookAppointmentButton>
+            </div>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">

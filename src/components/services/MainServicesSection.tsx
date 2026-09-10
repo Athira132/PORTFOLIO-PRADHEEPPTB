@@ -1,7 +1,9 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
-import { MessageCircle, ArrowUpRight, Heart, Users, Compass } from "lucide-react";
-import { getWhatsAppServiceEnquiryUrl } from "@/config/whatsapp";
+import { ArrowUpRight, Heart, Users, Compass } from "lucide-react";
+import BookAppointmentButton from "@/components/ui/BookAppointmentButton";
 
 interface ServiceItem {
   id: string;
@@ -63,7 +65,6 @@ export default function MainServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {mainServices.map((service) => {
             const Icon = service.icon;
-            const enquiryUrl = getWhatsAppServiceEnquiryUrl(service.name);
 
             return (
               <div
@@ -92,18 +93,14 @@ export default function MainServicesSection() {
                   </p>
                 </div>
 
-                {/* Bottom Actions: Enquiry Button (WhatsApp) + Details Link */}
+                {/* Bottom Actions: Enquiry Button (Opens Booking Modal) + Details Link */}
                 <div className="pt-4 border-t border-[#EAE2D3]/60 space-y-3">
-                  <a
-                    href={enquiryUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm tracking-wide shadow-xs hover:shadow-sm transition-all duration-200"
-                    aria-label={`Enquire about ${service.name} on WhatsApp`}
+                  <BookAppointmentButton
+                    service={service.name}
+                    variant="enquiry"
                   >
-                    <MessageCircle className="w-4 h-4" />
-                    <span>Enquiry</span>
-                  </a>
+                    Enquiry
+                  </BookAppointmentButton>
 
                   <div className="text-center">
                     <Link

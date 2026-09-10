@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import type { Metadata } from "next";
 import ContactForm from "@/components/forms/ContactForm";
-import WhatsAppBookingForm from "@/components/forms/WhatsAppBookingForm";
+import BookAppointmentButton from "@/components/ui/BookAppointmentButton";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
@@ -304,13 +304,35 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right Col: Booking & Contact Forms */}
+            {/* Right Col: Booking CTA & Contact Form */}
             <div className="lg:col-span-7 space-y-10">
-              {/* WhatsApp Quick Booking Form */}
-              <WhatsAppBookingForm
-                title="Book an Appointment on WhatsApp"
-                subtitle="Select your preferred date and time to confirm a direct consultation request on WhatsApp."
-              />
+              {/* WhatsApp Quick Booking CTA Card (Opens Modal) */}
+              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#D8CCA8] shadow-xs space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#EBF1EA] text-olive-800 flex items-center justify-center shrink-0">
+                    <Calendar className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-xs uppercase tracking-[0.2em] text-olive-700 font-semibold block">
+                      FAST TRACK APPOINTMENT
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-forest-950">
+                      Book an Appointment on WhatsApp
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-muted-text leading-relaxed font-sans">
+                  Select your preferred date and time to initiate a confidential booking request on WhatsApp.
+                </p>
+                <div className="pt-1 flex flex-wrap items-center gap-3">
+                  <BookAppointmentButton variant="primary">
+                    Book an Appointment
+                  </BookAppointmentButton>
+                  <BookAppointmentButton variant="outline">
+                    Make an Enquiry
+                  </BookAppointmentButton>
+                </div>
+              </div>
 
               {/* General Message Form */}
               <div className="pt-6 border-t border-[#EAE2D3]">

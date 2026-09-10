@@ -13,6 +13,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 import JsonLd from "@/components/seo/JsonLd";
+import BookingProviderWrapper from "@/components/providers/BookingProviderWrapper";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://pradheeppattambi.com"),
@@ -199,10 +200,12 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#1C2621] font-sans selection:bg-[#143022] selection:text-[#FAF7F2]">
         <JsonLd data={rootStructuredData} />
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-        <WhatsAppFloat />
+        <BookingProviderWrapper>
+          <Navbar />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          <WhatsAppFloat />
+        </BookingProviderWrapper>
       </body>
     </html>
   );
