@@ -17,15 +17,17 @@ import type { Metadata } from "next";
 import SectionHeading from "@/components/ui/SectionHeading";
 import JsonLd from "@/components/seo/JsonLd";
 
+import { getWhatsAppServiceEnquiryUrl } from "@/config/whatsapp";
+
 export const metadata: Metadata = {
-  title: "Career Counselling in Pattambi & Palakkad | Pradheep N.V.",
+  title: "Career Counselling in Pattambi | Pradheep Pattambi",
   description:
-    "Professional career counselling in Pattambi & Palakkad for +2 students, college graduates, and professionals. Scientific aptitude guidance & career path design.",
+    "Professional career counselling & guidance in Pattambi by Pradheep Pattambi. Course selection for +2 students, college graduates, and personal development support.",
   alternates: {
     canonical: "https://pradheeppattambi.com/career/"
   },
   openGraph: {
-    title: "Career Counselling in Pattambi & Palakkad | Pradheep N.V.",
+    title: "Career Counselling in Pattambi | Pradheep Pattambi",
     description:
       "Expert, psychology-based career counselling in Pattambi for +2 students, college graduates, job seekers, and career changers. Discover your true strengths.",
     url: "https://pradheeppattambi.com/career/",
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
         url: "/images/photo-4.png",
         width: 1200,
         height: 800,
-        alt: "Career Counselling and Guidance with Pradheep N.V. in Pattambi"
+        alt: "Career Counselling and Guidance with Pradheep Pattambi in Pattambi"
       }
     ],
     locale: "en_US",
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Career Counselling in Pattambi & Palakkad | Pradheep N.V.",
+    title: "Career Counselling in Pattambi | Pradheep Pattambi",
     description:
       "Psychology-based career guidance in Pattambi for students and working professionals across Kerala.",
     images: ["/images/photo-4.png"]
@@ -73,7 +75,7 @@ const careerStructuredData = {
     {
       "@type": "Service",
       "@id": "https://pradheeppattambi.com/career/#service",
-      "name": "Career Counselling & Guidance",
+      "name": "Career Counselling in Pattambi",
       "serviceType": "Educational & Career Counseling",
       "provider": { "@id": "https://pradheeppattambi.com/#person" },
       "areaServed": [
@@ -82,7 +84,7 @@ const careerStructuredData = {
         { "@type": "State", "name": "Kerala" }
       ],
       "description":
-        "Scientific aptitude testing, course selection guidance for +2 students, college graduate direction, and mid-career transition coaching in Pattambi and Palakkad.",
+        "Scientific aptitude testing, course selection guidance for +2 students, college graduate direction, and personal development support in Pattambi and Palakkad.",
       "url": "https://pradheeppattambi.com/career/"
     }
   ]
@@ -188,7 +190,7 @@ export default function CareerPage() {
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <a
-                  href="https://api.whatsapp.com/send?phone=919567654880"
+                  href={getWhatsAppServiceEnquiryUrl("Career Counseling")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-[#D8CCA8]/50 text-[#FAF7F2] bg-white/5 hover:bg-white/10 transition-colors text-sm sm:text-base font-medium tracking-wide"

@@ -21,16 +21,16 @@ import { testimonialsData } from "@/data/testimonials";
 import { faqData } from "@/data/faq";
 
 export const metadata: Metadata = {
-  title: "About Pradheep N.V. | Psychologist in Palakkad, Kerala",
+  title: "About Pradheep Pattambi | Psychologist in Pattambi, Kerala",
   description:
-    "Learn about Pradheep N.V. (Pradheep Pattambi), psychologist in Palakkad with 20+ years of Kerala service. Author, poet, NLP trainer & mental health guide.",
+    "Learn about Pradheep Pattambi (Pradheep N.V.), psychologist & therapeutic healer in Pattambi with 20+ years experience. NLP Grand Master, trainer & counsellor.",
   alternates: {
     canonical: "https://pradheeppattambi.com/about/",
   },
   openGraph: {
-    title: "About Pradheep N.V. | Psychologist in Palakkad & Pattambi",
+    title: "About Pradheep Pattambi | Psychologist in Pattambi, Kerala",
     description:
-      "Meet Pradheep N.V., psychologist in Palakkad with 20+ years experience. Discover his compassionate philosophy, life coaching journey, and mindful counselling.",
+      "Meet Pradheep Pattambi, psychologist in Pattambi with 20+ years experience. Discover his therapeutic healing philosophy, NLP mastery, and mindful counselling.",
     url: "https://pradheeppattambi.com/about/",
     siteName: "Pradheep Pattambi",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: "/images/about-hero.jpg",
         width: 800,
         height: 800,
-        alt: "Pradheep N.V. - Clinical Psychologist and Life Skill Coach in Palakkad"
+        alt: "Pradheep Pattambi - Psychologist and Therapeutic Healer in Pattambi"
       }
     ],
     locale: "en_US",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Pradheep N.V. | Psychologist in Palakkad & Pattambi",
+    title: "About Pradheep Pattambi | Psychologist in Pattambi, Kerala",
     description:
-      "20+ years of dedicated service empowering lives through counselling, NLP, and mindful coaching in Kerala.",
+      "20+ years of dedicated service empowering lives through psychological counselling, NLP, and therapeutic healing in Pattambi.",
     images: ["/images/about-hero.jpg"]
   }
 };
@@ -77,7 +77,7 @@ const aboutStructuredData = {
       "@type": "ProfilePage",
       "@id": "https://pradheeppattambi.com/about/#webpage",
       "url": "https://pradheeppattambi.com/about/",
-      "name": "About Pradheep N.V. | Psychologist in Palakkad & Pattambi",
+      "name": "About Pradheep Pattambi | Psychologist in Pattambi, Kerala",
       "isPartOf": { "@id": "https://pradheeppattambi.com/#website" },
       "mainEntity": { "@id": "https://pradheeppattambi.com/#person" }
     }

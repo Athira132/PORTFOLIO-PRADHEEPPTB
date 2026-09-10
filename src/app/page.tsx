@@ -12,35 +12,34 @@ import {
   CheckCircle2
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import ServiceCard from "@/components/ui/ServiceCard";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import JsonLd from "@/components/seo/JsonLd";
 import WhatsAppBookingForm from "@/components/forms/WhatsAppBookingForm";
-import { servicesData } from "@/data/services";
+import MainServicesSection from "@/components/services/MainServicesSection";
 import { testimonialsData } from "@/data/testimonials";
 import { faqData } from "@/data/faq";
 import { galleryData } from "@/data/gallery";
 
 export const metadata: Metadata = {
-  title: "Pradheep Pattambi | Psychologist in Palakkad & Life Coach",
+  title: "Psychologist in Pattambi | Counselling & Therapy – Pradheep Pattambi",
   description:
-    "Consult Pradheep N.V., expert psychologist in Palakkad & Pattambi. Confidential counselling, NLP training, stress management & life coaching across Kerala.",
+    "Consult Pradheep Pattambi, experienced psychologist & therapeutic healer in Pattambi. Confidential individual, family & career counselling, NLP training & mental wellness.",
   alternates: {
     canonical: "https://pradheeppattambi.com/"
   },
   openGraph: {
-    title: "Pradheep Pattambi | Psychologist in Palakkad & Life Coach",
+    title: "Psychologist in Pattambi | Counselling & Therapy – Pradheep Pattambi",
     description:
-      "Consult Pradheep N.V., expert psychologist in Palakkad & Pattambi. Confidential counselling, NLP training, stress management & life coaching across Kerala.",
+      "Consult Pradheep Pattambi, experienced psychologist & therapeutic healer in Pattambi. Confidential individual, family & career counselling, NLP training & mental wellness.",
     url: "https://pradheeppattambi.com/",
     siteName: "Pradheep Pattambi",
     images: [
       {
-        url: "/images/pradheep-hero.png",
+        url: "/images/hero-new.webp",
         width: 1200,
         height: 630,
-        alt: "Pradheep Pattambi - Psychologist and NLP Master Trainer in Palakkad, Kerala"
+        alt: "Pradheep Pattambi - Psychologist and Therapeutic Healer in Pattambi, Kerala"
       }
     ],
     locale: "en_US",
@@ -48,24 +47,114 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pradheep Pattambi | Psychologist in Palakkad & Life Coach",
+    title: "Psychologist in Pattambi | Counselling & Therapy – Pradheep Pattambi",
     description:
-      "Empathetic psychological counselling, NLP master training, and life coaching in Pattambi, Palakkad, Kerala.",
-    images: ["/images/pradheep-hero.png"]
+      "Confidential psychological counselling, individual & family therapy, and career guidance in Pattambi by Pradheep Pattambi.",
+    images: ["/images/hero-new.webp"]
   }
 };
 
-const homeFaqSchema = {
+const homeSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqData.slice(0, 4).map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://pradheeppattambi.com/#service",
+      "name": "Pradheep Pattambi - Psychologist & Therapeutic Healer",
+      "image": "https://pradheeppattambi.com/images/hero-new.webp",
+      "url": "https://pradheeppattambi.com/",
+      "telephone": "+91 9567-654-880",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pattambi",
+        "addressRegion": "Kerala",
+        "postalCode": "679303",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "10.8064",
+        "longitude": "76.1969"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Pattambi" },
+        { "@type": "AdministrativeArea", "name": "Palakkad" },
+        { "@type": "AdministrativeArea", "name": "Ottapalam" },
+        { "@type": "AdministrativeArea", "name": "Shornur" },
+        { "@type": "AdministrativeArea", "name": "Kerala" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Psychological Counselling & Therapy Services in Pattambi",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Individual Counseling",
+              "description": "One-on-one therapy for stress, anxiety, depression, and emotional well-being in Pattambi."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Family Counseling",
+              "description": "Support for families facing relationship and communication challenges in Pattambi."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Career Counseling",
+              "description": "Career guidance, decision-making, and personal development support in Pattambi."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://pradheeppattambi.com/#person",
+      "name": "Pradheep Pattambi",
+      "alternateName": "Pradheep N.V.",
+      "jobTitle": "Psychologist, Therapeutic Healer, NLP Grand Master, Certified Hypnotist, Trainer",
+      "worksFor": {
+        "@id": "https://pradheeppattambi.com/#service"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pattambi",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "url": "https://pradheeppattambi.com/",
+      "image": "https://pradheeppattambi.com/images/hero-new.webp"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pradheeppattambi.com/#website",
+      "url": "https://pradheeppattambi.com/",
+      "name": "Pradheep Pattambi | Psychologist in Pattambi",
+      "publisher": {
+        "@id": "https://pradheeppattambi.com/#person"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://pradheeppattambi.com/#faq",
+      "mainEntity": faqData.slice(0, 4).map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
     }
-  }))
+  ]
 };
 
 export default function HomePage() {
@@ -73,18 +162,18 @@ export default function HomePage() {
 
   return (
     <div className="overflow-x-hidden">
-      <JsonLd data={homeFaqSchema} />
+      <JsonLd data={homeSchema} />
       {/* ========================================================================= */}
-      {/* 1. HERO SECTION — IMAGE-FIRST, PROPORTIONALLY INCREASED TYPOGRAPHY */}
+      {/* 1. HERO SECTION — BALANCED, COMPACT BANNER WITH PROFESSIONAL DESCRIPTION */}
       {/* ========================================================================= */}
       <section className="relative w-full bg-[#FAF7F2] border-b border-[#EAE2D3]">
-        {/* DESKTOP LAYOUT (md and above): Full-width background banner with increased typography overlay — NO BOX / NO CARD */}
-        <div className="hidden md:flex relative w-full min-h-[560px] lg:h-[calc(100vh-5rem)] max-h-[760px] items-center overflow-hidden">
-          {/* Full-width original photo — 100% natural, positioned to showcase Pradheep on right with clear left space */}
+        {/* DESKTOP LAYOUT (md and above): Full-width background banner with professional typography overlay */}
+        <div className="hidden md:flex relative w-full min-h-[480px] lg:h-[530px] xl:h-[560px] max-h-[580px] items-center overflow-hidden">
+          {/* Full-width photo positioned to showcase Pradheep on right with clear left space */}
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/hero-new.webp"
-              alt="Pradheep Pattambi - Professional Psychologist and NLP Master Trainer in Palakkad, Kerala"
+              alt="Pradheep Pattambi - Professional Psychologist and Therapeutic Healer in Pattambi, Kerala"
               fill
               priority
               quality={100}
@@ -93,9 +182,9 @@ export default function HomePage() {
             />
           </div>
 
-          {/* Typography Direct Overlay on the Left — Noticeably Larger, Editorial */}
-          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-12 md:py-16 w-full flex items-center">
-            <div className="max-w-lg lg:max-w-xl space-y-6">
+          {/* Typography Direct Overlay on the Left — Balanced, Editorial */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-10 md:py-12 w-full flex items-center">
+            <div className="max-w-xl lg:max-w-2xl space-y-4">
               {/* Minimal Accent Label */}
               <div className="inline-flex items-center gap-2.5">
                 <span className="w-10 h-[2.5px] bg-olive-700" />
@@ -104,18 +193,18 @@ export default function HomePage() {
                 </span>
               </div>
 
-              {/* Main Heading — Noticeably Larger, Strong, Editorial */}
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[4.75rem] xl:text-[5.25rem] font-extrabold text-forest-950 tracking-tight leading-[1.02]">
+              {/* Main Heading — Prominent H1 */}
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[4.25rem] xl:text-[4.75rem] font-extrabold text-forest-950 tracking-tight leading-[1.02]">
                 Pradheep Pattambi
               </h1>
 
-              {/* Subheading */}
-              <p className="text-xl sm:text-2xl lg:text-3xl text-forest-900 font-semibold tracking-tight">
-                Psychologist &bull; Life Skill Coach &bull; Speaker
+              {/* Professional Description directly following main heading */}
+              <p className="text-lg sm:text-xl lg:text-[1.3rem] text-forest-900 font-semibold tracking-tight leading-snug">
+                Psychologist, Therapeutic Healer, NLP Grand Master, Certified Hypnotist, Trainer
               </p>
 
-              {/* Supporting Line — Increased font size */}
-              <p className="text-forest-950/90 text-base sm:text-lg lg:text-xl leading-relaxed font-sans max-w-lg">
+              {/* Supporting Line */}
+              <p className="text-forest-950/85 text-sm sm:text-base lg:text-lg leading-relaxed font-sans max-w-lg">
                 Undertakes specialized training for students, Teachers, clubs, individuals and corporates.
               </p>
 
@@ -123,16 +212,16 @@ export default function HomePage() {
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-base font-medium tracking-wide shadow-sm hover:shadow-md transition-all"
+                  className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-base font-medium tracking-wide shadow-sm hover:shadow-md transition-all"
                 >
                   <span>Get in Touch</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full border border-forest-900/40 text-forest-950 hover:bg-forest-900 hover:text-[#FAF7F2] text-base font-medium tracking-wide transition-colors"
+                  href="#services"
+                  className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full border border-forest-900/40 text-forest-950 hover:bg-forest-900 hover:text-[#FAF7F2] text-base font-medium tracking-wide transition-colors"
                 >
-                  <span>About Pradheep</span>
+                  <span>Explore Services</span>
                 </Link>
               </div>
             </div>
@@ -140,7 +229,7 @@ export default function HomePage() {
         </div>
 
         {/* MOBILE LAYOUT (under md): Direct typography overlay on the LEFT SIDE, photo on the RIGHT SIDE — TWO-COLUMN COMPOSITION WITH SOFTER DARK OVERLAY */}
-        <div className="md:hidden relative w-full h-[580px] sm:h-[620px] bg-[#111814] overflow-hidden">
+        <div className="md:hidden relative w-full h-[510px] sm:h-[535px] bg-[#111814] overflow-hidden">
           {/* Hero photo framed with Pradheep visually dominant on the RIGHT */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -156,64 +245,69 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#111814]/85 via-[#111814]/60 via-[50%] to-transparent pointer-events-none" />
           </div>
 
-          {/* Typography Direct Overlay on the LEFT SIDE — Two-column composition, High Contrast, Noticeably Larger */}
-          <div className="relative z-10 h-full w-full flex justify-start items-start pt-8 sm:pt-10 px-4 sm:px-6 pointer-events-none">
-            <div className="max-w-[52%] sm:max-w-[48%] flex flex-col items-start text-left space-y-2 pointer-events-auto">
+          {/* Typography Direct Overlay on the LEFT SIDE — Two-column composition, High Contrast */}
+          <div className="relative z-10 h-full w-full flex justify-start items-start pt-5 sm:pt-6 px-4 sm:px-5 pointer-events-none">
+            <div className="max-w-[54%] sm:max-w-[50%] flex flex-col items-start text-left space-y-1.5 pointer-events-auto">
               {/* 1. Dominant Element: Pradheep Pattambi (Two lines, very large, bold, premium) */}
-              <p className="text-[2rem] sm:text-[2.25rem] font-extrabold text-[#FAF7F2] tracking-tight leading-[1.05] drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+              <p className="text-[1.8rem] sm:text-[2.1rem] font-extrabold text-[#FAF7F2] tracking-tight leading-[1.05] drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
                 <span>Pradheep</span>
                 <br />
                 <span>Pattambi</span>
               </p>
 
-              {/* 2. Second-largest text: NLP Master Trainer (Noticeably larger) */}
-              <p className="text-[14.5px] sm:text-[16px] font-bold text-[#C5A880] tracking-tight drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
+              {/* Professional Description directly following main heading */}
+              <p className="text-[11.5px] sm:text-[13px] font-semibold text-[#E6DAC8] leading-[1.25] drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
+                Psychologist, Therapeutic Healer, NLP Grand Master, Certified Hypnotist, Trainer
+              </p>
+
+              {/* 2. NLP Master Trainer */}
+              <p className="text-[13px] sm:text-[14.5px] font-bold text-[#C5A880] tracking-tight drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
                 NLP Master Trainer
               </p>
 
               {/* Subtle accent divider */}
-              <div className="w-12 sm:w-14 h-[2px] bg-[#C5A880] rounded-full my-0.5 shadow-xs" />
+              <div className="w-10 sm:w-12 h-[2px] bg-[#C5A880] rounded-full my-0.5 shadow-xs" />
 
-              {/* 3. Supporting description (Noticeably larger and clear) */}
-              <p className="text-[11px] sm:text-[12.5px] text-[#FAF7F2] font-medium leading-[1.38] max-w-[195px] drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
+              {/* 3. Supporting description */}
+              <p className="text-[10px] sm:text-[11px] text-[#FAF7F2] font-medium leading-[1.3] max-w-[195px] drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
                 Undertakes training for students, Teachers, clubs individuals and corporates
               </p>
 
-              {/* 4. Subjects / Tags (Noticeably larger, readable) */}
-              <div className="pt-1.5 flex flex-col items-start text-left w-full">
-                <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.15em] font-bold text-[#A3B899] mb-1.5 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+              {/* 4. Subjects / Tags (UNCHANGED) */}
+              <div className="pt-0.5 flex flex-col items-start text-left w-full">
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em] font-bold text-[#A3B899] mb-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
                   Subjects
                 </span>
-                <div className="flex flex-wrap justify-start gap-1.5 text-[9.5px] sm:text-[10.5px] text-[#FAF7F2] font-semibold max-w-[195px]">
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
+                <div className="flex flex-wrap justify-start gap-1 text-[8.5px] sm:text-[9.5px] text-[#FAF7F2] font-semibold max-w-[195px]">
+                  <span className="px-2 py-0.5 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     NLP
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
+                  <span className="px-2 py-0.5 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     Enniagram
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
+                  <span className="px-2 py-0.5 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     TA
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
+                  <span className="px-2 py-0.5 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     Therapees
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
+                  <span className="px-2 py-0.5 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     Stress Mannagement
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
+                  <span className="px-2 py-0.5 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     De Addiction
                   </span>
-                  <span className="px-2.5 py-1 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
+                  <span className="px-2 py-0.5 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     Relationship Issues etc
                   </span>
                 </div>
               </div>
 
               {/* Action CTA Button */}
-              <div className="pt-2 flex items-center gap-2">
+              <div className="pt-1 flex items-center gap-2">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] text-xs font-bold tracking-wide shadow-md transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] text-xs font-bold tracking-wide shadow-md transition-colors"
                 >
                   <span>Get in Touch</span>
                   <ArrowRight className="w-3 h-3" />
@@ -306,7 +400,12 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. ABOUT PREVIEW SECTION — BALANCED WITH DISTINCT SMALLER PHOTO */}
+      {/* 3. MAIN SERVICES SECTION (LOCAL SEO FOR PATTAMBI) */}
+      {/* ========================================================================= */}
+      <MainServicesSection />
+
+      {/* ========================================================================= */}
+      {/* 4. ABOUT PREVIEW SECTION — BALANCED WITH DISTINCT SMALLER PHOTO */}
       {/* ========================================================================= */}
       <section className="py-20 sm:py-28 lg:py-32 bg-[#F8F5EE] border-b border-[#EAE2D3]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -371,26 +470,6 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 3. SERVICES SECTION — BRIGHT WARM CREAM */}
-      {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 lg:py-32 bg-[#FAF7F2]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            label="HOLISTIC SERVICES"
-            title="Guiding you towards mental wellness and personal growth."
-            description="Empathetic, evidence-informed psychological support customized to your personal, emotional, and professional path."
-            align="center"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
-            {servicesData.map((service) => (
-              <ServiceCard key={service.id} service={service} variant="elevated" />
-            ))}
           </div>
         </div>
       </section>

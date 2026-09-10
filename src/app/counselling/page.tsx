@@ -20,22 +20,23 @@ import ServiceCard from "@/components/ui/ServiceCard";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import JsonLd from "@/components/seo/JsonLd";
+import { WHATSAPP_NUMBER, getWhatsAppServiceEnquiryUrl } from "@/config/whatsapp";
 import { servicesData } from "@/data/services";
 import { testimonialsData } from "@/data/testimonials";
 import { faqData } from "@/data/faq";
 import { trustFeaturesData } from "@/data/trustFeatures";
 
 export const metadata: Metadata = {
-  title: "Psychological Counselling in Palakkad | Pradheep Pattambi",
+  title: "Counselling in Pattambi | Psychologist Pradheep Pattambi",
   description:
-    "Confidential psychological counselling in Palakkad & Pattambi by Pradheep N.V. Compassionate therapy for anxiety, depression, stress & relationship healing.",
+    "Confidential psychological counselling in Pattambi by Pradheep Pattambi. Individual therapy, family counselling, stress management & emotional healing.",
   alternates: {
     canonical: "https://pradheeppattambi.com/counselling/"
   },
   openGraph: {
-    title: "Psychological Counselling in Palakkad | Pradheep Pattambi",
+    title: "Counselling in Pattambi | Psychologist Pradheep Pattambi",
     description:
-      "Expert, confidential psychological counselling in Palakkad & Pattambi by Pradheep N.V. Empowering minds, healing relationships, and building lasting resilience.",
+      "Confidential psychological counselling in Pattambi by Pradheep Pattambi. Individual therapy, family counselling, stress management & emotional healing.",
     url: "https://pradheeppattambi.com/counselling/",
     siteName: "Pradheep Pattambi",
     images: [
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
         url: "/images/gallery/gallery-04.jpg",
         width: 1200,
         height: 800,
-        alt: "Psychological Counselling Session with Pradheep Pattambi in Palakkad"
+        alt: "Psychological Counselling Session with Pradheep Pattambi in Pattambi"
       }
     ],
     locale: "en_US",
@@ -51,9 +52,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psychological Counselling in Palakkad | Pradheep Pattambi",
+    title: "Counselling in Pattambi | Psychologist Pradheep Pattambi",
     description:
-      "Confidential psychological counselling, anxiety therapy, and relationship guidance in Palakkad & Pattambi, Kerala.",
+      "Confidential psychological counselling, individual and family guidance, and stress relief in Pattambi, Kerala.",
     images: ["/images/gallery/gallery-04.jpg"]
   }
 };
@@ -81,8 +82,8 @@ const counsellingStructuredData = {
     {
       "@type": "Service",
       "@id": "https://pradheeppattambi.com/counselling/#service",
-      "name": "Psychological Counselling & Psychotherapy",
-      "serviceType": "Mental Health Counseling",
+      "name": "Psychological Counselling in Pattambi",
+      "serviceType": "Psychological Counselling & Psychotherapy",
       "provider": { "@id": "https://pradheeppattambi.com/#person" },
       "areaServed": [
         { "@type": "City", "name": "Pattambi" },
@@ -90,7 +91,7 @@ const counsellingStructuredData = {
         { "@type": "State", "name": "Kerala" }
       ],
       "description":
-        "Confidential psychological counselling for stress management, anxiety relief, emotional trauma healing, de-addiction guidance, and premarital relationship clarity.",
+        "Confidential individual and family psychological counselling for stress management, anxiety relief, emotional wellbeing, and personal healing in Pattambi.",
       "url": "https://pradheeppattambi.com/counselling/"
     }
   ]
@@ -158,7 +159,7 @@ export default function CounsellingPage() {
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <a
-                  href="https://wa.link/n8jdj7"
+                  href={getWhatsAppServiceEnquiryUrl("Individual Counseling")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-[#D8CCA8]/50 text-[#FAF7F2] bg-white/5 hover:bg-white/10 transition-colors text-sm sm:text-base font-medium tracking-wide"

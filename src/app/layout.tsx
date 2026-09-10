@@ -17,27 +17,33 @@ import JsonLd from "@/components/seo/JsonLd";
 export const metadata: Metadata = {
   metadataBase: new URL("https://pradheeppattambi.com"),
   title: {
-    default: "Pradheep Pattambi | Psychologist in Palakkad & Life Coach",
+    default: "Psychologist in Pattambi | Counselling & Therapy – Pradheep Pattambi",
     template: "%s",
   },
   description:
-    "Official website of Pradheep N.V. (Pradheep Pattambi) — Renowned psychologist in Palakkad, author, motivational speaker, and life skill coach based in Pattambi, Kerala.",
+    "Official website of Pradheep Pattambi (Pradheep N.V.) — Psychologist, Therapeutic Healer, NLP Grand Master, and Certified Hypnotist based in Pattambi, Kerala.",
   keywords: [
-    "Pradheep Pattambi",
-    "Pradheep N.V.",
-    "Psychologist in Palakkad",
+    "Psychologist Pattambi",
     "Psychologist in Pattambi",
-    "Psychological Counselling Palakkad",
-    "Counselling Kerala",
-    "NLP Master Trainer Kerala",
-    "Motivational Speaker Kerala",
-    "Life Skill Coach Pattambi",
-    "Career Counselling Pattambi",
-    "Stress Management Kerala",
-    "Premarital Counselling Palakkad"
+    "Counselling Pattambi",
+    "Counseling Pattambi",
+    "Counsellor Pattambi",
+    "Counselor Pattambi",
+    "Individual counselling Pattambi",
+    "Family counselling Pattambi",
+    "Career counselling Pattambi",
+    "Stress counselling Pattambi",
+    "Anxiety counselling Pattambi",
+    "Relationship counselling Pattambi",
+    "NLP trainer Pattambi",
+    "Hypnotherapy Pattambi",
+    "Therapeutic healer Pattambi",
+    "Mental wellness Pattambi",
+    "Pradheep Pattambi",
+    "Pradheep N.V."
   ],
-  authors: [{ name: "Pradheep N.V.", url: "https://pradheeppattambi.com" }],
-  creator: "Pradheep N.V.",
+  authors: [{ name: "Pradheep Pattambi", url: "https://pradheeppattambi.com" }],
+  creator: "Pradheep Pattambi",
   publisher: "Pradheep Pattambi",
   formatDetection: {
     email: true,
@@ -59,17 +65,17 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: "Pradheep Pattambi | Psychologist in Palakkad & Life Coach",
+    title: "Psychologist in Pattambi | Counselling & Therapy – Pradheep Pattambi",
     description:
-      "Elevating lives through psychological counseling, mindful life skill coaching, and inspiring transformation in Kerala.",
+      "Empathetic psychological counselling, individual & family therapy, and NLP training in Pattambi, Kerala.",
     url: "https://pradheeppattambi.com",
     siteName: "Pradheep Pattambi",
     images: [
       {
-        url: "/images/pradheep-hero.png",
+        url: "/images/hero-new.webp",
         width: 1200,
         height: 630,
-        alt: "Pradheep Pattambi - Psychologist and Life Skill Coach in Kerala"
+        alt: "Pradheep Pattambi - Psychologist and Therapeutic Healer in Pattambi, Kerala"
       }
     ],
     locale: "en_US",
@@ -77,10 +83,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pradheep Pattambi | Psychologist in Palakkad & Life Coach",
+    title: "Psychologist in Pattambi | Counselling & Therapy – Pradheep Pattambi",
     description:
-      "Empathetic psychological counselling, NLP mastery, and life skill coaching in Pattambi, Palakkad, Kerala.",
-    images: ["/images/pradheep-hero.png"]
+      "Psychological counselling, individual & family guidance, and NLP mastery in Pattambi, Kerala.",
+    images: ["/images/hero-new.webp"]
   },
   icons: {
     icon: [
@@ -103,17 +109,17 @@ const rootStructuredData = {
       "url": "https://pradheeppattambi.com",
       "name": "Pradheep Pattambi",
       "description":
-        "Official website of Pradheep N.V. - Psychologist, Life Skill Coach & Motivational Speaker in Palakkad, Kerala",
+        "Official website of Pradheep Pattambi - Psychologist, Therapeutic Healer, and NLP Grand Master in Pattambi, Kerala",
       "publisher": { "@id": "https://pradheeppattambi.com/#person" }
     },
     {
       "@type": "Person",
       "@id": "https://pradheeppattambi.com/#person",
-      "name": "Pradheep N.V.",
-      "alternateName": ["Pradheep Pattambi", "Pradeep Pattambi"],
-      "jobTitle": "Psychologist, NLP Master Trainer & Life Skill Coach",
+      "name": "Pradheep Pattambi",
+      "alternateName": ["Pradheep N.V.", "Pradeep Pattambi"],
+      "jobTitle": "Psychologist, Therapeutic Healer, NLP Grand Master, Certified Hypnotist, Trainer",
       "url": "https://pradheeppattambi.com",
-      "image": "https://pradheeppattambi.com/images/pradheep-hero.png",
+      "image": "https://pradheeppattambi.com/images/hero-new.webp",
       "telephone": "+919567654880",
       "email": "info@pradheeppattambi.com",
       "sameAs": [
@@ -122,11 +128,13 @@ const rootStructuredData = {
       ],
       "knowsAbout": [
         "Psychological Counselling",
+        "Individual Counseling",
+        "Family Counseling",
+        "Career Counseling",
         "Neuro-Linguistic Programming (NLP)",
         "Enneagram Personality Typing",
         "Transactional Analysis (TA)",
         "Stress Management",
-        "Career Guidance",
         "Mindfulness & Life Skills"
       ],
       "address": {
