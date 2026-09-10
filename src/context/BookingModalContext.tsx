@@ -11,8 +11,26 @@ interface BookingModalContextType {
 
 const BookingModalContext = createContext<BookingModalContextType | undefined>(undefined);
 
-const SESSION_STORAGE_KEY = "bookingPopupShown";
-const AUTO_POPUP_DELAY_MS = 3000;
+// Trigger phrases for existing CTA buttons and links
+const TRIGGER_PHRASES = [
+  "contact",
+  "get in touch",
+  "enquiry",
+  "enquire",
+  "make an enquiry",
+  "book an appointment",
+  "booking",
+  "contact me",
+  "contact us",
+  "book a consultation",
+  "book consultation",
+  "book a session",
+  "book your career session",
+  "fix an appointment",
+  "contact pradheep directly",
+  "inquire for speaking",
+  "book an appointment on whatsapp"
+];
 
 export function BookingModalProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +46,7 @@ export function BookingModalProvider({ children }: { children: React.ReactNode }
     setServiceName("");
   }, []);
 
-  // Lock background scrolling while modal is open
+  // Lock background scrolling while modal is open; restore upon closing
   useEffect(() => {
     if (isOpen) {
       const originalOverflow = document.body.style.overflow;
@@ -38,30 +56,6 @@ export function BookingModalProvider({ children }: { children: React.ReactNode }
       };
     }
   }, [isOpen]);
-
-  // Auto-popup after 3 seconds once per browsing session
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    try {
-      const alreadyShown = sessionStorage.getItem(SESSION_STORAGE_KEY);
-      if (alreadyShown) {
-        return;
-      }
-
-      const timer = setTimeout(() => {
-        const checkAgain = sessionStorage.getItem(SESSION_STORAGE_KEY);
-        if (!checkAgain) {
-          sessionStorage.setItem(SESSION_STORAGE_KEY, "true");
-          setIsOpen(true);
-        }
-      }, AUTO_POPUP_DELAY_MS);
-
-      return () => clearTimeout(timer);
-    } catch {
-      // Ignore sessionStorage errors in restricted environments
-    }
-  }, []);
 
   // Global custom event listener so any button can open modal
   useEffect(() => {
@@ -73,6 +67,61 @@ export function BookingModalProvider({ children }: { children: React.ReactNode }
     window.addEventListener("open-booking-modal", handleCustomEvent);
     return () => {
       window.removeEventListener("open-booking-modal", handleCustomEvent);
+    };
+  }, [openBookingModal]);
+
+  // Global click/tap listener to connect all existing Contact, Enquiry, and Booking CTA buttons
+  useEffect(() => {
+    const handleGlobalClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+
+      const triggerEl = target.closest<HTMLElement>("a, button, [role='button']");
+      if (!triggerEl) return;
+
+      // Do not intercept if inside the modal itself or explicitly excluded
+      if (
+        triggerEl.closest("[data-no-booking-modal]") ||
+        triggerEl.closest("[role='dialog']") ||
+        triggerEl.hasAttribute("data-no-booking-modal")
+      ) {
+        return;
+      }
+
+      // Check for explicit data attribute
+      const hasTriggerAttr = triggerEl.hasAttribute("data-booking-trigger");
+      const serviceAttr = triggerEl.getAttribute("data-service");
+
+      // Check button / link text
+      const rawText = (triggerEl.innerText || triggerEl.textContent || "").trim().toLowerCase();
+      const text = rawText.replace(/\s+/g, " ");
+
+      // Exclude tel:, mailto:, map links, and direct external social links
+      const href = (triggerEl.getAttribute("href") || "").trim();
+      if (
+        href.startsWith("tel:") ||
+        href.startsWith("mailto:") ||
+        href.includes("maps.google") ||
+        href.includes("maps.app.goo.gl")
+      ) {
+        return;
+      }
+
+      const matchesPhrase =
+        hasTriggerAttr ||
+        TRIGGER_PHRASES.includes(text) ||
+        TRIGGER_PHRASES.some((phrase) => text.startsWith(phrase));
+
+      if (matchesPhrase) {
+        e.preventDefault();
+        e.stopPropagation();
+        openBookingModal(serviceAttr || undefined);
+      }
+    };
+
+    document.addEventListener("click", handleGlobalClick, true);
+    return () => {
+      document.removeEventListener("click", handleGlobalClick, true);
     };
   }, [openBookingModal]);
 

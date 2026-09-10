@@ -212,7 +212,8 @@ export default function HomePage() {
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-base font-medium tracking-wide shadow-sm hover:shadow-md transition-all"
+                  data-booking-trigger="true"
+                  className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-base font-medium tracking-wide shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Get in Touch</span>
                   <ArrowRight className="w-4 h-4" />
@@ -307,7 +308,8 @@ export default function HomePage() {
               <div className="pt-1 flex items-center gap-2">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] text-xs font-bold tracking-wide shadow-md transition-colors"
+                  data-booking-trigger="true"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] text-xs font-bold tracking-wide shadow-md transition-colors cursor-pointer"
                 >
                   <span>Get in Touch</span>
                   <ArrowRight className="w-3 h-3" />
@@ -593,7 +595,8 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-9 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-colors text-base font-medium shadow-sm hover:shadow group"
+              data-booking-trigger="true"
+              className="inline-flex items-center gap-2 px-9 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-colors text-base font-medium shadow-sm hover:shadow group cursor-pointer"
             >
               <span>Get in Touch</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

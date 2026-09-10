@@ -142,7 +142,8 @@ export default function GalleryClient() {
           <div className="pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm font-medium tracking-wide shadow-sm"
+              data-booking-trigger="true"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm font-medium tracking-wide shadow-sm cursor-pointer"
             >
               <span>Inquire for Speaking</span>
               <ArrowRight className="w-4 h-4" />

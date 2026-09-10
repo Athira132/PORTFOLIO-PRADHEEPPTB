@@ -33,7 +33,8 @@ export default function Footer() {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#FAF7F2] text-[#0E2016] font-medium hover:bg-[#F3EDE2] transition-colors shadow text-sm tracking-wide group"
+                data-booking-trigger="true"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#FAF7F2] text-[#0E2016] font-medium hover:bg-[#F3EDE2] transition-colors shadow text-sm tracking-wide group cursor-pointer"
               >
                 <span>Book a Consultation</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

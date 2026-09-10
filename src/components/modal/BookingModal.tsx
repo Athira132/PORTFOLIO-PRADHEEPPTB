@@ -46,17 +46,15 @@ export default function BookingModal() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, closeBookingModal]);
 
-  // Reset form state when modal closes
+  // Reset form state immediately when modal closes
   useEffect(() => {
     if (!isOpen) {
-      setTimeout(() => {
-        setName("");
-        setDate("");
-        setTime("");
-        setErrors({});
-        setIsSubmitted(false);
-        setLastSubmittedUrl("");
-      }, 250);
+      setName("");
+      setDate("");
+      setTime("");
+      setErrors({});
+      setIsSubmitted(false);
+      setLastSubmittedUrl("");
     }
   }, [isOpen]);
 
@@ -92,10 +90,29 @@ export default function BookingModal() {
 
     const formattedDate = formatBookingDate(date);
 
-    // Build the exact message requested
-    const serviceLine = serviceName.trim() ? `\nService: ${serviceName.trim()}\n` : "";
-    const message = `Hello, I would like to request a booking.
-${serviceLine}
+    // Differentiate between service-specific enquiry and general booking request
+    const hasService = Boolean(
+      serviceName &&
+      serviceName.trim() &&
+      serviceName.trim().toLowerCase() !== "general enquiry"
+    );
+
+    let message = "";
+    if (hasService) {
+      message = `Hello, I would like to make an enquiry.
+
+Service: ${serviceName.trim()}
+
+Name: ${name.trim()}
+Date: ${formattedDate}
+Time: ${time.trim()}
+
+Please provide more information.
+
+Thank you.`;
+    } else {
+      message = `Hello, I would like to request a booking.
+
 Name: ${name.trim()}
 Date: ${formattedDate}
 Time: ${time.trim()}
@@ -103,6 +120,7 @@ Time: ${time.trim()}
 Please confirm the availability of this booking.
 
 Thank you.`;
+    }
 
     const encodedMessage = encodeURIComponent(message);
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
@@ -123,6 +141,7 @@ Thank you.`;
 
   return (
     <div
+      data-no-booking-modal="true"
       className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/65 backdrop-blur-[2px] animate-in fade-in duration-200 overflow-y-auto"
       onClick={handleBackdropClick}
       aria-modal="true"
@@ -131,6 +150,7 @@ Thank you.`;
     >
       <div
         ref={modalRef}
+        data-no-booking-modal="true"
         className="relative w-full max-w-lg bg-white rounded-3xl p-6 sm:p-8 md:p-9 shadow-2xl border border-[#EAE2D3] max-h-[90vh] overflow-y-auto my-auto animate-in zoom-in-95 duration-200"
       >
         {/* Close Button: Clearly visible '×' button */}
@@ -161,9 +181,9 @@ Thank you.`;
             Fill in your details and continue to WhatsApp to request a booking.
           </p>
 
-          {serviceName && (
+          {serviceName && serviceName.trim().toLowerCase() !== "general enquiry" && (
             <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F3EDE2] border border-[#D8CCA8]/60 text-xs font-semibold text-forest-900">
-              <span>Service:</span>
+              <span className="text-muted-text">Service:</span>
               <span className="text-olive-900">{serviceName}</span>
             </div>
           )}

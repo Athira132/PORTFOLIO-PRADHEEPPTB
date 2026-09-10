@@ -184,7 +184,9 @@ export default function CareerPage() {
               <div className="flex flex-wrap items-center gap-3.5 pt-2">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] transition-all text-sm sm:text-base font-bold tracking-wide shadow-sm group"
+                  data-booking-trigger="true"
+                  data-service="Career Counseling"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] transition-all text-sm sm:text-base font-bold tracking-wide shadow-sm group cursor-pointer"
                 >
                   <span>Book Your Career Session</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -261,7 +263,9 @@ export default function CareerPage() {
               <div className="pt-2">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-sm group"
+                  data-booking-trigger="true"
+                  data-service="Career Counseling"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-sm group cursor-pointer"
                 >
                   <span>Book a Session</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

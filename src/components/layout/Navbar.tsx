@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import { useBookingModal } from "@/context/BookingModalContext";
 
 interface NavItem {
   name: string;
@@ -23,6 +24,7 @@ const navLinks: NavItem[] = [
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { openBookingModal } = useBookingModal();
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -44,10 +46,29 @@ export default function Navbar() {
 
             <nav className="flex items-center space-x-1 xl:space-x-3">
               {navLinks.map((item) => {
+                const isContact = item.name === "Contact";
                 const isActive =
                   item.href === "/"
                     ? pathname === "/"
                     : pathname.startsWith(item.href);
+
+                if (isContact) {
+                  return (
+                    <button
+                      key={item.name}
+                      type="button"
+                      data-booking-trigger="true"
+                      onClick={() => openBookingModal()}
+                      className={`relative px-4 py-2 text-sm xl:text-base font-medium transition-colors font-sans rounded-full cursor-pointer ${
+                        isActive
+                          ? "text-forest-950 font-bold"
+                          : "text-forest-900/80 hover:text-forest-950 hover:bg-[#F3EDE2]"
+                      }`}
+                    >
+                      {item.name}
+                    </button>
+                  );
+                }
 
                 return (
                   <Link
@@ -71,13 +92,15 @@ export default function Navbar() {
 
           {/* Right: Far-Right Aligned Get in Touch Button — Desktop */}
           <div className="hidden lg:flex items-center justify-end">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-1.5 px-6 py-2.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm hover:shadow text-sm font-medium tracking-wide group"
+            <button
+              type="button"
+              data-booking-trigger="true"
+              onClick={() => openBookingModal()}
+              className="inline-flex items-center justify-center gap-1.5 px-6 py-2.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all shadow-sm hover:shadow text-sm font-medium tracking-wide group cursor-pointer"
             >
               <span>Get in Touch</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Navigation Header: Brand Name on the LEFT, Hamburger on the RIGHT */}
@@ -92,12 +115,14 @@ export default function Navbar() {
 
             {/* Far Right: Compact CTA & Menu Button */}
             <div className="flex items-center gap-2">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-forest-900 text-[#FAF7F2] text-xs font-medium shadow-sm hover:bg-forest-800 transition-colors shrink-0"
+              <button
+                type="button"
+                data-booking-trigger="true"
+                onClick={() => openBookingModal()}
+                className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-forest-900 text-[#FAF7F2] text-xs font-medium shadow-sm hover:bg-forest-800 transition-colors shrink-0 cursor-pointer"
               >
                 Get in Touch
-              </Link>
+              </button>
 
               <button
                 type="button"
@@ -124,10 +149,32 @@ export default function Navbar() {
               Navigation
             </p>
             {navLinks.map((item) => {
+              const isContact = item.name === "Contact";
               const isActive =
                 item.href === "/"
                   ? pathname === "/"
                   : pathname.startsWith(item.href);
+
+              if (isContact) {
+                return (
+                  <button
+                    key={item.name}
+                    type="button"
+                    data-booking-trigger="true"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      openBookingModal();
+                    }}
+                    className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium transition-colors cursor-pointer ${
+                      isActive
+                        ? "bg-forest-900 text-[#FAF7F2] font-semibold"
+                        : "text-forest-950 hover:bg-[#F3EDE2]"
+                    }`}
+                  >
+                    <span>{item.name}</span>
+                  </button>
+                );
+              }
 
               return (
                 <Link
@@ -166,12 +213,17 @@ export default function Navbar() {
             </div>
 
             <div className="grid grid-cols-2 gap-3 pt-2">
-              <Link
-                href="/contact"
-                className="w-full flex items-center justify-center py-3 px-4 rounded-xl bg-forest-900 text-[#FAF7F2] font-medium text-sm text-center shadow"
+              <button
+                type="button"
+                data-booking-trigger="true"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  openBookingModal();
+                }}
+                className="w-full flex items-center justify-center py-3 px-4 rounded-xl bg-forest-900 text-[#FAF7F2] font-medium text-sm text-center shadow cursor-pointer"
               >
                 Get in Touch
-              </Link>
+              </button>
               <a
                 href="https://api.whatsapp.com/send?phone=919567654880"
                 target="_blank"

@@ -42,6 +42,8 @@ export default function BookAppointmentButton({
   return (
     <button
       type="button"
+      data-booking-trigger="true"
+      data-service={service || ""}
       onClick={() => openBookingModal(service)}
       className={`${baseStyles} ${variantStyles} ${className}`}
     >

@@ -153,7 +153,9 @@ export default function CounsellingPage() {
               <div className="flex flex-wrap items-center gap-3.5 pt-2">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] transition-all text-sm sm:text-base font-bold tracking-wide shadow-sm group"
+                  data-booking-trigger="true"
+                  data-service="Individual Counseling"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] transition-all text-sm sm:text-base font-bold tracking-wide shadow-sm group cursor-pointer"
                 >
                   <span>Fix an Appointment</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -233,9 +235,9 @@ export default function CounsellingPage() {
               <div className="pt-4">
                 <a
                   href="https://wa.link/n8jdj7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-sm group"
+                  data-booking-trigger="true"
+                  data-service="Individual Counseling"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-medium tracking-wide shadow-sm group cursor-pointer"
                 >
                   <span>Get in Touch</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
