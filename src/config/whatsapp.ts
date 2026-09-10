@@ -1,12 +1,11 @@
 /**
  * WhatsApp Configuration
  * 
- * To change the destination WhatsApp number for booking requests,
- * update the WHATSAPP_NUMBER constant below.
- * Provide the country code followed by the phone number with NO '+', spaces, or dashes.
- * Example: "919567654880"
+ * Destination WhatsApp number for booking and enquiry requests.
+ * Format: Country code followed by phone number with NO '+', spaces, or dashes.
+ * Example for India: "919876543210"
  */
-export const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
+export const WHATSAPP_NUMBER = "919567654880";
 
 /**
  * Generate official WhatsApp direct link for service enquiries

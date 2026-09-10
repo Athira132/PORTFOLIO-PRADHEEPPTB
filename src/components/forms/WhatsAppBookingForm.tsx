@@ -76,8 +76,11 @@ export default function WhatsAppBookingForm({
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleBooking = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleBooking = (e?: React.FormEvent | React.MouseEvent) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
 
     if (!validate()) {
       return;
@@ -96,13 +99,13 @@ Please confirm the availability of this booking.
 Thank you.`;
 
     const encodedMessage = encodeURIComponent(message);
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
 
-    setLastSubmittedUrl(url);
+    setLastSubmittedUrl(whatsappUrl);
     setIsSubmitted(true);
 
     if (typeof window !== "undefined") {
-      window.open(url, "_blank", "noopener,noreferrer");
+      window.open(whatsappUrl, "_blank");
     }
   };
 
@@ -161,7 +164,17 @@ Thank you.`;
         </div>
       )}
 
-      <form onSubmit={handleBooking} noValidate className="space-y-5">
+      <form
+        action="#"
+        method="dialog"
+        onSubmit={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          handleBooking(e);
+        }}
+        noValidate
+        className="space-y-5"
+      >
         {/* 1. Name */}
         <div>
           <label
@@ -285,7 +298,8 @@ Thank you.`;
         {/* 4. WhatsApp Booking Button */}
         <div className="pt-2">
           <button
-            type="submit"
+            type="button"
+            onClick={(e) => handleBooking(e)}
             className="w-full inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-[#25D366] text-white hover:bg-[#20ba5a] active:scale-[0.99] transition-all font-semibold text-sm sm:text-base shadow-sm hover:shadow group cursor-pointer"
           >
             <WhatsAppIcon className="w-5 h-5 transition-transform group-hover:scale-110" />
