@@ -158,7 +158,7 @@ const homeSchema = {
 };
 
 export default function HomePage() {
-  const previewGallery = galleryData.slice(0, 4);
+  const previewGallery = galleryData.slice(0, 6);
 
   return (
     <div className="overflow-x-hidden">
@@ -482,13 +482,15 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Gallery Preview Grid — Pure photos, square 1:1 ratio, object-cover */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {previewGallery.map((item) => (
+          {/* Gallery Preview Grid — 2-column square grid on mobile, 4-column on desktop */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+            {previewGallery.map((item, idx) => (
               <Link
                 key={item.id}
                 href="/gallery"
-                className="group relative aspect-square w-full rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+                className={`group relative aspect-square w-full rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 ${
+                  idx >= 4 ? "lg:hidden" : ""
+                }`}
                 style={{ aspectRatio: "1 / 1" }}
               >
                 <Image
@@ -502,7 +504,7 @@ export default function HomePage() {
                     objectFit: "cover",
                     objectPosition: item.objectPosition || "center",
                   }}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
               </Link>
             ))}
