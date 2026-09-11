@@ -5,18 +5,9 @@ import { CheckCircle2, AlertCircle, ChevronDown } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/config/whatsapp";
 
 export const SERVICE_OPTIONS = [
-  "NLP Training",
-  "Personality Development",
-  "Stress Management",
-  "De Addiction",
-  "Relationship Issues",
-  "Therapeutic Healing",
-  "Hypnotherapy",
-  "Corporate Training",
-  "Student Training",
-  "Teacher Training",
-  "Individual Training",
-  "Other"
+  "Individual Counseling",
+  "Family Counseling",
+  "Career Counseling"
 ] as const;
 
 export type ServiceOption = typeof SERVICE_OPTIONS[number];
@@ -29,27 +20,18 @@ export function mapToServiceOption(serviceName?: string): string {
   const exact = SERVICE_OPTIONS.find((s) => s.toLowerCase() === clean);
   if (exact) return exact;
 
-  if (clean.includes("nlp")) return "NLP Training";
-  if (clean.includes("personality")) return "Personality Development";
-  if (clean.includes("stress")) return "Stress Management";
-  if (clean.includes("addiction")) return "De Addiction";
+  if (clean.includes("individual")) return "Individual Counseling";
   if (
-    clean.includes("relationship") ||
     clean.includes("family") ||
     clean.includes("couple") ||
-    clean.includes("marriage")
+    clean.includes("marriage") ||
+    clean.includes("relationship")
   ) {
-    return "Relationship Issues";
+    return "Family Counseling";
   }
-  if (clean.includes("healing") || clean.includes("therapeutic")) return "Therapeutic Healing";
-  if (clean.includes("hypno")) return "Hypnotherapy";
-  if (clean.includes("corporate")) return "Corporate Training";
-  if (clean.includes("student")) return "Student Training";
-  if (clean.includes("teacher")) return "Teacher Training";
-  if (clean.includes("individual")) return "Individual Training";
-  if (clean.includes("career")) return "Personality Development";
+  if (clean.includes("career")) return "Career Counseling";
 
-  return "Other";
+  return "";
 }
 
 function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
