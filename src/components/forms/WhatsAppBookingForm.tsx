@@ -1,8 +1,56 @@
 "use client";
 
 import React, { useState } from "react";
-import { CheckCircle2, AlertCircle } from "lucide-react";
+import { CheckCircle2, AlertCircle, ChevronDown } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/config/whatsapp";
+
+export const SERVICE_OPTIONS = [
+  "NLP Training",
+  "Personality Development",
+  "Stress Management",
+  "De Addiction",
+  "Relationship Issues",
+  "Therapeutic Healing",
+  "Hypnotherapy",
+  "Corporate Training",
+  "Student Training",
+  "Teacher Training",
+  "Individual Training",
+  "Other"
+] as const;
+
+export type ServiceOption = typeof SERVICE_OPTIONS[number];
+
+export function mapToServiceOption(serviceName?: string): string {
+  if (!serviceName) return "";
+  const clean = serviceName.trim().toLowerCase();
+  if (!clean || clean === "general enquiry") return "";
+
+  const exact = SERVICE_OPTIONS.find((s) => s.toLowerCase() === clean);
+  if (exact) return exact;
+
+  if (clean.includes("nlp")) return "NLP Training";
+  if (clean.includes("personality")) return "Personality Development";
+  if (clean.includes("stress")) return "Stress Management";
+  if (clean.includes("addiction")) return "De Addiction";
+  if (
+    clean.includes("relationship") ||
+    clean.includes("family") ||
+    clean.includes("couple") ||
+    clean.includes("marriage")
+  ) {
+    return "Relationship Issues";
+  }
+  if (clean.includes("healing") || clean.includes("therapeutic")) return "Therapeutic Healing";
+  if (clean.includes("hypno")) return "Hypnotherapy";
+  if (clean.includes("corporate")) return "Corporate Training";
+  if (clean.includes("student")) return "Student Training";
+  if (clean.includes("teacher")) return "Teacher Training";
+  if (clean.includes("individual")) return "Individual Training";
+  if (clean.includes("career")) return "Personality Development";
+
+  return "Other";
+}
 
 function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (
@@ -45,10 +93,16 @@ export default function WhatsAppBookingForm({
   subtitle = "Select your preferred date and time to request a confidential appointment directly on WhatsApp.",
   className = ""
 }: WhatsAppBookingFormProps) {
+  const [service, setService] = useState("");
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [errors, setErrors] = useState<{ name?: string; date?: string; time?: string }>({});
+  const [errors, setErrors] = useState<{
+    service?: string;
+    name?: string;
+    date?: string;
+    time?: string;
+  }>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [lastSubmittedUrl, setLastSubmittedUrl] = useState("");
 
@@ -56,7 +110,16 @@ export default function WhatsAppBookingForm({
   const today = new Date().toISOString().split("T")[0];
 
   const validate = () => {
-    const newErrors: { name?: string; date?: string; time?: string } = {};
+    const newErrors: {
+      service?: string;
+      name?: string;
+      date?: string;
+      time?: string;
+    } = {};
+
+    if (!service || service.trim() === "" || service === "Select a Service") {
+      newErrors.service = "Please select a service.";
+    }
 
     if (!name.trim()) {
       newErrors.name = "Please enter your name.";
@@ -89,6 +152,8 @@ export default function WhatsAppBookingForm({
     const formattedDate = formatBookingDate(date);
 
     const message = `Hello, I would like to request a booking.
+
+Service Required: ${service.trim()}
 
 Name: ${name.trim()}
 Date: ${formattedDate}
@@ -175,7 +240,49 @@ Thank you.`;
         noValidate
         className="space-y-5"
       >
-        {/* 1. Name */}
+        {/* 1. Service Required Dropdown */}
+        <div>
+          <label
+            htmlFor="booking-service"
+            className="block text-xs font-semibold uppercase tracking-wider text-forest-950 mb-1.5"
+          >
+            Service Required <span className="text-red-500">*</span>
+          </label>
+          <div className="relative">
+            <select
+              id="booking-service"
+              name="service"
+              value={service}
+              onChange={(e) => {
+                setService(e.target.value);
+                if (errors.service) setErrors((prev) => ({ ...prev, service: undefined }));
+              }}
+              className={`w-full min-h-[48px] px-4 py-3 pr-10 rounded-xl bg-[#FAF7F2] border text-forest-950 text-base sm:text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all appearance-none cursor-pointer ${
+                errors.service
+                  ? "border-red-400 focus:ring-red-400/20 focus:border-red-500"
+                  : "border-[#EAE2D3] focus:ring-forest-900/20 focus:border-forest-900"
+              } ${!service ? "text-muted-text/70" : "text-forest-950"}`}
+            >
+              <option value="">Select a Service</option>
+              {SERVICE_OPTIONS.map((opt) => (
+                <option key={opt} value={opt} className="text-forest-950">
+                  {opt}
+                </option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-forest-900/60">
+              <ChevronDown className="w-4 h-4" />
+            </div>
+          </div>
+          {errors.service && (
+            <p className="mt-1 text-xs text-red-600 flex items-center gap-1">
+              <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+              <span>{errors.service}</span>
+            </p>
+          )}
+        </div>
+
+        {/* 2. Name */}
         <div>
           <label
             htmlFor="booking-name"
@@ -194,7 +301,7 @@ Thank you.`;
                 if (errors.name) setErrors((prev) => ({ ...prev, name: undefined }));
               }}
               placeholder="Enter your name"
-              className={`w-full px-4 py-3 rounded-xl bg-[#FAF7F2] border text-forest-950 placeholder:text-muted-text/50 text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all ${
+              className={`w-full min-h-[48px] px-4 py-3 rounded-xl bg-[#FAF7F2] border text-forest-950 placeholder:text-muted-text/50 text-base sm:text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all ${
                 errors.name
                   ? "border-red-400 focus:ring-red-400/20 focus:border-red-500"
                   : "border-[#EAE2D3] focus:ring-forest-900/20 focus:border-forest-900"
@@ -209,7 +316,7 @@ Thank you.`;
           )}
         </div>
 
-        {/* 2. Date & 3. Time */}
+        {/* 3. Date & 4. Time */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {/* Date */}
           <div>
@@ -230,7 +337,7 @@ Thank you.`;
                   setDate(e.target.value);
                   if (errors.date) setErrors((prev) => ({ ...prev, date: undefined }));
                 }}
-                className={`w-full px-4 py-3 rounded-xl bg-[#FAF7F2] border text-forest-950 text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all ${
+                className={`w-full min-h-[48px] px-4 py-3 rounded-xl bg-[#FAF7F2] border text-forest-950 text-base sm:text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all ${
                   errors.date
                     ? "border-red-400 focus:ring-red-400/20 focus:border-red-500"
                     : "border-[#EAE2D3] focus:ring-forest-900/20 focus:border-forest-900"
@@ -262,11 +369,11 @@ Thank you.`;
                   setTime(e.target.value);
                   if (errors.time) setErrors((prev) => ({ ...prev, time: undefined }));
                 }}
-                className={`w-full px-4 py-3 rounded-xl bg-[#FAF7F2] border text-forest-950 text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all appearance-none cursor-pointer ${
+                className={`w-full min-h-[48px] px-4 py-3 pr-10 rounded-xl bg-[#FAF7F2] border text-forest-950 text-base sm:text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all appearance-none cursor-pointer ${
                   errors.time
                     ? "border-red-400 focus:ring-red-400/20 focus:border-red-500"
                     : "border-[#EAE2D3] focus:ring-forest-900/20 focus:border-forest-900"
-                }`}
+                } ${!time ? "text-muted-text/70" : "text-forest-950"}`}
               >
                 <option value="">Select a preferred time</option>
                 <option value="09:30 AM">09:30 AM</option>
@@ -285,6 +392,9 @@ Thank you.`;
                 <option value="05:30 PM">05:30 PM</option>
                 <option value="06:00 PM">06:00 PM</option>
               </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-forest-900/60">
+                <ChevronDown className="w-4 h-4" />
+              </div>
             </div>
             {errors.time && (
               <p className="mt-1 text-xs text-red-600 flex items-center gap-1">
@@ -295,12 +405,12 @@ Thank you.`;
           </div>
         </div>
 
-        {/* 4. WhatsApp Booking Button */}
+        {/* 5. WhatsApp Booking Button */}
         <div className="pt-2">
           <button
             type="button"
             onClick={(e) => handleBooking(e)}
-            className="w-full inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-[#25D366] text-white hover:bg-[#20ba5a] active:scale-[0.99] transition-all font-semibold text-sm sm:text-base shadow-sm hover:shadow group cursor-pointer"
+            className="w-full min-h-[50px] inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-[#25D366] text-white hover:bg-[#20ba5a] active:scale-[0.99] transition-all font-semibold text-base shadow-sm hover:shadow group cursor-pointer touch-manipulation"
           >
             <WhatsAppIcon className="w-5 h-5 transition-transform group-hover:scale-110" />
             <span>Confirm Booking on WhatsApp</span>

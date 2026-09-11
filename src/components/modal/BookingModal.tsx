@@ -1,10 +1,14 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { X, CheckCircle2, AlertCircle, Calendar, Clock, User, ShieldCheck } from "lucide-react";
+import { X, CheckCircle2, AlertCircle, Calendar, Clock, User, ShieldCheck, ChevronDown } from "lucide-react";
 import { useBookingModal } from "@/context/BookingModalContext";
 import { WHATSAPP_NUMBER } from "@/config/whatsapp";
-import { formatBookingDate } from "@/components/forms/WhatsAppBookingForm";
+import {
+  formatBookingDate,
+  SERVICE_OPTIONS,
+  mapToServiceOption
+} from "@/components/forms/WhatsAppBookingForm";
 
 function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (
@@ -22,10 +26,16 @@ function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
 export default function BookingModal() {
   const { isOpen, serviceName, closeBookingModal } = useBookingModal();
 
+  const [service, setService] = useState("");
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [errors, setErrors] = useState<{ name?: string; date?: string; time?: string }>({});
+  const [errors, setErrors] = useState<{
+    service?: string;
+    name?: string;
+    date?: string;
+    time?: string;
+  }>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [lastSubmittedUrl, setLastSubmittedUrl] = useState("");
 
@@ -46,9 +56,16 @@ export default function BookingModal() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, closeBookingModal]);
 
-  // Reset form state immediately when modal closes
+  // Pre-select service when modal opens with serviceName, or reset form
   useEffect(() => {
-    if (!isOpen) {
+    if (isOpen) {
+      if (serviceName) {
+        setService(mapToServiceOption(serviceName));
+      } else {
+        setService("");
+      }
+    } else {
+      setService("");
       setName("");
       setDate("");
       setTime("");
@@ -56,12 +73,21 @@ export default function BookingModal() {
       setIsSubmitted(false);
       setLastSubmittedUrl("");
     }
-  }, [isOpen]);
+  }, [isOpen, serviceName]);
 
   if (!isOpen) return null;
 
   const validate = () => {
-    const newErrors: { name?: string; date?: string; time?: string } = {};
+    const newErrors: {
+      service?: string;
+      name?: string;
+      date?: string;
+      time?: string;
+    } = {};
+
+    if (!service || service.trim() === "" || service === "Select a Service") {
+      newErrors.service = "Please select a service.";
+    }
 
     if (!name.trim()) {
       newErrors.name = "Please enter your name.";
@@ -94,17 +120,17 @@ export default function BookingModal() {
     const formattedDate = formatBookingDate(date);
 
     // Differentiate between service-specific enquiry and general booking request
-    const hasService = Boolean(
+    const isEnquiry = Boolean(
       serviceName &&
       serviceName.trim() &&
       serviceName.trim().toLowerCase() !== "general enquiry"
     );
 
     let message = "";
-    if (hasService) {
+    if (isEnquiry) {
       message = `Hello, I would like to make an enquiry.
 
-Service: ${serviceName.trim()}
+Service Required: ${service.trim()}
 
 Name: ${name.trim()}
 Date: ${formattedDate}
@@ -115,6 +141,8 @@ Please provide more information.
 Thank you.`;
     } else {
       message = `Hello, I would like to request a booking.
+
+Service Required: ${service.trim()}
 
 Name: ${name.trim()}
 Date: ${formattedDate}
@@ -145,7 +173,7 @@ Thank you.`;
   return (
     <div
       data-no-booking-modal="true"
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/65 backdrop-blur-[2px] animate-in fade-in duration-200 overflow-y-auto"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-black/65 backdrop-blur-[2px] animate-in fade-in duration-200 overflow-y-auto overscroll-contain"
       onClick={handleBackdropClick}
       aria-modal="true"
       role="dialog"
@@ -154,20 +182,20 @@ Thank you.`;
       <div
         ref={modalRef}
         data-no-booking-modal="true"
-        className="relative w-full max-w-lg bg-white rounded-3xl p-6 sm:p-8 md:p-9 shadow-2xl border border-[#EAE2D3] max-h-[90vh] overflow-y-auto my-auto animate-in zoom-in-95 duration-200"
+        className="relative w-full max-w-lg bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-9 shadow-2xl border border-[#EAE2D3] max-h-[90dvh] sm:max-h-[85vh] overflow-y-auto my-auto overscroll-contain animate-in zoom-in-95 duration-200"
       >
-        {/* Close Button: Clearly visible '×' button */}
+        {/* Close Button: 44px comfortable touch target */}
         <button
           type="button"
           onClick={closeBookingModal}
-          className="absolute top-4 right-4 sm:top-5 sm:right-5 w-9 h-9 rounded-full bg-[#FAF7F2] hover:bg-[#EAE2D3] border border-[#EAE2D3] flex items-center justify-center text-forest-950 text-2xl font-bold leading-none transition-colors cursor-pointer"
+          className="absolute top-3.5 right-3.5 sm:top-5 sm:right-5 w-11 h-11 rounded-full bg-[#FAF7F2] hover:bg-[#EAE2D3] active:bg-[#E2D6C0] active:scale-95 border border-[#EAE2D3] flex items-center justify-center text-forest-950 text-2xl font-bold leading-none transition-all cursor-pointer touch-manipulation z-20"
           aria-label="Close booking modal"
         >
           &times;
         </button>
 
         {/* Modal Header */}
-        <div className="pr-10 mb-6">
+        <div className="pr-10 mb-5 sm:mb-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50 mb-2">
             <span className="w-2 h-2 rounded-full bg-olive-600" />
             <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-olive-800">
@@ -185,8 +213,8 @@ Thank you.`;
           </p>
 
           {serviceName && serviceName.trim().toLowerCase() !== "general enquiry" && (
-            <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F3EDE2] border border-[#D8CCA8]/60 text-xs font-semibold text-forest-900">
-              <span className="text-muted-text">Service:</span>
+            <div className="mt-2.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F3EDE2] border border-[#D8CCA8]/60 text-xs font-semibold text-forest-900">
+              <span className="text-muted-text">Enquiry for:</span>
               <span className="text-olive-900">{serviceName}</span>
             </div>
           )}
@@ -247,7 +275,49 @@ Thank you.`;
           noValidate
           className="space-y-4 sm:space-y-5"
         >
-          {/* 1. Name */}
+          {/* 1. Service Required Dropdown */}
+          <div>
+            <label
+              htmlFor="modal-booking-service"
+              className="block text-xs font-semibold uppercase tracking-wider text-forest-950 mb-1.5"
+            >
+              Service Required <span className="text-red-500">*</span>
+            </label>
+            <div className="relative">
+              <select
+                id="modal-booking-service"
+                name="service"
+                value={service}
+                onChange={(e) => {
+                  setService(e.target.value);
+                  if (errors.service) setErrors((prev) => ({ ...prev, service: undefined }));
+                }}
+                className={`w-full min-h-[48px] px-4 py-3 pr-10 rounded-xl bg-[#FAF7F2] border text-forest-950 text-base sm:text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all appearance-none cursor-pointer ${
+                  errors.service
+                    ? "border-red-400 focus:ring-red-400/20 focus:border-red-500"
+                    : "border-[#EAE2D3] focus:ring-forest-900/20 focus:border-forest-900"
+                } ${!service ? "text-muted-text/70" : "text-forest-950"}`}
+              >
+                <option value="">Select a Service</option>
+                {SERVICE_OPTIONS.map((opt) => (
+                  <option key={opt} value={opt} className="text-forest-950">
+                    {opt}
+                  </option>
+                ))}
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-forest-900/60">
+                <ChevronDown className="w-4 h-4" />
+              </div>
+            </div>
+            {errors.service && (
+              <p className="mt-1 text-xs text-red-600 flex items-center gap-1">
+                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                <span>{errors.service}</span>
+              </p>
+            )}
+          </div>
+
+          {/* 2. Name */}
           <div>
             <label
               htmlFor="modal-booking-name"
@@ -266,7 +336,7 @@ Thank you.`;
                   if (errors.name) setErrors((prev) => ({ ...prev, name: undefined }));
                 }}
                 placeholder="Enter your name"
-                className={`w-full px-4 py-3 rounded-xl bg-[#FAF7F2] border text-forest-950 placeholder:text-muted-text/50 text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all ${
+                className={`w-full min-h-[48px] px-4 py-3 rounded-xl bg-[#FAF7F2] border text-forest-950 placeholder:text-muted-text/50 text-base sm:text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all ${
                   errors.name
                     ? "border-red-400 focus:ring-red-400/20 focus:border-red-500"
                     : "border-[#EAE2D3] focus:ring-forest-900/20 focus:border-forest-900"
@@ -281,7 +351,7 @@ Thank you.`;
             )}
           </div>
 
-          {/* 2. Date & 3. Time */}
+          {/* 3. Date & 4. Time */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Date */}
             <div>
@@ -302,7 +372,7 @@ Thank you.`;
                     setDate(e.target.value);
                     if (errors.date) setErrors((prev) => ({ ...prev, date: undefined }));
                   }}
-                  className={`w-full px-4 py-3 rounded-xl bg-[#FAF7F2] border text-forest-950 text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all ${
+                  className={`w-full min-h-[48px] px-4 py-3 rounded-xl bg-[#FAF7F2] border text-forest-950 text-base sm:text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all ${
                     errors.date
                       ? "border-red-400 focus:ring-red-400/20 focus:border-red-500"
                       : "border-[#EAE2D3] focus:ring-forest-900/20 focus:border-forest-900"
@@ -334,11 +404,11 @@ Thank you.`;
                     setTime(e.target.value);
                     if (errors.time) setErrors((prev) => ({ ...prev, time: undefined }));
                   }}
-                  className={`w-full px-4 py-3 rounded-xl bg-[#FAF7F2] border text-forest-950 text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all appearance-none cursor-pointer ${
+                  className={`w-full min-h-[48px] px-4 py-3 pr-10 rounded-xl bg-[#FAF7F2] border text-forest-950 text-base sm:text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all appearance-none cursor-pointer ${
                     errors.time
                       ? "border-red-400 focus:ring-red-400/20 focus:border-red-500"
                       : "border-[#EAE2D3] focus:ring-forest-900/20 focus:border-forest-900"
-                  }`}
+                  } ${!time ? "text-muted-text/70" : "text-forest-950"}`}
                 >
                   <option value="">Select a preferred time</option>
                   <option value="09:30 AM">09:30 AM</option>
@@ -357,6 +427,9 @@ Thank you.`;
                   <option value="05:30 PM">05:30 PM</option>
                   <option value="06:00 PM">06:00 PM</option>
                 </select>
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-forest-900/60">
+                  <ChevronDown className="w-4 h-4" />
+                </div>
               </div>
               {errors.time && (
                 <p className="mt-1 text-xs text-red-600 flex items-center gap-1">
@@ -367,12 +440,12 @@ Thank you.`;
             </div>
           </div>
 
-          {/* 4. WhatsApp Booking Button */}
-          <div className="pt-3">
+          {/* 5. WhatsApp Booking Button */}
+          <div className="pt-2 sm:pt-3">
             <button
               type="button"
               onClick={(e) => handleBooking(e)}
-              className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-[#25D366] text-white hover:bg-[#20ba5a] active:scale-[0.99] transition-all font-semibold text-sm sm:text-base shadow-sm hover:shadow group cursor-pointer"
+              className="w-full min-h-[50px] inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-[#25D366] text-white hover:bg-[#20ba5a] active:scale-[0.99] transition-all font-semibold text-base shadow-sm hover:shadow group cursor-pointer touch-manipulation"
             >
               <WhatsAppIcon className="w-5 h-5 transition-transform group-hover:scale-110" />
               <span>Confirm Booking on WhatsApp</span>

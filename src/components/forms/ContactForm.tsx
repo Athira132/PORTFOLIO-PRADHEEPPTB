@@ -8,7 +8,7 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
-    service: "Individual Psychological Counseling",
+    service: "NLP Training",
     message: ""
   });
 
@@ -132,7 +132,7 @@ export default function ContactForm() {
                 htmlFor="service"
                 className="block text-xs font-semibold uppercase tracking-wider text-forest-950 mb-2"
               >
-                Area of Guidance
+                Service Required
               </label>
               <select
                 id="service"
@@ -141,22 +141,18 @@ export default function ContactForm() {
                 onChange={handleChange}
                 className="w-full px-4 py-3.5 rounded-xl bg-[#FAF7F2] border border-[#EAE2D3] text-forest-950 text-sm focus:outline-none focus:ring-2 focus:ring-forest-900 focus:bg-white transition-all"
               >
-                <option value="Individual Psychological Counseling">
-                  Individual Psychological Counseling
-                </option>
-                <option value="Couples & Premarital Counseling">
-                  Couples & Premarital Counseling
-                </option>
-                <option value="Career Guidance in Pattambi">
-                  Career Guidance & Counseling
-                </option>
-                <option value="Life Skill Coaching">
-                  Life Skill Coaching & Personal Evolution
-                </option>
-                <option value="Motivational Speaking & Seminars">
-                  Motivational Speaking & Corporate Seminars
-                </option>
-                <option value="Other Inquiries">Other Inquiries</option>
+                <option value="NLP Training">NLP Training</option>
+                <option value="Personality Development">Personality Development</option>
+                <option value="Stress Management">Stress Management</option>
+                <option value="De Addiction">De Addiction</option>
+                <option value="Relationship Issues">Relationship Issues</option>
+                <option value="Therapeutic Healing">Therapeutic Healing</option>
+                <option value="Hypnotherapy">Hypnotherapy</option>
+                <option value="Corporate Training">Corporate Training</option>
+                <option value="Student Training">Student Training</option>
+                <option value="Teacher Training">Teacher Training</option>
+                <option value="Individual Training">Individual Training</option>
+                <option value="Other">Other</option>
               </select>
             </div>
           </div>
