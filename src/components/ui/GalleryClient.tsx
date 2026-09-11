@@ -97,17 +97,22 @@ export default function GalleryClient() {
               <div
                 key={item.id}
                 onClick={() => setActiveItem(item)}
-                className="group relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-[#FAF7F2] border border-[#EAE2D3] shadow-xs hover:border-forest-900/40 hover:shadow-md transition-all duration-300 cursor-pointer flex items-center justify-center p-3"
+                className="group relative aspect-square w-full rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+                style={{ aspectRatio: "1 / 1" }}
               >
-                <div className="relative w-full h-full">
-                  <Image
-                    src={item.imageSrc}
-                    alt={`${item.title} - Pradheep Pattambi Workshops and Guidance in Kerala`}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
+                <Image
+                  src={item.imageSrc}
+                  alt={`${item.title} - Pradheep Pattambi Workshops and Guidance in Kerala`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: item.objectPosition || "center"
+                  }}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
               </div>
             ))}
           </div>

@@ -5,6 +5,7 @@ export interface GalleryItem {
   imageSrc: string;
   description: string;
   featured?: boolean;
+  objectPosition?: string;
 }
 
 export const galleryCategories = [
@@ -22,7 +23,8 @@ export const galleryData: GalleryItem[] = [
     category: "Workshops & Speaking",
     imageSrc: "/images/gallery/gallery-01.jpg",
     description: "Interactive session fostering communication, confidence, and leadership.",
-    featured: true
+    featured: true,
+    objectPosition: "center"
   },
   {
     id: "gal-2",
@@ -30,7 +32,8 @@ export const galleryData: GalleryItem[] = [
     category: "Workshops & Speaking",
     imageSrc: "/images/gallery/gallery-02.jpg",
     description: "Inspiring teachers and students on emotional intelligence and purpose.",
-    featured: true
+    featured: true,
+    objectPosition: "center 5%"
   },
   {
     id: "gal-3",
@@ -38,7 +41,8 @@ export const galleryData: GalleryItem[] = [
     category: "Counseling & Guidance",
     imageSrc: "/images/gallery/gallery-03.jpg",
     description: "Empowering individuals through empathetic psychological guidance.",
-    featured: true
+    featured: true,
+    objectPosition: "center 15%"
   },
   {
     id: "gal-4",
@@ -46,7 +50,8 @@ export const galleryData: GalleryItem[] = [
     category: "Workshops & Speaking",
     imageSrc: "/images/gallery/gallery-04.jpg",
     description: "Pradheep N.V. speaking on holistic development and life skills.",
-    featured: true
+    featured: true,
+    objectPosition: "center 40%"
   },
   {
     id: "gal-5",
@@ -54,7 +59,8 @@ export const galleryData: GalleryItem[] = [
     category: "Personal Growth",
     imageSrc: "/images/gallery/gallery-05.jpg",
     description: "Creating spaces for self-reflection, understanding, and inner calm.",
-    featured: false
+    featured: false,
+    objectPosition: "center 45%"
   },
   {
     id: "gal-6",
@@ -62,7 +68,8 @@ export const galleryData: GalleryItem[] = [
     category: "Workshops & Speaking",
     imageSrc: "/images/gallery/gallery-06.jpg",
     description: "Keynote presentation addressing stress management and mental resilience.",
-    featured: false
+    featured: false,
+    objectPosition: "center"
   },
   {
     id: "gal-7",
@@ -70,7 +77,8 @@ export const galleryData: GalleryItem[] = [
     category: "Counseling & Guidance",
     imageSrc: "/images/gallery/gallery-07.jpg",
     description: "Guiding learners with practical strategies for academic clarity and focus.",
-    featured: false
+    featured: false,
+    objectPosition: "center"
   },
   {
     id: "gal-8",
@@ -78,7 +86,8 @@ export const galleryData: GalleryItem[] = [
     category: "Workshops & Speaking",
     imageSrc: "/images/gallery/gallery-08.jpg",
     description: "Fostering leadership, empathy, and active participation.",
-    featured: false
+    featured: false,
+    objectPosition: "center"
   },
   {
     id: "gal-9",
@@ -86,7 +95,8 @@ export const galleryData: GalleryItem[] = [
     category: "Personal Growth",
     imageSrc: "/images/gallery/gallery-09.jpg",
     description: "Assisting youth to discover inherent strengths and confident life paths.",
-    featured: false
+    featured: false,
+    objectPosition: "center"
   },
   {
     id: "gal-10",
@@ -94,7 +104,8 @@ export const galleryData: GalleryItem[] = [
     category: "Workshops & Speaking",
     imageSrc: "/images/gallery/gallery-10.jpg",
     description: "Corporate and educator coaching on effective communication and team dynamics.",
-    featured: false
+    featured: false,
+    objectPosition: "75% center"
   },
   {
     id: "gal-11",
@@ -102,7 +113,8 @@ export const galleryData: GalleryItem[] = [
     category: "Moments & Memories",
     imageSrc: "/images/gallery/gallery-11.jpg",
     description: "Sharing insights with audiences across Palakkad and Kerala.",
-    featured: false
+    featured: false,
+    objectPosition: "center"
   },
   {
     id: "gal-12",
@@ -110,7 +122,8 @@ export const galleryData: GalleryItem[] = [
     category: "Counseling & Guidance",
     imageSrc: "/images/gallery/gallery-12.jpg",
     description: "Engaging students directly to address emotional roadblocks and fears.",
-    featured: false
+    featured: false,
+    objectPosition: "center 25%"
   },
   {
     id: "gal-13",
@@ -118,7 +131,8 @@ export const galleryData: GalleryItem[] = [
     category: "Workshops & Speaking",
     imageSrc: "/images/gallery/gallery-13.jpg",
     description: "Equipping teachers with empathetic psychological tools for student care.",
-    featured: false
+    featured: false,
+    objectPosition: "center"
   },
   {
     id: "gal-14",
@@ -126,7 +140,8 @@ export const galleryData: GalleryItem[] = [
     category: "Personal Growth",
     imageSrc: "/images/gallery/gallery-14.jpg",
     description: "Equipping youth with emotional resilience and practical wisdom.",
-    featured: false
+    featured: false,
+    objectPosition: "center 20%"
   },
   {
     id: "gal-15",
@@ -134,7 +149,8 @@ export const galleryData: GalleryItem[] = [
     category: "Moments & Memories",
     imageSrc: "/images/gallery/gallery-15.jpg",
     description: "Fostering community bonds and positive mental health awareness.",
-    featured: false
+    featured: false,
+    objectPosition: "60% center"
   },
   {
     id: "gal-16",
@@ -142,7 +158,8 @@ export const galleryData: GalleryItem[] = [
     category: "Workshops & Speaking",
     imageSrc: "/images/gallery/gallery-16.jpg",
     description: "Pradheep Sir delivering an inspiring address at a regional convention.",
-    featured: false
+    featured: false,
+    objectPosition: "center 30%"
   },
   {
     id: "gal-17",
@@ -150,7 +167,8 @@ export const galleryData: GalleryItem[] = [
     category: "Counseling & Guidance",
     imageSrc: "/images/gallery/gallery-17.jpg",
     description: "Guiding parents and families toward harmonious domestic relationships.",
-    featured: false
+    featured: false,
+    objectPosition: "center"
   },
   {
     id: "gal-18",
@@ -158,7 +176,8 @@ export const galleryData: GalleryItem[] = [
     category: "Personal Growth",
     imageSrc: "/images/gallery/gallery-18.jpg",
     description: "Inspiring youth to overcome adversity with confidence.",
-    featured: false
+    featured: false,
+    objectPosition: "center"
   },
   {
     id: "gal-19",
@@ -166,7 +185,8 @@ export const galleryData: GalleryItem[] = [
     category: "Moments & Memories",
     imageSrc: "/images/gallery/gallery-19.jpg",
     description: "Celebrating milestones and enduring positive impact across Kerala.",
-    featured: false
+    featured: false,
+    objectPosition: "center 70%"
   },
   {
     id: "gal-20",
@@ -174,7 +194,8 @@ export const galleryData: GalleryItem[] = [
     category: "Workshops & Speaking",
     imageSrc: "/images/gallery/gallery-20.jpg",
     description: "Inspiring audiences with actionable psychological guidance and life skills.",
-    featured: false
+    featured: false,
+    objectPosition: "center 45%"
   },
   {
     id: "gal-21",
@@ -182,7 +203,8 @@ export const galleryData: GalleryItem[] = [
     category: "Counseling & Guidance",
     imageSrc: "/images/gallery/gallery-21.jpg",
     description: "Counselling and guidance team addressing career, family, premarital, teenage, and couple counselling.",
-    featured: false
+    featured: false,
+    objectPosition: "center"
   }
 ];
 
