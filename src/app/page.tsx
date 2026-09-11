@@ -185,14 +185,6 @@ export default function HomePage() {
           {/* Typography Direct Overlay on the Left — Balanced, Editorial */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-10 md:py-12 w-full flex items-center">
             <div className="max-w-xl lg:max-w-2xl space-y-4">
-              {/* Minimal Accent Label */}
-              <div className="inline-flex items-center gap-2.5">
-                <span className="w-10 h-[2.5px] bg-olive-700" />
-                <span className="text-sm sm:text-base uppercase tracking-[0.25em] font-bold text-olive-900">
-                  NLP Master Trainer
-                </span>
-              </div>
-
               {/* Main Heading — Prominent H1 */}
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[4.25rem] xl:text-[4.75rem] font-extrabold text-forest-950 tracking-tight leading-[1.02]">
                 Pradheep Pattambi
@@ -201,11 +193,6 @@ export default function HomePage() {
               {/* Professional Description directly following main heading */}
               <p className="text-lg sm:text-xl lg:text-[1.3rem] text-forest-900 font-semibold tracking-tight leading-snug">
                 Psychologist, Therapeutic Healer, NLP Grand Master, Certified Hypnotist, Trainer
-              </p>
-
-              {/* Supporting Line */}
-              <p className="text-forest-950/85 text-sm sm:text-base lg:text-lg leading-relaxed font-sans max-w-lg">
-                Undertakes specialized training for students, Teachers, clubs, individuals and corporates.
               </p>
 
               {/* Action Buttons */}
@@ -248,30 +235,17 @@ export default function HomePage() {
 
           {/* Typography Direct Overlay on the LEFT SIDE — Two-column composition, High Contrast */}
           <div className="relative z-10 h-full w-full flex justify-start items-start pt-5 sm:pt-6 px-4 sm:px-5 pointer-events-none">
-            <div className="max-w-[54%] sm:max-w-[50%] flex flex-col items-start text-left space-y-1.5 pointer-events-auto">
-              {/* 1. Dominant Element: Pradheep Pattambi (Two lines, very large, bold, premium) */}
-              <p className="text-[1.8rem] sm:text-[2.1rem] font-extrabold text-[#FAF7F2] tracking-tight leading-[1.05] drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+            <div className="max-w-[55%] sm:max-w-[50%] flex flex-col items-start text-left space-y-2 pointer-events-auto">
+              {/* 1. Dominant Element: Pradheep Pattambi (Two lines, significantly larger font, dominant visual element) */}
+              <p className="text-[2.35rem] min-[375px]:text-[2.55rem] min-[414px]:text-[2.85rem] sm:text-[3.1rem] font-extrabold text-[#FAF7F2] tracking-tight leading-[1.02] drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
                 <span>Pradheep</span>
                 <br />
                 <span>Pattambi</span>
               </p>
 
               {/* Professional Description directly following main heading */}
-              <p className="text-[11.5px] sm:text-[13px] font-semibold text-[#E6DAC8] leading-[1.25] drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
+              <p className="text-[11.5px] sm:text-[13px] font-semibold text-[#E6DAC8] leading-[1.25] drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] pb-1">
                 Psychologist, Therapeutic Healer, NLP Grand Master, Certified Hypnotist, Trainer
-              </p>
-
-              {/* 2. NLP Master Trainer */}
-              <p className="text-[13px] sm:text-[14.5px] font-bold text-[#C5A880] tracking-tight drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
-                NLP Master Trainer
-              </p>
-
-              {/* Subtle accent divider */}
-              <div className="w-10 sm:w-12 h-[2px] bg-[#C5A880] rounded-full my-0.5 shadow-xs" />
-
-              {/* 3. Supporting description */}
-              <p className="text-[10px] sm:text-[11px] text-[#FAF7F2] font-medium leading-[1.3] max-w-[195px] drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
-                Undertakes training for students, Teachers, clubs individuals and corporates
               </p>
 
               {/* 4. Subjects / Tags (UNCHANGED) */}

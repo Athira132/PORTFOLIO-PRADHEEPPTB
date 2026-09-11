@@ -41,23 +41,37 @@ const mainServices: ServiceItem[] = [
   }
 ];
 
-export default function MainServicesSection() {
+export interface MainServicesSectionProps {
+  id?: string;
+  badge?: string;
+  title?: string;
+  subtitle?: string;
+  className?: string;
+}
+
+export default function MainServicesSection({
+  id = "services",
+  badge = "SERVICES",
+  title = "Psychologist & Counselling Services in Pattambi",
+  subtitle = "Confidential psychological therapies, family guidance, and career direction tailored to help you overcome life challenges and thrive.",
+  className = "py-16 sm:py-20 bg-[#FBF9F4] border-b border-[#EAE2D3]/70"
+}: MainServicesSectionProps = {}) {
   return (
-    <section id="services" className="py-16 sm:py-20 bg-[#FBF9F4] border-b border-[#EAE2D3]/70">
+    <section id={id} className={className}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading with Local SEO focus */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50">
             <span className="w-2 h-2 rounded-full bg-olive-600" />
             <span className="text-xs uppercase tracking-[0.2em] font-semibold text-olive-800">
-              SERVICES
+              {badge}
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold text-forest-950 tracking-tight leading-tight">
-            Psychologist &amp; Counselling Services in Pattambi
+            {title}
           </h2>
           <p className="text-base sm:text-lg text-muted-text font-sans leading-relaxed">
-            Confidential psychological therapies, family guidance, and career direction tailored to help you overcome life challenges and thrive.
+            {subtitle}
           </p>
         </div>
 

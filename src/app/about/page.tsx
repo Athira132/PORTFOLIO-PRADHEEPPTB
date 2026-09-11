@@ -17,6 +17,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import JsonLd from "@/components/seo/JsonLd";
+import MainServicesSection from "@/components/services/MainServicesSection";
 import { testimonialsData } from "@/data/testimonials";
 import { faqData } from "@/data/faq";
 
@@ -235,104 +236,12 @@ export default function AboutPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. THREE CORE PILLARS OF EXPERTISE — BRIGHT SOFT CREAM */}
+      {/* 3. MAIN SERVICES (ALIGNED WITH HOME PAGE) */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 bg-[#F8F5EE] border-t border-b border-[#EAE2D3]/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            label="AREAS OF MASTERY"
-            title="Three Pillars of Healing & Evolution"
-            description="Bridging deep psychological insight, public inspiration, and practical life competencies."
-            align="center"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#EAE2D3] shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center mb-6">
-                <HeartHandshake className="w-7 h-7" />
-              </div>
-              <h3 className="text-2xl text-forest-950 font-bold mb-3">
-                Psychological Counselor
-              </h3>
-              <p className="text-muted-text text-sm sm:text-base leading-relaxed mb-6">
-                Personalized, empathetic sessions to untangle emotional knots, alleviate anxiety,
-                rebuild relationships, and provide a confidential haven for your deepest thoughts.
-              </p>
-              <ul className="space-y-2 text-xs sm:text-sm text-forest-900">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-olive-600" />
-                  <span>Anxiety & Stress Management</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-olive-600" />
-                  <span>Couples & Premarital Guidance</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-olive-600" />
-                  <span>Confidential Safe Space</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Card 2 */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#EAE2D3] shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center mb-6">
-                <Mic className="w-7 h-7" />
-              </div>
-              <h3 className="text-2xl text-forest-950 font-bold mb-3">
-                Motivational Speaker
-              </h3>
-              <p className="text-muted-text text-sm sm:text-base leading-relaxed mb-6">
-                Tailored keynotes and workshops blending psychological clarity, humor, storytelling,
-                and practical strategies to awaken inner purpose and grit.
-              </p>
-              <ul className="space-y-2 text-xs sm:text-sm text-forest-900">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-olive-600" />
-                  <span>Youth & College Seminars</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-olive-600" />
-                  <span>Corporate & Team Well-being</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-olive-600" />
-                  <span>Transformational Storytelling</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Card 3 */}
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#EAE2D3] shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center mb-6">
-                <Sparkles className="w-7 h-7" />
-              </div>
-              <h3 className="text-2xl text-forest-950 font-bold mb-3">
-                Life Skill Coach
-              </h3>
-              <p className="text-muted-text text-sm sm:text-base leading-relaxed mb-6">
-                Mentoring individuals in assertiveness, emotional regulation, mindful decision-making,
-                and resilience to excel in day-to-day challenges and careers.
-              </p>
-              <ul className="space-y-2 text-xs sm:text-sm text-forest-900">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-olive-600" />
-                  <span>Communication & Confidence</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-olive-600" />
-                  <span>Meditation & Hypnosis Techniques</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-olive-600" />
-                  <span>Career & Personal Clarity</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MainServicesSection
+        title="Psychological & Counselling Services"
+        subtitle="Confidential individual therapy, family counseling, and career guidance tailored to help you overcome life challenges and thrive."
+      />
 
       {/* ========================================================================= */}
       {/* 4. PHILOSOPHY SECTION — BRIGHT PALE SAGE BACKGROUND */}
