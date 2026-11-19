@@ -34,34 +34,50 @@ import {
 } from "@/data/trainingCounsellingData";
 
 export const metadata: Metadata = {
-  title: "Training & Therapeutic Counselling in Pattambi | The Light Centre",
+  title: "Training & Therapeutic Counselling in Pattambi | The Light Training and Counselling Centre",
   description:
-    "Explore training sessions and therapeutic counselling at The Light Training and Counselling Centre, Pattambi. Contact 9567654880.",
+    "Explore Training & Therapeutic Counselling in Pattambi at The Light Training and Counselling Centre. Discover training sessions, NLP, parenting, stress management and counselling services. Call 9567654880.",
   keywords: [
+    "Training & Therapeutic Counselling in Pattambi",
     "Training and Counselling Centre in Pattambi",
-    "Therapeutic Counselling Pattambi",
-    "Counselling in Pattambi",
-    "NLP Training Pattambi",
-    "Psychological Counsellor Pattambi",
-    "Training Sessions Pattambi",
+    "Therapeutic Counselling in Pattambi",
+    "Training Sessions in Pattambi",
+    "Counselling Services in Pattambi",
+    "NLP Training in Pattambi",
+    "Psychological Counselling in Pattambi",
+    "Parenting Counselling in Pattambi",
+    "Couple Counselling in Pattambi",
+    "Stress Management Training in Pattambi",
+    "Hypnotic Therapy in Pattambi",
     "Pradheep Pattambi",
-    "The Light Centre Pattambi"
+    "The Light Training and Counselling Centre"
   ],
   alternates: {
     canonical: "https://pradheeppattambi.com/training-and-therapeutic-counselling/"
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
   openGraph: {
-    title: "Training & Therapeutic Counselling in Pattambi | The Light Centre",
+    title: "Training & Therapeutic Counselling in Pattambi | The Light Training and Counselling Centre",
     description:
-      "Explore training sessions and therapeutic counselling at The Light Training and Counselling Centre, Pattambi. Contact 9567654880.",
+      "Explore Training & Therapeutic Counselling in Pattambi at The Light Training and Counselling Centre. Discover training sessions, NLP, parenting, stress management and counselling services. Call 9567654880.",
     url: "https://pradheeppattambi.com/training-and-therapeutic-counselling/",
     siteName: "The Light Training and Counselling Centre",
     images: [
       {
-        url: "/images/pradheep-poster-portrait.jpg",
+        url: "https://pradheeppattambi.com/images/pradheep-poster-portrait.jpg",
         width: 600,
         height: 600,
-        alt: "Pradheep Pattambi - The Light Training and Counselling Centre Pattambi"
+        alt: "Pradheep Pattambi - Training & Therapeutic Counselling in Pattambi | The Light Centre"
       }
     ],
     locale: "en_US",
@@ -69,10 +85,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Training & Therapeutic Counselling in Pattambi | The Light Centre",
+    title: "Training & Therapeutic Counselling in Pattambi | The Light Training and Counselling Centre",
     description:
-      "Explore training sessions and therapeutic counselling at The Light Training and Counselling Centre, Pattambi. Contact 9567654880.",
-    images: ["/images/pradheep-poster-portrait.jpg"]
+      "Explore Training & Therapeutic Counselling in Pattambi at The Light Training and Counselling Centre. Discover training sessions, NLP, parenting, stress management and counselling services. Call 9567654880.",
+    images: ["https://pradheeppattambi.com/images/pradheep-poster-portrait.jpg"]
   }
 };
 
@@ -128,7 +144,7 @@ const pageStructuredData = {
       "email": "info@pradheeppattambi.com",
       "image": "https://pradheeppattambi.com/images/pradheep-poster-portrait.jpg",
       "description":
-        "Explore training sessions and therapeutic counselling at The Light Training and Counselling Centre, Pattambi led by Pradheep Pattambi (NLP Master Trainer, Hypnotist, Psychological Counsellor).",
+        "Explore Training & Therapeutic Counselling in Pattambi at The Light Training and Counselling Centre. Discover training sessions, NLP, parenting, stress management and counselling services. Call 9567654880.",
       "founder": {
         "@type": "Person",
         "@id": "https://pradheeppattambi.com/#person",
@@ -237,10 +253,10 @@ export default function TrainingAndTherapeuticCounsellingPage() {
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
                     src="/images/pradheep-poster-portrait.jpg"
-                    alt="Pradheep Pattambi - The Light Training and Counselling Centre Pattambi"
+                    alt="Pradheep Pattambi - Training &amp; Therapeutic Counselling in Pattambi | The Light Centre"
                     fill
                     priority
-                    className="object-cover object-center scale-110"
+                    className="object-cover object-center scale-105"
                     sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 390px"
                   />
                 </div>
@@ -259,7 +275,7 @@ export default function TrainingAndTherapeuticCounsellingPage() {
 
               {/* Main Heading H1 */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#FAF7F2] font-bold tracking-tight leading-[1.1]">
-                Training &amp; Therapeutic Counselling
+                Training &amp; Therapeutic Counselling<span className="sr-only"> in Pattambi</span>
               </h1>
 
               {/* Tagline: Learn • Heal • Transform */}
@@ -363,7 +379,7 @@ export default function TrainingAndTherapeuticCounsellingPage() {
               Therapeutical Counselling
             </h2>
             <p className="mt-2 text-sm sm:text-base text-muted-text">
-              Confidential therapeutic modalities designed to heal emotional wounds and restore wellbeing.
+              Confidential therapeutic counselling and clinical modalities offered at The Light Centre in Pattambi.
             </p>
           </div>
 
