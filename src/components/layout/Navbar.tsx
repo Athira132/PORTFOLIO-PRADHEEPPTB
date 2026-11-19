@@ -14,9 +14,10 @@ interface NavItem {
 const navLinks: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Gallery", href: "/gallery" },
+  { name: "Training & Counselling", href: "/training-and-therapeutic-counselling" },
   { name: "Counselling", href: "/counselling" },
   { name: "Career", href: "/career" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" }
 ];
 
@@ -35,7 +36,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 md:h-20 w-full">
           {/* Desktop Navigation: Far-Left Brand Name, Menu Items Following It */}
-          <div className="hidden lg:flex items-center gap-8 xl:gap-12">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-8 2xl:gap-10">
             <Link
               href="/"
               className="text-base xl:text-lg font-bold tracking-tight text-forest-950 hover:text-forest-800 transition-colors shrink-0"
@@ -43,13 +44,15 @@ export default function Navbar() {
               Pradheep Pattambi
             </Link>
 
-            <nav className="flex items-center space-x-1 xl:space-x-3">
+            <nav className="flex items-center space-x-0.5 xl:space-x-1.5">
               {navLinks.map((item) => {
                 const isContact = item.name === "Contact";
                 const isActive =
                   item.href === "/"
                     ? pathname === "/"
-                    : pathname.startsWith(item.href);
+                    : pathname === item.href ||
+                      pathname === `${item.href}/` ||
+                      pathname.startsWith(`${item.href}/`);
 
                 if (isContact) {
                   return (
@@ -58,7 +61,7 @@ export default function Navbar() {
                       type="button"
                       data-booking-trigger="true"
                       onClick={() => openBookingModal()}
-                      className={`relative px-4 py-2 text-sm xl:text-base font-medium transition-colors font-sans rounded-full cursor-pointer ${
+                      className={`relative px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm 2xl:text-base font-medium transition-colors font-sans rounded-full cursor-pointer whitespace-nowrap ${
                         isActive
                           ? "text-forest-950 font-bold"
                           : "text-forest-900/80 hover:text-forest-950 hover:bg-[#F3EDE2]"
@@ -73,7 +76,7 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`relative px-4 py-2 text-sm xl:text-base font-medium transition-colors font-sans rounded-full ${
+                    className={`relative px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm 2xl:text-base font-medium transition-colors font-sans rounded-full whitespace-nowrap ${
                       isActive
                         ? "text-forest-950 font-bold"
                         : "text-forest-900/80 hover:text-forest-950 hover:bg-[#F3EDE2]"
@@ -81,7 +84,7 @@ export default function Navbar() {
                   >
                     {item.name}
                     {isActive && (
-                      <span className="absolute bottom-1 left-4 right-4 h-[2px] bg-forest-900 rounded-full" />
+                      <span className="absolute bottom-1 left-3 right-3 h-[2px] bg-forest-900 rounded-full" />
                     )}
                   </Link>
                 );
@@ -152,7 +155,9 @@ export default function Navbar() {
               const isActive =
                 item.href === "/"
                   ? pathname === "/"
-                  : pathname.startsWith(item.href);
+                  : pathname === item.href ||
+                    pathname === `${item.href}/` ||
+                    pathname.startsWith(`${item.href}/`);
 
               if (isContact) {
                 return (
