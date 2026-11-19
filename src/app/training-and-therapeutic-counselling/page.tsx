@@ -207,25 +207,25 @@ function ServiceCard({ item }: { item: ServiceCardItem }) {
   const enquiryUrl = getWhatsAppServiceEnquiryUrl(item.name);
 
   return (
-    <div className="group rounded-2xl bg-[#0D2E20] border border-[#1E543C] p-5 shadow-sm hover:shadow-md hover:border-[#3B8A66] hover:bg-[#103726] transition-all duration-200 flex flex-col justify-between">
+    <div className="group rounded-2xl bg-white border border-[#DCE5DF] p-5 shadow-xs hover:shadow-md hover:border-[#123D2B]/40 transition-all duration-200 flex flex-col justify-between">
       <div className="space-y-3">
-        <div className="w-11 h-11 rounded-xl bg-[#1D543B] text-[#95E5BA] flex items-center justify-center group-hover:bg-[#95E5BA] group-hover:text-[#0D2E20] transition-colors duration-200">
-          <IconComp className="w-5 h-5 stroke-[2]" />
+        <div className="w-11 h-11 rounded-xl bg-[#F0F5F2] text-[#123D2B] border border-[#DCE5DF] flex items-center justify-center group-hover:bg-[#123D2B] group-hover:text-white transition-colors duration-200">
+          <IconComp className="w-5 h-5 stroke-[1.8]" />
         </div>
-        <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-[#95E5BA] transition-colors">
+        <h3 className="text-base sm:text-lg font-bold text-[#252525] group-hover:text-[#123D2B] transition-colors">
           {item.name}
         </h3>
-        <p className="text-xs sm:text-sm text-[#D1E5D8] leading-relaxed font-sans">
+        <p className="text-xs sm:text-sm text-[#555555] leading-relaxed font-sans">
           {item.brief}
         </p>
       </div>
 
-      <div className="pt-4 mt-4 border-t border-[#1C4E37]">
+      <div className="pt-4 mt-4 border-t border-[#EDF2EF]">
         <a
           href={enquiryUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#95E5BA] hover:text-white transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#123D2B] hover:text-[#1E5D42] transition-colors"
           aria-label={`Enquire about ${item.name} on WhatsApp`}
         >
           <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
@@ -242,9 +242,9 @@ export default function TrainingAndTherapeuticCounsellingPage() {
       <JsonLd data={pageStructuredData} />
 
       {/* ========================================================================= */}
-      {/* 1. HERO BANNER — WARM IVORY PALETTE, PRESERVED CIRCULAR PORTRAIT */}
+      {/* 1. HERO BANNER — SOLID DARK GREEN (#123D2B), PRESERVED CIRCULAR PORTRAIT */}
       {/* ========================================================================= */}
-      <section className="py-14 sm:py-20 lg:py-24 bg-[#FAF6F0] border-b border-[#E8DFC9]">
+      <section className="py-16 sm:py-24 bg-[#123D2B] border-b border-[#1A4E38]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             {/* Left: Circular Photo Frame (Exact dimensions & positioning preserved) */}
@@ -266,36 +266,36 @@ export default function TrainingAndTherapeuticCounsellingPage() {
             {/* Right: Editorial Typography & Actions */}
             <div className="lg:col-span-7 space-y-5 text-left">
               {/* Category Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8F0E9] border border-[#C5DAC8] w-fit">
-                <span className="w-2 h-2 rounded-full bg-[#346E44]" />
-                <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#1E4527]">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C4E37] border border-[#2B6D50] w-fit">
+                <span className="w-2 h-2 rounded-full bg-[#C5A880]" />
+                <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#D4E8DC]">
                   THE LIGHT TRAINING AND COUNSELLING CENTRE &bull; PATTAMBI
                 </span>
               </div>
 
               {/* Main Heading H1 */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl text-forest-950 font-bold tracking-tight leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl text-white font-bold tracking-tight leading-[1.1]">
                 Training &amp; Therapeutic Counselling<span className="sr-only"> in Pattambi</span>
               </h1>
 
               {/* Tagline: Learn • Heal • Transform */}
-              <p className="text-lg sm:text-xl text-[#825C34] font-semibold tracking-wide">
+              <p className="text-lg sm:text-xl text-[#C5A880] font-semibold tracking-wide">
                 Learn &bull; Heal &bull; Transform
               </p>
 
               {/* Trainer & Contact Info */}
-              <div className="space-y-1.5 text-[#3E4E44]">
-                <p className="text-xl sm:text-2xl font-bold text-forest-950">
+              <div className="space-y-1.5 text-[#D4E8DC]">
+                <p className="text-xl sm:text-2xl font-bold text-white">
                   Pradheep Pattambi
                 </p>
-                <p className="text-sm sm:text-base text-[#4D6054] font-medium">
-                  NLP Master Trainer <span className="text-[#8C653B]">|</span> Hypnotist <span className="text-[#8C653B]">|</span> Psychological Counsellor
+                <p className="text-sm sm:text-base text-[#D4C3A3] font-medium">
+                  NLP Master Trainer <span className="text-[#C5A880]">|</span> Hypnotist <span className="text-[#C5A880]">|</span> Psychological Counsellor
                 </p>
-                <p className="text-sm sm:text-base text-forest-950 pt-1">
+                <p className="text-sm sm:text-base text-white pt-1">
                   Contact:{" "}
                   <a
                     href="tel:+919567654880"
-                    className="text-forest-950 font-bold hover:text-[#825C34] transition-colors underline underline-offset-4"
+                    className="text-white font-bold hover:text-[#C5A880] transition-colors underline underline-offset-4"
                   >
                     9567654880
                   </a>
@@ -308,7 +308,7 @@ export default function TrainingAndTherapeuticCounsellingPage() {
                   href="/contact"
                   data-booking-trigger="true"
                   data-service="Training &amp; Therapeutic Counselling"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#14231A] text-[#FAF7F2] hover:bg-[#1E3628] transition-all text-sm sm:text-base font-bold tracking-wide shadow-md group cursor-pointer"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] transition-all text-sm sm:text-base font-bold tracking-wide shadow-sm group cursor-pointer"
                 >
                   <span>Book a Consultation</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -319,7 +319,7 @@ export default function TrainingAndTherapeuticCounsellingPage() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-forest-950/20 text-forest-950 bg-white/80 hover:bg-white hover:border-forest-950/40 transition-all text-sm sm:text-base font-medium tracking-wide shadow-xs"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-[#D8CCA8]/50 text-white bg-white/5 hover:bg-white/10 transition-colors text-sm sm:text-base font-medium tracking-wide"
                 >
                   <MessageCircle className="w-4 h-4 text-[#25D366]" />
                   <span>Chat on WhatsApp</span>
@@ -331,12 +331,12 @@ export default function TrainingAndTherapeuticCounsellingPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. TRAINING SESSIONS SECTION — SOLID DARK GREEN (#123D2B) */}
+      {/* 2. TRAINING SESSIONS SECTION — CLEAN WHITE BODY, DARK GREEN (#123D2B) HEADING */}
       {/* ========================================================================= */}
-      <section className="py-14 sm:py-20 bg-[#123D2B] border-b border-[#1A4E38]">
+      <section className="py-12 sm:py-16 bg-white border-b border-[#DCE5DF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+          {/* Solid Dark Green Heading Area Box */}
+          <div className="w-full rounded-2xl bg-[#123D2B] py-8 sm:py-10 px-6 sm:px-8 mb-8 sm:mb-10 text-center border border-[#1A4E38] shadow-xs">
             <div className="inline-flex items-center gap-2 mb-2">
               <span className="w-6 h-[1.5px] bg-[#3B7A5C]" />
               <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#D4E8DC]">
@@ -347,12 +347,12 @@ export default function TrainingAndTherapeuticCounsellingPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
               Training Sessions
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-[#D4E8DC]">
+            <p className="mt-2 text-sm sm:text-base text-[#D4E8DC] max-w-2xl mx-auto">
               Professional training programs and interactive skill-building sessions in Pattambi at The Light Training and Counselling Centre.
             </p>
           </div>
 
-          {/* 8 Clean Service Cards */}
+          {/* 8 Clean Service Cards on White Background */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {trainingSessionsData.map((item) => (
               <ServiceCard key={item.id} item={item} />
@@ -362,12 +362,12 @@ export default function TrainingAndTherapeuticCounsellingPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. THERAPEUTICAL COUNSELLING SECTION — SOLID DARK GREEN (#123D2B) */}
+      {/* 3. THERAPEUTICAL COUNSELLING SECTION — CLEAN WHITE BODY, DARK GREEN (#123D2B) HEADING */}
       {/* ========================================================================= */}
-      <section className="py-14 sm:py-20 bg-[#123D2B] border-b border-[#1A4E38]">
+      <section className="py-12 sm:py-16 bg-white border-b border-[#DCE5DF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+          {/* Solid Dark Green Heading Area Box */}
+          <div className="w-full rounded-2xl bg-[#123D2B] py-8 sm:py-10 px-6 sm:px-8 mb-8 sm:mb-10 text-center border border-[#1A4E38] shadow-xs">
             <div className="inline-flex items-center gap-2 mb-2">
               <span className="w-6 h-[1.5px] bg-[#3B7A5C]" />
               <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#D4E8DC]">
@@ -378,12 +378,12 @@ export default function TrainingAndTherapeuticCounsellingPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
               Therapeutical Counselling
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-[#D4E8DC]">
+            <p className="mt-2 text-sm sm:text-base text-[#D4E8DC] max-w-2xl mx-auto">
               Confidential therapeutic counselling and clinical modalities offered at The Light Centre in Pattambi.
             </p>
           </div>
 
-          {/* 8 Clean Service Cards */}
+          {/* 8 Clean Service Cards on White Background */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {therapeuticCounsellingData.map((item) => (
               <ServiceCard key={item.id} item={item} />
@@ -393,66 +393,68 @@ export default function TrainingAndTherapeuticCounsellingPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 4. COMPACT FINAL CONTACT SECTION — DEEP FOREST GREEN THEME */}
+      {/* 4. COMPACT FINAL CONTACT SECTION — WHITE BODY WITH DARK GREEN (#123D2B) BOX */}
       {/* ========================================================================= */}
-      <section className="py-14 sm:py-20 bg-[#111C15] text-[#FAF7F2] border-b border-[#213527]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="space-y-2">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#C5A880] font-semibold">
-              Get in Touch
-            </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#FAF7F2] tracking-tight">
-              Pradheep Pattambi
-            </h2>
-            <p className="text-base sm:text-lg text-[#D4C3A3] font-medium">
-              The Light Training and Counselling Centre
-            </p>
-            <p className="text-xs sm:text-sm text-[#A9B8AF] flex items-center justify-center gap-1.5">
-              <MapPin className="w-4 h-4 text-[#C5A880]" />
-              <span>Pattambi, Palakkad District, Kerala</span>
-            </p>
-          </div>
+      <section className="py-12 sm:py-16 bg-white border-b border-[#DCE5DF]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl bg-[#123D2B] p-8 sm:p-12 text-center text-white border border-[#1A4E38] shadow-xs space-y-6">
+            <div className="space-y-2">
+              <p className="text-xs uppercase tracking-[0.25em] text-[#C5A880] font-semibold">
+                Get in Touch
+              </p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
+                Pradheep Pattambi
+              </h2>
+              <p className="text-base sm:text-lg text-[#D4C3A3] font-medium">
+                The Light Training and Counselling Centre
+              </p>
+              <p className="text-xs sm:text-sm text-[#D4E8DC] flex items-center justify-center gap-1.5">
+                <MapPin className="w-4 h-4 text-[#C5A880]" />
+                <span>Pattambi, Palakkad District, Kerala</span>
+              </p>
+            </div>
 
-          <div className="py-2">
-            <p className="text-sm text-[#B5C2B9]">Direct Phone:</p>
-            <a
-              href="tel:+919567654880"
-              className="text-2xl sm:text-3xl font-bold text-[#FAF7F2] hover:text-[#C5A880] transition-colors inline-block mt-0.5"
-            >
-              9567654880
-            </a>
-          </div>
+            <div className="py-2">
+              <p className="text-sm text-[#D4E8DC]">Direct Phone:</p>
+              <a
+                href="tel:+919567654880"
+                className="text-2xl sm:text-3xl font-bold text-white hover:text-[#C5A880] transition-colors inline-block mt-0.5"
+              >
+                9567654880
+              </a>
+            </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
-            <a
-              href="tel:+919567654880"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] transition-all text-sm sm:text-base font-bold tracking-wide shadow-sm"
-            >
-              <Phone className="w-4 h-4" />
-              <span>Call Now: 9567654880</span>
-            </a>
+            <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
+              <a
+                href="tel:+919567654880"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] transition-all text-sm sm:text-base font-bold tracking-wide shadow-sm"
+              >
+                <Phone className="w-4 h-4" />
+                <span>Call Now: 9567654880</span>
+              </a>
 
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                "Hello Pradheep Sir, I would like to enquire about Training & Therapeutic Counselling at The Light Centre, Pattambi."
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#25D366] text-white hover:bg-[#20ba5a] transition-all text-sm sm:text-base font-semibold shadow-sm"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span>WhatsApp Us</span>
-            </a>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                  "Hello Pradheep Sir, I would like to enquire about Training & Therapeutic Counselling at The Light Centre, Pattambi."
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#25D366] text-white hover:bg-[#20ba5a] transition-all text-sm sm:text-base font-semibold shadow-sm"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>WhatsApp Us</span>
+              </a>
 
-            <Link
-              href="/contact"
-              data-booking-trigger="true"
-              data-service="Training &amp; Therapeutic Counselling"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-[#D8CCA8]/50 text-[#FAF7F2] bg-white/5 hover:bg-white/10 transition-colors text-sm sm:text-base font-medium tracking-wide cursor-pointer"
-            >
-              <CalendarCheck className="w-4 h-4 text-[#C5A880]" />
-              <span>Book a Consultation</span>
-            </Link>
+              <Link
+                href="/contact"
+                data-booking-trigger="true"
+                data-service="Training &amp; Therapeutic Counselling"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-[#D8CCA8]/50 text-[#FAF7F2] bg-white/5 hover:bg-white/10 transition-colors text-sm sm:text-base font-medium tracking-wide cursor-pointer"
+              >
+                <CalendarCheck className="w-4 h-4 text-[#C5A880]" />
+                <span>Book a Consultation</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
