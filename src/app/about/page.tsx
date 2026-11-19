@@ -22,16 +22,29 @@ import { testimonialsData } from "@/data/testimonials";
 import { faqData } from "@/data/faq";
 
 export const metadata: Metadata = {
-  title: "About Pradheep Pattambi | Psychologist in Pattambi, Kerala",
+  title: "Pradheep Pattambi | Psychologist & NLP Trainer in Kerala",
   description:
-    "Learn about Pradheep Pattambi (Pradheep N.V.), psychologist & therapeutic healer in Pattambi with 20+ years experience. NLP Grand Master, trainer & counsellor.",
+    "Learn about Pradheep Pattambi (Pradheep N.V.), psychologist, NLP trainer and motivational speaker in Kerala with 20+ years of experience in psychological counselling.",
+  keywords: [
+    "Pradheep Pattambi",
+    "Psychological Counselling in Kerala",
+    "NLP Trainer in Kerala",
+    "Motivational Speaker in Kerala",
+    "NLP Grand Master in Kerala",
+    "Psychologist in Palakkad",
+    "Psychologist in Pattambi",
+    "Hypnosis Training in Kerala",
+    "Life Skills Coach in Kerala",
+    "Psychologist near Pattambi",
+    "Counselling in Palakkad"
+  ],
   alternates: {
     canonical: "https://pradheeppattambi.com/about/",
   },
   openGraph: {
-    title: "About Pradheep Pattambi | Psychologist in Pattambi, Kerala",
+    title: "Pradheep Pattambi | Psychologist & NLP Trainer in Kerala",
     description:
-      "Meet Pradheep Pattambi, psychologist in Pattambi with 20+ years experience. Discover his therapeutic healing philosophy, NLP mastery, and mindful counselling.",
+      "Meet Pradheep Pattambi, dedicated psychologist, NLP trainer, and motivational speaker in Kerala with 20+ years of empowering lives through psychological counselling.",
     url: "https://pradheeppattambi.com/about/",
     siteName: "Pradheep Pattambi",
     images: [
@@ -39,7 +52,7 @@ export const metadata: Metadata = {
         url: "/images/about-hero.jpg",
         width: 800,
         height: 800,
-        alt: "Pradheep Pattambi - Psychologist and Therapeutic Healer in Pattambi"
+        alt: "Pradheep Pattambi - Psychologist and NLP Trainer in Kerala"
       }
     ],
     locale: "en_US",
@@ -47,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Pradheep Pattambi | Psychologist in Pattambi, Kerala",
+    title: "Pradheep Pattambi | Psychologist & NLP Trainer in Kerala",
     description:
-      "20+ years of dedicated service empowering lives through psychological counselling, NLP, and therapeutic healing in Pattambi.",
+      "20+ years of dedicated service empowering lives through psychological counselling, NLP training, and motivational speaking in Kerala.",
     images: ["/images/about-hero.jpg"]
   }
 };
@@ -78,9 +91,26 @@ const aboutStructuredData = {
       "@type": "ProfilePage",
       "@id": "https://pradheeppattambi.com/about/#webpage",
       "url": "https://pradheeppattambi.com/about/",
-      "name": "About Pradheep Pattambi | Psychologist in Pattambi, Kerala",
+      "name": "About Pradheep Pattambi | Psychologist & NLP Trainer in Kerala",
       "isPartOf": { "@id": "https://pradheeppattambi.com/#website" },
-      "mainEntity": { "@id": "https://pradheeppattambi.com/#person" }
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://pradheeppattambi.com/#person",
+        "name": "Pradheep Pattambi",
+        "alternateName": ["Pradheep N.V.", "Pradeep Pattambi"],
+        "jobTitle": "Psychologist, NLP Trainer, Motivational Speaker, Certified Hypnotist",
+        "url": "https://pradheeppattambi.com/about/",
+        "image": "https://pradheeppattambi.com/images/about-hero.jpg",
+        "telephone": "+919567654880",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "The Light Training and Counselling Centre, Sree Nilayam, Umikkunnu",
+          "addressLocality": "Pattambi",
+          "addressRegion": "Palakkad District, Kerala",
+          "postalCode": "679303",
+          "addressCountry": "IN"
+        }
+      }
     }
   ]
 };
@@ -101,7 +131,7 @@ export default function AboutPage() {
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
                     src="/images/about-hero.jpg"
-                    alt="Pradheep N.V. - Clinical Psychologist and Life Skill Coach in Palakkad, Kerala"
+                    alt="Pradheep Pattambi - Psychologist and NLP Trainer in Kerala"
                     fill
                     priority
                     className="object-cover object-center scale-110"
@@ -121,12 +151,12 @@ export default function AboutPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#FAF7F2] font-bold tracking-tight leading-[1.1]">
-                About Me
+                Pradheep Pattambi
               </h1>
 
               <p className="text-lg sm:text-xl text-[#D6CEBE] font-medium leading-relaxed">
-                &ldquo;I’m Pradheep N.V., a psychologist in Palakkad, helping individuals explore
-                their inner strength and overcome life’s challenges through mindful guidance and support.&rdquo;
+                &ldquo;I’m Pradheep N.V., a dedicated psychologist and NLP trainer in Kerala, helping individuals explore
+                their inner strength and overcome life’s challenges through compassionate psychological counselling.&rdquo;
               </p>
 
               <div className="flex flex-wrap items-center gap-3.5 pt-2">
@@ -164,7 +194,7 @@ export default function AboutPage() {
                 <div className="relative w-full h-full">
                   <Image
                     src="/images/gallery/gallery-03.jpg"
-                    alt="Pradheep N.V. addressing a seminar at KVVES Pattambi, Palakkad"
+                    alt="Pradheep Pattambi delivering a seminar as a motivational speaker in Kerala"
                     fill
                     className="object-contain"
                     priority
@@ -184,30 +214,30 @@ export default function AboutPage() {
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-bold leading-tight tracking-tight">
-                Pradheep Pattambi
+                Biography &amp; Life Purpose
               </h2>
 
               <div className="space-y-5 text-muted-text text-base sm:text-lg leading-relaxed font-sans">
                 <p>
                   <strong className="text-forest-950 font-semibold">Pradheep N. V</strong>, a
-                  renowned Psychologist in Palakkad, was born in Pattambi, Kerala, to Sri.
-                  Narayanan Nair and Smt. Lakshmi Amma. A man of many friends and interests,
+                  distinguished Psychologist in Palakkad and Pattambi, was born in Pattambi, Kerala, to Sri.
+                  Narayanan Nair and Smt. Lakshmi Amma. A dedicated mentor and scholar of human behavior,
                   he completed his graduation and post-graduation with distinction. With over
-                  20 years of service in the Kerala Government, he is admired for his deep
-                  compassion and love for humanity.
+                  20 years of honorable service in the Kerala Government, he is widely respected for his deep
+                  compassion and dedication to psychological counselling in Kerala.
                 </p>
 
                 <p>
-                  Pradheep is also a published author of three Malayalam poetry books, a
-                  storyteller, and a martial arts enthusiast. He is passionate about meditation,
-                  hypnosis, and personal growth. As a motivational speaker with a sense of humor
-                  and a love for music and badminton, Pradheep N. V inspires many to live fuller,
-                  more aware lives.
+                  Pradheep is an accomplished NLP Trainer in Kerala, NLP Grand Master, certified hypnotist,
+                  and published author of three Malayalam poetry books. As a motivational speaker in Kerala
+                  with a passion for youth empowerment and emotional wellness, he blends humor, practical mindfulness,
+                  and deep empathy to inspire students, professionals, and families across Palakkad, Shoranur,
+                  Ottapalam, and Kerala.
                 </p>
 
                 <p>
-                  For those seeking personal transformation and emotional wellness, he is a
-                  trusted guide and a leading Psychologist in Palakkad.
+                  For individuals and families seeking lasting emotional wellness, stress relief, and personal transformation,
+                  he is a trusted counsellor and leading psychologist near Pattambi.
                 </p>
               </div>
 

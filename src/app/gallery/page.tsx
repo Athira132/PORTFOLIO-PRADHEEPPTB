@@ -6,14 +6,23 @@ import JsonLd from "@/components/seo/JsonLd";
 export const metadata: Metadata = {
   title: "Workshops & Seminar Gallery | Pradheep Pattambi Kerala",
   description:
-    "Browse photos from transformational workshops, student seminars, leadership keynotes, and counselling sessions conducted by Pradheep N.V. across Kerala.",
+    "Explore photos of transformational workshops, student motivation seminars, leadership training, and counselling sessions conducted by Pradheep Pattambi across Kerala.",
+  keywords: [
+    "Workshops & Seminar Gallery",
+    "Student Motivation Training",
+    "NLP Training in Kerala",
+    "Life Skills Training in Kerala",
+    "Psychologist in Pattambi",
+    "Pradheep Pattambi",
+    "Motivational Speaker in Kerala"
+  ],
   alternates: {
     canonical: "https://pradheeppattambi.com/gallery/"
   },
   openGraph: {
     title: "Workshops & Seminar Gallery | Pradheep Pattambi Kerala",
     description:
-      "Visual archive of workshops, seminars, and counseling moments with Pradheep N.V. in Palakkad & Kerala.",
+      "Explore photos of transformational workshops, student motivation seminars, leadership training, and counselling sessions conducted by Pradheep Pattambi across Kerala.",
     url: "https://pradheeppattambi.com/gallery/",
     siteName: "Pradheep Pattambi",
     images: [
@@ -31,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Workshops & Seminar Gallery | Pradheep Pattambi Kerala",
     description:
-      "Visual archive of keynote seminars and life skill workshops conducted by Pradheep N.V. across Kerala.",
+      "Explore photos of transformational workshops, student motivation seminars, leadership training, and counselling sessions conducted by Pradheep Pattambi across Kerala.",
     images: ["/images/photo-2.png"]
   }
 };

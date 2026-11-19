@@ -34,23 +34,21 @@ import {
 } from "@/data/trainingCounsellingData";
 
 export const metadata: Metadata = {
-  title: "Training & Therapeutic Counselling in Pattambi | The Light Training and Counselling Centre",
+  title: "NLP Training in Kerala | Training & Therapeutic Counselling Pattambi",
   description:
-    "Explore Training & Therapeutic Counselling in Pattambi at The Light Training and Counselling Centre. Discover training sessions, NLP, parenting, stress management and counselling services. Call 9567654880.",
+    "Certified NLP training in Kerala & therapeutic counselling in Pattambi by Pradheep Pattambi. Hypnosis training, parenting training, stress management & personal development.",
   keywords: [
+    "NLP Training in Kerala",
+    "NLP Trainer in Kerala",
+    "Hypnosis Training in Kerala",
+    "Life Skills Training in Kerala",
+    "Parenting Training in Kerala",
+    "Stress Management Training",
+    "Personal Development Training",
     "Training & Therapeutic Counselling in Pattambi",
-    "Training and Counselling Centre in Pattambi",
-    "Therapeutic Counselling in Pattambi",
-    "Training Sessions in Pattambi",
-    "Counselling Services in Pattambi",
-    "NLP Training in Pattambi",
-    "Psychological Counselling in Pattambi",
-    "Parenting Counselling in Pattambi",
-    "Couple Counselling in Pattambi",
-    "Stress Management Training in Pattambi",
-    "Hypnotic Therapy in Pattambi",
-    "Pradheep Pattambi",
-    "The Light Training and Counselling Centre"
+    "The Light Training and Counselling Centre",
+    "Psychologist in Pattambi",
+    "Pradheep Pattambi"
   ],
   alternates: {
     canonical: "https://pradheeppattambi.com/training-and-therapeutic-counselling/"
@@ -67,9 +65,9 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: "Training & Therapeutic Counselling in Pattambi | The Light Training and Counselling Centre",
+    title: "NLP Training in Kerala | Training & Therapeutic Counselling Pattambi",
     description:
-      "Explore Training & Therapeutic Counselling in Pattambi at The Light Training and Counselling Centre. Discover training sessions, NLP, parenting, stress management and counselling services. Call 9567654880.",
+      "Certified NLP training in Kerala & therapeutic counselling in Pattambi by Pradheep Pattambi. Hypnosis training, parenting training, stress management & personal development.",
     url: "https://pradheeppattambi.com/training-and-therapeutic-counselling/",
     siteName: "The Light Training and Counselling Centre",
     images: [
@@ -77,7 +75,7 @@ export const metadata: Metadata = {
         url: "https://pradheeppattambi.com/images/pradheep-poster-portrait.jpg",
         width: 600,
         height: 600,
-        alt: "Pradheep Pattambi - Training & Therapeutic Counselling in Pattambi | The Light Centre"
+        alt: "Pradheep Pattambi - NLP Training in Kerala and Therapeutic Counselling in Pattambi"
       }
     ],
     locale: "en_US",
@@ -85,9 +83,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Training & Therapeutic Counselling in Pattambi | The Light Training and Counselling Centre",
+    title: "NLP Training in Kerala | Training & Therapeutic Counselling Pattambi",
     description:
-      "Explore Training & Therapeutic Counselling in Pattambi at The Light Training and Counselling Centre. Discover training sessions, NLP, parenting, stress management and counselling services. Call 9567654880.",
+      "Certified NLP training in Kerala & therapeutic counselling in Pattambi by Pradheep Pattambi. Hypnosis training, parenting training, stress management & personal development.",
     images: ["https://pradheeppattambi.com/images/pradheep-poster-portrait.jpg"]
   }
 };
@@ -179,16 +177,18 @@ const pageStructuredData = {
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Training Sessions & Therapeutic Counselling",
+        "name": "NLP Training & Therapeutic Counselling Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Parenting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "NLP Training in Kerala" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hypnosis Training in Kerala" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Life Skills Training in Kerala" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Parenting Training in Kerala" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stress Management Training" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personal Development Training" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Couple Therapy" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-marital Counselling" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stress Management" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Study Skills" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hypnotism" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Addiction Support" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "NLP" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CBT" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DBT" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "EMDR (Trauma)" } },
@@ -348,7 +348,7 @@ export default function TrainingAndTherapeuticCounsellingPage() {
               Training Sessions
             </h2>
             <p className="mt-2 text-sm sm:text-base text-[#D4E8DC] max-w-2xl mx-auto">
-              Professional training programs and interactive skill-building sessions in Pattambi at The Light Training and Counselling Centre.
+              Professional training programs and interactive skill-building sessions in Pattambi, including certified NLP training in Kerala, hypnosis, parenting training, and stress management.
             </p>
           </div>
 
@@ -379,7 +379,7 @@ export default function TrainingAndTherapeuticCounsellingPage() {
               Therapeutical Counselling
             </h2>
             <p className="mt-2 text-sm sm:text-base text-[#D4E8DC] max-w-2xl mx-auto">
-              Confidential therapeutic counselling and clinical modalities offered at The Light Centre in Pattambi.
+              Confidential therapeutic counselling and clinical modalities offered at The Light Centre in Pattambi, supporting emotional wellness and personal development.
             </p>
           </div>
 

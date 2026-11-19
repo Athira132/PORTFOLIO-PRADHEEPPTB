@@ -18,30 +18,43 @@ import BookingProviderWrapper from "@/components/providers/BookingProviderWrappe
 export const metadata: Metadata = {
   metadataBase: new URL("https://pradheeppattambi.com"),
   title: {
-    default: "Psychologist in Pattambi | Counselling & Therapy – Pradheep Pattambi",
+    default: "Psychologist in Pattambi | Pradheep Pattambi",
     template: "%s",
   },
   description:
     "Official website of Pradheep Pattambi (Pradheep N.V.) — Psychologist, Therapeutic Healer, NLP Grand Master, and Certified Hypnotist based in Pattambi, Kerala.",
   keywords: [
-    "Psychologist Pattambi",
     "Psychologist in Pattambi",
-    "Counselling Pattambi",
-    "Counseling Pattambi",
-    "Counsellor Pattambi",
-    "Counselor Pattambi",
-    "Individual counselling Pattambi",
-    "Family counselling Pattambi",
-    "Career counselling Pattambi",
-    "Stress counselling Pattambi",
-    "Anxiety counselling Pattambi",
-    "Relationship counselling Pattambi",
-    "NLP trainer Pattambi",
-    "Hypnotherapy Pattambi",
-    "Therapeutic healer Pattambi",
-    "Mental wellness Pattambi",
+    "Psychologist in Palakkad",
+    "Counselling in Pattambi",
+    "Counselling Centre in Pattambi",
+    "Psychological Counselling in Kerala",
+    "Counsellor in Pattambi",
+    "Mental Health Counselling in Palakkad",
     "Pradheep Pattambi",
-    "Pradheep N.V."
+    "Pradheep N.V.",
+    "Individual Counselling in Pattambi",
+    "Family Counselling in Pattambi",
+    "Marriage Counselling in Palakkad",
+    "Couples Counselling in Kerala",
+    "Premarital Counselling in Pattambi",
+    "Stress Management Counselling",
+    "Anxiety Counselling in Kerala",
+    "Emotional Wellness Counselling",
+    "Relationship Counselling in Palakkad",
+    "Career Counselling in Pattambi",
+    "Career Guidance in Kerala",
+    "NLP Training in Kerala",
+    "NLP Trainer in Kerala",
+    "NLP Grand Master in Kerala",
+    "Hypnosis Training in Kerala",
+    "Hypnotherapy in Kerala",
+    "Motivational Speaker in Kerala",
+    "Psychologist near Pattambi",
+    "Psychologist in Shoranur",
+    "Psychologist in Ottapalam",
+    "Psychologist in Perinthalmanna",
+    "Counselling in Palakkad"
   ],
   authors: [{ name: "Pradheep Pattambi", url: "https://pradheeppattambi.com" }],
   creator: "Pradheep Pattambi",
@@ -66,10 +79,10 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: "Psychologist in Pattambi | Counselling & Therapy – Pradheep Pattambi",
+    title: "Psychologist in Pattambi | Pradheep Pattambi",
     description:
-      "Empathetic psychological counselling, individual & family therapy, and NLP training in Pattambi, Kerala.",
-    url: "https://pradheeppattambi.com",
+      "Looking for counselling in Pattambi or Palakkad? Explore psychological counselling, NLP training, personal development and professional training services at Pradheep Pattambi.",
+    url: "https://pradheeppattambi.com/",
     siteName: "Pradheep Pattambi",
     images: [
       {
@@ -84,9 +97,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psychologist in Pattambi | Counselling & Therapy – Pradheep Pattambi",
+    title: "Psychologist in Pattambi | Pradheep Pattambi",
     description:
-      "Psychological counselling, individual & family guidance, and NLP mastery in Pattambi, Kerala.",
+      "Looking for counselling in Pattambi or Palakkad? Explore psychological counselling, NLP training, personal development and professional training services at Pradheep Pattambi.",
     images: ["/images/hero-new.webp"]
   },
   icons: {
@@ -140,7 +153,7 @@ const rootStructuredData = {
       ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Sree Nilayam, Umikkunnu",
+        "streetAddress": "The Light Training and Counselling Centre, Sree Nilayam, Umikkunnu",
         "addressLocality": "Pattambi",
         "addressRegion": "Palakkad District, Kerala",
         "postalCode": "679303",
@@ -160,7 +173,7 @@ const rootStructuredData = {
       "hasMap": "https://maps.app.goo.gl/PcEBdo9ftxN1VcRs9",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Sree Nilayam, Umikkunnu",
+        "streetAddress": "The Light Training and Counselling Centre, Sree Nilayam, Umikkunnu",
         "addressLocality": "Pattambi",
         "addressRegion": "Palakkad District, Kerala",
         "postalCode": "679303",
@@ -173,7 +186,11 @@ const rootStructuredData = {
       },
       "areaServed": [
         { "@type": "City", "name": "Pattambi" },
-        { "@type": "AdministrativeArea", "name": "Palakkad" },
+        { "@type": "City", "name": "Palakkad" },
+        { "@type": "City", "name": "Shoranur" },
+        { "@type": "City", "name": "Ottapalam" },
+        { "@type": "City", "name": "Perinthalmanna" },
+        { "@type": "AdministrativeArea", "name": "Palakkad District" },
         { "@type": "State", "name": "Kerala" }
       ],
       "openingHoursSpecification": [

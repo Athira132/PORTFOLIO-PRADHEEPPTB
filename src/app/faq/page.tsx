@@ -8,16 +8,25 @@ import FAQAccordion from "@/components/ui/FAQAccordion";
 import { faqData } from "@/data/faq";
 
 export const metadata: Metadata = {
-  title: "Counselling FAQs | Pradheep Pattambi Psychologist Kerala",
+  title: "Counselling & Therapy FAQs | Pradheep Pattambi Kerala",
   description:
-    "Find answers to common questions on psychological counseling, therapy sessions, confidentiality, premarital guidance, and appointments in Palakkad & Kerala.",
+    "Find answers to common questions on psychological counselling in Pattambi, therapy confidentiality, premarital guidance, and appointments with Pradheep Pattambi.",
+  keywords: [
+    "Counselling in Pattambi FAQs",
+    "Psychologist in Pattambi",
+    "Counselling in Palakkad",
+    "Psychological Counselling in Kerala",
+    "Individual Counselling in Pattambi",
+    "Family Counselling in Pattambi",
+    "Pradheep Pattambi"
+  ],
   alternates: {
     canonical: "https://pradheeppattambi.com/faq/",
   },
   openGraph: {
-    title: "Counselling FAQs | Pradheep Pattambi Psychologist Kerala",
+    title: "Counselling & Therapy FAQs | Pradheep Pattambi Kerala",
     description:
-      "Find answers to common questions on psychological counseling, therapy sessions, confidentiality, premarital guidance, and appointments in Palakkad & Kerala.",
+      "Find answers to common questions on psychological counselling in Pattambi, therapy confidentiality, premarital guidance, and appointments with Pradheep Pattambi.",
     url: "https://pradheeppattambi.com/faq/",
     siteName: "Pradheep Pattambi - Psychologist & NLP Master Trainer",
     images: [
@@ -25,7 +34,7 @@ export const metadata: Metadata = {
         url: "https://pradheeppattambi.com/images/photo-3.png",
         width: 1200,
         height: 630,
-        alt: "Pradheep Pattambi - Counselling Questions and Answers Kerala",
+        alt: "Pradheep Pattambi - Counselling Questions and Answers Pattambi Kerala",
       },
     ],
     locale: "en_IN",
@@ -33,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Counselling FAQs | Pradheep Pattambi Psychologist Kerala",
+    title: "Counselling & Therapy FAQs | Pradheep Pattambi Kerala",
     description:
-      "Find answers to common questions on psychological counseling, therapy sessions, confidentiality, premarital guidance, and appointments in Palakkad & Kerala.",
+      "Find answers to common questions on psychological counselling in Pattambi, therapy confidentiality, premarital guidance, and appointments with Pradheep Pattambi.",
     images: ["https://pradheeppattambi.com/images/photo-3.png"],
   },
 };
@@ -111,17 +120,22 @@ export default function FAQPage() {
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C2B22] border border-[#375240] w-fit">
                 <span className="w-2 h-2 rounded-full bg-[#C5A880]" />
                 <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#A3B899]">
-                  HELP & COMMON QUESTIONS
+                  HELP &amp; COMMON QUESTIONS
                 </span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#FAF7F2] font-bold tracking-tight leading-[1.1]">
-                Frequently Asked Questions
+                Counselling &amp; Therapy FAQs
               </h1>
 
+              <p className="text-lg sm:text-xl font-medium text-[#C5A880]">
+                Everything You Need to Know About Sessions &amp; Confidentiality
+              </p>
+
               <p className="text-[#D6CEBE] text-base sm:text-lg max-w-2xl leading-relaxed">
-                Clear answers regarding psychological counseling sessions, confidentiality,
-                duration, and what you can expect during your personal growth journey with Pradheep N.V.
+                Clear answers regarding psychological counselling in Pattambi, individual therapy,
+                confidentiality, session duration, and what you can expect during your consultation
+                with Pradheep Pattambi.
               </p>
 
               <div className="flex flex-wrap items-center gap-3.5 pt-2">

@@ -22,16 +22,29 @@ import { faqData } from "@/data/faq";
 import { galleryData } from "@/data/gallery";
 
 export const metadata: Metadata = {
-  title: "Psychologist in Pattambi | Counselling & Therapy – Pradheep Pattambi",
+  title: "Psychologist in Pattambi | Pradheep Pattambi",
   description:
-    "Consult Pradheep Pattambi, experienced psychologist & therapeutic healer in Pattambi. Confidential individual, family & career counselling, NLP training & mental wellness.",
+    "Looking for counselling in Pattambi or Palakkad? Explore psychological counselling, NLP training, personal development and professional training services at Pradheep Pattambi.",
+  keywords: [
+    "Psychologist in Pattambi",
+    "Psychologist in Palakkad",
+    "Counselling Centre in Pattambi",
+    "Counsellor in Pattambi",
+    "Pradheep Pattambi",
+    "Mental Health Counselling in Palakkad",
+    "Psychological Counselling in Kerala",
+    "Individual Counselling in Pattambi",
+    "Family Counselling in Pattambi",
+    "Psychologist near Pattambi",
+    "Counselling in Palakkad"
+  ],
   alternates: {
     canonical: "https://pradheeppattambi.com/"
   },
   openGraph: {
-    title: "Psychologist in Pattambi | Counselling & Therapy – Pradheep Pattambi",
+    title: "Psychologist in Pattambi | Pradheep Pattambi",
     description:
-      "Consult Pradheep Pattambi, experienced psychologist & therapeutic healer in Pattambi. Confidential individual, family & career counselling, NLP training & mental wellness.",
+      "Looking for counselling in Pattambi or Palakkad? Explore psychological counselling, NLP training, personal development and professional training services at Pradheep Pattambi.",
     url: "https://pradheeppattambi.com/",
     siteName: "Pradheep Pattambi",
     images: [
@@ -39,7 +52,7 @@ export const metadata: Metadata = {
         url: "/images/hero-new.webp",
         width: 1200,
         height: 630,
-        alt: "Pradheep Pattambi - Psychologist and Therapeutic Healer in Pattambi, Kerala"
+        alt: "Pradheep Pattambi - Professional Psychologist and Counsellor in Pattambi, Kerala"
       }
     ],
     locale: "en_US",
@@ -47,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psychologist in Pattambi | Counselling & Therapy – Pradheep Pattambi",
+    title: "Psychologist in Pattambi | Pradheep Pattambi",
     description:
-      "Confidential psychological counselling, individual & family therapy, and career guidance in Pattambi by Pradheep Pattambi.",
+      "Looking for counselling in Pattambi or Palakkad? Explore psychological counselling, NLP training, personal development and professional training services at Pradheep Pattambi.",
     images: ["/images/hero-new.webp"]
   }
 };
@@ -63,26 +76,29 @@ const homeSchema = {
       "name": "Pradheep Pattambi - Psychologist & Therapeutic Healer",
       "image": "https://pradheeppattambi.com/images/hero-new.webp",
       "url": "https://pradheeppattambi.com/",
-      "telephone": "+91 9567-654-880",
+      "telephone": "+919567654880",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "The Light Training and Counselling Centre, Sree Nilayam, Umikkunnu",
         "addressLocality": "Pattambi",
-        "addressRegion": "Kerala",
+        "addressRegion": "Palakkad District, Kerala",
         "postalCode": "679303",
         "addressCountry": "IN"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "10.8064",
-        "longitude": "76.1969"
+        "latitude": "10.8065",
+        "longitude": "76.1950"
       },
       "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Pattambi" },
-        { "@type": "AdministrativeArea", "name": "Palakkad" },
-        { "@type": "AdministrativeArea", "name": "Ottapalam" },
-        { "@type": "AdministrativeArea", "name": "Shornur" },
-        { "@type": "AdministrativeArea", "name": "Kerala" }
+        { "@type": "City", "name": "Pattambi" },
+        { "@type": "City", "name": "Palakkad" },
+        { "@type": "City", "name": "Shoranur" },
+        { "@type": "City", "name": "Ottapalam" },
+        { "@type": "City", "name": "Perinthalmanna" },
+        { "@type": "AdministrativeArea", "name": "Palakkad District" },
+        { "@type": "State", "name": "Kerala" }
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -92,24 +108,24 @@ const homeSchema = {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Individual Counseling",
-              "description": "One-on-one therapy for stress, anxiety, depression, and emotional well-being in Pattambi."
+              "name": "Individual Counselling in Pattambi",
+              "description": "One-on-one therapy for stress management, anxiety relief, emotional healing, and personal wellbeing in Pattambi."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Family Counseling",
-              "description": "Support for families facing relationship and communication challenges in Pattambi."
+              "name": "Family Counselling in Pattambi",
+              "description": "Support for couples and families facing relationship, communication, and interpersonal challenges in Pattambi."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Career Counseling",
-              "description": "Career guidance, decision-making, and personal development support in Pattambi."
+              "name": "Career Counselling in Pattambi",
+              "description": "Scientific career guidance, course selection, student motivation, and personal development in Pattambi."
             }
           }
         ]
@@ -126,8 +142,10 @@ const homeSchema = {
       },
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "The Light Training and Counselling Centre, Sree Nilayam, Umikkunnu",
         "addressLocality": "Pattambi",
-        "addressRegion": "Kerala",
+        "addressRegion": "Palakkad District, Kerala",
+        "postalCode": "679303",
         "addressCountry": "IN"
       },
       "url": "https://pradheeppattambi.com/",
@@ -173,7 +191,7 @@ export default function HomePage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/hero-new.webp"
-              alt="Pradheep Pattambi - Professional Psychologist and Therapeutic Healer in Pattambi, Kerala"
+              alt="Pradheep Pattambi - Professional Psychologist and Counsellor in Pattambi, Kerala"
               fill
               priority
               quality={100}
@@ -185,14 +203,14 @@ export default function HomePage() {
           {/* Typography Direct Overlay on the Left — Balanced, Editorial */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-10 md:py-12 w-full flex items-center">
             <div className="max-w-xl lg:max-w-2xl space-y-4">
-              {/* Main Heading — Prominent H1 */}
+              {/* Main Heading — Prominent H1 with primary keyword context */}
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[4.25rem] xl:text-[4.75rem] font-extrabold text-forest-950 tracking-tight leading-[1.02]">
                 Pradheep Pattambi
               </h1>
 
               {/* Professional Description directly following main heading */}
               <p className="text-lg sm:text-xl lg:text-[1.3rem] text-forest-900 font-semibold tracking-tight leading-snug">
-                Psychologist, Therapeutic Healer, NLP Grand Master, Certified Hypnotist, Trainer
+                Psychologist in Pattambi &bull; Therapeutic Healer &bull; NLP Grand Master &bull; Trainer
               </p>
 
               {/* Action Buttons */}
@@ -222,7 +240,7 @@ export default function HomePage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/hero-new.webp"
-              alt="Pradheep Pattambi - Psychologist and Life Skill Coach in Pattambi, Kerala"
+              alt="Pradheep Pattambi - Psychologist and Counsellor in Pattambi, Kerala"
               fill
               priority
               quality={100}
@@ -237,15 +255,15 @@ export default function HomePage() {
           <div className="relative z-10 h-full w-full flex justify-start items-start pt-5 sm:pt-6 px-4 sm:px-5 pointer-events-none">
             <div className="max-w-[55%] sm:max-w-[50%] flex flex-col items-start text-left space-y-2 pointer-events-auto">
               {/* 1. Dominant Element: Pradheep Pattambi (Two lines, significantly larger font, dominant visual element) */}
-              <p className="text-[2.35rem] min-[375px]:text-[2.55rem] min-[414px]:text-[2.85rem] sm:text-[3.1rem] font-extrabold text-[#FAF7F2] tracking-tight leading-[1.02] drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+              <h1 className="text-[2.35rem] min-[375px]:text-[2.55rem] min-[414px]:text-[2.85rem] sm:text-[3.1rem] font-extrabold text-[#FAF7F2] tracking-tight leading-[1.02] drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
                 <span>Pradheep</span>
                 <br />
                 <span>Pattambi</span>
-              </p>
+              </h1>
 
               {/* Professional Description directly following main heading */}
               <p className="text-[11.5px] sm:text-[13px] font-semibold text-[#E6DAC8] leading-[1.25] drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] pb-1">
-                Psychologist, Therapeutic Healer, NLP Grand Master, Certified Hypnotist, Trainer
+                Psychologist in Pattambi, Therapeutic Healer, NLP Grand Master, Trainer
               </p>
 
               {/* 4. Subjects / Tags (UNCHANGED) */}
@@ -308,10 +326,10 @@ export default function HomePage() {
                 </span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-forest-950 tracking-tight">
-                Core Subjects & Training Focus
+                Core Psychological Training & Specializations
               </h2>
               <p className="text-sm sm:text-base text-muted-text leading-relaxed font-sans">
-                Pradheep Pattambi undertakes specialized psychological and life skill training for students, teachers, clubs, individuals, and corporate teams across Kerala.
+                Pradheep Pattambi undertakes specialized psychological counselling and life skill training for students, teachers, clubs, individuals, and corporate teams across Pattambi, Palakkad, and Kerala.
               </p>
             </div>
 
@@ -392,7 +410,7 @@ export default function HomePage() {
                 <div className="relative w-full h-full">
                   <Image
                     src="/images/gallery/gallery-05.jpg"
-                    alt="Pradheep N.V. consulting clients at his psychological guidance desk in Pattambi"
+                    alt="Pradheep Pattambi consulting clients at his psychological guidance desk in Pattambi"
                     fill
                     className="object-contain"
                     sizes="(max-width: 1024px) 100vw, 35vw"
@@ -406,12 +424,12 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2">
                 <span className="w-6 h-[1.5px] bg-olive-600" />
                 <span className="text-xs uppercase tracking-[0.2em] font-semibold text-olive-800">
-                  ABOUT ME
+                  ABOUT PRADHEEP PATTAMBI
                 </span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-bold leading-tight tracking-tight">
-                A little about Pradheep
+                A Little About Pradheep Pattambi
               </h2>
 
               <div className="space-y-4">
@@ -424,15 +442,15 @@ export default function HomePage() {
                 <p className="text-muted-text text-base sm:text-lg leading-relaxed pt-2">
                   Welcome to a sanctuary of self-discovery and healing. I&rsquo;m{" "}
                   <strong className="text-forest-950 font-semibold">PRADHEEP N.V.</strong>, a
-                  Psychologist in Kerala dedicated to guiding individuals through their
-                  personal growth journeys. With deep compassion and years of experience, I
+                  dedicated Psychologist in Pattambi, Kerala guiding individuals through their
+                  personal growth journeys. With deep compassion and over two decades of experience, I
                   help uncover the resilience and strength that already exist within you.
                 </p>
                 <p className="text-muted-text text-base sm:text-lg leading-relaxed">
                   My approach is rooted in the belief that every mind holds the power to heal
-                  and evolve. Together, we&rsquo;ll explore your challenges and rediscover your inner
-                  potential. Thank you for considering me as your partner on this transformative
-                  path toward clarity, confidence, and lasting fulfillment.
+                  and evolve. Whether you are looking for psychological counselling in Kerala, NLP training,
+                  or relationship counselling in Palakkad, together we will explore your challenges and rediscover your inner
+                  potential.
                 </p>
               </div>
 
@@ -557,10 +575,10 @@ export default function HomePage() {
             </div>
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-forest-950 tracking-tight">
-                Request a Confidential Session
+                Request a Confidential Session at Our Counselling Centre in Pattambi
               </h3>
               <p className="text-xs sm:text-sm text-muted-text mt-1 max-w-md mx-auto leading-relaxed">
-                Connect directly for individual, family, or career counselling in Pattambi. Instant appointment requests via WhatsApp.
+                Connect directly for individual counselling, family counselling, or career guidance in Pattambi and Palakkad. Serving clients from Shoranur, Ottapalam, Perinthalmanna, and across Kerala.
               </p>
             </div>
             <div className="pt-2 flex flex-wrap items-center justify-center gap-3.5">

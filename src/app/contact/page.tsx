@@ -18,16 +18,28 @@ import BookAppointmentButton from "@/components/ui/BookAppointmentButton";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Contact & Appointments | Psychologist in Pattambi – Pradheep Pattambi",
+  title: "Counselling Centre in Pattambi | Contact Pradheep Pattambi",
   description:
-    "Book a confidential psychological counselling appointment with Pradheep Pattambi in Pattambi, Kerala. Consultations for individual, family & career guidance.",
+    "Looking for a trusted counselling centre in Pattambi? Connect with counsellor Pradheep Pattambi for confidential psychological counselling in Palakkad & nearby areas.",
+  keywords: [
+    "Counselling Centre in Pattambi",
+    "Counsellor in Pattambi",
+    "Psychologist near Pattambi",
+    "Counselling in Palakkad",
+    "Psychologist in Pattambi",
+    "Pradheep Pattambi",
+    "The Light Training and Counselling Centre",
+    "Counselling in Shoranur",
+    "Counselling in Ottapalam",
+    "Counselling in Perinthalmanna"
+  ],
   alternates: {
     canonical: "https://pradheeppattambi.com/contact/"
   },
   openGraph: {
-    title: "Contact & Appointments | Psychologist in Pattambi – Pradheep Pattambi",
+    title: "Counselling Centre in Pattambi | Contact Pradheep Pattambi",
     description:
-      "Get in touch with Pradheep Pattambi for confidential psychological counselling and career guidance in Pattambi, Kerala.",
+      "Looking for a trusted counselling centre in Pattambi? Connect with counsellor Pradheep Pattambi for confidential psychological counselling in Palakkad & nearby areas.",
     url: "https://pradheeppattambi.com/contact/",
     siteName: "Pradheep Pattambi",
     images: [
@@ -35,7 +47,7 @@ export const metadata: Metadata = {
         url: "/images/gallery/gallery-03.jpg",
         width: 1200,
         height: 800,
-        alt: "Contact Pradheep Pattambi for Counselling Appointments in Pattambi"
+        alt: "Contact Counselling Centre in Pattambi - Pradheep Pattambi"
       }
     ],
     locale: "en_US",
@@ -43,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact & Appointments | Psychologist in Pattambi – Pradheep Pattambi",
+    title: "Counselling Centre in Pattambi | Contact Pradheep Pattambi",
     description:
-      "Reach out to Pradheep Pattambi in Pattambi, Kerala for psychological consultations and guidance.",
+      "Reach out to counsellor Pradheep Pattambi in Pattambi, Palakkad for confidential psychological consultations.",
     images: ["/images/gallery/gallery-03.jpg"]
   }
 };
@@ -65,7 +77,7 @@ const contactStructuredData = {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Contact & Appointments",
+          "name": "Counselling Centre in Pattambi",
           "item": "https://pradheeppattambi.com/contact/"
         }
       ]
@@ -74,10 +86,32 @@ const contactStructuredData = {
       "@type": "ContactPage",
       "@id": "https://pradheeppattambi.com/contact/#webpage",
       "url": "https://pradheeppattambi.com/contact/",
-      "name": "Contact & Appointments | Pradheep Pattambi Psychologist in Pattambi",
+      "name": "Counselling Centre in Pattambi | Contact Pradheep Pattambi",
       "description":
-        "Contact information and appointment booking for psychological counselling with Pradheep Pattambi in Pattambi, Kerala.",
-      "mainEntity": { "@id": "https://pradheeppattambi.com/#service" }
+        "Contact information and appointment booking for psychological counselling with Pradheep Pattambi in Pattambi, Palakkad, Kerala.",
+      "mainEntity": {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://pradheeppattambi.com/#business",
+        "name": "The Light Training and Counselling Centre",
+        "telephone": "+919567654880",
+        "email": "info@pradheeppattambi.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "The Light Training and Counselling Centre, Sree Nilayam, Umikkunnu",
+          "addressLocality": "Pattambi",
+          "addressRegion": "Palakkad District, Kerala",
+          "postalCode": "679303",
+          "addressCountry": "IN"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Pattambi" },
+          { "@type": "AdministrativeArea", "name": "Palakkad" },
+          { "@type": "City", "name": "Shoranur" },
+          { "@type": "City", "name": "Ottapalam" },
+          { "@type": "City", "name": "Perinthalmanna" },
+          { "@type": "State", "name": "Kerala" }
+        ]
+      }
     }
   ]
 };
@@ -113,17 +147,22 @@ export default function ContactPage() {
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C2B22] border border-[#375240] w-fit">
                 <span className="w-2 h-2 rounded-full bg-[#C5A880]" />
                 <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#A3B899]">
-                  SAFE & CONFIDENTIAL REACH
+                  THE LIGHT TRAINING AND COUNSELLING CENTRE
                 </span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#FAF7F2] font-bold tracking-tight leading-[1.1]">
-                Let’s connect.
+                Counselling Centre in Pattambi
               </h1>
 
+              <p className="text-lg sm:text-xl font-medium text-[#C5A880]">
+                Safe, Confidential Reach & Direct Consultations
+              </p>
+
               <p className="text-[#D6CEBE] text-base sm:text-lg max-w-2xl leading-relaxed">
-                &ldquo;Take the first step towards clarity, growth, and a more fulfilling life.
-                Reach out directly for appointments, confidential consultations, or speaking inquiries.&rdquo;
+                Connect with psychologist and counsellor Pradheep Pattambi at The Light Training and Counselling
+                Centre in Pattambi. Dedicated support for individual, marriage, family, and student guidance across
+                Pattambi, Palakkad, Shoranur, and Ottapalam.
               </p>
 
               <div className="flex flex-wrap items-center gap-3.5 pt-2">
@@ -159,14 +198,16 @@ export default function ContactPage() {
             <div className="lg:col-span-5 space-y-8">
               <div>
                 <span className="text-xs uppercase tracking-[0.2em] text-olive-700 font-semibold block mb-2">
-                  DIRECT CONSULTATION
+                  DIRECT CONSULTATION & APPOINTMENTS
                 </span>
                 <h2 className="text-3xl font-bold tracking-tight text-forest-950">
-                  Reach out personally
+                  Connect with Our Counselling Centre in Pattambi
                 </h2>
                 <p className="mt-3 text-muted-text text-sm sm:text-base leading-relaxed">
-                  Whether you are seeking personal psychological counseling, career
-                  direction, or would like to invite Pradheep Sir for an event, we welcome your call or note.
+                  Whether you are seeking personal psychological counselling in Pattambi, marriage
+                  counselling in Palakkad, student career direction, or training programs across
+                  Kerala, we welcome your direct call or message. All interactions are held in the
+                  strictest clinical confidentiality.
                 </p>
               </div>
 

@@ -27,16 +27,32 @@ import { faqData } from "@/data/faq";
 import { trustFeaturesData } from "@/data/trustFeatures";
 
 export const metadata: Metadata = {
-  title: "Counselling in Pattambi | Psychologist Pradheep Pattambi",
+  title: "Counselling in Pattambi | Pradheep Pattambi",
   description:
-    "Confidential psychological counselling in Pattambi by Pradheep Pattambi. Individual therapy, family counselling, stress management & emotional healing.",
+    "Confidential counselling in Pattambi by Pradheep Pattambi. Expert individual counselling, family counselling, marriage counselling in Palakkad & stress management.",
+  keywords: [
+    "Counselling in Pattambi",
+    "Individual Counselling in Pattambi",
+    "Family Counselling in Pattambi",
+    "Marriage Counselling in Palakkad",
+    "Couples Counselling in Kerala",
+    "Premarital Counselling in Pattambi",
+    "Stress Management Counselling",
+    "Anxiety Counselling in Kerala",
+    "Emotional Wellness Counselling",
+    "Relationship Counselling in Palakkad",
+    "Psychologist in Pattambi",
+    "Psychologist in Palakkad",
+    "Counselling Centre in Pattambi",
+    "Pradheep Pattambi"
+  ],
   alternates: {
     canonical: "https://pradheeppattambi.com/counselling/"
   },
   openGraph: {
-    title: "Counselling in Pattambi | Psychologist Pradheep Pattambi",
+    title: "Counselling in Pattambi | Pradheep Pattambi",
     description:
-      "Confidential psychological counselling in Pattambi by Pradheep Pattambi. Individual therapy, family counselling, stress management & emotional healing.",
+      "Confidential counselling in Pattambi by Pradheep Pattambi. Expert individual counselling, family counselling, marriage counselling in Palakkad & stress management.",
     url: "https://pradheeppattambi.com/counselling/",
     siteName: "Pradheep Pattambi",
     images: [
@@ -52,9 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Counselling in Pattambi | Psychologist Pradheep Pattambi",
+    title: "Counselling in Pattambi | Pradheep Pattambi",
     description:
-      "Confidential psychological counselling, individual and family guidance, and stress relief in Pattambi, Kerala.",
+      "Confidential counselling in Pattambi by Pradheep Pattambi. Individual therapy, family counselling, marriage counselling in Palakkad & stress relief.",
     images: ["/images/gallery/gallery-04.jpg"]
   }
 };
@@ -74,7 +90,7 @@ const counsellingStructuredData = {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Psychological Counselling",
+          "name": "Counselling in Pattambi",
           "item": "https://pradheeppattambi.com/counselling/"
         }
       ]
@@ -82,16 +98,60 @@ const counsellingStructuredData = {
     {
       "@type": "Service",
       "@id": "https://pradheeppattambi.com/counselling/#service",
-      "name": "Psychological Counselling in Pattambi",
+      "name": "Counselling in Pattambi",
       "serviceType": "Psychological Counselling & Psychotherapy",
       "provider": { "@id": "https://pradheeppattambi.com/#person" },
       "areaServed": [
         { "@type": "City", "name": "Pattambi" },
         { "@type": "AdministrativeArea", "name": "Palakkad" },
+        { "@type": "City", "name": "Shoranur" },
+        { "@type": "City", "name": "Ottapalam" },
+        { "@type": "City", "name": "Perinthalmanna" },
         { "@type": "State", "name": "Kerala" }
       ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Counselling Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Individual Counselling in Pattambi"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Family Counselling in Pattambi"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Marriage Counselling in Palakkad"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Couples Counselling in Kerala"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stress Management Counselling"
+            }
+          }
+        ]
+      },
       "description":
-        "Confidential individual and family psychological counselling for stress management, anxiety relief, emotional wellbeing, and personal healing in Pattambi.",
+        "Confidential individual and family counselling in Pattambi for stress management, anxiety relief, emotional wellness, marriage counselling in Palakkad, and personal healing.",
       "url": "https://pradheeppattambi.com/counselling/"
     }
   ]
@@ -142,12 +202,17 @@ export default function CounsellingPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#FAF7F2] font-bold tracking-tight leading-[1.1]">
-                Empowering minds, transforming lives
+                Counselling in Pattambi
               </h1>
 
+              <p className="text-lg sm:text-xl font-medium text-[#C5A880]">
+                Empowering minds, transforming lives & restoring inner peace
+              </p>
+
               <p className="text-[#D6CEBE] text-base sm:text-lg max-w-2xl leading-relaxed">
-                Safe, confidential psychological support in Palakkad and Pattambi to help you
-                overcome anxiety, heal emotional wounds, and rediscover inner calm.
+                Safe, confidential individual and family counselling in Pattambi and Palakkad with
+                Pradheep Pattambi. Professional therapeutic guidance to help you overcome anxiety,
+                manage stress, heal relationship issues, and rediscover emotional balance.
               </p>
 
               <div className="flex flex-wrap items-center gap-3.5 pt-2">
@@ -205,30 +270,31 @@ export default function CounsellingPage() {
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-bold leading-tight tracking-tight">
-                Psychologist In Palakkad
+                Psychological Counselling & Therapy in Palakkad & Pattambi
               </h2>
 
               <div className="space-y-4 text-muted-text text-base sm:text-lg leading-relaxed font-sans">
                 <p>
-                  Discovering peace of mind and navigating life’s challenges is made more
-                  accessible with the support of skilled psychologists and counselors in
-                  Palakkad. Our dedicated professionals offer expert guidance and a compassionate
-                  ear, providing a confidential space for individuals to explore their thoughts,
-                  emotions, and behaviors.
+                  Discovering peace of mind and navigating life’s challenges is made accessible
+                  with compassionate, expert counselling in Pattambi and Palakkad. Led by
+                  experienced psychologist and counsellor Pradheep Pattambi, our sessions provide a
+                  deeply respectful, strictly confidential space for individuals, couples, and families
+                  to explore emotions, heal inner conflicts, and build lasting resilience.
                 </p>
 
                 <p>
-                  Whether you seek assistance for managing stress, improving relationships, or
-                  addressing mental health concerns, our psychologists bring a wealth of knowledge
-                  and therapeutic approaches to support your unique journey.
+                  We offer specialized <strong>individual counselling in Pattambi</strong>, 
+                  <strong>family counselling in Pattambi</strong>, and <strong>marriage counselling in Palakkad</strong>. 
+                  Whether you are seeking <strong>stress management counselling</strong>, anxiety counselling in Kerala, 
+                  or <strong>relationship counselling in Palakkad</strong>, our scientific blend of psychology, 
+                  cognitive restructuring, and NLP-driven interventions offers personalized pathways for lasting relief.
                 </p>
 
                 <p>
-                  Likewise, our counselors specialize in empowering individuals with practical
-                  strategies and emotional support, fostering personal growth and resilience. Take
-                  a step towards well-being by engaging with our trusted psychologists and counselors
-                  in Palakkad, where your mental health and personal development are prioritized
-                  with care and expertise.
+                  Likewise, our premarital counselling in Pattambi and couples counselling in Kerala
+                  empower partners to foster mutual understanding, emotional intimacy, and healthy communication.
+                  Take the first step towards emotional wellness and mental clarity with trusted psychological
+                  care in Pattambi, where your wellbeing is honored with genuine empathy and professional dedication.
                 </p>
               </div>
 
@@ -255,8 +321,8 @@ export default function CounsellingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="THERAPEUTIC OFFERINGS"
-            title="Comprehensive Counseling & Mental Wellness"
-            description="Explore our specialized guidance pathways crafted to bring lasting relief and personal growth."
+            title="Comprehensive Counselling & Mental Wellness in Pattambi"
+            description="Explore our specialized guidance pathways—including individual counselling in Pattambi, family therapy, and stress management."
             align="center"
           />
 
@@ -332,8 +398,8 @@ export default function CounsellingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="COUNSELLING FAQ"
-            title="Questions About Palakkad Counseling"
-            description="Everything you need to know about preparing for your first session."
+            title="Questions About Counselling in Pattambi & Palakkad"
+            description="Everything you need to know about preparing for your confidential psychological counselling session."
             align="center"
           />
 

@@ -54,12 +54,16 @@ export default function GalleryClient() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#FAF7F2] font-bold tracking-tight leading-[1.1]">
-                Moments of Insight & Transformation
+                Workshops &amp; Seminar Gallery
               </h1>
 
+              <p className="text-lg sm:text-xl font-medium text-[#C5A880]">
+                Moments of Insight, Healing &amp; Transformation
+              </p>
+
               <p className="text-[#D6CEBE] text-base sm:text-lg max-w-2xl leading-relaxed">
-                A window into the transformative journeys, keynote seminars, life skill
-                workshops, and community wellness programs led by Pradheep N.V.
+                Explore photographic moments from student motivation training, life skills seminars,
+                leadership keynotes, and psychological counselling workshops led by Pradheep Pattambi across Kerala.
               </p>
 
               {/* Category Filter Pills */}

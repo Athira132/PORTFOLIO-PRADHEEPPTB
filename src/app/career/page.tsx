@@ -22,7 +22,17 @@ import { getWhatsAppServiceEnquiryUrl } from "@/config/whatsapp";
 export const metadata: Metadata = {
   title: "Career Counselling in Pattambi | Pradheep Pattambi",
   description:
-    "Professional career counselling & guidance in Pattambi by Pradheep Pattambi. Course selection for +2 students, college graduates, and personal development support.",
+    "Professional career counselling in Pattambi by Pradheep Pattambi. Scientific career guidance in Kerala, student motivation training & personality development support.",
+  keywords: [
+    "Career Counselling in Pattambi",
+    "Career Guidance in Kerala",
+    "Student Motivation Training",
+    "Personality Development Training",
+    "Career Guidance in Pattambi",
+    "Student Counselling in Pattambi",
+    "Psychologist in Pattambi",
+    "Pradheep Pattambi"
+  ],
   alternates: {
     canonical: "https://pradheeppattambi.com/career/"
   },
@@ -67,7 +77,7 @@ const careerStructuredData = {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Career Counselling",
+          "name": "Career Counselling in Pattambi",
           "item": "https://pradheeppattambi.com/career/"
         }
       ]
@@ -81,10 +91,46 @@ const careerStructuredData = {
       "areaServed": [
         { "@type": "City", "name": "Pattambi" },
         { "@type": "AdministrativeArea", "name": "Palakkad" },
+        { "@type": "City", "name": "Shoranur" },
+        { "@type": "City", "name": "Ottapalam" },
         { "@type": "State", "name": "Kerala" }
       ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Career Guidance & Student Training",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Career Counselling in Pattambi"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Career Guidance in Kerala"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Student Motivation Training"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Personality Development Training"
+            }
+          }
+        ]
+      },
       "description":
-        "Scientific aptitude testing, course selection guidance for +2 students, college graduate direction, and personal development support in Pattambi and Palakkad.",
+        "Scientific aptitude assessment, course selection guidance for +2 students, college graduate mentoring, student motivation training, and personality development support in Pattambi and Kerala.",
       "url": "https://pradheeppattambi.com/career/"
     }
   ]
@@ -99,7 +145,8 @@ const audienceGroups = [
     points: [
       "Stream & Degree selection guidance",
       "Entrance exam mindset & stress relief",
-      "Matching natural aptitudes with future courses"
+      "Matching natural aptitudes with future courses",
+      "Student motivation training & goal clarity"
     ]
   },
   {
@@ -110,7 +157,8 @@ const audienceGroups = [
     points: [
       "Post-graduation path alignment",
       "Skill gap identification",
-      "Confidence building for campus recruitment"
+      "Confidence building & personality development",
+      "Effective career guidance in Kerala"
     ]
   },
   {
@@ -121,7 +169,8 @@ const audienceGroups = [
     points: [
       "Identifying your market niche",
       "Interview fear & communication coaching",
-      "Building emotional resilience during search"
+      "Building emotional resilience during search",
+      "Personality development training for workplace success"
     ]
   },
   {
@@ -132,7 +181,8 @@ const audienceGroups = [
     points: [
       "Evaluating transferable skills",
       "Overcoming mid-career fear of change",
-      "Designing a step-by-step transition plan"
+      "Designing a step-by-step transition plan",
+      "Professional growth & purpose realignment"
     ]
   }
 ];
@@ -173,12 +223,17 @@ export default function CareerPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#FAF7F2] font-bold tracking-tight leading-[1.1]">
-                Confused About Your Career Path?
+                Career Counselling in Pattambi
               </h1>
 
+              <p className="text-lg sm:text-xl font-medium text-[#C5A880]">
+                Confused About Your Career Path? Discover Your True Potential
+              </p>
+
               <p className="text-[#D6CEBE] text-base sm:text-lg max-w-2xl leading-relaxed">
-                &ldquo;Get expert, psychology-based career counselling in Pattambi to discover your
-                strengths, choose the right path, and build a confident future.&rdquo;
+                Get expert, psychology-based career counselling in Pattambi with Pradheep Pattambi.
+                Identify your unique strengths, receive scientific career guidance in Kerala, and
+                navigate academic and career transitions with confidence and clarity.
               </p>
 
               <div className="flex flex-wrap items-center gap-3.5 pt-2">
@@ -236,27 +291,28 @@ export default function CareerPage() {
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl text-forest-950 font-bold leading-tight tracking-tight">
-                Find the Right Career with the Right Guidance
+                Find the Right Career with Expert Guidance in Kerala
               </h2>
 
               <div className="space-y-4 text-muted-text text-base sm:text-lg leading-relaxed font-sans">
                 <p>
-                  Choosing a career is one of the most important decisions in life — but
-                  many students and young professionals in Pattambi feel confused and
-                  overwhelmed.
+                  Choosing a career is one of the most defining decisions in life — yet many students
+                  and young professionals in Pattambi and across Palakkad feel overwhelmed by conflicting
+                  options and external expectations.
                 </p>
 
                 <p>
-                  Through my career counselling in Pattambi, I help you understand yourself
-                  better and make the right career decisions based on your interests,
-                  abilities, and personality. This is not generic advice — it is
-                  personalised guidance designed specifically for you.
+                  Through comprehensive <strong>career counselling in Pattambi</strong>, I help you understand
+                  your cognitive profile, emotional drivers, and natural inclinations. Combining
+                  structured aptitude assessment with <strong>student motivation training</strong> and
+                  <strong>personality development training</strong>, we deliver tailored <strong>career guidance in Kerala</strong>
+                  that transforms uncertainty into an actionable roadmap.
                 </p>
 
                 <p>
-                  By taking into account your emotional temperament, analytical strengths,
-                  and authentic aspirations, we turn vague anxieties into an actionable,
-                  inspiring plan.
+                  By taking into account your emotional temperament, analytical strengths, and long-term
+                  aspirations, we empower you to choose courses, degrees, or professional pivots with
+                  conviction and clarity.
                 </p>
               </div>
 

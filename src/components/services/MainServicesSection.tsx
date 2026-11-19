@@ -18,7 +18,7 @@ const mainServices: ServiceItem[] = [
   {
     id: "individual-counseling",
     name: "Individual Counseling",
-    description: "One-on-one therapy for stress, anxiety, depression, and emotional well-being.",
+    description: "One-on-one therapy for stress management, anxiety relief, depression, and emotional wellness in Pattambi.",
     link: "/counselling",
     icon: Heart,
     tag: "Personal Healing"
@@ -26,7 +26,7 @@ const mainServices: ServiceItem[] = [
   {
     id: "family-counseling",
     name: "Family Counseling",
-    description: "Support for families facing relationship and communication challenges.",
+    description: "Support for couples and families facing relationship, premarital, and communication challenges in Palakkad.",
     link: "/counselling",
     icon: Users,
     tag: "Relationship Harmony"
@@ -34,7 +34,7 @@ const mainServices: ServiceItem[] = [
   {
     id: "career-counseling",
     name: "Career Counseling",
-    description: "Career guidance, decision-making, and personal development support.",
+    description: "Scientific career guidance in Kerala, student motivation training, and personal development support.",
     link: "/career",
     icon: Compass,
     tag: "Growth & Purpose"
@@ -53,7 +53,7 @@ export default function MainServicesSection({
   id = "services",
   badge = "SERVICES",
   title = "Psychologist & Counselling Services in Pattambi",
-  subtitle = "Confidential psychological therapies, family guidance, and career direction tailored to help you overcome life challenges and thrive.",
+  subtitle = "Confidential psychological therapies, individual & family guidance, and career counselling tailored to help you overcome life challenges in Pattambi, Palakkad, and Kerala.",
   className = "py-16 sm:py-20 bg-[#FBF9F4] border-b border-[#EAE2D3]/70"
 }: MainServicesSectionProps = {}) {
   return (
