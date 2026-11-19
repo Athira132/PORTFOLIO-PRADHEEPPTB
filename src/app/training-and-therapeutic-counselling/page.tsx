@@ -78,12 +78,6 @@ export const metadata: Metadata = {
         width: 600,
         height: 600,
         alt: "Pradheep Pattambi - Training & Therapeutic Counselling in Pattambi | The Light Centre"
-      },
-      {
-        url: "https://pradheeppattambi.com/images/hero-family-wellbeing.jpg",
-        width: 1376,
-        height: 768,
-        alt: "Family wellbeing and emotional harmony at The Light Training and Counselling Centre Pattambi"
       }
     ],
     locale: "en_US",
@@ -208,55 +202,30 @@ const pageStructuredData = {
   ]
 };
 
-function ServiceCard({
-  item,
-  variant = "sage"
-}: {
-  item: ServiceCardItem;
-  variant?: "sage" | "peach";
-}) {
+function ServiceCard({ item }: { item: ServiceCardItem }) {
   const IconComp = iconMap[item.iconName] || Brain;
   const enquiryUrl = getWhatsAppServiceEnquiryUrl(item.name);
-  const isSage = variant === "sage";
 
   return (
-    <div
-      className={`group rounded-2xl bg-white p-5 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between ${
-        isSage
-          ? "border border-[#D4E4D7] hover:border-[#7FA885]"
-          : "border border-[#EBDCCF] hover:border-[#C4A58F]"
-      }`}
-    >
+    <div className="group rounded-2xl bg-[#0D2E20] border border-[#1E543C] p-5 shadow-sm hover:shadow-md hover:border-[#3B8A66] hover:bg-[#103726] transition-all duration-200 flex flex-col justify-between">
       <div className="space-y-3">
-        <div
-          className={`w-11 h-11 rounded-xl flex items-center justify-center transition-colors duration-200 ${
-            isSage
-              ? "bg-[#E5EFE7] text-[#1E4A2B] group-hover:bg-[#1E4A2B] group-hover:text-[#FAF7F2]"
-              : "bg-[#F5ECE1] text-[#784F2B] group-hover:bg-[#784F2B] group-hover:text-[#FAF7F2]"
-          }`}
-        >
-          <IconComp className="w-5 h-5 stroke-[1.8]" />
+        <div className="w-11 h-11 rounded-xl bg-[#1D543B] text-[#95E5BA] flex items-center justify-center group-hover:bg-[#95E5BA] group-hover:text-[#0D2E20] transition-colors duration-200">
+          <IconComp className="w-5 h-5 stroke-[2]" />
         </div>
-        <h3
-          className={`text-base sm:text-lg font-bold text-forest-950 transition-colors ${
-            isSage ? "group-hover:text-[#1E4A2B]" : "group-hover:text-[#784F2B]"
-          }`}
-        >
+        <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-[#95E5BA] transition-colors">
           {item.name}
         </h3>
-        <p className="text-xs sm:text-sm text-[#4E5D53] leading-relaxed font-sans">
+        <p className="text-xs sm:text-sm text-[#D1E5D8] leading-relaxed font-sans">
           {item.brief}
         </p>
       </div>
 
-      <div className={`pt-4 mt-4 border-t ${isSage ? "border-[#EBF2EC]" : "border-[#F4ECE3]"}`}>
+      <div className="pt-4 mt-4 border-t border-[#1C4E37]">
         <a
           href={enquiryUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className={`inline-flex items-center gap-1.5 text-xs font-bold transition-colors ${
-            isSage ? "text-[#1E4A2B] hover:text-[#14301E]" : "text-[#784F2B] hover:text-[#4A2F17]"
-          }`}
+          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#95E5BA] hover:text-white transition-colors"
           aria-label={`Enquire about ${item.name} on WhatsApp`}
         >
           <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
@@ -358,152 +327,66 @@ export default function TrainingAndTherapeuticCounsellingPage() {
               </div>
             </div>
           </div>
-
-          {/* Hero Family Wellbeing Visual Showcase */}
-          <div className="mt-12 sm:mt-16 relative rounded-3xl overflow-hidden border border-[#E4D7C4] shadow-md h-60 sm:h-72 md:h-80">
-            <Image
-              src="/images/hero-family-wellbeing.jpg"
-              alt="Emotional wellbeing, personal development and family harmony at The Light Training and Counselling Centre Pattambi"
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 1280px) 100vw, 1200px"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-forest-950/85 via-forest-950/30 to-transparent flex items-end p-6 sm:p-8">
-              <div className="max-w-2xl text-left">
-                <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] font-semibold text-[#D4C3A3] block mb-1">
-                  FAMILY WELLBEING &bull; PERSONAL EMPOWERMENT
-                </span>
-                <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-[#FAF7F2] leading-snug">
-                  Nurturing Emotional Harmony, Strong Families &amp; Confident Futures
-                </h2>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. TRAINING SESSIONS SECTION — SOFT SAGE GREEN THEME */}
+      {/* 2. TRAINING SESSIONS SECTION — SOLID DARK GREEN (#123D2B) */}
       {/* ========================================================================= */}
-      <section className="py-14 sm:py-20 bg-[#EFF5F0] border-b border-[#D8E6DB]">
+      <section className="py-14 sm:py-20 bg-[#123D2B] border-b border-[#1A4E38]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
             <div className="inline-flex items-center gap-2 mb-2">
-              <span className="w-6 h-[1.5px] bg-[#346E44]" />
-              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#1E4829]">
+              <span className="w-6 h-[1.5px] bg-[#3B7A5C]" />
+              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#D4E8DC]">
                 PERSONAL &bull; PROFESSIONAL DEVELOPMENT
               </span>
-              <span className="w-6 h-[1.5px] bg-[#346E44]" />
+              <span className="w-6 h-[1.5px] bg-[#3B7A5C]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-forest-950 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
               Training Sessions
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-[#4E5D53]">
+            <p className="mt-2 text-sm sm:text-base text-[#D4E8DC]">
               Professional training programs and interactive skill-building sessions in Pattambi at The Light Training and Counselling Centre.
             </p>
-          </div>
-
-          {/* Visual Workshop Banner Card */}
-          <div className="mb-10 rounded-2xl overflow-hidden border border-[#D5E5D8] bg-white shadow-xs grid grid-cols-1 md:grid-cols-12 items-center">
-            <div className="md:col-span-5 relative h-56 sm:h-64 md:h-full min-h-[230px]">
-              <Image
-                src="/images/training-sessions-workshop.jpg"
-                alt="Interactive parenting, communication, and family training workshops in Pattambi"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 500px"
-              />
-            </div>
-            <div className="md:col-span-7 p-6 sm:p-8 text-left space-y-2.5">
-              <span className="text-xs uppercase tracking-[0.2em] font-bold text-[#235632]">
-                Interactive Workshops &bull; Experiential Learning
-              </span>
-              <h3 className="text-xl sm:text-2xl font-bold text-forest-950">
-                Empowering Individuals, Parents &amp; Students
-              </h3>
-              <p className="text-xs sm:text-sm text-muted-text leading-relaxed font-sans">
-                Our structured training modules integrate behavioural insights, neuro-linguistic programming, and real-world tools to build emotional resilience, focus, and positive family communication.
-              </p>
-              <div className="pt-1">
-                <a
-                  href="tel:+919567654880"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#235632] hover:text-forest-950 transition-colors"
-                >
-                  <span>Enquire about training sessions &rarr;</span>
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* 8 Clean Service Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {trainingSessionsData.map((item) => (
-              <ServiceCard key={item.id} item={item} variant="sage" />
+              <ServiceCard key={item.id} item={item} />
             ))}
           </div>
         </div>
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. THERAPEUTICAL COUNSELLING SECTION — WARM BEIGE / SOFT PEACH THEME */}
+      {/* 3. THERAPEUTICAL COUNSELLING SECTION — SOLID DARK GREEN (#123D2B) */}
       {/* ========================================================================= */}
-      <section className="py-14 sm:py-20 bg-[#F8F2EB] border-b border-[#E8DCCE]">
+      <section className="py-14 sm:py-20 bg-[#123D2B] border-b border-[#1A4E38]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
             <div className="inline-flex items-center gap-2 mb-2">
-              <span className="w-6 h-[1.5px] bg-[#9C6B43]" />
-              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#7A4F2A]">
+              <span className="w-6 h-[1.5px] bg-[#3B7A5C]" />
+              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#D4E8DC]">
                 CLINICAL THERAPEUTIC MODALITIES
               </span>
-              <span className="w-6 h-[1.5px] bg-[#9C6B43]" />
+              <span className="w-6 h-[1.5px] bg-[#3B7A5C]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-forest-950 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
               Therapeutical Counselling
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-[#5A4F45]">
+            <p className="mt-2 text-sm sm:text-base text-[#D4E8DC]">
               Confidential therapeutic counselling and clinical modalities offered at The Light Centre in Pattambi.
             </p>
-          </div>
-
-          {/* Visual Counselling Session Banner Card */}
-          <div className="mb-10 rounded-2xl overflow-hidden border border-[#E9DACB] bg-white shadow-xs grid grid-cols-1 md:grid-cols-12 items-center">
-            <div className="md:col-span-5 relative h-56 sm:h-64 md:h-full min-h-[230px]">
-              <Image
-                src="/images/therapeutic-counselling-session.jpg"
-                alt="Confidential and supportive psychological counselling session in Pattambi"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 500px"
-              />
-            </div>
-            <div className="md:col-span-7 p-6 sm:p-8 text-left space-y-2.5">
-              <span className="text-xs uppercase tracking-[0.2em] font-bold text-[#7A4F2A]">
-                Evidence-Based Modalities &bull; Safe Environment
-              </span>
-              <h3 className="text-xl sm:text-2xl font-bold text-forest-950">
-                Compassionate, Science-Backed Psychological Care
-              </h3>
-              <p className="text-xs sm:text-sm text-muted-text leading-relaxed font-sans">
-                A private, non-judgmental space to navigate personal distress, process trauma, resolve relationship barriers, and develop grounded emotional resilience.
-              </p>
-              <div className="pt-1">
-                <a
-                  href="tel:+919567654880"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#7A4F2A] hover:text-forest-950 transition-colors"
-                >
-                  <span>Schedule a confidential consultation &rarr;</span>
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* 8 Clean Service Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {therapeuticCounsellingData.map((item) => (
-              <ServiceCard key={item.id} item={item} variant="peach" />
+              <ServiceCard key={item.id} item={item} />
             ))}
           </div>
         </div>
