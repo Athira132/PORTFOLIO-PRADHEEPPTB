@@ -213,31 +213,27 @@ export default function HomePage() {
                 Psychologist in Pattambi &bull; Therapeutic Healer &bull; NLP Grand Master &bull; Trainer
               </p>
 
-              {/* Training & Therapeutic Counselling Service Mention */}
-              <div className="pt-0.5">
+              {/* Navigation Options & Action Buttons */}
+              <div className="pt-2 flex flex-wrap items-center gap-3.5 sm:gap-4">
                 <Link
                   href="/training-and-therapeutic-counselling/"
-                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8] text-forest-950 text-xs sm:text-sm font-semibold hover:bg-forest-900 hover:text-[#FAF7F2] transition-colors group shadow-xs w-fit"
+                  className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-sm sm:text-base font-semibold tracking-wide shadow-sm hover:shadow-md transition-all cursor-pointer group"
                 >
-                  <span className="w-2 h-2 rounded-full bg-olive-600 group-hover:bg-[#C5A880]" />
-                  <span>Training &amp; Therapeutic Counselling</span>
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                  <span>Training &amp; Therapeutical Counselling</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
-              </div>
 
-              {/* Action Buttons */}
-              <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact"
                   data-booking-trigger="true"
-                  className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-base font-medium tracking-wide shadow-sm hover:shadow-md transition-all cursor-pointer"
+                  className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-full border border-forest-900/40 text-forest-950 hover:bg-forest-900 hover:text-[#FAF7F2] text-sm sm:text-base font-medium tracking-wide transition-colors cursor-pointer"
                 >
                   <span>Get in Touch</span>
-                  <ArrowRight className="w-4 h-4" />
                 </Link>
+
                 <Link
                   href="#services"
-                  className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full border border-forest-900/40 text-forest-950 hover:bg-forest-900 hover:text-[#FAF7F2] text-base font-medium tracking-wide transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-forest-800 hover:text-forest-950 text-sm sm:text-base font-medium tracking-wide hover:underline underline-offset-4 transition-colors"
                 >
                   <span>Explore Services</span>
                 </Link>
@@ -278,18 +274,24 @@ export default function HomePage() {
                 Psychologist in Pattambi, Therapeutic Healer, NLP Grand Master, Trainer
               </p>
 
+              {/* Navigation Option: Exact full name Training & Therapeutical Counselling */}
+              <div className="pt-0.5 w-full">
+                <Link
+                  href="/training-and-therapeutic-counselling/"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1C2621]/95 border border-[#C5A880] text-[#FAF7F2] hover:bg-[#C5A880] hover:text-[#111814] text-[9.5px] min-[375px]:text-[10px] font-bold tracking-tight shadow-sm transition-all"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]" />
+                  <span>Training &amp; Therapeutical Counselling</span>
+                  <ArrowRight className="w-3 h-3 shrink-0" />
+                </Link>
+              </div>
+
               {/* 4. Subjects / Tags */}
               <div className="pt-0.5 flex flex-col items-start text-left w-full">
                 <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em] font-bold text-[#A3B899] mb-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
-                  Subjects &amp; Services
+                  Subjects
                 </span>
                 <div className="flex flex-wrap justify-start gap-1 text-[8.5px] sm:text-[9.5px] text-[#FAF7F2] font-semibold max-w-[195px]">
-                  <Link
-                    href="/training-and-therapeutic-counselling/"
-                    className="px-2 py-0.5 rounded-full bg-[#1C2621]/95 border border-[#C5A880]/80 text-[#C5A880] shadow-xs flex items-center gap-0.5 hover:text-white transition-colors"
-                  >
-                    <span>Training &amp; Counselling &rarr;</span>
-                  </Link>
                   <span className="px-2 py-0.5 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     NLP
                   </span>
@@ -534,13 +536,13 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Read More Button — Centered, High Visibility */}
+          {/* Explore All Services Button — Centered, High Visibility */}
           <div className="text-center pt-2">
             <Link
               href="/training-and-therapeutic-counselling/"
               className="inline-flex items-center gap-2.5 px-9 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-semibold tracking-wide shadow-sm hover:shadow-md group cursor-pointer"
             >
-              <span>Read More</span>
+              <span>Explore All Services</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
