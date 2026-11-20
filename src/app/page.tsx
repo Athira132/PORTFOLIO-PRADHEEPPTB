@@ -213,6 +213,18 @@ export default function HomePage() {
                 Psychologist in Pattambi &bull; Therapeutic Healer &bull; NLP Grand Master &bull; Trainer
               </p>
 
+              {/* Training & Therapeutic Counselling Service Mention */}
+              <div className="pt-0.5">
+                <Link
+                  href="/training-and-therapeutic-counselling/"
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8] text-forest-950 text-xs sm:text-sm font-semibold hover:bg-forest-900 hover:text-[#FAF7F2] transition-colors group shadow-xs w-fit"
+                >
+                  <span className="w-2 h-2 rounded-full bg-olive-600 group-hover:bg-[#C5A880]" />
+                  <span>Training &amp; Therapeutic Counselling</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              </div>
+
               {/* Action Buttons */}
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
@@ -266,12 +278,18 @@ export default function HomePage() {
                 Psychologist in Pattambi, Therapeutic Healer, NLP Grand Master, Trainer
               </p>
 
-              {/* 4. Subjects / Tags (UNCHANGED) */}
+              {/* 4. Subjects / Tags */}
               <div className="pt-0.5 flex flex-col items-start text-left w-full">
                 <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em] font-bold text-[#A3B899] mb-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
-                  Subjects
+                  Subjects &amp; Services
                 </span>
                 <div className="flex flex-wrap justify-start gap-1 text-[8.5px] sm:text-[9.5px] text-[#FAF7F2] font-semibold max-w-[195px]">
+                  <Link
+                    href="/training-and-therapeutic-counselling/"
+                    className="px-2 py-0.5 rounded-full bg-[#1C2621]/95 border border-[#C5A880]/80 text-[#C5A880] shadow-xs flex items-center gap-0.5 hover:text-white transition-colors"
+                  >
+                    <span>Training &amp; Counselling &rarr;</span>
+                  </Link>
                   <span className="px-2 py-0.5 rounded-full bg-[#1C2621]/90 border border-[#375240]/80 shadow-xs">
                     NLP
                   </span>
@@ -397,6 +415,137 @@ export default function HomePage() {
       {/* 3. MAIN SERVICES SECTION (LOCAL SEO FOR PATTAMBI) */}
       {/* ========================================================================= */}
       <MainServicesSection />
+
+      {/* ========================================================================= */}
+      {/* 3B. TRAINING & THERAPEUTIC COUNSELLING DEDICATED SECTION */}
+      {/* ========================================================================= */}
+      <section className="py-20 sm:py-24 bg-[#FAF7F2] border-b border-[#EAE2D3]/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50">
+              <span className="w-2 h-2 rounded-full bg-olive-600" />
+              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-olive-800">
+                THE LIGHT CENTRE &bull; PATTAMBI
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950 tracking-tight leading-tight">
+              Training &amp; Therapeutic Counselling
+            </h2>
+            <p className="text-sm sm:text-base text-muted-text leading-relaxed font-sans max-w-2xl mx-auto">
+              Empowering personal transformation and holistic mental wellness through specialized training programs and clinical counselling modalities in Pattambi.
+            </p>
+          </div>
+
+          {/* Two Main Categories Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Category 1: Training Sessions */}
+            <div className="rounded-3xl bg-white border border-[#EAE2D3] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-12 h-12 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center shrink-0 border border-[#DCE5DF]">
+                    <Users className="w-6 h-6 text-olive-700" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-forest-950 tracking-tight">
+                      Training Sessions
+                    </h3>
+                    <p className="text-xs text-olive-700 font-semibold uppercase tracking-wider">
+                      Interactive Skill &amp; Mindset Programs
+                    </p>
+                  </div>
+                </div>
+
+                {/* Service Items Grid: 8 items */}
+                <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
+                  {[
+                    "Parenting",
+                    "Couple Therapy",
+                    "Pre-marital Counselling",
+                    "Stress Management",
+                    "Study Skills",
+                    "Hypnotism",
+                    "Addiction",
+                    "NLP"
+                  ].map((service, idx) => (
+                    <div
+                      key={idx}
+                      className="px-3.5 py-2.5 rounded-xl bg-[#FAF7F2] border border-[#EAE2D3] text-forest-950 text-xs sm:text-sm font-semibold flex items-center gap-2 hover:bg-[#F2ECE1] transition-colors"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-olive-600 shrink-0" />
+                      <span className="truncate">{service}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-[#F0EAE0]">
+                <p className="text-xs text-muted-text leading-relaxed">
+                  Tailored developmental training designed to cultivate resilience, study habits, and effective family communication.
+                </p>
+              </div>
+            </div>
+
+            {/* Category 2: Therapeutical Counselling */}
+            <div className="rounded-3xl bg-white border border-[#EAE2D3] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-12 h-12 rounded-2xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center shrink-0 border border-[#DCE5DF]">
+                    <Sparkles className="w-6 h-6 text-olive-700" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-forest-950 tracking-tight">
+                      Therapeutical Counselling
+                    </h3>
+                    <p className="text-xs text-olive-700 font-semibold uppercase tracking-wider">
+                      Clinical &amp; Evidence-Based Healing
+                    </p>
+                  </div>
+                </div>
+
+                {/* Service Items Grid: 8 items */}
+                <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
+                  {[
+                    "CBT",
+                    "DBT",
+                    "EMDR (Trauma)",
+                    "Couple Therapy",
+                    "Sex Therapy",
+                    "Hypnotic Therapy",
+                    "NLP Therapies",
+                    "Meditation"
+                  ].map((service, idx) => (
+                    <div
+                      key={idx}
+                      className="px-3.5 py-2.5 rounded-xl bg-[#FAF7F2] border border-[#EAE2D3] text-forest-950 text-xs sm:text-sm font-semibold flex items-center gap-2 hover:bg-[#F2ECE1] transition-colors"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-olive-600 shrink-0" />
+                      <span className="truncate">{service}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-[#F0EAE0]">
+                <p className="text-xs text-muted-text leading-relaxed">
+                  Confidential psychological care utilizing advanced therapeutic modalities to overcome trauma, anxiety, and distress.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Read More Button — Centered, High Visibility */}
+          <div className="text-center pt-2">
+            <Link
+              href="/training-and-therapeutic-counselling/"
+              className="inline-flex items-center gap-2.5 px-9 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-semibold tracking-wide shadow-sm hover:shadow-md group cursor-pointer"
+            >
+              <span>Read More</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ========================================================================= */}
       {/* 4. ABOUT PREVIEW SECTION — BALANCED WITH DISTINCT SMALLER PHOTO */}

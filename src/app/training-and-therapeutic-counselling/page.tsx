@@ -242,9 +242,9 @@ export default function TrainingAndTherapeuticCounsellingPage() {
       <JsonLd data={pageStructuredData} />
 
       {/* ========================================================================= */}
-      {/* 1. HERO BANNER — SOLID DARK GREEN (#123D2B), PRESERVED CIRCULAR PORTRAIT */}
+      {/* 1. HERO BANNER — SOLID DARK BACKGROUND (#111814), MATCHING OTHER LANDING PAGES */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-24 bg-[#123D2B] border-b border-[#1A4E38]">
+      <section className="py-16 sm:py-24 bg-[#111814] border-b border-[#233127]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             {/* Left: Circular Photo Frame (Exact dimensions & positioning preserved) */}
@@ -266,15 +266,15 @@ export default function TrainingAndTherapeuticCounsellingPage() {
             {/* Right: Editorial Typography & Actions */}
             <div className="lg:col-span-7 space-y-5 text-left">
               {/* Category Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C4E37] border border-[#2B6D50] w-fit">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C2B22] border border-[#375240] w-fit">
                 <span className="w-2 h-2 rounded-full bg-[#C5A880]" />
-                <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#D4E8DC]">
+                <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#A3B899]">
                   THE LIGHT TRAINING AND COUNSELLING CENTRE &bull; PATTAMBI
                 </span>
               </div>
 
               {/* Main Heading H1 */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl text-white font-bold tracking-tight leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#FAF7F2] font-bold tracking-tight leading-[1.1]">
                 Training &amp; Therapeutic Counselling<span className="sr-only"> in Pattambi</span>
               </h1>
 
@@ -284,14 +284,14 @@ export default function TrainingAndTherapeuticCounsellingPage() {
               </p>
 
               {/* Trainer & Contact Info */}
-              <div className="space-y-1.5 text-[#D4E8DC]">
-                <p className="text-xl sm:text-2xl font-bold text-white">
+              <div className="space-y-1.5 text-[#D6CEBE]">
+                <p className="text-xl sm:text-2xl font-bold text-[#FAF7F2]">
                   Pradheep Pattambi
                 </p>
                 <p className="text-sm sm:text-base text-[#D4C3A3] font-medium">
                   NLP Master Trainer <span className="text-[#C5A880]">|</span> Hypnotist <span className="text-[#C5A880]">|</span> Psychological Counsellor
                 </p>
-                <p className="text-sm sm:text-base text-white pt-1">
+                <p className="text-sm sm:text-base text-[#FAF7F2] pt-1">
                   Contact:{" "}
                   <a
                     href="tel:+919567654880"
@@ -319,7 +319,7 @@ export default function TrainingAndTherapeuticCounsellingPage() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-[#D8CCA8]/50 text-white bg-white/5 hover:bg-white/10 transition-colors text-sm sm:text-base font-medium tracking-wide"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-[#D8CCA8]/50 text-[#FAF7F2] bg-white/5 hover:bg-white/10 transition-colors text-sm sm:text-base font-medium tracking-wide"
                 >
                   <MessageCircle className="w-4 h-4 text-[#25D366]" />
                   <span>Chat on WhatsApp</span>
