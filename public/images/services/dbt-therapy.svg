@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dbtBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F8F6" />
+      <stop offset="100%" stop-color="#E1EBE4" />
+    </linearGradient>
+    <linearGradient id="stoneDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E382A" />
+      <stop offset="100%" stop-color="#12241A" />
+    </linearGradient>
+    <linearGradient id="stoneMid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4B6E57" />
+      <stop offset="100%" stop-color="#34503E" />
+    </linearGradient>
+    <linearGradient id="stoneGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D6C19D" />
+      <stop offset="100%" stop-color="#C5A880" />
+    </linearGradient>
+    <linearGradient id="yinYangGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F2" />
+      <stop offset="100%" stop-color="#E2D6C0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#dbtBg)" rx="16" />
+
+  <!-- Harmonic Circular Aura of Equilibrium -->
+  <circle cx="200" cy="125" r="90" fill="none" stroke="#C5A880" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.6" />
+  <circle cx="200" cy="125" r="70" fill="#FAF8F3" opacity="0.7" />
+
+  <!-- Dialectical Fulcrum Base Line -->
+  <line x1="80" y1="215" x2="320" y2="215" stroke="#9AB3A1" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Stacked Zen Balancing Stones (Emotional Regulation & Mindful Balance) -->
+  <!-- Base Stone (Large) -->
+  <ellipse cx="200" cy="205" rx="55" ry="14" fill="url(#stoneDark)" />
+  <!-- Middle Stone 1 -->
+  <ellipse cx="200" cy="182" rx="42" ry="12" fill="url(#stoneMid)" />
+  <!-- Middle Stone 2 (Gold Accent) -->
+  <ellipse cx="200" cy="162" rx="32" ry="10" fill="url(#stoneGold)" />
+  <!-- Top Stone (Peak) -->
+  <ellipse cx="200" cy="144" rx="22" ry="8" fill="url(#stoneDark)" />
+  <!-- Keystone / Wise Mind Pearl -->
+  <circle cx="200" cy="128" r="6" fill="#FFF" stroke="#C5A880" stroke-width="1.8" />
+
+  <!-- Dialectical Scales of "Emotion Mind" (Left) and "Reasonable Mind" (Right) -->
+  <!-- Horizontal Balance Bar -->
+  <path d="M 120,95 Q 200,85 280,95" stroke="#C5A880" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  <!-- Center Pivot -->
+  <polygon points="200,85 194,98 206,98" fill="#1E382A" />
+
+  <!-- Left Scale: Emotional Acceptance (Heart motif) -->
+  <line x1="120" y1="95" x2="120" y2="125" stroke="#C5A880" stroke-width="1.5" />
+  <path d="M 105,125 Q 120,135 135,125" stroke="#C5A880" stroke-width="2" fill="none" />
+  <circle cx="120" cy="122" r="10" fill="url(#yinYangGlow)" stroke="#9AB3A1" stroke-width="1" />
+  <path d="M 117,121 C 115,118 118,116 120,119 C 122,116 125,118 123,121 L 120,125 Z" fill="#4B6E57" />
+
+  <!-- Right Scale: Change & Rational Mind (Insight motif) -->
+  <line x1="280" y1="95" x2="280" y2="125" stroke="#C5A880" stroke-width="1.5" />
+  <path d="M 265,125 Q 280,135 295,125" stroke="#C5A880" stroke-width="2" fill="none" />
+  <circle cx="280" cy="122" r="10" fill="url(#yinYangGlow)" stroke="#9AB3A1" stroke-width="1" />
+  <path d="M 280,116 L 280,126 M 275,121 L 285,121" stroke="#C5A880" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Wise Mind Golden Synthesis Crown -->
+  <path d="M 200,60 L 203,68 L 211,71 L 203,74 L 200,82 L 197,74 L 189,71 L 197,68 Z" fill="#C5A880" />
+
+  <!-- Subtle water ripples on base -->
+  <ellipse cx="200" cy="225" rx="90" ry="6" fill="none" stroke="#C5A880" stroke-width="1" opacity="0.4" />
+</svg>

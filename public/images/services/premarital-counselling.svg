@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="premBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF8F3" />
+      <stop offset="100%" stop-color="#EEE6D8" />
+    </linearGradient>
+    <linearGradient id="portalGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DFCEB3" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#C5A880" stop-opacity="0.1" />
+    </linearGradient>
+    <linearGradient id="personMale" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#182E22" />
+      <stop offset="100%" stop-color="#0E1E16" />
+    </linearGradient>
+    <linearGradient id="personFemale" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#385645" />
+      <stop offset="100%" stop-color="#21382A" />
+    </linearGradient>
+    <linearGradient id="ringGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5D1B0" />
+      <stop offset="100%" stop-color="#C5A880" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#premBg)" rx="16" />
+
+  <!-- Gateway arch to shared future -->
+  <path d="M 140,215 L 140,110 C 140,65 260,65 260,110 L 260,215" fill="none" stroke="url(#ringGold)" stroke-width="1.8" opacity="0.6" stroke-dasharray="4 4" />
+  <path d="M 155,215 L 155,115 C 155,80 245,80 245,115 L 245,215" fill="url(#portalGlow)" />
+
+  <!-- Interlocking Commitment Rings -->
+  <circle cx="192" cy="72" r="14" fill="none" stroke="url(#ringGold)" stroke-width="2.5" />
+  <circle cx="208" cy="72" r="14" fill="none" stroke="url(#ringGold)" stroke-width="2.5" />
+  <!-- Ring Sparkle -->
+  <path d="M 200,66 L 200,78 M 194,72 L 206,72" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" />
+
+  <!-- Ground Line -->
+  <line x1="100" y1="215" x2="300" y2="215" stroke="#C5A880" stroke-width="1.5" opacity="0.5" />
+
+  <!-- Faceless Couple Standing Side by Side looking to future -->
+  <!-- Figure 1 (Left) -->
+  <circle cx="180" cy="115" r="13" fill="url(#personMale)" />
+  <path d="M 180,130 C 168,132 160,146 162,170 L 165,215 L 176,215 L 178,175 L 184,175 L 186,215 L 196,215 L 195,160 C 195,145 190,130 180,130 Z" fill="url(#personMale)" />
+
+  <!-- Figure 2 (Right) -->
+  <circle cx="220" cy="118" r="12" fill="url(#personFemale)" />
+  <path d="M 220,132 C 210,134 205,148 206,170 L 208,215 L 218,215 L 220,180 L 224,180 L 227,215 L 236,215 L 235,165 C 235,145 230,132 220,132 Z" fill="url(#personFemale)" />
+
+  <!-- Joined hands / bond -->
+  <path d="M 188,155 C 194,165 204,165 210,157" stroke="url(#ringGold)" stroke-width="4" stroke-linecap="round" fill="none" />
+  <circle cx="200" cy="162" r="3" fill="#C5A880" />
+
+  <!-- Delicate olive branch symbols on sides -->
+  <path d="M 110,195 Q 120,170 135,155" stroke="#879E83" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7" />
+  <circle cx="125" cy="173" r="2.5" fill="#879E83" opacity="0.7" />
+  <circle cx="135" cy="155" r="2.5" fill="#879E83" opacity="0.7" />
+
+  <path d="M 290,195 Q 280,170 265,155" stroke="#879E83" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7" />
+  <circle cx="275" cy="173" r="2.5" fill="#879E83" opacity="0.7" />
+  <circle cx="265" cy="155" r="2.5" fill="#879E83" opacity="0.7" />
+</svg>

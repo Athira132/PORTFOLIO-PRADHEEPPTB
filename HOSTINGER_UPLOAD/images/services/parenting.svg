@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="parentBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9F6F0" />
+      <stop offset="100%" stop-color="#EBE3D5" />
+    </linearGradient>
+    <linearGradient id="sunGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2D4B7" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#C5A880" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="adultGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A2B" />
+      <stop offset="100%" stop-color="#12251B" />
+    </linearGradient>
+    <linearGradient id="childGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A880" />
+      <stop offset="100%" stop-color="#9E7D56" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#parentBg)" rx="16" />
+
+  <!-- Soft organic backdrop shapes -->
+  <circle cx="200" cy="130" r="95" fill="url(#sunGlow)" />
+  <path d="M 0,210 Q 120,180 240,210 T 400,200 L 400,250 L 0,250 Z" fill="#E2DACB" opacity="0.6" />
+  <path d="M 0,225 Q 160,205 320,230 T 400,225 L 400,250 L 0,250 Z" fill="#D5CBB9" opacity="0.4" />
+
+  <!-- Botanical branch / growth leaves -->
+  <g stroke="#82987E" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.75">
+    <path d="M 40,200 Q 60,140 85,110" />
+    <path d="M 60,155 Q 75,150 78,142" />
+    <path d="M 72,135 Q 88,132 90,122" />
+    <path d="M 78,118 Q 94,115 95,105" />
+  </g>
+  <circle cx="78" cy="142" r="3.5" fill="#82987E" opacity="0.75" />
+  <circle cx="90" cy="122" r="3.5" fill="#82987E" opacity="0.75" />
+  <circle cx="95" cy="105" r="3.5" fill="#82987E" opacity="0.75" />
+
+  <!-- Faceless Adult Silhouette -->
+  <!-- Head -->
+  <circle cx="165" cy="85" r="17" fill="url(#adultGrad)" />
+  <!-- Body leaning gently toward child -->
+  <path d="M 165,104 C 150,105 138,125 140,158 L 144,215 L 160,215 L 160,175 L 168,175 L 170,215 L 184,215 L 180,150 C 185,135 180,105 165,104 Z" fill="url(#adultGrad)" />
+  <!-- Adult extended arm holding child hand -->
+  <path d="M 175,122 C 185,138 200,154 212,168 C 215,172 218,174 222,175" stroke="url(#adultGrad)" stroke-width="8" stroke-linecap="round" fill="none" />
+
+  <!-- Faceless Child Silhouette -->
+  <!-- Head -->
+  <circle cx="238" cy="128" r="11" fill="url(#childGrad)" />
+  <!-- Child Body -->
+  <path d="M 238,141 C 230,143 224,154 225,175 L 227,215 L 236,215 L 237,185 L 241,185 L 243,215 L 251,215 L 250,170 C 252,158 248,142 238,141 Z" fill="url(#childGrad)" />
+  <!-- Child raised arm holding adult hand -->
+  <path d="M 230,152 C 226,160 223,168 221,174" stroke="url(#childGrad)" stroke-width="5" stroke-linecap="round" fill="none" />
+
+  <!-- Tender Connection Sparkle -->
+  <circle cx="221" cy="174" r="5" fill="#C5A880" />
+  <path d="M 221,165 L 221,183 M 212,174 L 230,174" stroke="#FFF" stroke-width="1.5" stroke-linecap="round" opacity="0.9" />
+
+  <!-- Gentle decorative sparkles in air -->
+  <circle cx="280" cy="80" r="2" fill="#C5A880" opacity="0.7" />
+  <circle cx="310" cy="110" r="3" fill="#C5A880" opacity="0.5" />
+  <circle cx="295" cy="140" r="1.5" fill="#C5A880" opacity="0.6" />
+</svg>

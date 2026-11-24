@@ -2,6 +2,9 @@
   RewriteEngine On
   RewriteBase /
 
+  # 301 Redirect old training & therapeutic counselling URL to our-services
+  RewriteRule ^training-and-therapeutic-counselling/?$ /our-services/ [R=301,L]
+
   # Force HTTPS
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

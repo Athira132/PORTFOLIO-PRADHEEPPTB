@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="addictBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4EFE6" />
+      <stop offset="100%" stop-color="#E2D9C8" />
+    </linearGradient>
+    <linearGradient id="pathGold" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C6B53" />
+      <stop offset="50%" stop-color="#C5A880" />
+      <stop offset="100%" stop-color="#F6E7CA" />
+    </linearGradient>
+    <radialGradient id="dawnLight" cx="80%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#FFF8E7" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#EAD7B5" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#C5A880" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="climberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B3828" />
+      <stop offset="100%" stop-color="#0E2117" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#addictBg)" rx="16" />
+
+  <!-- Luminous Dawn of Hope & Recovery (Top Right) -->
+  <circle cx="310" cy="75" r="90" fill="url(#dawnLight)" />
+  <circle cx="310" cy="75" r="30" fill="#FFFBEF" opacity="0.8" />
+
+  <!-- Ascending Path of Hope from darkness toward the light -->
+  <path d="M 40,240 Q 140,225 210,170 T 310,75" fill="none" stroke="url(#pathGold)" stroke-width="26" stroke-linecap="round" opacity="0.4" />
+  <path d="M 40,240 Q 140,225 210,170 T 310,75" fill="none" stroke="url(#pathGold)" stroke-width="8" stroke-linecap="round" />
+  <path d="M 40,240 Q 140,225 210,170 T 310,75" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 6" opacity="0.8" />
+
+  <!-- Supportive Outstretched Hand from Left / Community Guiding Presence -->
+  <g stroke="#8B7355" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6">
+    <path d="M 20,180 C 60,175 80,185 105,170" />
+    <path d="M 105,170 C 115,165 125,168 135,165" />
+  </g>
+  <path d="M 70,210 Q 110,205 130,185" stroke="#C5A880" stroke-width="2" fill="none" opacity="0.5" />
+
+  <!-- Faceless Person Walking Confidently Up the Path into the Sun -->
+  <circle cx="235" cy="120" r="13" fill="url(#climberGrad)" />
+  <!-- Dynamic, determined walking posture -->
+  <path d="M 235,135 C 224,138 218,150 220,170 L 210,205 L 222,205 L 230,175 L 238,175 L 246,198 L 257,198 L 248,155 C 250,145 244,136 235,135 Z" fill="url(#climberGrad)" />
+  <!-- Forward stride arms -->
+  <path d="M 230,148 L 245,155 L 255,150" stroke="url(#climberGrad)" stroke-width="4.5" stroke-linecap="round" fill="none" />
+
+  <!-- Rays of New Life & Renewal -->
+  <line x1="310" y1="35" x2="310" y2="20" stroke="#C5A880" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+  <line x1="345" y1="50" x2="360" y2="40" stroke="#C5A880" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+  <line x1="350" y1="90" x2="368" y2="95" stroke="#C5A880" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+  <line x1="270" y1="50" x2="255" y2="40" stroke="#C5A880" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+
+  <!-- New Leaves sprouting along the path symbolizing growth -->
+  <ellipse cx="145" cy="190" rx="4" ry="9" fill="#7C9882" transform="rotate(-30 145 190)" />
+  <ellipse cx="205" cy="148" rx="4" ry="9" fill="#7C9882" transform="rotate(-40 205 148)" />
+</svg>

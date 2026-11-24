@@ -216,10 +216,10 @@ export default function HomePage() {
               {/* Navigation Options & Action Buttons */}
               <div className="pt-2 flex flex-wrap items-center gap-3.5 sm:gap-4">
                 <Link
-                  href="/training-and-therapeutic-counselling/"
+                  href="/our-services/"
                   className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 text-sm sm:text-base font-semibold tracking-wide shadow-sm hover:shadow-md transition-all cursor-pointer group"
                 >
-                  <span>Training &amp; Therapeutical Counselling</span>
+                  <span>Our Services</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
 
@@ -274,14 +274,14 @@ export default function HomePage() {
                 Psychologist in Pattambi, Therapeutic Healer, NLP Grand Master, Trainer
               </p>
 
-              {/* Navigation Option: Exact full name Training & Therapeutical Counselling */}
+              {/* Navigation Option: Exact name Our Services */}
               <div className="pt-0.5 w-full">
                 <Link
-                  href="/training-and-therapeutic-counselling/"
+                  href="/our-services/"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1C2621]/95 border border-[#C5A880] text-[#FAF7F2] hover:bg-[#C5A880] hover:text-[#111814] text-[9.5px] min-[375px]:text-[10px] font-bold tracking-tight shadow-sm transition-all"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]" />
-                  <span>Training &amp; Therapeutical Counselling</span>
+                  <span>Our Services</span>
                   <ArrowRight className="w-3 h-3 shrink-0" />
                 </Link>
               </div>
@@ -432,7 +432,7 @@ export default function HomePage() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950 tracking-tight leading-tight">
-              Training &amp; Therapeutic Counselling
+              Our Services
             </h2>
             <p className="text-sm sm:text-base text-muted-text leading-relaxed font-sans max-w-2xl mx-auto">
               Empowering personal transformation and holistic mental wellness through specialized training programs and clinical counselling modalities in Pattambi.
@@ -536,13 +536,13 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Explore All Services Button — Centered, High Visibility */}
+          {/* Explore Our Services Button — Centered, High Visibility */}
           <div className="text-center pt-2">
             <Link
-              href="/training-and-therapeutic-counselling/"
+              href="/our-services/"
               className="inline-flex items-center gap-2.5 px-9 py-4 rounded-full bg-forest-900 text-[#FAF7F2] hover:bg-forest-800 transition-all text-sm sm:text-base font-semibold tracking-wide shadow-sm hover:shadow-md group cursor-pointer"
             >
-              <span>Explore All Services</span>
+              <span>Explore Our Services</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="studyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF9F4" />
+      <stop offset="100%" stop-color="#EBE3D3" />
+    </linearGradient>
+    <linearGradient id="lampGlow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FFEBB8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#F8E5C0" stop-opacity="0.05" />
+    </linearGradient>
+    <linearGradient id="deskWood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A3324" />
+      <stop offset="100%" stop-color="#102117" />
+    </linearGradient>
+    <linearGradient id="bookCoverA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A880" />
+      <stop offset="100%" stop-color="#9B7F5A" />
+    </linearGradient>
+    <linearGradient id="bookCoverB" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4B6E57" />
+      <stop offset="100%" stop-color="#324B3B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#studyBg)" rx="16" />
+
+  <!-- Lamp light cone of focus -->
+  <polygon points="115,80 35,210 245,210" fill="url(#lampGlow)" />
+
+  <!-- Study Desk Surface -->
+  <rect x="30" y="210" width="340" height="12" rx="3" fill="url(#deskWood)" />
+  <line x1="30" y1="211" x2="370" y2="211" stroke="#C5A880" stroke-width="1.5" opacity="0.6" />
+
+  <!-- Minimalist Architectural Desk Lamp -->
+  <path d="M 75,210 L 85,210 M 80,210 L 80,110 L 115,80" stroke="#1A3324" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <circle cx="80" cy="110" r="4.5" fill="#C5A880" />
+  <!-- Lamp shade -->
+  <path d="M 105,72 L 132,92 L 118,102 L 95,82 Z" fill="#1A3324" />
+  <circle cx="120" cy="94" r="5" fill="#FFDA73" />
+
+  <!-- Stacked Books on Left -->
+  <!-- Book 1 (bottom) -->
+  <rect x="70" y="196" width="60" height="14" rx="2" fill="url(#bookCoverB)" />
+  <rect x="74" y="198" width="54" height="2" fill="#EAE3D2" opacity="0.8" />
+  <!-- Book 2 (top) -->
+  <rect x="75" y="184" width="52" height="12" rx="2" fill="url(#bookCoverA)" />
+  <rect x="78" y="186" width="46" height="2" fill="#FAF7F2" opacity="0.8" />
+
+  <!-- Open Notebook in Center -->
+  <path d="M 150,208 L 175,198 L 200,208 L 225,198 L 250,208 Z" fill="#FAF8F5" stroke="#D3C7B2" stroke-width="1.2" />
+  <!-- Ruled lines on pages -->
+  <line x1="158" y1="204" x2="192" y2="204" stroke="#C5A880" stroke-width="1" opacity="0.7" />
+  <line x1="208" y1="204" x2="242" y2="204" stroke="#C5A880" stroke-width="1" opacity="0.7" />
+
+  <!-- Pencil / Marker -->
+  <line x1="255" y1="200" x2="275" y2="208" stroke="#C5A880" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Faceless Student Silhouette on Right side -->
+  <circle cx="295" cy="115" r="17" fill="#1A3324" />
+  <path d="M 295,134 C 275,138 260,158 262,185 L 265,210 L 325,210 L 328,185 C 330,158 315,138 295,134 Z" fill="#1A3324" />
+  <!-- Student reading posture leaning slightly forward -->
+  <path d="M 275,160 C 265,175 255,195 245,205" stroke="#1A3324" stroke-width="7" stroke-linecap="round" fill="none" />
+
+  <!-- Sparkles of Learning & Insight -->
+  <g fill="#C5A880">
+    <path d="M 180,120 L 183,128 L 191,131 L 183,134 L 180,142 L 177,134 L 169,131 L 177,128 Z" opacity="0.9" />
+    <circle cx="225" cy="110" r="3" opacity="0.8" />
+    <circle cx="150" cy="140" r="2.5" opacity="0.7" />
+    <circle cx="240" cy="135" r="2" opacity="0.6" />
+  </g>
+</svg>

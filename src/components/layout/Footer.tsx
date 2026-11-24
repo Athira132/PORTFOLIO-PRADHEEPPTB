@@ -129,10 +129,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/training-and-therapeutic-counselling"
+                  href="/our-services"
                   className="text-[#B5C2B9] hover:text-[#FAF7F2] transition-colors"
                 >
-                  Training & Counselling
+                  Our Services
                 </Link>
               </li>
               <li>
@@ -186,10 +186,10 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
-                  href="/training-and-therapeutic-counselling"
+                  href="/our-services"
                   className="text-[#B5C2B9] hover:text-[#FAF7F2] transition-colors"
                 >
-                  Training & Therapeutic Counselling (Pattambi)
+                  Our Services (Training & Counselling)
                 </Link>
               </li>
               <li>

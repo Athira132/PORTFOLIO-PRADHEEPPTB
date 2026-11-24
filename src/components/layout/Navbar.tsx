@@ -14,7 +14,7 @@ interface NavItem {
 const navLinks: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Training & Counselling", href: "/training-and-therapeutic-counselling" },
+  { name: "Our Services", href: "/our-services" },
   { name: "Counselling", href: "/counselling" },
   { name: "Career", href: "/career" },
   { name: "Gallery", href: "/gallery" },

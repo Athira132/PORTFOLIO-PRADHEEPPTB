@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0
     },
     {
-      url: `${baseUrl}/training-and-therapeutic-counselling/`,
+      url: `${baseUrl}/our-services/`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.95

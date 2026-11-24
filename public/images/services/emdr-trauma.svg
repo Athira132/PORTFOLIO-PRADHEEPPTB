@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="emdrBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F6F8" />
+      <stop offset="100%" stop-color="#E2E7EC" />
+    </linearGradient>
+    <linearGradient id="waveBilateralA" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C92A6" />
+      <stop offset="50%" stop-color="#A5BACD" />
+      <stop offset="100%" stop-color="#C5A880" />
+    </linearGradient>
+    <linearGradient id="butterflyGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A880" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#6F889E" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="sereneProfile" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B3325" />
+      <stop offset="100%" stop-color="#0E2117" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#emdrBg)" rx="16" />
+
+  <!-- Bilateral Rhythm Flow Lines (Left to Right Alternating Processing) -->
+  <path d="M 40,90 Q 120,40 200,90 T 360,90" stroke="url(#waveBilateralA)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6" />
+  <path d="M 40,125 Q 120,175 200,125 T 360,125" stroke="url(#waveBilateralA)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8" />
+  <path d="M 40,160 Q 120,110 200,160 T 360,160" stroke="url(#waveBilateralA)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5" stroke-dasharray="4 4" />
+
+  <!-- Calming Aura Circle in Center -->
+  <circle cx="200" cy="125" r="70" fill="url(#butterflyGlow)" opacity="0.4" />
+
+  <!-- Central Faceless Head Silhouette Processing Trauma into Peaceful Stillness -->
+  <circle cx="200" cy="95" r="18" fill="url(#sereneProfile)" />
+  <path d="M 200,115 C 180,118 165,135 166,165 L 168,215 L 232,215 L 234,165 C 235,135 220,118 200,115 Z" fill="url(#sereneProfile)" />
+
+  <!-- Bilateral Stimulation Nodes (Left & Right alternating golden focus spheres) -->
+  <!-- Left Focus Node (Processing past) -->
+  <circle cx="85" cy="125" r="14" fill="#FAF7F2" stroke="#6F889E" stroke-width="2" />
+  <circle cx="85" cy="125" r="6" fill="#6F889E" />
+  <path d="M 85,100 L 85,110 M 85,140 L 85,150 M 60,125 L 70,125 M 100,125 L 110,125" stroke="#6F889E" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+
+  <!-- Right Focus Node (Integrated resolution & peace) -->
+  <circle cx="315" cy="125" r="14" fill="#FAF7F2" stroke="#C5A880" stroke-width="2" />
+  <circle cx="315" cy="125" r="6" fill="#C5A880" />
+  <path d="M 315,100 L 315,110 M 315,140 L 315,150 M 290,125 L 300,125 M 330,125 L 340,125" stroke="#C5A880" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+
+  <!-- Butterfly Hug / Heart Integration Symbol (EMDR signature healing) -->
+  <path d="M 200,150 C 190,140 180,145 185,155 C 190,165 200,172 200,172 C 200,172 210,165 215,155 C 220,145 210,140 200,150 Z" fill="#C5A880" />
+
+  <!-- Particles of Released Tension Transforming into Light -->
+  <circle cx="160" cy="85" r="2.5" fill="#C5A880" opacity="0.8" />
+  <circle cx="240" cy="85" r="3" fill="#C5A880" opacity="0.9" />
+  <circle cx="255" cy="105" r="2" fill="#6F889E" opacity="0.7" />
+  <circle cx="145" cy="105" r="2" fill="#6F889E" opacity="0.7" />
+</svg>

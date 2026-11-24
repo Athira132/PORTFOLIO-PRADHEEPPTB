@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cbtBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF9F4" />
+      <stop offset="100%" stop-color="#ECE5D6" />
+    </linearGradient>
+    <linearGradient id="cbtNodeA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B3828" />
+      <stop offset="100%" stop-color="#102218" />
+    </linearGradient>
+    <linearGradient id="cbtNodeB" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4C6E59" />
+      <stop offset="100%" stop-color="#30493A" />
+    </linearGradient>
+    <linearGradient id="cbtNodeC" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A880" />
+      <stop offset="100%" stop-color="#9A7B54" />
+    </linearGradient>
+    <linearGradient id="flowGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFC8A5" />
+      <stop offset="100%" stop-color="#C5A880" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#cbtBg)" rx="16" />
+
+  <!-- Cognitive Restructuring Flow: Tangled Line into Harmonious Curve -->
+  <!-- Left: Tangled loop of distress (becoming smooth) -->
+  <path d="M 50,125 C 70,80 90,160 110,100 C 120,70 140,150 155,125" stroke="#9A7B54" stroke-width="1.8" fill="none" opacity="0.4" stroke-linecap="round" />
+  <!-- Transition to clear golden path -->
+  <path d="M 155,125 C 180,100 220,100 245,125 T 350,125" stroke="url(#flowGold)" stroke-width="2.5" fill="none" opacity="0.75" />
+
+  <!-- CBT Triangle / Triad of Thoughts, Emotions, Behavior -->
+  <!-- Connecting Harmonic Flow Lines -->
+  <path d="M 200,68 L 270,180 L 130,180 Z" stroke="url(#flowGold)" stroke-width="2.2" stroke-linejoin="round" fill="none" stroke-dasharray="5 5" />
+
+  <!-- Continuous Circulation Arrows -->
+  <path d="M 205,75 Q 245,120 260,170" stroke="#C5A880" stroke-width="2" fill="none" stroke-linecap="round" />
+  <polygon points="261,173 255,165 264,163" fill="#C5A880" />
+
+  <path d="M 255,183 Q 200,195 145,183" stroke="#C5A880" stroke-width="2" fill="none" stroke-linecap="round" />
+  <polygon points="142,183 150,180 149,189" fill="#C5A880" />
+
+  <path d="M 140,170 Q 155,120 195,75" stroke="#C5A880" stroke-width="2" fill="none" stroke-linecap="round" />
+  <polygon points="196,73 194,82 188,76" fill="#C5A880" />
+
+  <!-- Node 1: Thoughts (Apex) -->
+  <circle cx="200" cy="65" r="24" fill="url(#cbtNodeA)" />
+  <!-- Thought icon inside -->
+  <circle cx="196" cy="62" r="5" fill="#FAF7F2" opacity="0.8" />
+  <circle cx="205" cy="64" r="3.5" fill="#C5A880" />
+  <text x="200" y="103" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#1B3828" letter-spacing="0.05em">THOUGHTS</text>
+
+  <!-- Node 2: Behavior (Bottom Right) -->
+  <circle cx="270" cy="180" r="22" fill="url(#cbtNodeB)" />
+  <path d="M 264,180 L 270,174 L 276,180 M 270,175 L 270,186" stroke="#FAF7F2" stroke-width="2" stroke-linecap="round" fill="none" />
+  <text x="270" y="216" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#30493A" letter-spacing="0.05em">BEHAVIOR</text>
+
+  <!-- Node 3: Emotions (Bottom Left) -->
+  <circle cx="130" cy="180" r="22" fill="url(#cbtNodeC)" />
+  <path d="M 126,177 C 124,173 128,171 130,174 C 132,171 136,173 134,177 L 130,182 Z" fill="#FFF" />
+  <text x="130" y="216" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#84663E" letter-spacing="0.05em">EMOTIONS</text>
+
+  <!-- Central Insight Core -->
+  <circle cx="200" cy="142" r="8" fill="#FFF" stroke="#C5A880" stroke-width="2" />
+  <circle cx="200" cy="142" r="3" fill="#C5A880" />
+</svg>

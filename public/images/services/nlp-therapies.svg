@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="nlpThBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111814" />
+      <stop offset="60%" stop-color="#15261C" />
+      <stop offset="100%" stop-color="#0E1712" />
+    </linearGradient>
+    <radialGradient id="nlpThHorizon" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#E6D5B8" stop-opacity="0.35" />
+      <stop offset="40%" stop-color="#A3B899" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#111814" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="nlpThGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E6D5B8" />
+      <stop offset="100%" stop-color="#C5A880" />
+    </linearGradient>
+    <linearGradient id="nlpThSage" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3D5A45" />
+      <stop offset="100%" stop-color="#A3B899" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="260" fill="url(#nlpThBg)" />
+
+  <!-- Horizon Radiant Glow -->
+  <circle cx="200" cy="100" r="90" fill="url(#nlpThHorizon)" />
+
+  <!-- Perspective Timeline Grid (Past -> Present -> Future) -->
+  <line x1="200" y1="100" x2="30" y2="250" stroke="#3D5A45" stroke-width="1.2" stroke-opacity="0.5" />
+  <line x1="200" y1="100" x2="120" y2="250" stroke="#88A07D" stroke-width="1.2" stroke-opacity="0.6" />
+  <line x1="200" y1="100" x2="200" y2="250" stroke="url(#nlpThGold)" stroke-width="2" stroke-dasharray="6 4" stroke-opacity="0.8" />
+  <line x1="200" y1="100" x2="280" y2="250" stroke="#88A07D" stroke-width="1.2" stroke-opacity="0.6" />
+  <line x1="200" y1="100" x2="370" y2="250" stroke="#3D5A45" stroke-width="1.2" stroke-opacity="0.5" />
+
+  <!-- Horizontal Timeline Milestone Rungs -->
+  <path d="M175 125 L225 125" stroke="#A3B899" stroke-width="1" stroke-opacity="0.4" />
+  <path d="M150 155 L250 155" stroke="#A3B899" stroke-width="1.2" stroke-opacity="0.5" />
+  <path d="M115 190 L285 190" stroke="#C5A880" stroke-width="1.5" stroke-opacity="0.6" />
+  <path d="M70 230 L330 230" stroke="#E6D5B8" stroke-width="1.8" stroke-opacity="0.7" />
+
+  <!-- Breakthrough Sun / Horizon Portal -->
+  <circle cx="200" cy="100" r="28" stroke="url(#nlpThGold)" stroke-width="1.5" stroke-dasharray="4 3" />
+  <circle cx="200" cy="100" r="16" fill="#C5A880" fill-opacity="0.25" stroke="#E6D5B8" stroke-width="1.5" />
+  <circle cx="200" cy="100" r="5" fill="#FAF7F2" />
+
+  <!-- Neuro Reframe Network Arcs above Horizon -->
+  <path d="M120 85 C150 60, 250 60, 280 85" stroke="#A3B899" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 3" opacity="0.6" />
+  <path d="M140 65 C170 45, 230 45, 260 65" stroke="url(#nlpThGold)" stroke-width="1.2" opacity="0.7" />
+
+  <!-- Reframe Nodes -->
+  <circle cx="120" cy="85" r="4" fill="#A3B899" />
+  <circle cx="140" cy="65" r="3" fill="#C5A880" />
+  <circle cx="260" cy="65" r="3" fill="#C5A880" />
+  <circle cx="280" cy="85" r="4" fill="#A3B899" />
+
+  <!-- Ascending Silhouette Moving Toward Future Clarity -->
+  <g transform="translate(190, 155)">
+    <!-- Head -->
+    <circle cx="10" cy="0" r="8" fill="url(#nlpThGold)" />
+    <!-- Torso stepping forward -->
+    <path d="M6 10 C3 16, 2 30, 2 48 L18 48 C18 30, 17 16, 14 10 Z" fill="#E6D5B8" opacity="0.9" />
+    <!-- Stepping legs -->
+    <path d="M4 48 L-1 70" stroke="#C5A880" stroke-width="3" stroke-linecap="round" />
+    <path d="M16 48 L22 68" stroke="#E6D5B8" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Guiding Light Particles -->
+  <circle cx="70" cy="60" r="1.5" fill="#E6D5B8" opacity="0.6" />
+  <circle cx="330" cy="70" r="1.5" fill="#E6D5B8" opacity="0.6" />
+  <circle cx="200" cy="35" r="2" fill="#FAF7F2" opacity="0.8" />
+</svg>

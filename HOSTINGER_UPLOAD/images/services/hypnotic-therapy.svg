@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="htBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111814" />
+      <stop offset="50%" stop-color="#16251D" />
+      <stop offset="100%" stop-color="#0E1511" />
+    </linearGradient>
+    <radialGradient id="htCoreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C5A880" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#88A07D" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#111814" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="htGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E6D5B8" />
+      <stop offset="100%" stop-color="#C5A880" />
+    </linearGradient>
+    <linearGradient id="htSage" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A3B899" />
+      <stop offset="100%" stop-color="#3D5A45" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="260" fill="url(#htBg)" />
+
+  <!-- Harmonic Focus Circles -->
+  <circle cx="200" cy="130" r="110" stroke="#3D5A45" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="4 4" />
+  <circle cx="200" cy="130" r="85" stroke="#88A07D" stroke-width="1.2" stroke-opacity="0.35" />
+  <circle cx="200" cy="130" r="60" stroke="#C5A880" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="6 3" />
+  <circle cx="200" cy="130" r="38" stroke="#E6D5B8" stroke-width="1.5" stroke-opacity="0.6" />
+  <circle cx="200" cy="130" r="18" fill="url(#htCoreGlow)" />
+  <circle cx="200" cy="130" r="6" fill="#E6D5B8" opacity="0.85" />
+
+  <!-- Flowing Hypnotic Waves (Subconscious Cadence) -->
+  <path d="M50 140 C100 110, 150 150, 200 130 C250 110, 300 150, 350 120" stroke="url(#htSage)" stroke-width="2" stroke-linecap="round" opacity="0.45" />
+  <path d="M70 160 C120 130, 160 170, 200 145 C240 120, 280 160, 330 135" stroke="url(#htGold)" stroke-width="1.5" stroke-linecap="round" opacity="0.5" />
+  <path d="M90 115 C130 95, 170 125, 200 110 C230 95, 270 125, 310 105" stroke="#A3B899" stroke-width="1" stroke-dasharray="3 3" opacity="0.35" />
+
+  <!-- Therapeutic Lotus Unfolding at Base of Circle -->
+  <g transform="translate(200, 175)">
+    <!-- Central petal -->
+    <path d="M0 -30 C-8 -15, -8 0, 0 8 C8 0, 8 -15, 0 -30 Z" fill="url(#htGold)" opacity="0.8" />
+    <!-- Left petal 1 -->
+    <path d="M-4 -20 C-18 -10, -20 2, -3 8 C-10 0, -10 -12, -4 -20 Z" fill="#A3B899" opacity="0.7" />
+    <!-- Right petal 1 -->
+    <path d="M4 -20 C18 -10, 20 2, 3 8 C10 0, 10 -12, 4 -20 Z" fill="#A3B899" opacity="0.7" />
+    <!-- Left outer petal -->
+    <path d="M-8 -10 C-26 -2, -26 10, -5 10 C-15 4, -18 -4, -8 -10 Z" fill="#3D5A45" opacity="0.6" />
+    <!-- Right outer petal -->
+    <path d="M8 -10 C26 -2,26 10, 5 10 C15 4, 18 -4, 8 -10 Z" fill="#3D5A45" opacity="0.6" />
+  </g>
+
+  <!-- Side Faceless Silhouette Resting in Serene Contemplation -->
+  <path d="M75 220 C75 190, 85 178, 100 165 C96 155, 96 140, 104 130 C112 120, 126 120, 134 128 C138 132, 140 140, 138 148 C144 153, 148 160, 148 172 C150 185, 155 198, 160 220 Z" fill="#1C2D23" opacity="0.65" />
+  <circle cx="118" cy="138" r="14" fill="#A3B899" opacity="0.25" />
+
+  <!-- Calming Aura / Star Accents -->
+  <circle cx="120" cy="70" r="1.5" fill="#E6D5B8" opacity="0.6" />
+  <circle cx="280" cy="65" r="2" fill="#E6D5B8" opacity="0.7" />
+  <circle cx="330" cy="170" r="1.5" fill="#A3B899" opacity="0.5" />
+  <circle cx="80" cy="100" r="1.5" fill="#A3B899" opacity="0.4" />
+</svg>

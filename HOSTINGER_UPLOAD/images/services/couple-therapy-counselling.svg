@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ctcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF8F4" />
+      <stop offset="100%" stop-color="#EBE3D3" />
+    </linearGradient>
+    <linearGradient id="heartArch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D5C5A8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#C5A880" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="pLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#142C1E" />
+      <stop offset="100%" stop-color="#091710" />
+    </linearGradient>
+    <linearGradient id="pRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A5844" />
+      <stop offset="100%" stop-color="#23382B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#ctcBg)" rx="16" />
+
+  <!-- Protective Embracing Heart/Oval Halo -->
+  <path d="M 200,60 C 260,15 330,70 330,135 C 330,185 200,230 200,230 C 200,230 70,185 70,135 C 70,70 140,15 200,60 Z" fill="url(#heartArch)" opacity="0.35" />
+
+  <!-- Safe Couch / Grounding Bench -->
+  <path d="M 110,215 Q 200,210 290,215" stroke="#C5A880" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7" />
+
+  <!-- Left Partner Silhouette (Leaning in, speaking gently with open heart) -->
+  <circle cx="155" cy="108" r="15" fill="url(#pLeft)" />
+  <path d="M 155,125 C 140,128 132,145 134,175 L 138,215 L 155,215 L 157,178 L 168,178 L 172,215 L 186,215 L 182,165 C 180,145 170,128 155,125 Z" fill="url(#pLeft)" />
+  <!-- Arm extended toward center -->
+  <path d="M 165,145 C 175,155 185,160 196,162" stroke="url(#pLeft)" stroke-width="6" stroke-linecap="round" fill="none" />
+
+  <!-- Right Partner Silhouette (Attentive, compassionate listening posture) -->
+  <circle cx="245" cy="108" r="15" fill="url(#pRight)" />
+  <path d="M 245,125 C 260,128 268,145 266,175 L 262,215 L 245,215 L 243,178 L 232,178 L 228,215 L 214,215 L 218,165 C 220,145 230,128 245,125 Z" fill="url(#pRight)" />
+  <!-- Arm meeting in center -->
+  <path d="M 235,145 C 225,155 215,160 204,162" stroke="url(#pRight)" stroke-width="6" stroke-linecap="round" fill="none" />
+
+  <!-- Hands Meeting / Touchpoint of Emotional Healing -->
+  <circle cx="200" cy="162" r="5" fill="#C5A880" />
+  <circle cx="200" cy="162" r="10" fill="none" stroke="#C5A880" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.8" />
+
+  <!-- Empathetic Resonance Waves between them -->
+  <path d="M 175,115 Q 200,98 225,115" stroke="#C5A880" stroke-width="2" stroke-linecap="round" fill="none" />
+  <path d="M 180,132 Q 200,120 220,132" stroke="#C5A880" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7" />
+
+  <!-- Healing Olive Leaves framing bottom -->
+  <path d="M 60,205 Q 80,180 100,170" stroke="#7E9680" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6" />
+  <circle cx="100" cy="170" r="2.5" fill="#7E9680" opacity="0.6" />
+  <path d="M 340,205 Q 320,180 300,170" stroke="#7E9680" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6" />
+  <circle cx="300" cy="170" r="2.5" fill="#7E9680" opacity="0.6" />
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="medBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111814" />
+      <stop offset="50%" stop-color="#182A1F" />
+      <stop offset="100%" stop-color="#0E1611" />
+    </linearGradient>
+    <radialGradient id="medAura" cx="50%" cy="48%" r="50%">
+      <stop offset="0%" stop-color="#E6D5B8" stop-opacity="0.3" />
+      <stop offset="45%" stop-color="#88A07D" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#111814" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="medGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E6D5B8" />
+      <stop offset="100%" stop-color="#C5A880" />
+    </linearGradient>
+    <linearGradient id="medSage" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3D5A45" />
+      <stop offset="100%" stop-color="#A3B899" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="260" fill="url(#medBg)" />
+
+  <!-- Breathing Aura Glow -->
+  <circle cx="200" cy="125" r="95" fill="url(#medAura)" />
+
+  <!-- Harmonic Breathing Cycles (Concentric Circles) -->
+  <circle cx="200" cy="125" r="85" stroke="#3D5A45" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="4 4" />
+  <circle cx="200" cy="125" r="65" stroke="#88A07D" stroke-width="1.2" stroke-opacity="0.5" />
+  <circle cx="200" cy="125" r="45" stroke="url(#medGold)" stroke-width="1.2" stroke-opacity="0.65" stroke-dasharray="6 3" />
+
+  <!-- Floating Botanical / Zen Leaf Elements -->
+  <g transform="translate(100, 90)">
+    <path d="M0 0 C-15 10, -25 30, -18 45 C-12 30, 5 15, 0 0 Z" fill="#A3B899" opacity="0.35" />
+    <path d="M-6 8 C-18 20, -20 32, -18 40" stroke="#3D5A45" stroke-width="0.8" opacity="0.5" />
+  </g>
+  <g transform="translate(300, 90)">
+    <path d="M0 0 C15 10, 25 30, 18 45 C12 30, -5 15, 0 0 Z" fill="#A3B899" opacity="0.35" />
+    <path d="M6 8 C18 20, 20 32, 18 40" stroke="#3D5A45" stroke-width="0.8" opacity="0.5" />
+  </g>
+
+  <!-- Grounded Zen Pedestal / Calming Waves -->
+  <path d="M120 205 C160 195, 240 195, 280 205" stroke="#88A07D" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+  <path d="M140 215 C175 208, 225 208, 260 215" stroke="url(#medGold)" stroke-width="1.5" stroke-linecap="round" opacity="0.5" />
+  <path d="M165 223 C185 218, 215 218, 235 223" stroke="#3D5A45" stroke-width="1.2" stroke-linecap="round" opacity="0.4" />
+
+  <!-- Meditating Faceless Silhouette in Lotus Pose -->
+  <g transform="translate(200, 155)">
+    <!-- Head in Serene Stillness -->
+    <circle cx="0" cy="-60" r="13" fill="url(#medGold)" />
+
+    <!-- Radiant Crown Light -->
+    <circle cx="0" cy="-60" r="18" stroke="#E6D5B8" stroke-width="1" stroke-dasharray="2 2" opacity="0.6" />
+
+    <!-- Neck and Shoulders -->
+    <path d="M-4 -47 C-15 -42, -26 -30, -28 -15 L-24 5 C-24 5, -28 12, -35 15 C-42 18, -45 25, -40 28 C-35 30, -10 25, 0 25 C10 25, 35 30, 40 28 C45 25, 42 18, 35 15 C28 12, 24 5, 24 5 L28 -15 C26 -30, 15 -42, 4 -47 Z" fill="#E6D5B8" opacity="0.95" />
+
+    <!-- Folded Legs Lotus Base -->
+    <path d="M-45 28 C-50 34, -40 40, -25 40 C-10 40, -5 32, 0 32 C5 32, 10 40, 25 40 C40 40, 50 34, 45 28 Z" fill="#C5A880" opacity="0.9" />
+
+    <!-- Hands in Dhyana Mudra / Heart Core -->
+    <circle cx="0" cy="-5" r="4" fill="#FAF7F2" opacity="0.8" />
+  </g>
+
+  <!-- Ambient Light Points -->
+  <circle cx="200" cy="55" r="2" fill="#FAF7F2" opacity="0.8" />
+  <circle cx="150" cy="70" r="1.5" fill="#E6D5B8" opacity="0.6" />
+  <circle cx="250" cy="70" r="1.5" fill="#E6D5B8" opacity="0.6" />
+  <circle cx="90" cy="160" r="1.5" fill="#A3B899" opacity="0.5" />
+  <circle cx="310" cy="160" r="1.5" fill="#A3B899" opacity="0.5" />
+</svg>
