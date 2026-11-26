@@ -92,9 +92,9 @@ export const metadata: Metadata = {
     siteName: "The Light Training and Counselling Centre",
     images: [
       {
-        url: "/images/gallery/gallery-03.jpg",
-        width: 1200,
-        height: 800,
+        url: "/images/services-hero.webp",
+        width: 1086,
+        height: 1448,
         alt: "Pradheep Pattambi - Training Programs and Therapeutic Counselling in Pattambi, Kerala"
       }
     ],
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
     title: "Training Programs & Therapeutic Counselling in Pattambi | The Light",
     description:
       "Explore training programs and therapeutic counselling in Pattambi, Kerala. Discover parenting, NLP, stress management, study skills and counselling services at The Light Training and Counselling Centre.",
-    images: ["/images/gallery/gallery-03.jpg"]
+    images: ["/images/services-hero.webp"]
   }
 };
 
@@ -197,12 +197,12 @@ export default function OurServicesPage() {
       <section className="py-16 sm:py-24 bg-[#111814] border-b border-[#233127]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            {/* Left: Circular Photo Frame — Exactly 3rd Gallery Photo (gallery-03.jpg) */}
+            {/* Left: Circular Photo Frame — Supplied ImgBB Hero Image */}
             <div className="lg:col-span-5 flex justify-center lg:justify-start">
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-[#1A241E] border-2 border-[#C5A880] shadow-xl flex items-center justify-center overflow-hidden shrink-0">
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
-                    src="/images/gallery/gallery-03.jpg"
+                    src="/images/services-hero.webp"
                     alt="Pradheep Pattambi - Training Programs and Therapeutic Counselling in Pattambi, Kerala"
                     fill
                     priority

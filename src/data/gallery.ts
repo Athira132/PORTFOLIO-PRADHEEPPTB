@@ -205,6 +205,33 @@ export const galleryData: GalleryItem[] = [
     description: "Counselling and guidance team addressing career, family, premarital, teenage, and couple counselling.",
     featured: false,
     objectPosition: "center"
+  },
+  {
+    id: "gal-22",
+    title: "One Day Healing Camp — Revival Workshop",
+    category: "Workshops & Speaking",
+    imageSrc: "/images/gallery/gallery-22.jpg",
+    description: "Pradheep Pattambi addressing participants at the Revival Healing Camp on inner healing and personal transformation.",
+    featured: false,
+    objectPosition: "center 20%"
+  },
+  {
+    id: "gal-23",
+    title: "Revival Healing Camp — Interactive Seminar",
+    category: "Workshops & Speaking",
+    imageSrc: "/images/gallery/gallery-23.jpg",
+    description: "Interactive healing and wellness seminar guiding attendees through practical mindfulness and emotional resilience.",
+    featured: false,
+    objectPosition: "center 40%"
+  },
+  {
+    id: "gal-24",
+    title: "Community Wellness & Transformation Gathering",
+    category: "Personal Growth",
+    imageSrc: "/images/gallery/gallery-24.jpg",
+    description: "Engaged audience and community members participating in a transformative psychological wellness session.",
+    featured: false,
+    objectPosition: "center"
   }
 ];
 
