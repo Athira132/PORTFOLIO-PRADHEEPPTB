@@ -435,7 +435,7 @@ export default function HomePage() {
               Our Services
             </h2>
             <p className="text-sm sm:text-base text-muted-text leading-relaxed font-sans max-w-2xl mx-auto">
-              Empowering personal transformation and holistic mental wellness through specialized training programs and clinical counselling modalities in Pattambi.
+              Empowering personal transformation and holistic mental wellness through specialized training programs in Kerala and evidence-based therapeutic counselling in Pattambi.
             </p>
           </div>
 
@@ -453,7 +453,7 @@ export default function HomePage() {
                       Training Sessions
                     </h3>
                     <p className="text-xs text-olive-700 font-semibold uppercase tracking-wider">
-                      Interactive Skill &amp; Mindset Programs
+                      Training Programs in Kerala
                     </p>
                   </div>
                 </div>
@@ -500,7 +500,7 @@ export default function HomePage() {
                       Therapeutical Counselling
                     </h3>
                     <p className="text-xs text-olive-700 font-semibold uppercase tracking-wider">
-                      Clinical &amp; Evidence-Based Healing
+                      Therapeutic Counselling in Pattambi
                     </p>
                   </div>
                 </div>

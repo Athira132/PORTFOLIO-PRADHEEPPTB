@@ -21,23 +21,54 @@ import {
 } from "@/data/trainingCounsellingData";
 
 export const metadata: Metadata = {
-  title: "Our Services | Training & Therapeutic Counselling in Pattambi",
+  title: "Training Programs & Therapeutic Counselling in Pattambi | The Light",
   description:
-    "Discover our training programs and therapeutic counselling services in Pattambi by Pradheep Pattambi. Specialized personal development, NLP, and psychological healing in Kerala.",
+    "Explore training programs and therapeutic counselling in Pattambi, Kerala. Discover parenting, NLP, stress management, study skills and counselling services at The Light Training and Counselling Centre.",
   keywords: [
-    "Our Services Pradheep Pattambi",
-    "Psychologist in Pattambi",
-    "Training and Counselling in Pattambi",
-    "NLP Training in Kerala",
+    // Main SEO Focus
+    "Training Programs in Kerala",
+    "Therapeutic Counselling in Kerala",
+    "Training Programs in Pattambi",
     "Therapeutic Counselling in Pattambi",
-    "Counselling Centre in Pattambi",
-    "CBT in Pattambi",
-    "EMDR Therapy Kerala",
-    "DBT Therapy Palakkad",
-    "Hypnosis Training Kerala",
-    "Pre-marital Counselling Pattambi",
-    "Couple Therapy Palakkad",
-    "Stress Management Pattambi"
+    // Training Sessions Keywords
+    "Parenting Classes in Kerala",
+    "Parenting Skills Training",
+    "Couple Relationship Training",
+    "Relationship Skills Training",
+    "Pre-Marital Counselling in Kerala",
+    "Marriage Preparation Counselling",
+    "Stress Management Training in Kerala",
+    "Study Skills Training in Kerala",
+    "Study Skills for Students",
+    "Hypnosis Training in Kerala",
+    "Addiction Awareness Training",
+    "NLP Training in Kerala",
+    "Neuro Linguistic Programming Training",
+    "Personal Development Training",
+    // Therapeutic Counselling Keywords
+    "Cognitive Behavioural Therapy in Kerala",
+    "CBT Counselling",
+    "Dialectical Behaviour Therapy",
+    "DBT Counselling",
+    "EMDR Therapy in Kerala",
+    "Trauma Counselling",
+    "Couples Counselling in Kerala",
+    "Relationship Counselling",
+    "Sex Therapy in Kerala",
+    "Psychosexual Wellness",
+    "Hypnotherapy in Kerala",
+    "Clinical Hypnotherapy",
+    "NLP Therapy in Kerala",
+    "Meditation Classes in Kerala",
+    "Guided Meditation",
+    "Mindfulness Meditation",
+    // Location Focus
+    "Psychologist in Pattambi",
+    "Psychologist in Palakkad",
+    "Counselling in Shoranur",
+    "Counselling in Ottapalam",
+    "The Light Training and Counselling Centre",
+    "Pradheep Pattambi"
   ],
   alternates: {
     canonical: "https://pradheeppattambi.com/our-services/"
@@ -54,19 +85,28 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: "Our Services | Training & Therapeutic Counselling in Pattambi",
+    title: "Training Programs & Therapeutic Counselling in Pattambi | The Light",
     description:
-      "Discover our training programs and therapeutic counselling services in Pattambi by Pradheep Pattambi. Specialized personal development, NLP, and psychological healing in Kerala.",
+      "Explore training programs and therapeutic counselling in Pattambi, Kerala. Discover parenting, NLP, stress management, study skills and counselling services at The Light Training and Counselling Centre.",
     url: "https://pradheeppattambi.com/our-services/",
     siteName: "The Light Training and Counselling Centre",
+    images: [
+      {
+        url: "/images/gallery/gallery-03.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Pradheep Pattambi - Training Programs and Therapeutic Counselling in Pattambi, Kerala"
+      }
+    ],
     locale: "en_US",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Services | Training & Therapeutic Counselling in Pattambi",
+    title: "Training Programs & Therapeutic Counselling in Pattambi | The Light",
     description:
-      "Discover our training programs and therapeutic counselling services in Pattambi by Pradheep Pattambi."
+      "Explore training programs and therapeutic counselling in Pattambi, Kerala. Discover parenting, NLP, stress management, study skills and counselling services at The Light Training and Counselling Centre.",
+    images: ["/images/gallery/gallery-03.jpg"]
   }
 };
 
@@ -93,22 +133,36 @@ const ourServicesSchema = {
     {
       "@type": "MedicalWebPage",
       "@id": "https://pradheeppattambi.com/our-services/#webpage",
-      "name": "Our Services | Training & Therapeutic Counselling in Pattambi",
+      "name": "Training Programs & Therapeutic Counselling in Pattambi | The Light",
       "description":
-        "Discover our training programs and therapeutic counselling services designed to support personal growth, learning and well-being in Pattambi, Kerala.",
+        "Explore training programs and therapeutic counselling in Pattambi, Kerala. Discover parenting, NLP, stress management, study skills and counselling services at The Light Training and Counselling Centre.",
       "url": "https://pradheeppattambi.com/our-services/",
       "provider": {
-        "@type": "Person",
-        "name": "Pradheep Pattambi",
-        "jobTitle": "Psychologist, Therapeutic Healer & NLP Trainer",
+        "@type": "LocalBusiness",
+        "@id": "https://pradheeppattambi.com/#service",
+        "name": "The Light Training and Counselling Centre",
         "telephone": "+919567654880",
-        "url": "https://pradheeppattambi.com/"
+        "url": "https://pradheeppattambi.com/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "The Light Training and Counselling Centre, Sree Nilayam, Umikkunnu",
+          "addressLocality": "Pattambi",
+          "addressRegion": "Palakkad District, Kerala",
+          "postalCode": "679303",
+          "addressCountry": "IN"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Pradheep Pattambi",
+          "alternateName": "Pradheep N.V.",
+          "jobTitle": "Psychologist, Therapeutic Healer, NLP Grand Master, Certified Hypnotist & Trainer"
+        }
       }
     }
   ]
 };
 
-// Map service IDs to vector illustration paths
+// Map service IDs to vector illustration covers
 const trainingImageMap: Record<string, string> = {
   parenting: "/images/services/parenting.svg",
   "couple-therapy-training": "/images/services/couple-therapy-training.svg",
@@ -137,65 +191,84 @@ export default function OurServicesPage() {
       <JsonLd data={ourServicesSchema} />
 
       {/* ========================================================================= */}
-      {/* 1. HERO BANNER — SOLID DARK GREEN THEME MATCHING OTHER LANDING PAGES      */}
+      {/* 1. HERO BANNER — CIRCULAR HERO IMAGE (3RD GALLERY PHOTO) ON LEFT,          */}
+      {/*    EDITORIAL TYPOGRAPHY ON RIGHT (MATCHES COUNSELLING/CAREER PAGES)        */}
       {/* ========================================================================= */}
-      <section className="relative py-16 sm:py-20 lg:py-24 bg-[#111814] border-b border-[#233127] text-[#FAF7F2] overflow-hidden">
-        {/* Subtle decorative vector geometry */}
-        <div className="absolute inset-0 pointer-events-none opacity-20">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-[#C5A880]/30" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-[#A3B899]/20" />
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center space-y-5">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1C2B22] border border-[#375240] shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-[#C5A880]" />
-              <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#A3B899]">
-                THE LIGHT TRAINING &amp; COUNSELLING CENTRE &bull; PATTAMBI
-              </span>
+      <section className="py-16 sm:py-24 bg-[#111814] border-b border-[#233127]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {/* Left: Circular Photo Frame — Exactly 3rd Gallery Photo (gallery-03.jpg) */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-start">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[360px] lg:h-[360px] xl:w-[390px] xl:h-[390px] rounded-full bg-[#1A241E] border-2 border-[#C5A880] shadow-xl flex items-center justify-center overflow-hidden shrink-0">
+                <div className="relative w-full h-full rounded-full overflow-hidden">
+                  <Image
+                    src="/images/gallery/gallery-03.jpg"
+                    alt="Pradheep Pattambi - Training Programs and Therapeutic Counselling in Pattambi, Kerala"
+                    fill
+                    priority
+                    className="object-cover object-[center_15%] scale-105"
+                    sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 390px"
+                  />
+                </div>
+              </div>
             </div>
 
-            {/* Main Page Heading */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#FAF7F2] leading-tight">
-              Our Services
-            </h1>
+            {/* Right: Editorial Typography & Actions */}
+            <div className="lg:col-span-7 space-y-5 text-left">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C2B22] border border-[#375240] w-fit">
+                <span className="w-2 h-2 rounded-full bg-[#C5A880]" />
+                <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#A3B899]">
+                  THE LIGHT TRAINING &amp; COUNSELLING CENTRE &bull; PATTAMBI
+                </span>
+              </div>
 
-            {/* Supporting Text */}
-            <p className="text-base sm:text-lg lg:text-xl text-[#D6CEBE] max-w-2xl mx-auto leading-relaxed font-sans">
-              Discover our training programs and therapeutic counselling services designed to support personal growth, learning and well-being.
-            </p>
+              {/* Main Page Heading — Visible H1 */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#FAF7F2] font-bold tracking-tight leading-[1.1]">
+                Our Services
+              </h1>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-              <Link
-                href="/contact"
-                data-booking-trigger="true"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] transition-all text-sm sm:text-base font-bold tracking-wide shadow-sm cursor-pointer"
-              >
-                <span>Book a Consultation</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Pradheep Pattambi, I would like to enquire about your services.")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-[#D8CCA8]/50 text-[#FAF7F2] bg-white/5 hover:bg-white/10 transition-colors text-sm sm:text-base font-medium tracking-wide"
-              >
-                <MessageCircle className="w-4 h-4 text-[#25D366]" />
-                <span>Chat on WhatsApp</span>
-              </a>
+              {/* Focus Subheading */}
+              <p className="text-lg sm:text-xl font-medium text-[#C5A880]">
+                Training Programs &amp; Therapeutic Counselling in Pattambi, Kerala
+              </p>
+
+              {/* Page Introduction incorporating Primary Keyword Focus */}
+              <p className="text-[#D6CEBE] text-base sm:text-lg max-w-2xl leading-relaxed font-sans">
+                Discover our training programs and therapeutic counselling services designed to support personal growth, learning and well-being. At The Light Training and Counselling Centre in Pattambi, Pradheep Pattambi provides professional guidance across Palakkad, Shoranur, Ottapalam, and Kerala.
+              </p>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center gap-3.5 pt-2">
+                <Link
+                  href="/contact"
+                  data-booking-trigger="true"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#C5A880] text-[#111814] hover:bg-[#D4BC96] transition-all text-sm sm:text-base font-bold tracking-wide shadow-sm group cursor-pointer"
+                >
+                  <span>Book a Consultation</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <a
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Pradheep Pattambi, I would like to enquire about your training programs and therapeutic counselling services.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-[#D8CCA8]/50 text-[#FAF7F2] bg-white/5 hover:bg-white/10 transition-colors text-sm sm:text-base font-medium tracking-wide"
+                >
+                  <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. SECTION 1: OUR TRAINING SESSIONS                                       */}
+      {/* 2. SECTION 1: OUR TRAINING SESSIONS (H2)                                  */}
       {/* ========================================================================= */}
       <section className="py-16 sm:py-20 lg:py-24 bg-[#FFFFFF] border-b border-[#EAE2D3]/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          {/* Section Heading */}
+          {/* Section Heading Hierarchy: H2 */}
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50">
               <span className="w-2 h-2 rounded-full bg-olive-600" />
@@ -207,7 +280,7 @@ export default function OurServicesPage() {
               Our Training Sessions
             </h2>
             <p className="text-sm sm:text-base text-muted-text leading-relaxed font-sans max-w-2xl mx-auto">
-              Interactive, structured developmental programs designed to build resilience, cultivate peak learning habits, and empower families and individuals.
+              Interactive, structured developmental workshops and training programs in Kerala designed to cultivate resilience, peak learning habits, and harmonious family relationships.
             </p>
           </div>
 
@@ -227,7 +300,7 @@ export default function OurServicesPage() {
                     <div className="relative w-full aspect-[16/10] bg-[#111814] overflow-hidden">
                       <Image
                         src={imageSrc}
-                        alt={`${item.name} Training Session - Pradheep Pattambi`}
+                        alt={`${item.name} - ${item.primaryKeyword} - Pradheep Pattambi`}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -239,10 +312,13 @@ export default function OurServicesPage() {
                       </div>
                     </div>
 
-                    {/* Card Content */}
+                    {/* Card Content with Descriptive H3 Heading */}
                     <div className="p-5 sm:p-6 space-y-2.5">
-                      <h3 className="text-lg sm:text-xl font-bold text-forest-950 tracking-tight group-hover:text-forest-800 transition-colors">
-                        {item.name}
+                      <h3 className="text-base sm:text-lg font-bold text-forest-950 tracking-tight group-hover:text-forest-800 transition-colors leading-snug">
+                        <span className="text-lg sm:text-xl font-bold text-forest-950 block">{item.name}</span>
+                        <span className="text-xs sm:text-[13px] font-semibold text-olive-800 block mt-1">
+                          {item.primaryKeyword}
+                        </span>
                       </h3>
                       <p className="text-xs sm:text-sm text-muted-text font-sans leading-relaxed">
                         {item.brief}
@@ -270,11 +346,11 @@ export default function OurServicesPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. SECTION 2: THERAPEUTIC COUNSELLING                                     */}
+      {/* 3. SECTION 2: THERAPEUTIC COUNSELLING (H2)                                */}
       {/* ========================================================================= */}
       <section className="py-16 sm:py-20 lg:py-24 bg-[#FAFAF8] border-b border-[#EAE2D3]/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          {/* Section Heading */}
+          {/* Section Heading Hierarchy: H2 */}
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1EA] border border-[#D8CCA8]/50">
               <span className="w-2 h-2 rounded-full bg-olive-600" />
@@ -286,7 +362,7 @@ export default function OurServicesPage() {
               Therapeutic Counselling
             </h2>
             <p className="text-sm sm:text-base text-muted-text leading-relaxed font-sans max-w-2xl mx-auto">
-              Confidential, evidence-based psychological therapies to resolve trauma, emotional distress, psychosexual concerns, and relationship disharmony.
+              Confidential, evidence-based therapeutic counselling in Pattambi and Kerala employing proven modalities to resolve trauma, emotional distress, psychosexual concerns, and relationship disharmony.
             </p>
           </div>
 
@@ -306,7 +382,7 @@ export default function OurServicesPage() {
                     <div className="relative w-full aspect-[16/10] bg-[#111814] overflow-hidden">
                       <Image
                         src={imageSrc}
-                        alt={`${item.name} Therapeutic Counselling - Pradheep Pattambi`}
+                        alt={`${item.name} - ${item.primaryKeyword} - Pradheep Pattambi`}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -318,10 +394,13 @@ export default function OurServicesPage() {
                       </div>
                     </div>
 
-                    {/* Card Content */}
+                    {/* Card Content with Descriptive H3 Heading */}
                     <div className="p-5 sm:p-6 space-y-2.5">
-                      <h3 className="text-lg sm:text-xl font-bold text-forest-950 tracking-tight group-hover:text-forest-800 transition-colors">
-                        {item.name}
+                      <h3 className="text-base sm:text-lg font-bold text-forest-950 tracking-tight group-hover:text-forest-800 transition-colors leading-snug">
+                        <span className="text-lg sm:text-xl font-bold text-forest-950 block">{item.name}</span>
+                        <span className="text-xs sm:text-[13px] font-semibold text-olive-800 block mt-1">
+                          {item.primaryKeyword}
+                        </span>
                       </h3>
                       <p className="text-xs sm:text-sm text-muted-text font-sans leading-relaxed">
                         {item.brief}
@@ -370,7 +449,7 @@ export default function OurServicesPage() {
               </div>
               <h3 className="text-lg font-bold text-forest-950">20+ Years Clinical Experience</h3>
               <p className="text-xs sm:text-sm text-muted-text leading-relaxed">
-                Guidance from a seasoned psychologist, NLP Grand Master, and certified therapist serving Palakkad and Kerala.
+                Guidance from a seasoned psychologist, NLP Grand Master, and certified therapist serving Palakkad, Shoranur, Ottapalam, and Kerala.
               </p>
             </div>
 
@@ -378,9 +457,9 @@ export default function OurServicesPage() {
               <div className="w-12 h-12 rounded-xl bg-[#EBF1EA] text-forest-900 flex items-center justify-center border border-[#DCE5DF]">
                 <CalendarCheck className="w-6 h-6 text-olive-700" />
               </div>
-              <h3 className="text-lg font-bold text-forest-950">Customized Action Plans</h3>
+              <h3 className="text-lg font-bold text-forest-950">Personalized Action Plans</h3>
               <p className="text-xs sm:text-sm text-muted-text leading-relaxed">
-                Every individual, couple, and student receives targeted, practical strategies tailored to their unique circumstances.
+                Every individual, couple, and student receives targeted, practical strategies tailored to their unique circumstances and goals.
               </p>
             </div>
           </div>
@@ -399,7 +478,7 @@ export default function OurServicesPage() {
             Take the First Step Toward Clarity and Well-Being
           </h2>
           <p className="text-base sm:text-lg text-[#D6CEBE] max-w-2xl mx-auto leading-relaxed">
-            Whether you seek personal healing through therapeutic counselling or transformative growth through our training sessions, we are here to support you.
+            Whether you seek personal healing through therapeutic counselling or transformative growth through our training sessions in Pattambi, we are here to support you.
           </p>
           <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
             <Link
@@ -411,7 +490,7 @@ export default function OurServicesPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello, I would like to book a consultation at Pradheep Pattambi's Centre.")}`}
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Pradheep Pattambi, I would like to book a consultation at The Light Centre.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-9 py-4 rounded-full border border-[#D8CCA8]/50 text-[#FAF7F2] bg-white/5 hover:bg-white/10 transition-colors text-sm sm:text-base font-medium tracking-wide"
@@ -425,4 +504,3 @@ export default function OurServicesPage() {
     </div>
   );
 }
-
